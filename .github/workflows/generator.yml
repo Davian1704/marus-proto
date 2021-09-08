@@ -55,6 +55,11 @@ jobs:
         run: |
           rm -f *
           mv ../python/* .   
+          cat << EOF > __init__.py
+          import sys
+          from os.path import dirname
+          sys.path.insert(1, dirname(__file__))
+          EOF
           git add *
           if [[ -n $(git status -s) ]] 
           then
