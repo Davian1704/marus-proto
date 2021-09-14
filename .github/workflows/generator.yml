@@ -36,8 +36,8 @@ jobs:
           ref: csharp    
       - name: Save updated C# code
         run: |
-          rm -f *
-          mv ../csharp/* .   
+          rm -f *.cs
+          mv ../csharp/*.cs .   
           git add *
           if [[ -n $(git status -s) ]] 
           then
@@ -53,8 +53,8 @@ jobs:
           ref: python    
       - name: Save updated Python code
         run: |
-          rm -f *
-          mv ../python/* .   
+          rm -f *.py
+          mv ../python/*.py .   
           cat << EOF > __init__.py
           import sys
           from os.path import dirname
