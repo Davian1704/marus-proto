@@ -12,7 +12,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import common_pb2 as common__pb2
+import std_pb2 as std__pb2
+import geometry_pb2 as geometry__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='tf',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x08tf.proto\x12\x02tf\x1a\x0c\x63ommon.proto\"7\n\x0eTfFrameRequest\x12\x0f\n\x07\x66rameId\x18\x01 \x01(\t\x12\x14\n\x0c\x63hildFrameId\x18\x02 \x01(\t\"|\n\x07TfFrame\x12\x0f\n\x07\x66rameId\x18\x01 \x01(\t\x12\x14\n\x0c\x63hildFrameId\x18\x02 \x01(\t\x12$\n\x0btranslation\x18\x03 \x01(\x0b\x32\x0f.common.Vector3\x12$\n\x08rotation\x18\x04 \x01(\x0b\x32\x12.common.Quaternion\"*\n\x0bTfFrameList\x12\x1b\n\x06\x66rames\x18\x01 \x03(\x0b\x32\x0b.tf.TfFrame2\xd0\x01\n\x02Tf\x12\x30\n\x0cGetAllFrames\x12\r.common.Empty\x1a\x0f.tf.TfFrameList\"\x00\x12-\n\x08GetFrame\x12\x12.tf.TfFrameRequest\x1a\x0b.tf.TfFrame\"\x00\x12\x35\n\x0fStreamAllFrames\x12\r.common.Empty\x1a\x0f.tf.TfFrameList\"\x00\x30\x01\x12\x32\n\x0bStreamFrame\x12\x12.tf.TfFrameRequest\x1a\x0b.tf.TfFrame\"\x00\x30\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x08tf.proto\x12\x02tf\x1a\tstd.proto\x1a\x0egeometry.proto\"7\n\x0eTfFrameRequest\x12\x0f\n\x07\x66rameId\x18\x01 \x01(\t\x12\x14\n\x0c\x63hildFrameId\x18\x02 \x01(\t\"\x80\x01\n\x07TfFrame\x12\x0f\n\x07\x66rameId\x18\x01 \x01(\t\x12\x14\n\x0c\x63hildFrameId\x18\x02 \x01(\t\x12&\n\x0btranslation\x18\x03 \x01(\x0b\x32\x11.geometry.Vector3\x12&\n\x08rotation\x18\x04 \x01(\x0b\x32\x14.geometry.Quaternion\"*\n\x0bTfFrameList\x12\x1b\n\x06\x66rames\x18\x01 \x03(\x0b\x32\x0b.tf.TfFrame2\xca\x01\n\x02Tf\x12-\n\x0cGetAllFrames\x12\n.std.Empty\x1a\x0f.tf.TfFrameList\"\x00\x12-\n\x08GetFrame\x12\x12.tf.TfFrameRequest\x1a\x0b.tf.TfFrame\"\x00\x12\x32\n\x0fStreamAllFrames\x12\n.std.Empty\x1a\x0f.tf.TfFrameList\"\x00\x30\x01\x12\x32\n\x0bStreamFrame\x12\x12.tf.TfFrameRequest\x1a\x0b.tf.TfFrame\"\x00\x30\x01\x62\x06proto3')
   ,
-  dependencies=[common__pb2.DESCRIPTOR,])
+  dependencies=[std__pb2.DESCRIPTOR,geometry__pb2.DESCRIPTOR,])
 
 
 
@@ -60,8 +61,8 @@ _TFFRAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30,
-  serialized_end=85,
+  serialized_start=43,
+  serialized_end=98,
 )
 
 
@@ -112,8 +113,8 @@ _TFFRAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=87,
-  serialized_end=211,
+  serialized_start=101,
+  serialized_end=229,
 )
 
 
@@ -143,12 +144,12 @@ _TFFRAMELIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=213,
-  serialized_end=255,
+  serialized_start=231,
+  serialized_end=273,
 )
 
-_TFFRAME.fields_by_name['translation'].message_type = common__pb2._VECTOR3
-_TFFRAME.fields_by_name['rotation'].message_type = common__pb2._QUATERNION
+_TFFRAME.fields_by_name['translation'].message_type = geometry__pb2._VECTOR3
+_TFFRAME.fields_by_name['rotation'].message_type = geometry__pb2._QUATERNION
 _TFFRAMELIST.fields_by_name['frames'].message_type = _TFFRAME
 DESCRIPTOR.message_types_by_name['TfFrameRequest'] = _TFFRAMEREQUEST
 DESCRIPTOR.message_types_by_name['TfFrame'] = _TFFRAME
@@ -184,15 +185,15 @@ _TF = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=258,
-  serialized_end=466,
+  serialized_start=276,
+  serialized_end=478,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetAllFrames',
     full_name='tf.Tf.GetAllFrames',
     index=0,
     containing_service=None,
-    input_type=common__pb2._EMPTY,
+    input_type=std__pb2._EMPTY,
     output_type=_TFFRAMELIST,
     serialized_options=None,
   ),
@@ -210,7 +211,7 @@ _TF = _descriptor.ServiceDescriptor(
     full_name='tf.Tf.StreamAllFrames',
     index=2,
     containing_service=None,
-    input_type=common__pb2._EMPTY,
+    input_type=std__pb2._EMPTY,
     output_type=_TFFRAMELIST,
     serialized_options=None,
   ),

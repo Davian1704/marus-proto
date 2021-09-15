@@ -12,19 +12,17 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import common_pb2 as common__pb2
+import geometry_pb2 as geometry__pb2
 
-from common_pb2 import *
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='navigation.proto',
   package='navigation',
   syntax='proto3',
   serialized_options=_b('\n\033io.grpc.examples.navigationB\nNavigationP\001\242\002\003HLW'),
-  serialized_pb=_b('\n\x10navigation.proto\x12\nnavigation\x1a\x0c\x63ommon.proto\"\xc2\x01\n\x11NavigationRequest\x12\x11\n\ttimeStamp\x18\x01 \x01(\x01\x12!\n\x08position\x18\x02 \x01(\x0b\x32\x0f.common.Vector3\x12$\n\x0borientation\x18\x03 \x01(\x0b\x32\x0f.common.Vector3\x12\'\n\x0elinearVelocity\x18\x04 \x01(\x0b\x32\x0f.common.Vector3\x12(\n\x0f\x61ngularVelocity\x18\x05 \x01(\x0b\x32\x0f.common.Vector3\"%\n\x12NavigationResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x32\x66\n\nNavigation\x12X\n\x15SendNavigationMessage\x12\x1d.navigation.NavigationRequest\x1a\x1e.navigation.NavigationResponse\"\x00\x42\x31\n\x1bio.grpc.examples.navigationB\nNavigationP\x01\xa2\x02\x03HLWP\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x10navigation.proto\x12\nnavigation\x1a\x0egeometry.proto\"\xb7\x01\n\x11NavigationRequest\x12#\n\x08position\x18\x02 \x01(\x0b\x32\x11.geometry.Vector3\x12&\n\x0borientation\x18\x03 \x01(\x0b\x32\x11.geometry.Vector3\x12)\n\x0elinearVelocity\x18\x04 \x01(\x0b\x32\x11.geometry.Vector3\x12*\n\x0f\x61ngularVelocity\x18\x05 \x01(\x0b\x32\x11.geometry.Vector3\"%\n\x12NavigationResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x32\x66\n\nNavigation\x12X\n\x15SendNavigationMessage\x12\x1d.navigation.NavigationRequest\x1a\x1e.navigation.NavigationResponse\"\x00\x42\x31\n\x1bio.grpc.examples.navigationB\nNavigationP\x01\xa2\x02\x03HLWb\x06proto3')
   ,
-  dependencies=[common__pb2.DESCRIPTOR,],
-  public_dependencies=[common__pb2.DESCRIPTOR,])
+  dependencies=[geometry__pb2.DESCRIPTOR,])
 
 
 
@@ -37,35 +35,28 @@ _NAVIGATIONREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='timeStamp', full_name='navigation.NavigationRequest.timeStamp', index=0,
-      number=1, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='position', full_name='navigation.NavigationRequest.position', index=1,
+      name='position', full_name='navigation.NavigationRequest.position', index=0,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='orientation', full_name='navigation.NavigationRequest.orientation', index=2,
+      name='orientation', full_name='navigation.NavigationRequest.orientation', index=1,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='linearVelocity', full_name='navigation.NavigationRequest.linearVelocity', index=3,
+      name='linearVelocity', full_name='navigation.NavigationRequest.linearVelocity', index=2,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='angularVelocity', full_name='navigation.NavigationRequest.angularVelocity', index=4,
+      name='angularVelocity', full_name='navigation.NavigationRequest.angularVelocity', index=3,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -83,8 +74,8 @@ _NAVIGATIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=47,
-  serialized_end=241,
+  serialized_start=49,
+  serialized_end=232,
 )
 
 
@@ -114,14 +105,14 @@ _NAVIGATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=243,
-  serialized_end=280,
+  serialized_start=234,
+  serialized_end=271,
 )
 
-_NAVIGATIONREQUEST.fields_by_name['position'].message_type = common__pb2._VECTOR3
-_NAVIGATIONREQUEST.fields_by_name['orientation'].message_type = common__pb2._VECTOR3
-_NAVIGATIONREQUEST.fields_by_name['linearVelocity'].message_type = common__pb2._VECTOR3
-_NAVIGATIONREQUEST.fields_by_name['angularVelocity'].message_type = common__pb2._VECTOR3
+_NAVIGATIONREQUEST.fields_by_name['position'].message_type = geometry__pb2._VECTOR3
+_NAVIGATIONREQUEST.fields_by_name['orientation'].message_type = geometry__pb2._VECTOR3
+_NAVIGATIONREQUEST.fields_by_name['linearVelocity'].message_type = geometry__pb2._VECTOR3
+_NAVIGATIONREQUEST.fields_by_name['angularVelocity'].message_type = geometry__pb2._VECTOR3
 DESCRIPTOR.message_types_by_name['NavigationRequest'] = _NAVIGATIONREQUEST
 DESCRIPTOR.message_types_by_name['NavigationResponse'] = _NAVIGATIONRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -149,8 +140,8 @@ _NAVIGATION = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=282,
-  serialized_end=384,
+  serialized_start=273,
+  serialized_end=375,
   methods=[
   _descriptor.MethodDescriptor(
     name='SendNavigationMessage',

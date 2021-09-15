@@ -12,7 +12,10 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import common_pb2 as common__pb2
+import geometry_pb2 as geometry__pb2
+import sensor_pb2 as sensor__pb2
+import marine_pb2 as marine__pb2
+import geographic_pb2 as geographic__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='sensorstreaming',
   syntax='proto3',
   serialized_options=_b('\n io.grpc.examples.sensorstreamingB\017SensorStreamingP\001\242\002\003HLW'),
-  serialized_pb=_b('\n\x16sensor_streaming.proto\x12\x0fsensorstreaming\x1a\x0c\x63ommon.proto\"i\n\x16\x43\x61meraStreamingRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x11\n\ttimeStamp\x18\x02 \x01(\x01\x12\r\n\x05width\x18\x03 \x01(\r\x12\x0e\n\x06height\x18\x04 \x01(\r\x12\x0f\n\x07\x61\x64\x64ress\x18\x05 \x01(\t\"$\n\x11StreamingResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"\xc8\x01\n\nPointField\x12\x0c\n\x04INT8\x18\x01 \x01(\r\x12\r\n\x05UINT8\x18\x02 \x01(\r\x12\r\n\x05INT16\x18\x03 \x01(\r\x12\x0e\n\x06UINT16\x18\x04 \x01(\r\x12\r\n\x05INT32\x18\x05 \x01(\r\x12\x0e\n\x06UINT32\x18\x06 \x01(\r\x12\x0f\n\x07\x46LOAT32\x18\x07 \x01(\r\x12\x0f\n\x07\x46LOAT64\x18\x08 \x01(\r\x12\x0c\n\x04name\x18\t \x01(\t\x12\x0e\n\x06offset\x18\n \x01(\r\x12\x10\n\x08\x64\x61tatype\x18\x0b \x01(\r\x12\r\n\x05\x63ount\x18\x0c \x01(\r\"\xd5\x01\n\x15LidarStreamingRequest\x12\x15\n\rtimeInSeconds\x18\x01 \x01(\x01\x12\x0e\n\x06height\x18\x02 \x01(\r\x12\r\n\x05width\x18\x03 \x01(\r\x12+\n\x06\x66ields\x18\x04 \x03(\x0b\x32\x1b.sensorstreaming.PointField\x12\x13\n\x0bisBigEndian\x18\x05 \x01(\x08\x12\x12\n\npoint_step\x18\x06 \x01(\r\x12\x10\n\x08row_step\x18\x07 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x08 \x01(\x0c\x12\x10\n\x08is_dense\x18\t \x01(\x08\"\xd3\x01\n\x15RadarStreamingRequest\x12\x16\n\x0erangeIncrement\x18\x01 \x01(\x02\x12\x12\n\nrangeStart\x18\x02 \x01(\x02\x12\x12\n\nnumSamples\x18\x03 \x01(\r\x12\x11\n\tnumSpokes\x18\x04 \x01(\r\x12\x14\n\x0cminIntensity\x18\x05 \x01(\r\x12\x14\n\x0cmaxIntensity\x18\x06 \x01(\r\x12\x15\n\rtimeInSeconds\x18\x07 \x03(\x01\x12\x0f\n\x07\x61zimuth\x18\x08 \x03(\x02\x12\x13\n\x0bradarSpokes\x18\t \x01(\x0c\"7\n\x15\x44\x65pthStreamingRequest\x12\r\n\x05\x64\x65pth\x18\x01 \x01(\x02\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"u\n\x13\x44vlStreamingRequest\x12\x10\n\x08\x61ltitude\x18\x01 \x01(\x02\x12\'\n\x0egroundVelocity\x18\x02 \x01(\x0b\x32\x0f.common.Vector3\x12\x12\n\nbeamRanges\x18\x03 \x03(\x02\x12\x0f\n\x07\x61\x64\x64ress\x18\x04 \x01(\t\"H\n\x14GnssStreamingRequest\x12\x1f\n\x05point\x18\x01 \x01(\x0b\x32\x10.common.GeoPoint\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"\x9d\x01\n\x13ImuStreamingRequest\x12%\n\x0c\x61\x63\x63\x65leration\x18\x01 \x01(\x0b\x32\x0f.common.Vector3\x12(\n\x0f\x61ngularVelocity\x18\x02 \x01(\x0b\x32\x0f.common.Vector3\x12$\n\x0borientation\x18\x03 \x01(\x0b\x32\x0f.common.Vector3\x12\x0f\n\x07\x61\x64\x64ress\x18\x04 \x01(\t\"C\n\x14PoseStreamingRequest\x12\x1a\n\x04pose\x18\x01 \x01(\x0b\x32\x0c.common.Pose\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"H\n\x15SonarStreamingRequest\x12\r\n\x05range\x18\x01 \x01(\x02\x12\x0f\n\x07\x62\x65\x61ring\x18\x02 \x01(\x02\x12\x0f\n\x07\x61\x64\x64ress\x18\x03 \x01(\t\"\\\n\x13\x41ISStreamingRequest\x12\x34\n\x11\x61isPositionReport\x18\x01 \x01(\x0b\x32\x19.common.AISPositionReport\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t2\xf5\x07\n\x0fSensorStreaming\x12\x65\n\x12StreamCameraSensor\x12\'.sensorstreaming.CameraStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x63\n\x11StreamLidarSensor\x12&.sensorstreaming.LidarStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x63\n\x11StreamRadarSensor\x12&.sensorstreaming.RadarStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x63\n\x11StreamDepthSensor\x12&.sensorstreaming.DepthStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12_\n\x0fStreamDvlSensor\x12$.sensorstreaming.DvlStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x61\n\x10StreamGnssSensor\x12%.sensorstreaming.GnssStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12_\n\x0fStreamImuSensor\x12$.sensorstreaming.ImuStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x61\n\x10StreamPoseSensor\x12%.sensorstreaming.PoseStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x63\n\x11StreamSonarSensor\x12&.sensorstreaming.SonarStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12_\n\x0fStreamAisSensor\x12$.sensorstreaming.AISStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x42;\n io.grpc.examples.sensorstreamingB\x0fSensorStreamingP\x01\xa2\x02\x03HLWb\x06proto3')
+  serialized_pb=_b('\n\x16sensor_streaming.proto\x12\x0fsensorstreaming\x1a\x0egeometry.proto\x1a\x0csensor.proto\x1a\x0cmarine.proto\x1a\x10geographic.proto\"i\n\x16\x43\x61meraStreamingRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x11\n\ttimeStamp\x18\x02 \x01(\x01\x12\r\n\x05width\x18\x03 \x01(\r\x12\x0e\n\x06height\x18\x04 \x01(\r\x12\x0f\n\x07\x61\x64\x64ress\x18\x05 \x01(\t\"$\n\x11StreamingResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"\xc8\x01\n\nPointField\x12\x0c\n\x04INT8\x18\x01 \x01(\r\x12\r\n\x05UINT8\x18\x02 \x01(\r\x12\r\n\x05INT16\x18\x03 \x01(\r\x12\x0e\n\x06UINT16\x18\x04 \x01(\r\x12\r\n\x05INT32\x18\x05 \x01(\r\x12\x0e\n\x06UINT32\x18\x06 \x01(\r\x12\x0f\n\x07\x46LOAT32\x18\x07 \x01(\r\x12\x0f\n\x07\x46LOAT64\x18\x08 \x01(\r\x12\x0c\n\x04name\x18\t \x01(\t\x12\x0e\n\x06offset\x18\n \x01(\r\x12\x10\n\x08\x64\x61tatype\x18\x0b \x01(\r\x12\r\n\x05\x63ount\x18\x0c \x01(\r\"\xd5\x01\n\x15LidarStreamingRequest\x12\x15\n\rtimeInSeconds\x18\x01 \x01(\x01\x12\x0e\n\x06height\x18\x02 \x01(\r\x12\r\n\x05width\x18\x03 \x01(\r\x12+\n\x06\x66ields\x18\x04 \x03(\x0b\x32\x1b.sensorstreaming.PointField\x12\x13\n\x0bisBigEndian\x18\x05 \x01(\x08\x12\x12\n\npoint_step\x18\x06 \x01(\r\x12\x10\n\x08row_step\x18\x07 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x08 \x01(\x0c\x12\x10\n\x08is_dense\x18\t \x01(\x08\"\xd3\x01\n\x15RadarStreamingRequest\x12\x16\n\x0erangeIncrement\x18\x01 \x01(\x02\x12\x12\n\nrangeStart\x18\x02 \x01(\x02\x12\x12\n\nnumSamples\x18\x03 \x01(\r\x12\x11\n\tnumSpokes\x18\x04 \x01(\r\x12\x14\n\x0cminIntensity\x18\x05 \x01(\r\x12\x14\n\x0cmaxIntensity\x18\x06 \x01(\r\x12\x15\n\rtimeInSeconds\x18\x07 \x03(\x01\x12\x0f\n\x07\x61zimuth\x18\x08 \x03(\x02\x12\x13\n\x0bradarSpokes\x18\t \x01(\x0c\"7\n\x15\x44\x65pthStreamingRequest\x12\r\n\x05\x64\x65pth\x18\x01 \x01(\x02\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"@\n\x13\x44vlStreamingRequest\x12\x18\n\x03\x64vl\x18\x01 \x01(\x0b\x32\x0b.marine.Dvl\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"L\n\x14GnssStreamingRequest\x12#\n\x05point\x18\x01 \x01(\x0b\x32\x14.geographic.GeoPoint\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"A\n\x13ImuStreamingRequest\x12\x19\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0b.sensor.Imu\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"E\n\x14PoseStreamingRequest\x12\x1c\n\x04pose\x18\x01 \x01(\x0b\x32\x0e.geometry.Pose\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"H\n\x15SonarStreamingRequest\x12\r\n\x05range\x18\x01 \x01(\x02\x12\x0f\n\x07\x62\x65\x61ring\x18\x02 \x01(\x02\x12\x0f\n\x07\x61\x64\x64ress\x18\x03 \x01(\t\"\\\n\x13\x41ISStreamingRequest\x12\x34\n\x11\x61isPositionReport\x18\x01 \x01(\x0b\x32\x19.marine.AISPositionReport\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t2\xf5\x07\n\x0fSensorStreaming\x12\x65\n\x12StreamCameraSensor\x12\'.sensorstreaming.CameraStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x63\n\x11StreamLidarSensor\x12&.sensorstreaming.LidarStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x63\n\x11StreamRadarSensor\x12&.sensorstreaming.RadarStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x63\n\x11StreamDepthSensor\x12&.sensorstreaming.DepthStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12_\n\x0fStreamDvlSensor\x12$.sensorstreaming.DvlStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x61\n\x10StreamGnssSensor\x12%.sensorstreaming.GnssStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12_\n\x0fStreamImuSensor\x12$.sensorstreaming.ImuStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x61\n\x10StreamPoseSensor\x12%.sensorstreaming.PoseStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12\x63\n\x11StreamSonarSensor\x12&.sensorstreaming.SonarStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x12_\n\x0fStreamAisSensor\x12$.sensorstreaming.AISStreamingRequest\x1a\".sensorstreaming.StreamingResponse\"\x00(\x01\x42;\n io.grpc.examples.sensorstreamingB\x0fSensorStreamingP\x01\xa2\x02\x03HLWb\x06proto3')
   ,
-  dependencies=[common__pb2.DESCRIPTOR,])
+  dependencies=[geometry__pb2.DESCRIPTOR,sensor__pb2.DESCRIPTOR,marine__pb2.DESCRIPTOR,geographic__pb2.DESCRIPTOR,])
 
 
 
@@ -81,8 +84,8 @@ _CAMERASTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57,
-  serialized_end=162,
+  serialized_start=105,
+  serialized_end=210,
 )
 
 
@@ -112,8 +115,8 @@ _STREAMINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=164,
-  serialized_end=200,
+  serialized_start=212,
+  serialized_end=248,
 )
 
 
@@ -220,8 +223,8 @@ _POINTFIELD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=203,
-  serialized_end=403,
+  serialized_start=251,
+  serialized_end=451,
 )
 
 
@@ -307,8 +310,8 @@ _LIDARSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=406,
-  serialized_end=619,
+  serialized_start=454,
+  serialized_end=667,
 )
 
 
@@ -394,8 +397,8 @@ _RADARSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=622,
-  serialized_end=833,
+  serialized_start=670,
+  serialized_end=881,
 )
 
 
@@ -432,8 +435,8 @@ _DEPTHSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=835,
-  serialized_end=890,
+  serialized_start=883,
+  serialized_end=938,
 )
 
 
@@ -445,29 +448,15 @@ _DVLSTREAMINGREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='altitude', full_name='sensorstreaming.DvlStreamingRequest.altitude', index=0,
-      number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='groundVelocity', full_name='sensorstreaming.DvlStreamingRequest.groundVelocity', index=1,
-      number=2, type=11, cpp_type=10, label=1,
+      name='dvl', full_name='sensorstreaming.DvlStreamingRequest.dvl', index=0,
+      number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='beamRanges', full_name='sensorstreaming.DvlStreamingRequest.beamRanges', index=2,
-      number=3, type=2, cpp_type=6, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='address', full_name='sensorstreaming.DvlStreamingRequest.address', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      name='address', full_name='sensorstreaming.DvlStreamingRequest.address', index=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -484,8 +473,8 @@ _DVLSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=892,
-  serialized_end=1009,
+  serialized_start=940,
+  serialized_end=1004,
 )
 
 
@@ -522,8 +511,8 @@ _GNSSSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1011,
-  serialized_end=1083,
+  serialized_start=1006,
+  serialized_end=1082,
 )
 
 
@@ -535,29 +524,15 @@ _IMUSTREAMINGREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='acceleration', full_name='sensorstreaming.ImuStreamingRequest.acceleration', index=0,
+      name='data', full_name='sensorstreaming.ImuStreamingRequest.data', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='angularVelocity', full_name='sensorstreaming.ImuStreamingRequest.angularVelocity', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='orientation', full_name='sensorstreaming.ImuStreamingRequest.orientation', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='address', full_name='sensorstreaming.ImuStreamingRequest.address', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      name='address', full_name='sensorstreaming.ImuStreamingRequest.address', index=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -574,8 +549,8 @@ _IMUSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1086,
-  serialized_end=1243,
+  serialized_start=1084,
+  serialized_end=1149,
 )
 
 
@@ -612,8 +587,8 @@ _POSESTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1245,
-  serialized_end=1312,
+  serialized_start=1151,
+  serialized_end=1220,
 )
 
 
@@ -657,8 +632,8 @@ _SONARSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1314,
-  serialized_end=1386,
+  serialized_start=1222,
+  serialized_end=1294,
 )
 
 
@@ -695,18 +670,16 @@ _AISSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1388,
-  serialized_end=1480,
+  serialized_start=1296,
+  serialized_end=1388,
 )
 
 _LIDARSTREAMINGREQUEST.fields_by_name['fields'].message_type = _POINTFIELD
-_DVLSTREAMINGREQUEST.fields_by_name['groundVelocity'].message_type = common__pb2._VECTOR3
-_GNSSSTREAMINGREQUEST.fields_by_name['point'].message_type = common__pb2._GEOPOINT
-_IMUSTREAMINGREQUEST.fields_by_name['acceleration'].message_type = common__pb2._VECTOR3
-_IMUSTREAMINGREQUEST.fields_by_name['angularVelocity'].message_type = common__pb2._VECTOR3
-_IMUSTREAMINGREQUEST.fields_by_name['orientation'].message_type = common__pb2._VECTOR3
-_POSESTREAMINGREQUEST.fields_by_name['pose'].message_type = common__pb2._POSE
-_AISSTREAMINGREQUEST.fields_by_name['aisPositionReport'].message_type = common__pb2._AISPOSITIONREPORT
+_DVLSTREAMINGREQUEST.fields_by_name['dvl'].message_type = marine__pb2._DVL
+_GNSSSTREAMINGREQUEST.fields_by_name['point'].message_type = geographic__pb2._GEOPOINT
+_IMUSTREAMINGREQUEST.fields_by_name['data'].message_type = sensor__pb2._IMU
+_POSESTREAMINGREQUEST.fields_by_name['pose'].message_type = geometry__pb2._POSE
+_AISSTREAMINGREQUEST.fields_by_name['aisPositionReport'].message_type = marine__pb2._AISPOSITIONREPORT
 DESCRIPTOR.message_types_by_name['CameraStreamingRequest'] = _CAMERASTREAMINGREQUEST
 DESCRIPTOR.message_types_by_name['StreamingResponse'] = _STREAMINGRESPONSE
 DESCRIPTOR.message_types_by_name['PointField'] = _POINTFIELD
@@ -814,8 +787,8 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1483,
-  serialized_end=2496,
+  serialized_start=1391,
+  serialized_end=2404,
   methods=[
   _descriptor.MethodDescriptor(
     name='StreamCameraSensor',

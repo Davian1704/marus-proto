@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import common_pb2 as common__pb2
+import std_pb2 as std__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='remotecontrol',
   syntax='proto3',
   serialized_options=_b('\n\036io.grpc.examples.remotecontrolB\rRemoteControlP\001\242\002\003HLW'),
-  serialized_pb=_b('\n\x14remote_control.proto\x12\rremotecontrol\x1a\x0c\x63ommon.proto\"\x1f\n\x0c\x46orceRequest\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\":\n\rForceResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x18\n\x03pwm\x18\x02 \x01(\x0b\x32\x0b.common.Pwm2\\\n\rRemoteControl\x12K\n\nApplyForce\x12\x1b.remotecontrol.ForceRequest\x1a\x1c.remotecontrol.ForceResponse\"\x00\x30\x01\x42\x37\n\x1eio.grpc.examples.remotecontrolB\rRemoteControlP\x01\xa2\x02\x03HLWb\x06proto3')
+  serialized_pb=_b('\n\x14remote_control.proto\x12\rremotecontrol\x1a\tstd.proto\"\x1f\n\x0c\x46orceRequest\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\"@\n\rForceResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x1e\n\x03pwm\x18\x02 \x01(\x0b\x32\x11.std.Float32Array2\\\n\rRemoteControl\x12K\n\nApplyForce\x12\x1b.remotecontrol.ForceRequest\x1a\x1c.remotecontrol.ForceResponse\"\x00\x30\x01\x42\x37\n\x1eio.grpc.examples.remotecontrolB\rRemoteControlP\x01\xa2\x02\x03HLWb\x06proto3')
   ,
-  dependencies=[common__pb2.DESCRIPTOR,])
+  dependencies=[std__pb2.DESCRIPTOR,])
 
 
 
@@ -53,8 +53,8 @@ _FORCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53,
-  serialized_end=84,
+  serialized_start=50,
+  serialized_end=81,
 )
 
 
@@ -91,11 +91,11 @@ _FORCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=86,
-  serialized_end=144,
+  serialized_start=83,
+  serialized_end=147,
 )
 
-_FORCERESPONSE.fields_by_name['pwm'].message_type = common__pb2._PWM
+_FORCERESPONSE.fields_by_name['pwm'].message_type = std__pb2._FLOAT32ARRAY
 DESCRIPTOR.message_types_by_name['ForceRequest'] = _FORCEREQUEST
 DESCRIPTOR.message_types_by_name['ForceResponse'] = _FORCERESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -123,8 +123,8 @@ _REMOTECONTROL = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=146,
-  serialized_end=238,
+  serialized_start=149,
+  serialized_end=241,
   methods=[
   _descriptor.MethodDescriptor(
     name='ApplyForce',

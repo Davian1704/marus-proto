@@ -13,7 +13,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import common_pb2 as common__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +20,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='sensormanagement',
   syntax='proto3',
   serialized_options=_b('\n!io.grpc.examples.sensormanagementB\020SensorManagementP\001\242\002\003HLW'),
-  serialized_pb=_b('\n\x17sensor_management.proto\x12\x10sensormanagement\x1a\x0c\x63ommon.proto\")\n\x15StartRenderingRequest\x12\x10\n\x08sensorID\x18\x01 \x01(\x05\")\n\x16StartRenderingResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"(\n\x14StopRenderingRequest\x12\x10\n\x08sensorID\x18\x01 \x01(\x05\"(\n\x15StopRenderingResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"E\n\x17\x41llSensorsOfTypeRequest\x12*\n\x04type\x18\x01 \x01(\x0e\x32\x1c.sensormanagement.SensorType\"E\n\x18\x41llSensorsOfTypeResponse\x12)\n\x07sensors\x18\x01 \x03(\x0b\x32\x18.sensormanagement.Sensor\"-\n\x19\x41llSensorsOnVesselRequest\x12\x10\n\x08vesselID\x18\x01 \x01(\t\"G\n\x1a\x41llSensorsOnVesselResponse\x12)\n\x07sensors\x18\x01 \x03(\x0b\x32\x18.sensormanagement.Sensor\"\x8c\x01\n\x06Sensor\x12\n\n\x02id\x18\x01 \x01(\x05\x12*\n\x04type\x18\x02 \x01(\x0e\x32\x1c.sensormanagement.SensorType\x12\x13\n\x0bsensorWidth\x18\x03 \x01(\x05\x12\x14\n\x0csensorHeight\x18\x04 \x01(\x05\x12\x11\n\tipAddress\x18\x05 \x01(\t\x12\x0c\n\x04port\x18\x06 \x01(\x05*J\n\nSensorType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07OPTICAL\x10\x01\x12\x0c\n\x08INFRARED\x10\x02\x12\t\n\x05RADAR\x10\x03\x12\t\n\x05LIDAR\x10\x04\x32\xc3\x03\n\x10SensorManagement\x12\x65\n\x0eStartRendering\x12\'.sensormanagement.StartRenderingRequest\x1a(.sensormanagement.StartRenderingResponse\"\x00\x12\x62\n\rStopRendering\x12&.sensormanagement.StopRenderingRequest\x1a\'.sensormanagement.StopRenderingResponse\"\x00\x12n\n\x13GetAllSensorsOfType\x12).sensormanagement.AllSensorsOfTypeRequest\x1a*.sensormanagement.AllSensorsOfTypeResponse\"\x00\x12t\n\x15GetAllSensorsOnVessel\x12+.sensormanagement.AllSensorsOnVesselRequest\x1a,.sensormanagement.AllSensorsOnVesselResponse\"\x00\x42=\n!io.grpc.examples.sensormanagementB\x10SensorManagementP\x01\xa2\x02\x03HLWb\x06proto3')
-  ,
-  dependencies=[common__pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n\x17sensor_management.proto\x12\x10sensormanagement\")\n\x15StartRenderingRequest\x12\x10\n\x08sensorID\x18\x01 \x01(\x05\")\n\x16StartRenderingResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"(\n\x14StopRenderingRequest\x12\x10\n\x08sensorID\x18\x01 \x01(\x05\"(\n\x15StopRenderingResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"E\n\x17\x41llSensorsOfTypeRequest\x12*\n\x04type\x18\x01 \x01(\x0e\x32\x1c.sensormanagement.SensorType\"E\n\x18\x41llSensorsOfTypeResponse\x12)\n\x07sensors\x18\x01 \x03(\x0b\x32\x18.sensormanagement.Sensor\"-\n\x19\x41llSensorsOnVesselRequest\x12\x10\n\x08vesselID\x18\x01 \x01(\t\"G\n\x1a\x41llSensorsOnVesselResponse\x12)\n\x07sensors\x18\x01 \x03(\x0b\x32\x18.sensormanagement.Sensor\"\x8c\x01\n\x06Sensor\x12\n\n\x02id\x18\x01 \x01(\x05\x12*\n\x04type\x18\x02 \x01(\x0e\x32\x1c.sensormanagement.SensorType\x12\x13\n\x0bsensorWidth\x18\x03 \x01(\x05\x12\x14\n\x0csensorHeight\x18\x04 \x01(\x05\x12\x11\n\tipAddress\x18\x05 \x01(\t\x12\x0c\n\x04port\x18\x06 \x01(\x05*J\n\nSensorType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07OPTICAL\x10\x01\x12\x0c\n\x08INFRARED\x10\x02\x12\t\n\x05RADAR\x10\x03\x12\t\n\x05LIDAR\x10\x04\x32\xc3\x03\n\x10SensorManagement\x12\x65\n\x0eStartRendering\x12\'.sensormanagement.StartRenderingRequest\x1a(.sensormanagement.StartRenderingResponse\"\x00\x12\x62\n\rStopRendering\x12&.sensormanagement.StopRenderingRequest\x1a\'.sensormanagement.StopRenderingResponse\"\x00\x12n\n\x13GetAllSensorsOfType\x12).sensormanagement.AllSensorsOfTypeRequest\x1a*.sensormanagement.AllSensorsOfTypeResponse\"\x00\x12t\n\x15GetAllSensorsOnVessel\x12+.sensormanagement.AllSensorsOnVesselRequest\x1a,.sensormanagement.AllSensorsOnVesselResponse\"\x00\x42=\n!io.grpc.examples.sensormanagementB\x10SensorManagementP\x01\xa2\x02\x03HLWb\x06proto3')
+)
 
 _SENSORTYPE = _descriptor.EnumDescriptor(
   name='SensorType',
@@ -54,8 +52,8 @@ _SENSORTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=634,
-  serialized_end=708,
+  serialized_start=620,
+  serialized_end=694,
 )
 _sym_db.RegisterEnumDescriptor(_SENSORTYPE)
 
@@ -94,8 +92,8 @@ _STARTRENDERINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59,
-  serialized_end=100,
+  serialized_start=45,
+  serialized_end=86,
 )
 
 
@@ -125,8 +123,8 @@ _STARTRENDERINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=102,
-  serialized_end=143,
+  serialized_start=88,
+  serialized_end=129,
 )
 
 
@@ -156,8 +154,8 @@ _STOPRENDERINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=145,
-  serialized_end=185,
+  serialized_start=131,
+  serialized_end=171,
 )
 
 
@@ -187,8 +185,8 @@ _STOPRENDERINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=187,
-  serialized_end=227,
+  serialized_start=173,
+  serialized_end=213,
 )
 
 
@@ -218,8 +216,8 @@ _ALLSENSORSOFTYPEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=229,
-  serialized_end=298,
+  serialized_start=215,
+  serialized_end=284,
 )
 
 
@@ -249,8 +247,8 @@ _ALLSENSORSOFTYPERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=300,
-  serialized_end=369,
+  serialized_start=286,
+  serialized_end=355,
 )
 
 
@@ -280,8 +278,8 @@ _ALLSENSORSONVESSELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=371,
-  serialized_end=416,
+  serialized_start=357,
+  serialized_end=402,
 )
 
 
@@ -311,8 +309,8 @@ _ALLSENSORSONVESSELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=418,
-  serialized_end=489,
+  serialized_start=404,
+  serialized_end=475,
 )
 
 
@@ -377,8 +375,8 @@ _SENSOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=492,
-  serialized_end=632,
+  serialized_start=478,
+  serialized_end=618,
 )
 
 _ALLSENSORSOFTYPEREQUEST.fields_by_name['type'].enum_type = _SENSORTYPE
@@ -469,8 +467,8 @@ _SENSORMANAGEMENT = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=711,
-  serialized_end=1162,
+  serialized_start=697,
+  serialized_end=1148,
   methods=[
   _descriptor.MethodDescriptor(
     name='StartRendering',

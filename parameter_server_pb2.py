@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import common_pb2 as common__pb2
+import std_pb2 as std__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='parameterserver',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x16parameter_server.proto\x12\x0fparameterserver\x1a\x0c\x63ommon.proto\"\x1f\n\x0fGetParamRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"K\n\x0fSetParamRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.parameterserver.ParamValue\"r\n\nParamValue\x12\x12\n\x08valueStr\x18\x01 \x01(\tH\x00\x12\x12\n\x08valueInt\x18\x02 \x01(\x05H\x00\x12\x13\n\tvalueBool\x18\x03 \x01(\x08H\x00\x12\x15\n\x0bvalueDouble\x18\x04 \x01(\x01H\x00\x42\x10\n\x0eparameterValue2\xa5\x01\n\x0fParameterServer\x12O\n\x0cGetParameter\x12 .parameterserver.GetParamRequest\x1a\x1b.parameterserver.ParamValue\"\x00\x12\x41\n\x0cSetParameter\x12 .parameterserver.SetParamRequest\x1a\r.common.Empty\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x16parameter_server.proto\x12\x0fparameterserver\x1a\tstd.proto\"\x1f\n\x0fGetParamRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"K\n\x0fSetParamRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.parameterserver.ParamValue\"r\n\nParamValue\x12\x12\n\x08valueStr\x18\x01 \x01(\tH\x00\x12\x12\n\x08valueInt\x18\x02 \x01(\x05H\x00\x12\x13\n\tvalueBool\x18\x03 \x01(\x08H\x00\x12\x15\n\x0bvalueDouble\x18\x04 \x01(\x01H\x00\x42\x10\n\x0eparameterValue2\xa2\x01\n\x0fParameterServer\x12O\n\x0cGetParameter\x12 .parameterserver.GetParamRequest\x1a\x1b.parameterserver.ParamValue\"\x00\x12>\n\x0cSetParameter\x12 .parameterserver.SetParamRequest\x1a\n.std.Empty\"\x00\x62\x06proto3')
   ,
-  dependencies=[common__pb2.DESCRIPTOR,])
+  dependencies=[std__pb2.DESCRIPTOR,])
 
 
 
@@ -53,8 +53,8 @@ _GETPARAMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57,
-  serialized_end=88,
+  serialized_start=54,
+  serialized_end=85,
 )
 
 
@@ -91,8 +91,8 @@ _SETPARAMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=90,
-  serialized_end=165,
+  serialized_start=87,
+  serialized_end=162,
 )
 
 
@@ -146,8 +146,8 @@ _PARAMVALUE = _descriptor.Descriptor(
       name='parameterValue', full_name='parameterserver.ParamValue.parameterValue',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=167,
-  serialized_end=281,
+  serialized_start=164,
+  serialized_end=278,
 )
 
 _SETPARAMREQUEST.fields_by_name['value'].message_type = _PARAMVALUE
@@ -197,8 +197,8 @@ _PARAMETERSERVER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=284,
-  serialized_end=449,
+  serialized_start=281,
+  serialized_end=443,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetParameter',
@@ -215,7 +215,7 @@ _PARAMETERSERVER = _descriptor.ServiceDescriptor(
     index=1,
     containing_service=None,
     input_type=_SETPARAMREQUEST,
-    output_type=common__pb2._EMPTY,
+    output_type=std__pb2._EMPTY,
     serialized_options=None,
   ),
 ])
