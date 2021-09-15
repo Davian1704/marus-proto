@@ -24,15 +24,15 @@ namespace Remotecontrol {
     static RemoteControlReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRyZW1vdGVfY29udHJvbC5wcm90bxINcmVtb3RlY29udHJvbBoMY29tbW9u",
-            "LnByb3RvIh8KDEZvcmNlUmVxdWVzdBIPCgdhZGRyZXNzGAEgASgJIjoKDUZv",
-            "cmNlUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBIYCgNwd20YAiABKAsyCy5j",
-            "b21tb24uUHdtMlwKDVJlbW90ZUNvbnRyb2wSSwoKQXBwbHlGb3JjZRIbLnJl",
-            "bW90ZWNvbnRyb2wuRm9yY2VSZXF1ZXN0GhwucmVtb3RlY29udHJvbC5Gb3Jj",
-            "ZVJlc3BvbnNlIgAwAUI3Ch5pby5ncnBjLmV4YW1wbGVzLnJlbW90ZWNvbnRy",
-            "b2xCDVJlbW90ZUNvbnRyb2xQAaICA0hMV2IGcHJvdG8z"));
+            "ChRyZW1vdGVfY29udHJvbC5wcm90bxINcmVtb3RlY29udHJvbBoJc3RkLnBy",
+            "b3RvIh8KDEZvcmNlUmVxdWVzdBIPCgdhZGRyZXNzGAEgASgJIkAKDUZvcmNl",
+            "UmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBIeCgNwd20YAiABKAsyES5zdGQu",
+            "RmxvYXQzMkFycmF5MlwKDVJlbW90ZUNvbnRyb2wSSwoKQXBwbHlGb3JjZRIb",
+            "LnJlbW90ZWNvbnRyb2wuRm9yY2VSZXF1ZXN0GhwucmVtb3RlY29udHJvbC5G",
+            "b3JjZVJlc3BvbnNlIgAwAUI3Ch5pby5ncnBjLmV4YW1wbGVzLnJlbW90ZWNv",
+            "bnRyb2xCDVJlbW90ZUNvbnRyb2xQAaICA0hMV2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Remotecontrol.ForceRequest), global::Remotecontrol.ForceRequest.Parser, new[]{ "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Remotecontrol.ForceResponse), global::Remotecontrol.ForceResponse.Parser, new[]{ "Success", "Pwm" }, null, null, null)
@@ -219,9 +219,9 @@ namespace Remotecontrol {
 
     /// <summary>Field number for the "pwm" field.</summary>
     public const int PwmFieldNumber = 2;
-    private global::Common.Pwm pwm_;
+    private global::Std.Float32Array pwm_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Common.Pwm Pwm {
+    public global::Std.Float32Array Pwm {
       get { return pwm_; }
       set {
         pwm_ = value;
@@ -302,7 +302,7 @@ namespace Remotecontrol {
       }
       if (other.pwm_ != null) {
         if (pwm_ == null) {
-          pwm_ = new global::Common.Pwm();
+          pwm_ = new global::Std.Float32Array();
         }
         Pwm.MergeFrom(other.Pwm);
       }
@@ -323,7 +323,7 @@ namespace Remotecontrol {
           }
           case 18: {
             if (pwm_ == null) {
-              pwm_ = new global::Common.Pwm();
+              pwm_ = new global::Std.Float32Array();
             }
             input.ReadMessage(pwm_);
             break;

@@ -24,19 +24,19 @@ namespace Tf {
     static TfReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgh0Zi5wcm90bxICdGYaDGNvbW1vbi5wcm90byI3Cg5UZkZyYW1lUmVxdWVz",
-            "dBIPCgdmcmFtZUlkGAEgASgJEhQKDGNoaWxkRnJhbWVJZBgCIAEoCSJ8CgdU",
-            "ZkZyYW1lEg8KB2ZyYW1lSWQYASABKAkSFAoMY2hpbGRGcmFtZUlkGAIgASgJ",
-            "EiQKC3RyYW5zbGF0aW9uGAMgASgLMg8uY29tbW9uLlZlY3RvcjMSJAoIcm90",
-            "YXRpb24YBCABKAsyEi5jb21tb24uUXVhdGVybmlvbiIqCgtUZkZyYW1lTGlz",
-            "dBIbCgZmcmFtZXMYASADKAsyCy50Zi5UZkZyYW1lMtABCgJUZhIwCgxHZXRB",
-            "bGxGcmFtZXMSDS5jb21tb24uRW1wdHkaDy50Zi5UZkZyYW1lTGlzdCIAEi0K",
-            "CEdldEZyYW1lEhIudGYuVGZGcmFtZVJlcXVlc3QaCy50Zi5UZkZyYW1lIgAS",
-            "NQoPU3RyZWFtQWxsRnJhbWVzEg0uY29tbW9uLkVtcHR5Gg8udGYuVGZGcmFt",
-            "ZUxpc3QiADABEjIKC1N0cmVhbUZyYW1lEhIudGYuVGZGcmFtZVJlcXVlc3Qa",
-            "Cy50Zi5UZkZyYW1lIgAwAWIGcHJvdG8z"));
+            "Cgh0Zi5wcm90bxICdGYaCXN0ZC5wcm90bxoOZ2VvbWV0cnkucHJvdG8iNwoO",
+            "VGZGcmFtZVJlcXVlc3QSDwoHZnJhbWVJZBgBIAEoCRIUCgxjaGlsZEZyYW1l",
+            "SWQYAiABKAkigAEKB1RmRnJhbWUSDwoHZnJhbWVJZBgBIAEoCRIUCgxjaGls",
+            "ZEZyYW1lSWQYAiABKAkSJgoLdHJhbnNsYXRpb24YAyABKAsyES5nZW9tZXRy",
+            "eS5WZWN0b3IzEiYKCHJvdGF0aW9uGAQgASgLMhQuZ2VvbWV0cnkuUXVhdGVy",
+            "bmlvbiIqCgtUZkZyYW1lTGlzdBIbCgZmcmFtZXMYASADKAsyCy50Zi5UZkZy",
+            "YW1lMsoBCgJUZhItCgxHZXRBbGxGcmFtZXMSCi5zdGQuRW1wdHkaDy50Zi5U",
+            "ZkZyYW1lTGlzdCIAEi0KCEdldEZyYW1lEhIudGYuVGZGcmFtZVJlcXVlc3Qa",
+            "Cy50Zi5UZkZyYW1lIgASMgoPU3RyZWFtQWxsRnJhbWVzEgouc3RkLkVtcHR5",
+            "Gg8udGYuVGZGcmFtZUxpc3QiADABEjIKC1N0cmVhbUZyYW1lEhIudGYuVGZG",
+            "cmFtZVJlcXVlc3QaCy50Zi5UZkZyYW1lIgAwAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrameRequest), global::Tf.TfFrameRequest.Parser, new[]{ "FrameId", "ChildFrameId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrame), global::Tf.TfFrame.Parser, new[]{ "FrameId", "ChildFrameId", "Translation", "Rotation" }, null, null, null),
@@ -265,9 +265,9 @@ namespace Tf {
 
     /// <summary>Field number for the "translation" field.</summary>
     public const int TranslationFieldNumber = 3;
-    private global::Common.Vector3 translation_;
+    private global::Geometry.Vector3 translation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Common.Vector3 Translation {
+    public global::Geometry.Vector3 Translation {
       get { return translation_; }
       set {
         translation_ = value;
@@ -276,9 +276,9 @@ namespace Tf {
 
     /// <summary>Field number for the "rotation" field.</summary>
     public const int RotationFieldNumber = 4;
-    private global::Common.Quaternion rotation_;
+    private global::Geometry.Quaternion rotation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Common.Quaternion Rotation {
+    public global::Geometry.Quaternion Rotation {
       get { return rotation_; }
       set {
         rotation_ = value;
@@ -380,13 +380,13 @@ namespace Tf {
       }
       if (other.translation_ != null) {
         if (translation_ == null) {
-          translation_ = new global::Common.Vector3();
+          translation_ = new global::Geometry.Vector3();
         }
         Translation.MergeFrom(other.Translation);
       }
       if (other.rotation_ != null) {
         if (rotation_ == null) {
-          rotation_ = new global::Common.Quaternion();
+          rotation_ = new global::Geometry.Quaternion();
         }
         Rotation.MergeFrom(other.Rotation);
       }
@@ -411,14 +411,14 @@ namespace Tf {
           }
           case 26: {
             if (translation_ == null) {
-              translation_ = new global::Common.Vector3();
+              translation_ = new global::Geometry.Vector3();
             }
             input.ReadMessage(translation_);
             break;
           }
           case 34: {
             if (rotation_ == null) {
-              rotation_ = new global::Common.Quaternion();
+              rotation_ = new global::Geometry.Quaternion();
             }
             input.ReadMessage(rotation_);
             break;

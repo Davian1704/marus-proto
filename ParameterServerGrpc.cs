@@ -15,7 +15,7 @@ namespace Parameterserver {
     static readonly grpc::Marshaller<global::Parameterserver.GetParamRequest> __Marshaller_parameterserver_GetParamRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Parameterserver.GetParamRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Parameterserver.ParamValue> __Marshaller_parameterserver_ParamValue = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Parameterserver.ParamValue.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Parameterserver.SetParamRequest> __Marshaller_parameterserver_SetParamRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Parameterserver.SetParamRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Common.Empty> __Marshaller_common_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Common.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Std.Empty> __Marshaller_std_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Std.Empty.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Parameterserver.GetParamRequest, global::Parameterserver.ParamValue> __Method_GetParameter = new grpc::Method<global::Parameterserver.GetParamRequest, global::Parameterserver.ParamValue>(
         grpc::MethodType.Unary,
@@ -24,12 +24,12 @@ namespace Parameterserver {
         __Marshaller_parameterserver_GetParamRequest,
         __Marshaller_parameterserver_ParamValue);
 
-    static readonly grpc::Method<global::Parameterserver.SetParamRequest, global::Common.Empty> __Method_SetParameter = new grpc::Method<global::Parameterserver.SetParamRequest, global::Common.Empty>(
+    static readonly grpc::Method<global::Parameterserver.SetParamRequest, global::Std.Empty> __Method_SetParameter = new grpc::Method<global::Parameterserver.SetParamRequest, global::Std.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetParameter",
         __Marshaller_parameterserver_SetParamRequest,
-        __Marshaller_common_Empty);
+        __Marshaller_std_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -45,7 +45,7 @@ namespace Parameterserver {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Common.Empty> SetParameter(global::Parameterserver.SetParamRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Std.Empty> SetParameter(global::Parameterserver.SetParamRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -91,19 +91,19 @@ namespace Parameterserver {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetParameter, null, options, request);
       }
-      public virtual global::Common.Empty SetParameter(global::Parameterserver.SetParamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Std.Empty SetParameter(global::Parameterserver.SetParamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetParameter(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Common.Empty SetParameter(global::Parameterserver.SetParamRequest request, grpc::CallOptions options)
+      public virtual global::Std.Empty SetParameter(global::Parameterserver.SetParamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetParameter, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Common.Empty> SetParameterAsync(global::Parameterserver.SetParamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Std.Empty> SetParameterAsync(global::Parameterserver.SetParamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetParameterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Common.Empty> SetParameterAsync(global::Parameterserver.SetParamRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Std.Empty> SetParameterAsync(global::Parameterserver.SetParamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetParameter, null, options, request);
       }

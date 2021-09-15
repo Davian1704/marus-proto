@@ -24,19 +24,19 @@ namespace Parameterserver {
     static ParameterServerReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZwYXJhbWV0ZXJfc2VydmVyLnByb3RvEg9wYXJhbWV0ZXJzZXJ2ZXIaDGNv",
-            "bW1vbi5wcm90byIfCg9HZXRQYXJhbVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJL",
-            "Cg9TZXRQYXJhbVJlcXVlc3QSDAoEbmFtZRgBIAEoCRIqCgV2YWx1ZRgCIAEo",
-            "CzIbLnBhcmFtZXRlcnNlcnZlci5QYXJhbVZhbHVlInIKClBhcmFtVmFsdWUS",
-            "EgoIdmFsdWVTdHIYASABKAlIABISCgh2YWx1ZUludBgCIAEoBUgAEhMKCXZh",
-            "bHVlQm9vbBgDIAEoCEgAEhUKC3ZhbHVlRG91YmxlGAQgASgBSABCEAoOcGFy",
-            "YW1ldGVyVmFsdWUypQEKD1BhcmFtZXRlclNlcnZlchJPCgxHZXRQYXJhbWV0",
-            "ZXISIC5wYXJhbWV0ZXJzZXJ2ZXIuR2V0UGFyYW1SZXF1ZXN0GhsucGFyYW1l",
-            "dGVyc2VydmVyLlBhcmFtVmFsdWUiABJBCgxTZXRQYXJhbWV0ZXISIC5wYXJh",
-            "bWV0ZXJzZXJ2ZXIuU2V0UGFyYW1SZXF1ZXN0Gg0uY29tbW9uLkVtcHR5IgBi",
-            "BnByb3RvMw=="));
+            "ChZwYXJhbWV0ZXJfc2VydmVyLnByb3RvEg9wYXJhbWV0ZXJzZXJ2ZXIaCXN0",
+            "ZC5wcm90byIfCg9HZXRQYXJhbVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJLCg9T",
+            "ZXRQYXJhbVJlcXVlc3QSDAoEbmFtZRgBIAEoCRIqCgV2YWx1ZRgCIAEoCzIb",
+            "LnBhcmFtZXRlcnNlcnZlci5QYXJhbVZhbHVlInIKClBhcmFtVmFsdWUSEgoI",
+            "dmFsdWVTdHIYASABKAlIABISCgh2YWx1ZUludBgCIAEoBUgAEhMKCXZhbHVl",
+            "Qm9vbBgDIAEoCEgAEhUKC3ZhbHVlRG91YmxlGAQgASgBSABCEAoOcGFyYW1l",
+            "dGVyVmFsdWUyogEKD1BhcmFtZXRlclNlcnZlchJPCgxHZXRQYXJhbWV0ZXIS",
+            "IC5wYXJhbWV0ZXJzZXJ2ZXIuR2V0UGFyYW1SZXF1ZXN0GhsucGFyYW1ldGVy",
+            "c2VydmVyLlBhcmFtVmFsdWUiABI+CgxTZXRQYXJhbWV0ZXISIC5wYXJhbWV0",
+            "ZXJzZXJ2ZXIuU2V0UGFyYW1SZXF1ZXN0Ggouc3RkLkVtcHR5IgBiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Parameterserver.GetParamRequest), global::Parameterserver.GetParamRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Parameterserver.SetParamRequest), global::Parameterserver.SetParamRequest.Parser, new[]{ "Name", "Value" }, null, null, null),

@@ -12,16 +12,16 @@ namespace Tf {
   {
     static readonly string __ServiceName = "tf.Tf";
 
-    static readonly grpc::Marshaller<global::Common.Empty> __Marshaller_common_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Common.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Std.Empty> __Marshaller_std_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Std.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Tf.TfFrameList> __Marshaller_tf_TfFrameList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tf.TfFrameList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Tf.TfFrameRequest> __Marshaller_tf_TfFrameRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tf.TfFrameRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Tf.TfFrame> __Marshaller_tf_TfFrame = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Tf.TfFrame.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Common.Empty, global::Tf.TfFrameList> __Method_GetAllFrames = new grpc::Method<global::Common.Empty, global::Tf.TfFrameList>(
+    static readonly grpc::Method<global::Std.Empty, global::Tf.TfFrameList> __Method_GetAllFrames = new grpc::Method<global::Std.Empty, global::Tf.TfFrameList>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAllFrames",
-        __Marshaller_common_Empty,
+        __Marshaller_std_Empty,
         __Marshaller_tf_TfFrameList);
 
     static readonly grpc::Method<global::Tf.TfFrameRequest, global::Tf.TfFrame> __Method_GetFrame = new grpc::Method<global::Tf.TfFrameRequest, global::Tf.TfFrame>(
@@ -31,11 +31,11 @@ namespace Tf {
         __Marshaller_tf_TfFrameRequest,
         __Marshaller_tf_TfFrame);
 
-    static readonly grpc::Method<global::Common.Empty, global::Tf.TfFrameList> __Method_StreamAllFrames = new grpc::Method<global::Common.Empty, global::Tf.TfFrameList>(
+    static readonly grpc::Method<global::Std.Empty, global::Tf.TfFrameList> __Method_StreamAllFrames = new grpc::Method<global::Std.Empty, global::Tf.TfFrameList>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "StreamAllFrames",
-        __Marshaller_common_Empty,
+        __Marshaller_std_Empty,
         __Marshaller_tf_TfFrameList);
 
     static readonly grpc::Method<global::Tf.TfFrameRequest, global::Tf.TfFrame> __Method_StreamFrame = new grpc::Method<global::Tf.TfFrameRequest, global::Tf.TfFrame>(
@@ -54,7 +54,7 @@ namespace Tf {
     /// <summary>Base class for server-side implementations of Tf</summary>
     public abstract partial class TfBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Tf.TfFrameList> GetAllFrames(global::Common.Empty request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Tf.TfFrameList> GetAllFrames(global::Std.Empty request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -64,7 +64,7 @@ namespace Tf {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task StreamAllFrames(global::Common.Empty request, grpc::IServerStreamWriter<global::Tf.TfFrameList> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task StreamAllFrames(global::Std.Empty request, grpc::IServerStreamWriter<global::Tf.TfFrameList> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -99,19 +99,19 @@ namespace Tf {
       {
       }
 
-      public virtual global::Tf.TfFrameList GetAllFrames(global::Common.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Tf.TfFrameList GetAllFrames(global::Std.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllFrames(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Tf.TfFrameList GetAllFrames(global::Common.Empty request, grpc::CallOptions options)
+      public virtual global::Tf.TfFrameList GetAllFrames(global::Std.Empty request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAllFrames, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Tf.TfFrameList> GetAllFramesAsync(global::Common.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Tf.TfFrameList> GetAllFramesAsync(global::Std.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllFramesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Tf.TfFrameList> GetAllFramesAsync(global::Common.Empty request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Tf.TfFrameList> GetAllFramesAsync(global::Std.Empty request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAllFrames, null, options, request);
       }
@@ -131,11 +131,11 @@ namespace Tf {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetFrame, null, options, request);
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Tf.TfFrameList> StreamAllFrames(global::Common.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Tf.TfFrameList> StreamAllFrames(global::Std.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamAllFrames(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Tf.TfFrameList> StreamAllFrames(global::Common.Empty request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::Tf.TfFrameList> StreamAllFrames(global::Std.Empty request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_StreamAllFrames, null, options, request);
       }
