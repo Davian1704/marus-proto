@@ -1,0 +1,15 @@
+syntax = "proto3";
+package sensor;
+
+import "std.proto";
+import "geometry.proto";
+
+message Imu {
+  std.Header header = 1;
+  geometry.Quaternion orientation = 2;
+  repeated double orientationCovariance = 3;
+  geometry.Vector3 angularVelocity = 4;
+  repeated double angularVelocityCovariance = 5;
+  geometry.Vector3 linearAcceleration = 6;
+  repeated double linearAccelerationCovariance = 7;
+}

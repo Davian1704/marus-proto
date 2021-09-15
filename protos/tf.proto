@@ -1,14 +1,14 @@
-
 syntax = "proto3";
 
-import "common.proto";
+import "std.proto";
+import "geometry.proto";
 
 package tf;
 
 service Tf {
-    rpc GetAllFrames(common.Empty) returns (TfFrameList) {}
+    rpc GetAllFrames(std.Empty) returns (TfFrameList) {}
     rpc GetFrame(TfFrameRequest) returns (TfFrame) {}
-    rpc StreamAllFrames(common.Empty) returns (stream TfFrameList) {}
+    rpc StreamAllFrames(std.Empty) returns (stream TfFrameList) {}
     rpc StreamFrame(TfFrameRequest) returns (stream TfFrame) {}
 }
 
@@ -21,8 +21,8 @@ message TfFrameRequest {
 message TfFrame {
     string frameId = 1;
     string childFrameId = 2;
-    common.Vector3 translation = 3;
-    common.Quaternion rotation = 4;
+    geometry.Vector3 translation = 3;
+    geometry.Quaternion rotation = 4;
 }
 
 message TfFrameList {

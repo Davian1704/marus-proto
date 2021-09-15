@@ -1,0 +1,13 @@
+syntax = "proto3";
+package std;
+
+message Empty {}
+
+message Header {
+    double timestamp = 1;
+    string frameId = 2;
+}
+
+message Float32Array {
+    repeated float data = 1; 
+}

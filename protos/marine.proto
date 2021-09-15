@@ -1,0 +1,31 @@
+syntax = "proto3";
+package marine;
+
+import "std.proto";
+import "geometry.proto";
+import "geographic.proto";
+
+message Dvl {
+    enum VelocityReference {
+        UNKNOWN = 0;
+        WATER = 1;
+        BOTTOM = 2;
+    }
+    
+    std.Header header = 1;
+    geometry.Vector3 velocity = 2;
+    repeated double velocityCovariance = 3;
+    double altitude = 4;
+    double altitudeCovariance = 5;
+    VelocityReference velocityReference = 7;
+}
+
+message AISPositionReport {
+    uint32 type = 1;
+    uint32 mmsi = 2;
+    float heading = 3;
+    float courseOverGround = 4;
+    float speedOverGround = 5;
+    uint32 timestamp = 6;
+    geographic.GeoPoint geopoint = 7;
+}

@@ -1,6 +1,9 @@
 syntax = "proto3";
 
-import "common.proto";
+import "geometry.proto";
+import "sensor.proto";
+import "marine.proto";
+import "geographic.proto";
 
 option java_multiple_files = true;
 option java_package = "io.grpc.examples.sensorstreaming";
@@ -82,26 +85,22 @@ message DepthStreamingRequest {
 }
 
 message DvlStreamingRequest {
-    float altitude = 1;
-    common.Vector3 groundVelocity = 2;
-    repeated float beamRanges = 3;
-    string address = 4;
+    marine.Dvl dvl = 1;
+    string address = 2;
 }
 
 message GnssStreamingRequest {
-    common.GeoPoint point = 1;
+    geographic.GeoPoint point = 1;
     string address = 2;
 }
 
 message ImuStreamingRequest {
-    common.Vector3 acceleration = 1;
-    common.Vector3 angularVelocity = 2;
-    common.Vector3 orientation = 3;
-    string address = 4;
+    sensor.Imu data = 1;
+    string address = 2;
 }
 
 message PoseStreamingRequest {
-    common.Pose pose = 1;
+    geometry.Pose pose = 1;
     string address = 2;
 }
 
@@ -111,6 +110,6 @@ message SonarStreamingRequest {
     string address = 3;
 }
 message AISStreamingRequest {
-    common.AISPositionReport aisPositionReport = 1;
+    marine.AISPositionReport aisPositionReport = 1;
     string address = 2;
 }

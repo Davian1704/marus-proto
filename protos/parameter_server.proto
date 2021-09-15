@@ -1,12 +1,11 @@
 syntax = "proto3";
-
 package parameterserver;
 
-import "common.proto";
+import "std.proto";
 
 service ParameterServer {
     rpc GetParameter (GetParamRequest) returns (ParamValue) {}
-    rpc SetParameter (SetParamRequest) returns (common.Empty) {}
+    rpc SetParameter (SetParamRequest) returns (std.Empty) {}
 }
 
 message GetParamRequest {
