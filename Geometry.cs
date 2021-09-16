@@ -24,25 +24,31 @@ namespace Geometry {
     static GeometryReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5nZW9tZXRyeS5wcm90bxIIZ2VvbWV0cnkiKgoHVmVjdG9yMxIJCgF4GAEg",
-            "ASgBEgkKAXkYAiABKAESCQoBehgDIAEoASIoCgVQb2ludBIJCgF4GAEgASgB",
-            "EgkKAXkYAiABKAESCQoBehgDIAEoASI4CgpRdWF0ZXJuaW9uEgkKAXgYASAB",
-            "KAESCQoBeRgCIAEoARIJCgF6GAMgASgBEgkKAXcYBCABKAEiTgoFVHdpc3QS",
-            "IQoGbGluZWFyGAEgASgLMhEuZ2VvbWV0cnkuVmVjdG9yMxIiCgdhbmd1bGFy",
-            "GAIgASgLMhEuZ2VvbWV0cnkuVmVjdG9yMyJUCgRQb3NlEiEKCHBvc2l0aW9u",
-            "GAEgASgLMg8uZ2VvbWV0cnkuUG9pbnQSKQoLb3JpZW50YXRpb24YAiABKAsy",
-            "FC5nZW9tZXRyeS5RdWF0ZXJuaW9uIk0KBldyZW5jaBIgCgVmb3JjZRgBIAEo",
-            "CzIRLmdlb21ldHJ5LlZlY3RvcjMSIQoGdG9ycXVlGAIgASgLMhEuZ2VvbWV0",
-            "cnkuVmVjdG9yM2IGcHJvdG8z"));
+            "Cg5nZW9tZXRyeS5wcm90bxIIZ2VvbWV0cnkaCXN0ZC5wcm90byIqCgdWZWN0",
+            "b3IzEgkKAXgYASABKAESCQoBeRgCIAEoARIJCgF6GAMgASgBIigKBVBvaW50",
+            "EgkKAXgYASABKAESCQoBeRgCIAEoARIJCgF6GAMgASgBIjgKClF1YXRlcm5p",
+            "b24SCQoBeBgBIAEoARIJCgF5GAIgASgBEgkKAXoYAyABKAESCQoBdxgEIAEo",
+            "ASJOCgVUd2lzdBIhCgZsaW5lYXIYASABKAsyES5nZW9tZXRyeS5WZWN0b3Iz",
+            "EiIKB2FuZ3VsYXIYAiABKAsyES5nZW9tZXRyeS5WZWN0b3IzIlQKBFBvc2US",
+            "IQoIcG9zaXRpb24YASABKAsyDy5nZW9tZXRyeS5Qb2ludBIpCgtvcmllbnRh",
+            "dGlvbhgCIAEoCzIULmdlb21ldHJ5LlF1YXRlcm5pb24iTQoGV3JlbmNoEiAK",
+            "BWZvcmNlGAEgASgLMhEuZ2VvbWV0cnkuVmVjdG9yMxIhCgZ0b3JxdWUYAiAB",
+            "KAsyES5nZW9tZXRyeS5WZWN0b3IzIkYKElBvc2VXaXRoQ292YXJpYW5jZRIc",
+            "CgRwb3NlGAEgASgLMg4uZ2VvbWV0cnkuUG9zZRISCgpjb3ZhcmlhbmNlGAIg",
+            "AygBImQKGVBvc2VXaXRoQ292YXJpYW5jZVN0YW1wZWQSGwoGaGVhZGVyGAEg",
+            "ASgLMgsuc3RkLkhlYWRlchIqCgRwb3NlGAIgASgLMhwuZ2VvbWV0cnkuUG9z",
+            "ZVdpdGhDb3ZhcmlhbmNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Vector3), global::Geometry.Vector3.Parser, new[]{ "X", "Y", "Z" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Point), global::Geometry.Point.Parser, new[]{ "X", "Y", "Z" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Quaternion), global::Geometry.Quaternion.Parser, new[]{ "X", "Y", "Z", "W" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Twist), global::Geometry.Twist.Parser, new[]{ "Linear", "Angular" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Pose), global::Geometry.Pose.Parser, new[]{ "Position", "Orientation" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Wrench), global::Geometry.Wrench.Parser, new[]{ "Force", "Torque" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Wrench), global::Geometry.Wrench.Parser, new[]{ "Force", "Torque" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.PoseWithCovariance), global::Geometry.PoseWithCovariance.Parser, new[]{ "Pose", "Covariance" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.PoseWithCovarianceStamped), global::Geometry.PoseWithCovarianceStamped.Parser, new[]{ "Header", "Pose" }, null, null, null)
           }));
     }
     #endregion
@@ -1131,6 +1137,331 @@ namespace Geometry {
               torque_ = new global::Geometry.Vector3();
             }
             input.ReadMessage(torque_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PoseWithCovariance : pb::IMessage<PoseWithCovariance> {
+    private static readonly pb::MessageParser<PoseWithCovariance> _parser = new pb::MessageParser<PoseWithCovariance>(() => new PoseWithCovariance());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PoseWithCovariance> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Geometry.GeometryReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PoseWithCovariance() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PoseWithCovariance(PoseWithCovariance other) : this() {
+      pose_ = other.pose_ != null ? other.pose_.Clone() : null;
+      covariance_ = other.covariance_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PoseWithCovariance Clone() {
+      return new PoseWithCovariance(this);
+    }
+
+    /// <summary>Field number for the "pose" field.</summary>
+    public const int PoseFieldNumber = 1;
+    private global::Geometry.Pose pose_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Geometry.Pose Pose {
+      get { return pose_; }
+      set {
+        pose_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "covariance" field.</summary>
+    public const int CovarianceFieldNumber = 2;
+    private static readonly pb::FieldCodec<double> _repeated_covariance_codec
+        = pb::FieldCodec.ForDouble(18);
+    private readonly pbc::RepeatedField<double> covariance_ = new pbc::RepeatedField<double>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<double> Covariance {
+      get { return covariance_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PoseWithCovariance);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PoseWithCovariance other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Pose, other.Pose)) return false;
+      if(!covariance_.Equals(other.covariance_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (pose_ != null) hash ^= Pose.GetHashCode();
+      hash ^= covariance_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (pose_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Pose);
+      }
+      covariance_.WriteTo(output, _repeated_covariance_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (pose_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pose);
+      }
+      size += covariance_.CalculateSize(_repeated_covariance_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PoseWithCovariance other) {
+      if (other == null) {
+        return;
+      }
+      if (other.pose_ != null) {
+        if (pose_ == null) {
+          pose_ = new global::Geometry.Pose();
+        }
+        Pose.MergeFrom(other.Pose);
+      }
+      covariance_.Add(other.covariance_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (pose_ == null) {
+              pose_ = new global::Geometry.Pose();
+            }
+            input.ReadMessage(pose_);
+            break;
+          }
+          case 18:
+          case 17: {
+            covariance_.AddEntriesFrom(input, _repeated_covariance_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PoseWithCovarianceStamped : pb::IMessage<PoseWithCovarianceStamped> {
+    private static readonly pb::MessageParser<PoseWithCovarianceStamped> _parser = new pb::MessageParser<PoseWithCovarianceStamped>(() => new PoseWithCovarianceStamped());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PoseWithCovarianceStamped> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Geometry.GeometryReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PoseWithCovarianceStamped() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PoseWithCovarianceStamped(PoseWithCovarianceStamped other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      pose_ = other.pose_ != null ? other.pose_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PoseWithCovarianceStamped Clone() {
+      return new PoseWithCovarianceStamped(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pose" field.</summary>
+    public const int PoseFieldNumber = 2;
+    private global::Geometry.PoseWithCovariance pose_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Geometry.PoseWithCovariance Pose {
+      get { return pose_; }
+      set {
+        pose_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PoseWithCovarianceStamped);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PoseWithCovarianceStamped other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if (!object.Equals(Pose, other.Pose)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      if (pose_ != null) hash ^= Pose.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (pose_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Pose);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      if (pose_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pose);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PoseWithCovarianceStamped other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      if (other.pose_ != null) {
+        if (pose_ == null) {
+          pose_ = new global::Geometry.PoseWithCovariance();
+        }
+        Pose.MergeFrom(other.Pose);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 18: {
+            if (pose_ == null) {
+              pose_ = new global::Geometry.PoseWithCovariance();
+            }
+            input.ReadMessage(pose_);
             break;
           }
         }

@@ -31,11 +31,22 @@ namespace Sensor {
             "BCABKAsyES5nZW9tZXRyeS5WZWN0b3IzEiEKGWFuZ3VsYXJWZWxvY2l0eUNv",
             "dmFyaWFuY2UYBSADKAESLQoSbGluZWFyQWNjZWxlcmF0aW9uGAYgASgLMhEu",
             "Z2VvbWV0cnkuVmVjdG9yMxIkChxsaW5lYXJBY2NlbGVyYXRpb25Db3Zhcmlh",
-            "bmNlGAcgAygBYgZwcm90bzM="));
+            "bmNlGAcgAygBIvMBCgxOYXZTYXRTdGF0dXMSKwoGc3RhdHVzGAEgASgOMhsu",
+            "c2Vuc29yLk5hdlNhdFN0YXR1cy5TdGF0dXMSLQoHc2VydmljZRgCIAEoDjIc",
+            "LnNlbnNvci5OYXZTYXRTdGF0dXMuU2VydmljZSJCCgZTdGF0dXMSBwoDRklY",
+            "EAASDAoIU0JBU19GSVgQARIMCghHQkFTX0ZJWBACEhMKBk5PX0ZJWBD/////",
+            "//////8BIkMKB1NlcnZpY2USCAoETk9ORRAAEgcKA0dQUxABEgsKB0dMT05B",
+            "U1MQAhILCgdDT01QQVNTEAQSCwoHR0FMSUxFTxAIIqIBCglOYXZTYXRGaXgS",
+            "GwoGaGVhZGVyGAEgASgLMgsuc3RkLkhlYWRlchIkCgZzdGF0dXMYAiABKAsy",
+            "FC5zZW5zb3IuTmF2U2F0U3RhdHVzEhAKCGxhdGl0dWRlGAMgASgBEhEKCWxv",
+            "bmdpdHVkZRgEIAEoARIQCghhbHRpdHVkZRgFIAEoARIbChNwb3NpdGlvbl9j",
+            "b3ZhcmlhbmNlGAYgAygBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Imu), global::Sensor.Imu.Parser, new[]{ "Header", "Orientation", "OrientationCovariance", "AngularVelocity", "AngularVelocityCovariance", "LinearAcceleration", "LinearAccelerationCovariance" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Imu), global::Sensor.Imu.Parser, new[]{ "Header", "Orientation", "OrientationCovariance", "AngularVelocity", "AngularVelocityCovariance", "LinearAcceleration", "LinearAccelerationCovariance" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatStatus), global::Sensor.NavSatStatus.Parser, new[]{ "Status", "Service" }, null, new[]{ typeof(global::Sensor.NavSatStatus.Types.Status), typeof(global::Sensor.NavSatStatus.Types.Service) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatFix), global::Sensor.NavSatFix.Parser, new[]{ "Header", "Status", "Latitude", "Longitude", "Altitude", "PositionCovariance" }, null, null, null)
           }));
     }
     #endregion
@@ -334,6 +345,459 @@ namespace Sensor {
           case 58:
           case 57: {
             linearAccelerationCovariance_.AddEntriesFrom(input, _repeated_linearAccelerationCovariance_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class NavSatStatus : pb::IMessage<NavSatStatus> {
+    private static readonly pb::MessageParser<NavSatStatus> _parser = new pb::MessageParser<NavSatStatus>(() => new NavSatStatus());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NavSatStatus> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensor.SensorReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NavSatStatus() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NavSatStatus(NavSatStatus other) : this() {
+      status_ = other.status_;
+      service_ = other.service_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NavSatStatus Clone() {
+      return new NavSatStatus(this);
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 1;
+    private global::Sensor.NavSatStatus.Types.Status status_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Sensor.NavSatStatus.Types.Status Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "service" field.</summary>
+    public const int ServiceFieldNumber = 2;
+    private global::Sensor.NavSatStatus.Types.Service service_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Sensor.NavSatStatus.Types.Service Service {
+      get { return service_; }
+      set {
+        service_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NavSatStatus);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NavSatStatus other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Status != other.Status) return false;
+      if (Service != other.Service) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Service != 0) hash ^= Service.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Status != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Status);
+      }
+      if (Service != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Service);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Status != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (Service != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Service);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NavSatStatus other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Status != 0) {
+        Status = other.Status;
+      }
+      if (other.Service != 0) {
+        Service = other.Service;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            status_ = (global::Sensor.NavSatStatus.Types.Status) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            service_ = (global::Sensor.NavSatStatus.Types.Service) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NavSatStatus message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Status {
+        [pbr::OriginalName("FIX")] Fix = 0,
+        [pbr::OriginalName("SBAS_FIX")] SbasFix = 1,
+        [pbr::OriginalName("GBAS_FIX")] GbasFix = 2,
+        [pbr::OriginalName("NO_FIX")] NoFix = -1,
+      }
+
+      public enum Service {
+        [pbr::OriginalName("NONE")] None = 0,
+        [pbr::OriginalName("GPS")] Gps = 1,
+        [pbr::OriginalName("GLONASS")] Glonass = 2,
+        [pbr::OriginalName("COMPASS")] Compass = 4,
+        [pbr::OriginalName("GALILEO")] Galileo = 8,
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class NavSatFix : pb::IMessage<NavSatFix> {
+    private static readonly pb::MessageParser<NavSatFix> _parser = new pb::MessageParser<NavSatFix>(() => new NavSatFix());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NavSatFix> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensor.SensorReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NavSatFix() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NavSatFix(NavSatFix other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      status_ = other.status_ != null ? other.status_.Clone() : null;
+      latitude_ = other.latitude_;
+      longitude_ = other.longitude_;
+      altitude_ = other.altitude_;
+      positionCovariance_ = other.positionCovariance_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NavSatFix Clone() {
+      return new NavSatFix(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 2;
+    private global::Sensor.NavSatStatus status_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Sensor.NavSatStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "latitude" field.</summary>
+    public const int LatitudeFieldNumber = 3;
+    private double latitude_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Latitude {
+      get { return latitude_; }
+      set {
+        latitude_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "longitude" field.</summary>
+    public const int LongitudeFieldNumber = 4;
+    private double longitude_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Longitude {
+      get { return longitude_; }
+      set {
+        longitude_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "altitude" field.</summary>
+    public const int AltitudeFieldNumber = 5;
+    private double altitude_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Altitude {
+      get { return altitude_; }
+      set {
+        altitude_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "position_covariance" field.</summary>
+    public const int PositionCovarianceFieldNumber = 6;
+    private static readonly pb::FieldCodec<double> _repeated_positionCovariance_codec
+        = pb::FieldCodec.ForDouble(50);
+    private readonly pbc::RepeatedField<double> positionCovariance_ = new pbc::RepeatedField<double>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<double> PositionCovariance {
+      get { return positionCovariance_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NavSatFix);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NavSatFix other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if (!object.Equals(Status, other.Status)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Latitude, other.Latitude)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Longitude, other.Longitude)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Altitude, other.Altitude)) return false;
+      if(!positionCovariance_.Equals(other.positionCovariance_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      if (status_ != null) hash ^= Status.GetHashCode();
+      if (Latitude != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Latitude);
+      if (Longitude != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Longitude);
+      if (Altitude != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Altitude);
+      hash ^= positionCovariance_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (status_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Status);
+      }
+      if (Latitude != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(Latitude);
+      }
+      if (Longitude != 0D) {
+        output.WriteRawTag(33);
+        output.WriteDouble(Longitude);
+      }
+      if (Altitude != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(Altitude);
+      }
+      positionCovariance_.WriteTo(output, _repeated_positionCovariance_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      if (status_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
+      }
+      if (Latitude != 0D) {
+        size += 1 + 8;
+      }
+      if (Longitude != 0D) {
+        size += 1 + 8;
+      }
+      if (Altitude != 0D) {
+        size += 1 + 8;
+      }
+      size += positionCovariance_.CalculateSize(_repeated_positionCovariance_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NavSatFix other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      if (other.status_ != null) {
+        if (status_ == null) {
+          status_ = new global::Sensor.NavSatStatus();
+        }
+        Status.MergeFrom(other.Status);
+      }
+      if (other.Latitude != 0D) {
+        Latitude = other.Latitude;
+      }
+      if (other.Longitude != 0D) {
+        Longitude = other.Longitude;
+      }
+      if (other.Altitude != 0D) {
+        Altitude = other.Altitude;
+      }
+      positionCovariance_.Add(other.positionCovariance_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 18: {
+            if (status_ == null) {
+              status_ = new global::Sensor.NavSatStatus();
+            }
+            input.ReadMessage(status_);
+            break;
+          }
+          case 25: {
+            Latitude = input.ReadDouble();
+            break;
+          }
+          case 33: {
+            Longitude = input.ReadDouble();
+            break;
+          }
+          case 41: {
+            Altitude = input.ReadDouble();
+            break;
+          }
+          case 50:
+          case 49: {
+            positionCovariance_.AddEntriesFrom(input, _repeated_positionCovariance_codec);
             break;
           }
         }
