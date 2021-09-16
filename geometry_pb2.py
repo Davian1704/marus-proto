@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import std_pb2 as std__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='geometry',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0egeometry.proto\x12\x08geometry\"*\n\x07Vector3\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"(\n\x05Point\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"8\n\nQuaternion\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\x12\t\n\x01w\x18\x04 \x01(\x01\"N\n\x05Twist\x12!\n\x06linear\x18\x01 \x01(\x0b\x32\x11.geometry.Vector3\x12\"\n\x07\x61ngular\x18\x02 \x01(\x0b\x32\x11.geometry.Vector3\"T\n\x04Pose\x12!\n\x08position\x18\x01 \x01(\x0b\x32\x0f.geometry.Point\x12)\n\x0borientation\x18\x02 \x01(\x0b\x32\x14.geometry.Quaternion\"M\n\x06Wrench\x12 \n\x05\x66orce\x18\x01 \x01(\x0b\x32\x11.geometry.Vector3\x12!\n\x06torque\x18\x02 \x01(\x0b\x32\x11.geometry.Vector3b\x06proto3')
-)
+  serialized_pb=_b('\n\x0egeometry.proto\x12\x08geometry\x1a\tstd.proto\"*\n\x07Vector3\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"(\n\x05Point\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"8\n\nQuaternion\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\x12\t\n\x01w\x18\x04 \x01(\x01\"N\n\x05Twist\x12!\n\x06linear\x18\x01 \x01(\x0b\x32\x11.geometry.Vector3\x12\"\n\x07\x61ngular\x18\x02 \x01(\x0b\x32\x11.geometry.Vector3\"T\n\x04Pose\x12!\n\x08position\x18\x01 \x01(\x0b\x32\x0f.geometry.Point\x12)\n\x0borientation\x18\x02 \x01(\x0b\x32\x14.geometry.Quaternion\"M\n\x06Wrench\x12 \n\x05\x66orce\x18\x01 \x01(\x0b\x32\x11.geometry.Vector3\x12!\n\x06torque\x18\x02 \x01(\x0b\x32\x11.geometry.Vector3\"F\n\x12PoseWithCovariance\x12\x1c\n\x04pose\x18\x01 \x01(\x0b\x32\x0e.geometry.Pose\x12\x12\n\ncovariance\x18\x02 \x03(\x01\"d\n\x19PoseWithCovarianceStamped\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12*\n\x04pose\x18\x02 \x01(\x0b\x32\x1c.geometry.PoseWithCovarianceb\x06proto3')
+  ,
+  dependencies=[std__pb2.DESCRIPTOR,])
 
 
 
@@ -65,8 +67,8 @@ _VECTOR3 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28,
-  serialized_end=70,
+  serialized_start=39,
+  serialized_end=81,
 )
 
 
@@ -110,8 +112,8 @@ _POINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=72,
-  serialized_end=112,
+  serialized_start=83,
+  serialized_end=123,
 )
 
 
@@ -162,8 +164,8 @@ _QUATERNION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=114,
-  serialized_end=170,
+  serialized_start=125,
+  serialized_end=181,
 )
 
 
@@ -200,8 +202,8 @@ _TWIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=172,
-  serialized_end=250,
+  serialized_start=183,
+  serialized_end=261,
 )
 
 
@@ -238,8 +240,8 @@ _POSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=252,
-  serialized_end=336,
+  serialized_start=263,
+  serialized_end=347,
 )
 
 
@@ -276,8 +278,84 @@ _WRENCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=338,
-  serialized_end=415,
+  serialized_start=349,
+  serialized_end=426,
+)
+
+
+_POSEWITHCOVARIANCE = _descriptor.Descriptor(
+  name='PoseWithCovariance',
+  full_name='geometry.PoseWithCovariance',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='pose', full_name='geometry.PoseWithCovariance.pose', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='covariance', full_name='geometry.PoseWithCovariance.covariance', index=1,
+      number=2, type=1, cpp_type=5, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=428,
+  serialized_end=498,
+)
+
+
+_POSEWITHCOVARIANCESTAMPED = _descriptor.Descriptor(
+  name='PoseWithCovarianceStamped',
+  full_name='geometry.PoseWithCovarianceStamped',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='geometry.PoseWithCovarianceStamped.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pose', full_name='geometry.PoseWithCovarianceStamped.pose', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=500,
+  serialized_end=600,
 )
 
 _TWIST.fields_by_name['linear'].message_type = _VECTOR3
@@ -286,12 +364,17 @@ _POSE.fields_by_name['position'].message_type = _POINT
 _POSE.fields_by_name['orientation'].message_type = _QUATERNION
 _WRENCH.fields_by_name['force'].message_type = _VECTOR3
 _WRENCH.fields_by_name['torque'].message_type = _VECTOR3
+_POSEWITHCOVARIANCE.fields_by_name['pose'].message_type = _POSE
+_POSEWITHCOVARIANCESTAMPED.fields_by_name['header'].message_type = std__pb2._HEADER
+_POSEWITHCOVARIANCESTAMPED.fields_by_name['pose'].message_type = _POSEWITHCOVARIANCE
 DESCRIPTOR.message_types_by_name['Vector3'] = _VECTOR3
 DESCRIPTOR.message_types_by_name['Point'] = _POINT
 DESCRIPTOR.message_types_by_name['Quaternion'] = _QUATERNION
 DESCRIPTOR.message_types_by_name['Twist'] = _TWIST
 DESCRIPTOR.message_types_by_name['Pose'] = _POSE
 DESCRIPTOR.message_types_by_name['Wrench'] = _WRENCH
+DESCRIPTOR.message_types_by_name['PoseWithCovariance'] = _POSEWITHCOVARIANCE
+DESCRIPTOR.message_types_by_name['PoseWithCovarianceStamped'] = _POSEWITHCOVARIANCESTAMPED
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Vector3 = _reflection.GeneratedProtocolMessageType('Vector3', (_message.Message,), dict(
@@ -335,6 +418,20 @@ Wrench = _reflection.GeneratedProtocolMessageType('Wrench', (_message.Message,),
   # @@protoc_insertion_point(class_scope:geometry.Wrench)
   ))
 _sym_db.RegisterMessage(Wrench)
+
+PoseWithCovariance = _reflection.GeneratedProtocolMessageType('PoseWithCovariance', (_message.Message,), dict(
+  DESCRIPTOR = _POSEWITHCOVARIANCE,
+  __module__ = 'geometry_pb2'
+  # @@protoc_insertion_point(class_scope:geometry.PoseWithCovariance)
+  ))
+_sym_db.RegisterMessage(PoseWithCovariance)
+
+PoseWithCovarianceStamped = _reflection.GeneratedProtocolMessageType('PoseWithCovarianceStamped', (_message.Message,), dict(
+  DESCRIPTOR = _POSEWITHCOVARIANCESTAMPED,
+  __module__ = 'geometry_pb2'
+  # @@protoc_insertion_point(class_scope:geometry.PoseWithCovarianceStamped)
+  ))
+_sym_db.RegisterMessage(PoseWithCovarianceStamped)
 
 
 # @@protoc_insertion_point(module_scope)
