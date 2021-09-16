@@ -1,6 +1,8 @@
 syntax = "proto3";
 package geometry;
 
+import "std.proto";
+
 message Vector3 {
     double x = 1;
     double y = 2;
@@ -34,6 +36,16 @@ message Pose {
 message Wrench {
     Vector3 force = 1;
     Vector3 torque = 2;
+}
+
+message PoseWithCovariance {
+    Pose pose = 1;
+    repeated double covariance = 2;
+}
+
+message PoseWithCovarianceStamped {
+    std.Header header = 1;
+    PoseWithCovariance pose = 2;
 }
 
 

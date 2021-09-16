@@ -80,7 +80,7 @@ message RadarStreamingRequest {
 }
 
 message DepthStreamingRequest {
-    float depth = 1;
+    geometry.PoseWithCovarianceStamped data = 1;
     string address = 2;
 }
 
@@ -90,7 +90,7 @@ message DvlStreamingRequest {
 }
 
 message GnssStreamingRequest {
-    geographic.GeoPoint point = 1;
+    sensor.NavSatFix data = 1;
     string address = 2;
 }
 
@@ -100,7 +100,7 @@ message ImuStreamingRequest {
 }
 
 message PoseStreamingRequest {
-    geometry.Pose pose = 1;
+    geometry.PoseWithCovarianceStamped data = 1;
     string address = 2;
 }
 

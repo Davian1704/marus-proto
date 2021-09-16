@@ -13,3 +13,32 @@ message Imu {
   geometry.Vector3 linearAcceleration = 6;
   repeated double linearAccelerationCovariance = 7;
 }
+
+message NavSatStatus {
+  enum Status {
+    FIX = 0;
+    SBAS_FIX = 1;
+    GBAS_FIX = 2;
+    NO_FIX = -1;
+  }
+  
+  enum Service {
+    NONE = 0;
+    GPS = 1;
+    GLONASS = 2;
+    COMPASS = 4;
+    GALILEO = 8;
+  }
+  
+  Status status = 1;
+  Service service = 2;
+}
+
+message NavSatFix {
+  std.Header header = 1;
+  NavSatStatus status = 2;
+  double latitude = 3;
+  double longitude = 4;
+  double altitude = 5;
+  repeated double position_covariance = 6;
+}
