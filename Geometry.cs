@@ -37,7 +37,11 @@ namespace Geometry {
             "CgRwb3NlGAEgASgLMg4uZ2VvbWV0cnkuUG9zZRISCgpjb3ZhcmlhbmNlGAIg",
             "AygBImQKGVBvc2VXaXRoQ292YXJpYW5jZVN0YW1wZWQSGwoGaGVhZGVyGAEg",
             "ASgLMgsuc3RkLkhlYWRlchIqCgRwb3NlGAIgASgLMhwuZ2VvbWV0cnkuUG9z",
-            "ZVdpdGhDb3ZhcmlhbmNlYgZwcm90bzM="));
+            "ZVdpdGhDb3ZhcmlhbmNlIkkKE1R3aXN0V2l0aENvdmFyaWFuY2USHgoFdHdp",
+            "c3QYASABKAsyDy5nZW9tZXRyeS5Ud2lzdBISCgpjb3ZhcmlhbmNlGAIgAygB",
+            "ImcKGlR3aXN0V2l0aENvdmFyaWFuY2VTdGFtcGVkEhsKBmhlYWRlchgBIAEo",
+            "CzILLnN0ZC5IZWFkZXISLAoFdHdpc3QYAiABKAsyHS5nZW9tZXRyeS5Ud2lz",
+            "dFdpdGhDb3ZhcmlhbmNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -48,7 +52,9 @@ namespace Geometry {
             new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Pose), global::Geometry.Pose.Parser, new[]{ "Position", "Orientation" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Wrench), global::Geometry.Wrench.Parser, new[]{ "Force", "Torque" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.PoseWithCovariance), global::Geometry.PoseWithCovariance.Parser, new[]{ "Pose", "Covariance" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.PoseWithCovarianceStamped), global::Geometry.PoseWithCovarianceStamped.Parser, new[]{ "Header", "Pose" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.PoseWithCovarianceStamped), global::Geometry.PoseWithCovarianceStamped.Parser, new[]{ "Header", "Pose" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.TwistWithCovariance), global::Geometry.TwistWithCovariance.Parser, new[]{ "Twist", "Covariance" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.TwistWithCovarianceStamped), global::Geometry.TwistWithCovarianceStamped.Parser, new[]{ "Header", "Twist" }, null, null, null)
           }));
     }
     #endregion
@@ -1462,6 +1468,331 @@ namespace Geometry {
               pose_ = new global::Geometry.PoseWithCovariance();
             }
             input.ReadMessage(pose_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class TwistWithCovariance : pb::IMessage<TwistWithCovariance> {
+    private static readonly pb::MessageParser<TwistWithCovariance> _parser = new pb::MessageParser<TwistWithCovariance>(() => new TwistWithCovariance());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TwistWithCovariance> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Geometry.GeometryReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TwistWithCovariance() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TwistWithCovariance(TwistWithCovariance other) : this() {
+      twist_ = other.twist_ != null ? other.twist_.Clone() : null;
+      covariance_ = other.covariance_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TwistWithCovariance Clone() {
+      return new TwistWithCovariance(this);
+    }
+
+    /// <summary>Field number for the "twist" field.</summary>
+    public const int TwistFieldNumber = 1;
+    private global::Geometry.Twist twist_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Geometry.Twist Twist {
+      get { return twist_; }
+      set {
+        twist_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "covariance" field.</summary>
+    public const int CovarianceFieldNumber = 2;
+    private static readonly pb::FieldCodec<double> _repeated_covariance_codec
+        = pb::FieldCodec.ForDouble(18);
+    private readonly pbc::RepeatedField<double> covariance_ = new pbc::RepeatedField<double>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<double> Covariance {
+      get { return covariance_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TwistWithCovariance);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TwistWithCovariance other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Twist, other.Twist)) return false;
+      if(!covariance_.Equals(other.covariance_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (twist_ != null) hash ^= Twist.GetHashCode();
+      hash ^= covariance_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (twist_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Twist);
+      }
+      covariance_.WriteTo(output, _repeated_covariance_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (twist_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Twist);
+      }
+      size += covariance_.CalculateSize(_repeated_covariance_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TwistWithCovariance other) {
+      if (other == null) {
+        return;
+      }
+      if (other.twist_ != null) {
+        if (twist_ == null) {
+          twist_ = new global::Geometry.Twist();
+        }
+        Twist.MergeFrom(other.Twist);
+      }
+      covariance_.Add(other.covariance_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (twist_ == null) {
+              twist_ = new global::Geometry.Twist();
+            }
+            input.ReadMessage(twist_);
+            break;
+          }
+          case 18:
+          case 17: {
+            covariance_.AddEntriesFrom(input, _repeated_covariance_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class TwistWithCovarianceStamped : pb::IMessage<TwistWithCovarianceStamped> {
+    private static readonly pb::MessageParser<TwistWithCovarianceStamped> _parser = new pb::MessageParser<TwistWithCovarianceStamped>(() => new TwistWithCovarianceStamped());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TwistWithCovarianceStamped> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Geometry.GeometryReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TwistWithCovarianceStamped() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TwistWithCovarianceStamped(TwistWithCovarianceStamped other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      twist_ = other.twist_ != null ? other.twist_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TwistWithCovarianceStamped Clone() {
+      return new TwistWithCovarianceStamped(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "twist" field.</summary>
+    public const int TwistFieldNumber = 2;
+    private global::Geometry.TwistWithCovariance twist_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Geometry.TwistWithCovariance Twist {
+      get { return twist_; }
+      set {
+        twist_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TwistWithCovarianceStamped);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TwistWithCovarianceStamped other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if (!object.Equals(Twist, other.Twist)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      if (twist_ != null) hash ^= Twist.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (twist_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Twist);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      if (twist_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Twist);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TwistWithCovarianceStamped other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      if (other.twist_ != null) {
+        if (twist_ == null) {
+          twist_ = new global::Geometry.TwistWithCovariance();
+        }
+        Twist.MergeFrom(other.Twist);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 18: {
+            if (twist_ == null) {
+              twist_ = new global::Geometry.TwistWithCovariance();
+            }
+            input.ReadMessage(twist_);
             break;
           }
         }
