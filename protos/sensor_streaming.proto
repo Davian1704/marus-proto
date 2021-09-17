@@ -85,7 +85,7 @@ message DepthStreamingRequest {
 }
 
 message DvlStreamingRequest {
-    marine.Dvl data = 1;
+    geometry.TwistWithCovarianceStamped data = 1;
     string address = 2;
 }
 

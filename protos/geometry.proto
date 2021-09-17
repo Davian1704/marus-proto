@@ -48,4 +48,13 @@ message PoseWithCovarianceStamped {
     PoseWithCovariance pose = 2;
 }
 
+message TwistWithCovariance {
+    Twist twist = 1;
+    repeated double covariance = 2;
+}
+
+message TwistWithCovarianceStamped {
+    std.Header header = 1;
+    TwistWithCovariance twist = 2;
+}
 
