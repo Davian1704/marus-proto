@@ -54,11 +54,6 @@ class SensorStreamingStub(object):
         request_serializer=sensor__streaming__pb2.PoseStreamingRequest.SerializeToString,
         response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
         )
-    self.StreamNavigationStatusSensor = channel.stream_unary(
-        '/sensorstreaming.SensorStreaming/StreamNavigationStatusSensor',
-        request_serializer=sensor__streaming__pb2.NavigationStatusStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
-        )
     self.StreamSonarSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamSonarSensor',
         request_serializer=sensor__streaming__pb2.SonarStreamingRequest.SerializeToString,
@@ -131,13 +126,6 @@ class SensorStreamingServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def StreamNavigationStatusSensor(self, request_iterator, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
   def StreamSonarSensor(self, request_iterator, context):
     # missing associated documentation comment in .proto file
     pass
@@ -193,11 +181,6 @@ def add_SensorStreamingServicer_to_server(servicer, server):
       'StreamPoseSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamPoseSensor,
           request_deserializer=sensor__streaming__pb2.PoseStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
-      ),
-      'StreamNavigationStatusSensor': grpc.stream_unary_rpc_method_handler(
-          servicer.StreamNavigationStatusSensor,
-          request_deserializer=sensor__streaming__pb2.NavigationStatusStreamingRequest.FromString,
           response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
       ),
       'StreamSonarSensor': grpc.stream_unary_rpc_method_handler(
