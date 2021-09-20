@@ -51,41 +51,36 @@ namespace Sensorstreaming {
             "FEduc3NTdHJlYW1pbmdSZXF1ZXN0Eh8KBGRhdGEYASABKAsyES5zZW5zb3Iu",
             "TmF2U2F0Rml4Eg8KB2FkZHJlc3MYAiABKAkiQQoTSW11U3RyZWFtaW5nUmVx",
             "dWVzdBIZCgRkYXRhGAEgASgLMgsuc2Vuc29yLkltdRIPCgdhZGRyZXNzGAIg",
-            "ASgJIloKFFBvc2VTdHJlYW1pbmdSZXF1ZXN0EjEKBGRhdGEYASABKAsyIy5n",
-            "ZW9tZXRyeS5Qb3NlV2l0aENvdmFyaWFuY2VTdGFtcGVkEg8KB2FkZHJlc3MY",
-            "AiABKAkiWAogTmF2aWdhdGlvblN0YXR1c1N0cmVhbWluZ1JlcXVlc3QSIwoE",
-            "ZGF0YRgBIAEoCzIVLmF1di5OYXZpZ2F0aW9uU3RhdHVzEg8KB2FkZHJlc3MY",
-            "AiABKAkiSAoVU29uYXJTdHJlYW1pbmdSZXF1ZXN0Eg0KBXJhbmdlGAEgASgC",
-            "Eg8KB2JlYXJpbmcYAiABKAISDwoHYWRkcmVzcxgDIAEoCSJcChNBSVNTdHJl",
-            "YW1pbmdSZXF1ZXN0EjQKEWFpc1Bvc2l0aW9uUmVwb3J0GAEgASgLMhkubWFy",
-            "aW5lLkFJU1Bvc2l0aW9uUmVwb3J0Eg8KB2FkZHJlc3MYAiABKAky8AgKD1Nl",
-            "bnNvclN0cmVhbWluZxJlChJTdHJlYW1DYW1lcmFTZW5zb3ISJy5zZW5zb3Jz",
-            "dHJlYW1pbmcuQ2FtZXJhU3RyZWFtaW5nUmVxdWVzdBoiLnNlbnNvcnN0cmVh",
-            "bWluZy5TdHJlYW1pbmdSZXNwb25zZSIAKAESYwoRU3RyZWFtTGlkYXJTZW5z",
-            "b3ISJi5zZW5zb3JzdHJlYW1pbmcuTGlkYXJTdHJlYW1pbmdSZXF1ZXN0GiIu",
-            "c2Vuc29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3BvbnNlIgAoARJjChFTdHJl",
-            "YW1SYWRhclNlbnNvchImLnNlbnNvcnN0cmVhbWluZy5SYWRhclN0cmVhbWlu",
-            "Z1JlcXVlc3QaIi5zZW5zb3JzdHJlYW1pbmcuU3RyZWFtaW5nUmVzcG9uc2Ui",
-            "ACgBEmMKEVN0cmVhbURlcHRoU2Vuc29yEiYuc2Vuc29yc3RyZWFtaW5nLkRl",
-            "cHRoU3RyZWFtaW5nUmVxdWVzdBoiLnNlbnNvcnN0cmVhbWluZy5TdHJlYW1p",
-            "bmdSZXNwb25zZSIAKAESXwoPU3RyZWFtRHZsU2Vuc29yEiQuc2Vuc29yc3Ry",
-            "ZWFtaW5nLkR2bFN0cmVhbWluZ1JlcXVlc3QaIi5zZW5zb3JzdHJlYW1pbmcu",
-            "U3RyZWFtaW5nUmVzcG9uc2UiACgBEmEKEFN0cmVhbUduc3NTZW5zb3ISJS5z",
-            "ZW5zb3JzdHJlYW1pbmcuR25zc1N0cmVhbWluZ1JlcXVlc3QaIi5zZW5zb3Jz",
-            "dHJlYW1pbmcuU3RyZWFtaW5nUmVzcG9uc2UiACgBEl8KD1N0cmVhbUltdVNl",
-            "bnNvchIkLnNlbnNvcnN0cmVhbWluZy5JbXVTdHJlYW1pbmdSZXF1ZXN0GiIu",
-            "c2Vuc29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3BvbnNlIgAoARJhChBTdHJl",
-            "YW1Qb3NlU2Vuc29yEiUuc2Vuc29yc3RyZWFtaW5nLlBvc2VTdHJlYW1pbmdS",
-            "ZXF1ZXN0GiIuc2Vuc29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3BvbnNlIgAo",
-            "ARJ5ChxTdHJlYW1OYXZpZ2F0aW9uU3RhdHVzU2Vuc29yEjEuc2Vuc29yc3Ry",
-            "ZWFtaW5nLk5hdmlnYXRpb25TdGF0dXNTdHJlYW1pbmdSZXF1ZXN0GiIuc2Vu",
-            "c29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3BvbnNlIgAoARJjChFTdHJlYW1T",
-            "b25hclNlbnNvchImLnNlbnNvcnN0cmVhbWluZy5Tb25hclN0cmVhbWluZ1Jl",
+            "ASgJIkwKFFBvc2VTdHJlYW1pbmdSZXF1ZXN0EiMKBGRhdGEYASABKAsyFS5h",
+            "dXYuTmF2aWdhdGlvblN0YXR1cxIPCgdhZGRyZXNzGAIgASgJIkgKFVNvbmFy",
+            "U3RyZWFtaW5nUmVxdWVzdBINCgVyYW5nZRgBIAEoAhIPCgdiZWFyaW5nGAIg",
+            "ASgCEg8KB2FkZHJlc3MYAyABKAkiXAoTQUlTU3RyZWFtaW5nUmVxdWVzdBI0",
+            "ChFhaXNQb3NpdGlvblJlcG9ydBgBIAEoCzIZLm1hcmluZS5BSVNQb3NpdGlv",
+            "blJlcG9ydBIPCgdhZGRyZXNzGAIgASgJMvUHCg9TZW5zb3JTdHJlYW1pbmcS",
+            "ZQoSU3RyZWFtQ2FtZXJhU2Vuc29yEicuc2Vuc29yc3RyZWFtaW5nLkNhbWVy",
+            "YVN0cmVhbWluZ1JlcXVlc3QaIi5zZW5zb3JzdHJlYW1pbmcuU3RyZWFtaW5n",
+            "UmVzcG9uc2UiACgBEmMKEVN0cmVhbUxpZGFyU2Vuc29yEiYuc2Vuc29yc3Ry",
+            "ZWFtaW5nLkxpZGFyU3RyZWFtaW5nUmVxdWVzdBoiLnNlbnNvcnN0cmVhbWlu",
+            "Zy5TdHJlYW1pbmdSZXNwb25zZSIAKAESYwoRU3RyZWFtUmFkYXJTZW5zb3IS",
+            "Ji5zZW5zb3JzdHJlYW1pbmcuUmFkYXJTdHJlYW1pbmdSZXF1ZXN0GiIuc2Vu",
+            "c29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3BvbnNlIgAoARJjChFTdHJlYW1E",
+            "ZXB0aFNlbnNvchImLnNlbnNvcnN0cmVhbWluZy5EZXB0aFN0cmVhbWluZ1Jl",
             "cXVlc3QaIi5zZW5zb3JzdHJlYW1pbmcuU3RyZWFtaW5nUmVzcG9uc2UiACgB",
-            "El8KD1N0cmVhbUFpc1NlbnNvchIkLnNlbnNvcnN0cmVhbWluZy5BSVNTdHJl",
+            "El8KD1N0cmVhbUR2bFNlbnNvchIkLnNlbnNvcnN0cmVhbWluZy5EdmxTdHJl",
             "YW1pbmdSZXF1ZXN0GiIuc2Vuc29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3Bv",
-            "bnNlIgAoAUI7CiBpby5ncnBjLmV4YW1wbGVzLnNlbnNvcnN0cmVhbWluZ0IP",
-            "U2Vuc29yU3RyZWFtaW5nUAGiAgNITFdiBnByb3RvMw=="));
+            "bnNlIgAoARJhChBTdHJlYW1HbnNzU2Vuc29yEiUuc2Vuc29yc3RyZWFtaW5n",
+            "Lkduc3NTdHJlYW1pbmdSZXF1ZXN0GiIuc2Vuc29yc3RyZWFtaW5nLlN0cmVh",
+            "bWluZ1Jlc3BvbnNlIgAoARJfCg9TdHJlYW1JbXVTZW5zb3ISJC5zZW5zb3Jz",
+            "dHJlYW1pbmcuSW11U3RyZWFtaW5nUmVxdWVzdBoiLnNlbnNvcnN0cmVhbWlu",
+            "Zy5TdHJlYW1pbmdSZXNwb25zZSIAKAESYQoQU3RyZWFtUG9zZVNlbnNvchIl",
+            "LnNlbnNvcnN0cmVhbWluZy5Qb3NlU3RyZWFtaW5nUmVxdWVzdBoiLnNlbnNv",
+            "cnN0cmVhbWluZy5TdHJlYW1pbmdSZXNwb25zZSIAKAESYwoRU3RyZWFtU29u",
+            "YXJTZW5zb3ISJi5zZW5zb3JzdHJlYW1pbmcuU29uYXJTdHJlYW1pbmdSZXF1",
+            "ZXN0GiIuc2Vuc29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3BvbnNlIgAoARJf",
+            "Cg9TdHJlYW1BaXNTZW5zb3ISJC5zZW5zb3JzdHJlYW1pbmcuQUlTU3RyZWFt",
+            "aW5nUmVxdWVzdBoiLnNlbnNvcnN0cmVhbWluZy5TdHJlYW1pbmdSZXNwb25z",
+            "ZSIAKAFCOwogaW8uZ3JwYy5leGFtcGxlcy5zZW5zb3JzdHJlYW1pbmdCD1Nl",
+            "bnNvclN0cmVhbWluZ1ABogIDSExXYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Geometry.GeometryReflection.Descriptor, global::Sensor.SensorReflection.Descriptor, global::Marine.MarineReflection.Descriptor, global::Geographic.GeographicReflection.Descriptor, global::Auv.AuvReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -99,7 +94,6 @@ namespace Sensorstreaming {
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.GnssStreamingRequest), global::Sensorstreaming.GnssStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.ImuStreamingRequest), global::Sensorstreaming.ImuStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.PoseStreamingRequest), global::Sensorstreaming.PoseStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.NavigationStatusStreamingRequest), global::Sensorstreaming.NavigationStatusStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.SonarStreamingRequest), global::Sensorstreaming.SonarStreamingRequest.Parser, new[]{ "Range", "Bearing", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.AISStreamingRequest), global::Sensorstreaming.AISStreamingRequest.Parser, new[]{ "AisPositionReport", "Address" }, null, null, null)
           }));
@@ -2288,9 +2282,9 @@ namespace Sensorstreaming {
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
-    private global::Geometry.PoseWithCovarianceStamped data_;
+    private global::Auv.NavigationStatus data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Geometry.PoseWithCovarianceStamped Data {
+    public global::Auv.NavigationStatus Data {
       get { return data_; }
       set {
         data_ = value;
@@ -2379,169 +2373,6 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Geometry.PoseWithCovarianceStamped();
-        }
-        Data.MergeFrom(other.Data);
-      }
-      if (other.Address.Length != 0) {
-        Address = other.Address;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (data_ == null) {
-              data_ = new global::Geometry.PoseWithCovarianceStamped();
-            }
-            input.ReadMessage(data_);
-            break;
-          }
-          case 18: {
-            Address = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class NavigationStatusStreamingRequest : pb::IMessage<NavigationStatusStreamingRequest> {
-    private static readonly pb::MessageParser<NavigationStatusStreamingRequest> _parser = new pb::MessageParser<NavigationStatusStreamingRequest>(() => new NavigationStatusStreamingRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<NavigationStatusStreamingRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[10]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NavigationStatusStreamingRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NavigationStatusStreamingRequest(NavigationStatusStreamingRequest other) : this() {
-      data_ = other.data_ != null ? other.data_.Clone() : null;
-      address_ = other.address_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NavigationStatusStreamingRequest Clone() {
-      return new NavigationStatusStreamingRequest(this);
-    }
-
-    /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 1;
-    private global::Auv.NavigationStatus data_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Auv.NavigationStatus Data {
-      get { return data_; }
-      set {
-        data_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "address" field.</summary>
-    public const int AddressFieldNumber = 2;
-    private string address_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Address {
-      get { return address_; }
-      set {
-        address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as NavigationStatusStreamingRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(NavigationStatusStreamingRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Data, other.Data)) return false;
-      if (Address != other.Address) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (data_ != null) hash ^= Data.GetHashCode();
-      if (Address.Length != 0) hash ^= Address.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (data_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Data);
-      }
-      if (Address.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Address);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (data_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
-      }
-      if (Address.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(NavigationStatusStreamingRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.data_ != null) {
-        if (data_ == null) {
           data_ = new global::Auv.NavigationStatus();
         }
         Data.MergeFrom(other.Data);
@@ -2585,7 +2416,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2770,7 +2601,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
