@@ -1,0 +1,32 @@
+syntax = "proto3";
+package labust;
+
+import "std.proto";
+import "geographic.proto";
+import "geometry.proto";
+
+message FSPathInfo {
+  std.Header header = 1;
+  double deltaR = 2;
+  double k = 3;
+  double xiR = 4;
+  double dxiR = 5;
+  double pi = 6;
+  double piTilda = 7;
+  geometry.Vector3 drP = 8;
+  geometry.Vector3 position = 9;
+  geometry.Vector3 orientation = 10;
+  double curvature = 11;
+  double torsion = 12;
+}
+
+message PointerPrimitiveService {
+  double radius = 1;
+  double vertical_offset = 2;
+  geometry.Vector3 guidanceTarget = 3;
+  bool guidanceEnable = 4;
+  bool wrappingEnable = 5;
+  bool streamlineOrientation = 6;
+  string guidanceTopic = 7;
+  string radiusTopic = 8;
+}
