@@ -4,6 +4,7 @@ package sensorstreaming;
 import "geometry.proto";
 import "sensor.proto";
 import "marine.proto";
+import "auv.proto";
 
 option java_multiple_files = true;
 option java_package = "io.grpc.examples.sensorstreaming";
