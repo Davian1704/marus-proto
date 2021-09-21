@@ -40,13 +40,30 @@ namespace Sensor {
             "GwoGaGVhZGVyGAEgASgLMgsuc3RkLkhlYWRlchIkCgZzdGF0dXMYAiABKAsy",
             "FC5zZW5zb3IuTmF2U2F0U3RhdHVzEhAKCGxhdGl0dWRlGAMgASgBEhEKCWxv",
             "bmdpdHVkZRgEIAEoARIQCghhbHRpdHVkZRgFIAEoARIbChNwb3NpdGlvbl9j",
-            "b3ZhcmlhbmNlGAYgAygBYgZwcm90bzM="));
+            "b3ZhcmlhbmNlGAYgAygBIicKB0NoYW5uZWwSDAoEbmFtZRgBIAEoCRIOCgZ2",
+            "YWx1ZXMYAiADKAEiyAEKClBvaW50RmllbGQSDAoESU5UOBgBIAEoDRINCgVV",
+            "SU5UOBgCIAEoDRINCgVJTlQxNhgDIAEoDRIOCgZVSU5UMTYYBCABKA0SDQoF",
+            "SU5UMzIYBSABKA0SDgoGVUlOVDMyGAYgASgNEg8KB0ZMT0FUMzIYByABKA0S",
+            "DwoHRkxPQVQ2NBgIIAEoDRIMCgRuYW1lGAkgASgJEg4KBm9mZnNldBgKIAEo",
+            "DRIQCghkYXRhdHlwZRgLIAEoDRINCgVjb3VudBgMIAEoDSJtCgpQb2ludENs",
+            "b3VkEhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISHwoGcG9pbnRzGAIg",
+            "AygLMg8uZ2VvbWV0cnkuUG9pbnQSIQoIY2hhbm5lbHMYAyADKAsyDy5zZW5z",
+            "b3IuQ2hhbm5lbCLfAQoLUG9pbnRDbG91ZDISGwoGaGVhZGVyGAEgASgLMgsu",
+            "c3RkLkhlYWRlchIVCg10aW1lSW5TZWNvbmRzGAIgASgBEg4KBmhlaWdodBgD",
+            "IAEoDRINCgV3aWR0aBgEIAEoDRIiCgZmaWVsZHMYBSADKAsyEi5zZW5zb3Iu",
+            "UG9pbnRGaWVsZBITCgtpc0JpZ0VuZGlhbhgGIAEoCBISCgpwb2ludF9zdGVw",
+            "GAcgASgNEhAKCHJvd19zdGVwGAggASgNEgwKBGRhdGEYCSABKAwSEAoIaXNf",
+            "ZGVuc2UYCiABKAhiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Imu), global::Sensor.Imu.Parser, new[]{ "Header", "Orientation", "OrientationCovariance", "AngularVelocity", "AngularVelocityCovariance", "LinearAcceleration", "LinearAccelerationCovariance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatStatus), global::Sensor.NavSatStatus.Parser, new[]{ "Status", "Service" }, null, new[]{ typeof(global::Sensor.NavSatStatus.Types.Status), typeof(global::Sensor.NavSatStatus.Types.Service) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatFix), global::Sensor.NavSatFix.Parser, new[]{ "Header", "Status", "Latitude", "Longitude", "Altitude", "PositionCovariance" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatFix), global::Sensor.NavSatFix.Parser, new[]{ "Header", "Status", "Latitude", "Longitude", "Altitude", "PositionCovariance" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Channel), global::Sensor.Channel.Parser, new[]{ "Name", "Values" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointField), global::Sensor.PointField.Parser, new[]{ "INT8", "UINT8", "INT16", "UINT16", "INT32", "UINT32", "FLOAT32", "FLOAT64", "Name", "Offset", "Datatype", "Count" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud), global::Sensor.PointCloud.Parser, new[]{ "Header", "Points", "Channels" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud2), global::Sensor.PointCloud2.Parser, new[]{ "Header", "TimeInSeconds", "Height", "Width", "Fields", "IsBigEndian", "PointStep", "RowStep", "Data", "IsDense" }, null, null, null)
           }));
     }
     #endregion
@@ -798,6 +815,1147 @@ namespace Sensor {
           case 50:
           case 49: {
             positionCovariance_.AddEntriesFrom(input, _repeated_positionCovariance_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Channel : pb::IMessage<Channel> {
+    private static readonly pb::MessageParser<Channel> _parser = new pb::MessageParser<Channel>(() => new Channel());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Channel> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensor.SensorReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Channel() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Channel(Channel other) : this() {
+      name_ = other.name_;
+      values_ = other.values_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Channel Clone() {
+      return new Channel(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "values" field.</summary>
+    public const int ValuesFieldNumber = 2;
+    private static readonly pb::FieldCodec<double> _repeated_values_codec
+        = pb::FieldCodec.ForDouble(18);
+    private readonly pbc::RepeatedField<double> values_ = new pbc::RepeatedField<double>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<double> Values {
+      get { return values_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Channel);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Channel other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if(!values_.Equals(other.values_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= values_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      values_.WriteTo(output, _repeated_values_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += values_.CalculateSize(_repeated_values_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Channel other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      values_.Add(other.values_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18:
+          case 17: {
+            values_.AddEntriesFrom(input, _repeated_values_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PointField : pb::IMessage<PointField> {
+    private static readonly pb::MessageParser<PointField> _parser = new pb::MessageParser<PointField>(() => new PointField());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PointField> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensor.SensorReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PointField() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PointField(PointField other) : this() {
+      iNT8_ = other.iNT8_;
+      uINT8_ = other.uINT8_;
+      iNT16_ = other.iNT16_;
+      uINT16_ = other.uINT16_;
+      iNT32_ = other.iNT32_;
+      uINT32_ = other.uINT32_;
+      fLOAT32_ = other.fLOAT32_;
+      fLOAT64_ = other.fLOAT64_;
+      name_ = other.name_;
+      offset_ = other.offset_;
+      datatype_ = other.datatype_;
+      count_ = other.count_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PointField Clone() {
+      return new PointField(this);
+    }
+
+    /// <summary>Field number for the "INT8" field.</summary>
+    public const int INT8FieldNumber = 1;
+    private uint iNT8_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint INT8 {
+      get { return iNT8_; }
+      set {
+        iNT8_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "UINT8" field.</summary>
+    public const int UINT8FieldNumber = 2;
+    private uint uINT8_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint UINT8 {
+      get { return uINT8_; }
+      set {
+        uINT8_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "INT16" field.</summary>
+    public const int INT16FieldNumber = 3;
+    private uint iNT16_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint INT16 {
+      get { return iNT16_; }
+      set {
+        iNT16_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "UINT16" field.</summary>
+    public const int UINT16FieldNumber = 4;
+    private uint uINT16_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint UINT16 {
+      get { return uINT16_; }
+      set {
+        uINT16_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "INT32" field.</summary>
+    public const int INT32FieldNumber = 5;
+    private uint iNT32_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint INT32 {
+      get { return iNT32_; }
+      set {
+        iNT32_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "UINT32" field.</summary>
+    public const int UINT32FieldNumber = 6;
+    private uint uINT32_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint UINT32 {
+      get { return uINT32_; }
+      set {
+        uINT32_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "FLOAT32" field.</summary>
+    public const int FLOAT32FieldNumber = 7;
+    private uint fLOAT32_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint FLOAT32 {
+      get { return fLOAT32_; }
+      set {
+        fLOAT32_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "FLOAT64" field.</summary>
+    public const int FLOAT64FieldNumber = 8;
+    private uint fLOAT64_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint FLOAT64 {
+      get { return fLOAT64_; }
+      set {
+        fLOAT64_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 9;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "offset" field.</summary>
+    public const int OffsetFieldNumber = 10;
+    private uint offset_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Offset {
+      get { return offset_; }
+      set {
+        offset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "datatype" field.</summary>
+    public const int DatatypeFieldNumber = 11;
+    private uint datatype_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Datatype {
+      get { return datatype_; }
+      set {
+        datatype_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "count" field.</summary>
+    public const int CountFieldNumber = 12;
+    private uint count_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Count {
+      get { return count_; }
+      set {
+        count_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PointField);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PointField other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (INT8 != other.INT8) return false;
+      if (UINT8 != other.UINT8) return false;
+      if (INT16 != other.INT16) return false;
+      if (UINT16 != other.UINT16) return false;
+      if (INT32 != other.INT32) return false;
+      if (UINT32 != other.UINT32) return false;
+      if (FLOAT32 != other.FLOAT32) return false;
+      if (FLOAT64 != other.FLOAT64) return false;
+      if (Name != other.Name) return false;
+      if (Offset != other.Offset) return false;
+      if (Datatype != other.Datatype) return false;
+      if (Count != other.Count) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (INT8 != 0) hash ^= INT8.GetHashCode();
+      if (UINT8 != 0) hash ^= UINT8.GetHashCode();
+      if (INT16 != 0) hash ^= INT16.GetHashCode();
+      if (UINT16 != 0) hash ^= UINT16.GetHashCode();
+      if (INT32 != 0) hash ^= INT32.GetHashCode();
+      if (UINT32 != 0) hash ^= UINT32.GetHashCode();
+      if (FLOAT32 != 0) hash ^= FLOAT32.GetHashCode();
+      if (FLOAT64 != 0) hash ^= FLOAT64.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Offset != 0) hash ^= Offset.GetHashCode();
+      if (Datatype != 0) hash ^= Datatype.GetHashCode();
+      if (Count != 0) hash ^= Count.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (INT8 != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(INT8);
+      }
+      if (UINT8 != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(UINT8);
+      }
+      if (INT16 != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(INT16);
+      }
+      if (UINT16 != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(UINT16);
+      }
+      if (INT32 != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(INT32);
+      }
+      if (UINT32 != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(UINT32);
+      }
+      if (FLOAT32 != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(FLOAT32);
+      }
+      if (FLOAT64 != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(FLOAT64);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Name);
+      }
+      if (Offset != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Offset);
+      }
+      if (Datatype != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Datatype);
+      }
+      if (Count != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Count);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (INT8 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INT8);
+      }
+      if (UINT8 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UINT8);
+      }
+      if (INT16 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INT16);
+      }
+      if (UINT16 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UINT16);
+      }
+      if (INT32 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INT32);
+      }
+      if (UINT32 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UINT32);
+      }
+      if (FLOAT32 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FLOAT32);
+      }
+      if (FLOAT64 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FLOAT64);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Offset != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Offset);
+      }
+      if (Datatype != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Datatype);
+      }
+      if (Count != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PointField other) {
+      if (other == null) {
+        return;
+      }
+      if (other.INT8 != 0) {
+        INT8 = other.INT8;
+      }
+      if (other.UINT8 != 0) {
+        UINT8 = other.UINT8;
+      }
+      if (other.INT16 != 0) {
+        INT16 = other.INT16;
+      }
+      if (other.UINT16 != 0) {
+        UINT16 = other.UINT16;
+      }
+      if (other.INT32 != 0) {
+        INT32 = other.INT32;
+      }
+      if (other.UINT32 != 0) {
+        UINT32 = other.UINT32;
+      }
+      if (other.FLOAT32 != 0) {
+        FLOAT32 = other.FLOAT32;
+      }
+      if (other.FLOAT64 != 0) {
+        FLOAT64 = other.FLOAT64;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Offset != 0) {
+        Offset = other.Offset;
+      }
+      if (other.Datatype != 0) {
+        Datatype = other.Datatype;
+      }
+      if (other.Count != 0) {
+        Count = other.Count;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            INT8 = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            UINT8 = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            INT16 = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            UINT16 = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            INT32 = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            UINT32 = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            FLOAT32 = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            FLOAT64 = input.ReadUInt32();
+            break;
+          }
+          case 74: {
+            Name = input.ReadString();
+            break;
+          }
+          case 80: {
+            Offset = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            Datatype = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            Count = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PointCloud : pb::IMessage<PointCloud> {
+    private static readonly pb::MessageParser<PointCloud> _parser = new pb::MessageParser<PointCloud>(() => new PointCloud());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PointCloud> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensor.SensorReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PointCloud() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PointCloud(PointCloud other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      points_ = other.points_.Clone();
+      channels_ = other.channels_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PointCloud Clone() {
+      return new PointCloud(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "points" field.</summary>
+    public const int PointsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Geometry.Point> _repeated_points_codec
+        = pb::FieldCodec.ForMessage(18, global::Geometry.Point.Parser);
+    private readonly pbc::RepeatedField<global::Geometry.Point> points_ = new pbc::RepeatedField<global::Geometry.Point>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Geometry.Point> Points {
+      get { return points_; }
+    }
+
+    /// <summary>Field number for the "channels" field.</summary>
+    public const int ChannelsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Sensor.Channel> _repeated_channels_codec
+        = pb::FieldCodec.ForMessage(26, global::Sensor.Channel.Parser);
+    private readonly pbc::RepeatedField<global::Sensor.Channel> channels_ = new pbc::RepeatedField<global::Sensor.Channel>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Sensor.Channel> Channels {
+      get { return channels_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PointCloud);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PointCloud other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if(!points_.Equals(other.points_)) return false;
+      if(!channels_.Equals(other.channels_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      hash ^= points_.GetHashCode();
+      hash ^= channels_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      points_.WriteTo(output, _repeated_points_codec);
+      channels_.WriteTo(output, _repeated_channels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      size += points_.CalculateSize(_repeated_points_codec);
+      size += channels_.CalculateSize(_repeated_channels_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PointCloud other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      points_.Add(other.points_);
+      channels_.Add(other.channels_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 18: {
+            points_.AddEntriesFrom(input, _repeated_points_codec);
+            break;
+          }
+          case 26: {
+            channels_.AddEntriesFrom(input, _repeated_channels_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PointCloud2 : pb::IMessage<PointCloud2> {
+    private static readonly pb::MessageParser<PointCloud2> _parser = new pb::MessageParser<PointCloud2>(() => new PointCloud2());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PointCloud2> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensor.SensorReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PointCloud2() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PointCloud2(PointCloud2 other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      timeInSeconds_ = other.timeInSeconds_;
+      height_ = other.height_;
+      width_ = other.width_;
+      fields_ = other.fields_.Clone();
+      isBigEndian_ = other.isBigEndian_;
+      pointStep_ = other.pointStep_;
+      rowStep_ = other.rowStep_;
+      data_ = other.data_;
+      isDense_ = other.isDense_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PointCloud2 Clone() {
+      return new PointCloud2(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "timeInSeconds" field.</summary>
+    public const int TimeInSecondsFieldNumber = 2;
+    private double timeInSeconds_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double TimeInSeconds {
+      get { return timeInSeconds_; }
+      set {
+        timeInSeconds_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "height" field.</summary>
+    public const int HeightFieldNumber = 3;
+    private uint height_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Height {
+      get { return height_; }
+      set {
+        height_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "width" field.</summary>
+    public const int WidthFieldNumber = 4;
+    private uint width_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Width {
+      get { return width_; }
+      set {
+        width_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fields" field.</summary>
+    public const int FieldsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Sensor.PointField> _repeated_fields_codec
+        = pb::FieldCodec.ForMessage(42, global::Sensor.PointField.Parser);
+    private readonly pbc::RepeatedField<global::Sensor.PointField> fields_ = new pbc::RepeatedField<global::Sensor.PointField>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Sensor.PointField> Fields {
+      get { return fields_; }
+    }
+
+    /// <summary>Field number for the "isBigEndian" field.</summary>
+    public const int IsBigEndianFieldNumber = 6;
+    private bool isBigEndian_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsBigEndian {
+      get { return isBigEndian_; }
+      set {
+        isBigEndian_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "point_step" field.</summary>
+    public const int PointStepFieldNumber = 7;
+    private uint pointStep_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint PointStep {
+      get { return pointStep_; }
+      set {
+        pointStep_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "row_step" field.</summary>
+    public const int RowStepFieldNumber = 8;
+    private uint rowStep_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint RowStep {
+      get { return rowStep_; }
+      set {
+        rowStep_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 9;
+    private pb::ByteString data_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Data {
+      get { return data_; }
+      set {
+        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "is_dense" field.</summary>
+    public const int IsDenseFieldNumber = 10;
+    private bool isDense_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsDense {
+      get { return isDense_; }
+      set {
+        isDense_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PointCloud2);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PointCloud2 other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TimeInSeconds, other.TimeInSeconds)) return false;
+      if (Height != other.Height) return false;
+      if (Width != other.Width) return false;
+      if(!fields_.Equals(other.fields_)) return false;
+      if (IsBigEndian != other.IsBigEndian) return false;
+      if (PointStep != other.PointStep) return false;
+      if (RowStep != other.RowStep) return false;
+      if (Data != other.Data) return false;
+      if (IsDense != other.IsDense) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      if (TimeInSeconds != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TimeInSeconds);
+      if (Height != 0) hash ^= Height.GetHashCode();
+      if (Width != 0) hash ^= Width.GetHashCode();
+      hash ^= fields_.GetHashCode();
+      if (IsBigEndian != false) hash ^= IsBigEndian.GetHashCode();
+      if (PointStep != 0) hash ^= PointStep.GetHashCode();
+      if (RowStep != 0) hash ^= RowStep.GetHashCode();
+      if (Data.Length != 0) hash ^= Data.GetHashCode();
+      if (IsDense != false) hash ^= IsDense.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (TimeInSeconds != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(TimeInSeconds);
+      }
+      if (Height != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Height);
+      }
+      if (Width != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Width);
+      }
+      fields_.WriteTo(output, _repeated_fields_codec);
+      if (IsBigEndian != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsBigEndian);
+      }
+      if (PointStep != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(PointStep);
+      }
+      if (RowStep != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(RowStep);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteBytes(Data);
+      }
+      if (IsDense != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IsDense);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      if (TimeInSeconds != 0D) {
+        size += 1 + 8;
+      }
+      if (Height != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Height);
+      }
+      if (Width != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Width);
+      }
+      size += fields_.CalculateSize(_repeated_fields_codec);
+      if (IsBigEndian != false) {
+        size += 1 + 1;
+      }
+      if (PointStep != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PointStep);
+      }
+      if (RowStep != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RowStep);
+      }
+      if (Data.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
+      }
+      if (IsDense != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PointCloud2 other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      if (other.TimeInSeconds != 0D) {
+        TimeInSeconds = other.TimeInSeconds;
+      }
+      if (other.Height != 0) {
+        Height = other.Height;
+      }
+      if (other.Width != 0) {
+        Width = other.Width;
+      }
+      fields_.Add(other.fields_);
+      if (other.IsBigEndian != false) {
+        IsBigEndian = other.IsBigEndian;
+      }
+      if (other.PointStep != 0) {
+        PointStep = other.PointStep;
+      }
+      if (other.RowStep != 0) {
+        RowStep = other.RowStep;
+      }
+      if (other.Data.Length != 0) {
+        Data = other.Data;
+      }
+      if (other.IsDense != false) {
+        IsDense = other.IsDense;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 17: {
+            TimeInSeconds = input.ReadDouble();
+            break;
+          }
+          case 24: {
+            Height = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            Width = input.ReadUInt32();
+            break;
+          }
+          case 42: {
+            fields_.AddEntriesFrom(input, _repeated_fields_codec);
+            break;
+          }
+          case 48: {
+            IsBigEndian = input.ReadBool();
+            break;
+          }
+          case 56: {
+            PointStep = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            RowStep = input.ReadUInt32();
+            break;
+          }
+          case 74: {
+            Data = input.ReadBytes();
+            break;
+          }
+          case 80: {
+            IsDense = input.ReadBool();
             break;
           }
         }

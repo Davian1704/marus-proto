@@ -25,69 +25,63 @@ namespace Sensorstreaming {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZzZW5zb3Jfc3RyZWFtaW5nLnByb3RvEg9zZW5zb3JzdHJlYW1pbmcaDmdl",
-            "b21ldHJ5LnByb3RvGgxzZW5zb3IucHJvdG8aDG1hcmluZS5wcm90bxoQZ2Vv",
-            "Z3JhcGhpYy5wcm90bxoJYXV2LnByb3RvImkKFkNhbWVyYVN0cmVhbWluZ1Jl",
-            "cXVlc3QSDAoEZGF0YRgBIAEoDBIRCgl0aW1lU3RhbXAYAiABKAESDQoFd2lk",
-            "dGgYAyABKA0SDgoGaGVpZ2h0GAQgASgNEg8KB2FkZHJlc3MYBSABKAkiJAoR",
-            "U3RyZWFtaW5nUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCCLIAQoKUG9pbnRG",
-            "aWVsZBIMCgRJTlQ4GAEgASgNEg0KBVVJTlQ4GAIgASgNEg0KBUlOVDE2GAMg",
-            "ASgNEg4KBlVJTlQxNhgEIAEoDRINCgVJTlQzMhgFIAEoDRIOCgZVSU5UMzIY",
-            "BiABKA0SDwoHRkxPQVQzMhgHIAEoDRIPCgdGTE9BVDY0GAggASgNEgwKBG5h",
-            "bWUYCSABKAkSDgoGb2Zmc2V0GAogASgNEhAKCGRhdGF0eXBlGAsgASgNEg0K",
-            "BWNvdW50GAwgASgNItUBChVMaWRhclN0cmVhbWluZ1JlcXVlc3QSFQoNdGlt",
-            "ZUluU2Vjb25kcxgBIAEoARIOCgZoZWlnaHQYAiABKA0SDQoFd2lkdGgYAyAB",
-            "KA0SKwoGZmllbGRzGAQgAygLMhsuc2Vuc29yc3RyZWFtaW5nLlBvaW50Rmll",
-            "bGQSEwoLaXNCaWdFbmRpYW4YBSABKAgSEgoKcG9pbnRfc3RlcBgGIAEoDRIQ",
-            "Cghyb3dfc3RlcBgHIAEoDRIMCgRkYXRhGAggASgMEhAKCGlzX2RlbnNlGAkg",
-            "ASgIItMBChVSYWRhclN0cmVhbWluZ1JlcXVlc3QSFgoOcmFuZ2VJbmNyZW1l",
-            "bnQYASABKAISEgoKcmFuZ2VTdGFydBgCIAEoAhISCgpudW1TYW1wbGVzGAMg",
-            "ASgNEhEKCW51bVNwb2tlcxgEIAEoDRIUCgxtaW5JbnRlbnNpdHkYBSABKA0S",
-            "FAoMbWF4SW50ZW5zaXR5GAYgASgNEhUKDXRpbWVJblNlY29uZHMYByADKAES",
-            "DwoHYXppbXV0aBgIIAMoAhITCgtyYWRhclNwb2tlcxgJIAEoDCJbChVEZXB0",
-            "aFN0cmVhbWluZ1JlcXVlc3QSMQoEZGF0YRgBIAEoCzIjLmdlb21ldHJ5LlBv",
-            "c2VXaXRoQ292YXJpYW5jZVN0YW1wZWQSDwoHYWRkcmVzcxgCIAEoCSJaChNE",
-            "dmxTdHJlYW1pbmdSZXF1ZXN0EjIKBGRhdGEYASABKAsyJC5nZW9tZXRyeS5U",
-            "d2lzdFdpdGhDb3ZhcmlhbmNlU3RhbXBlZBIPCgdhZGRyZXNzGAIgASgJIkgK",
-            "FEduc3NTdHJlYW1pbmdSZXF1ZXN0Eh8KBGRhdGEYASABKAsyES5zZW5zb3Iu",
-            "TmF2U2F0Rml4Eg8KB2FkZHJlc3MYAiABKAkiQQoTSW11U3RyZWFtaW5nUmVx",
-            "dWVzdBIZCgRkYXRhGAEgASgLMgsuc2Vuc29yLkltdRIPCgdhZGRyZXNzGAIg",
-            "ASgJIkwKFFBvc2VTdHJlYW1pbmdSZXF1ZXN0EiMKBGRhdGEYASABKAsyFS5h",
-            "dXYuTmF2aWdhdGlvblN0YXR1cxIPCgdhZGRyZXNzGAIgASgJIkgKFVNvbmFy",
-            "U3RyZWFtaW5nUmVxdWVzdBINCgVyYW5nZRgBIAEoAhIPCgdiZWFyaW5nGAIg",
-            "ASgCEg8KB2FkZHJlc3MYAyABKAkiXAoTQUlTU3RyZWFtaW5nUmVxdWVzdBI0",
-            "ChFhaXNQb3NpdGlvblJlcG9ydBgBIAEoCzIZLm1hcmluZS5BSVNQb3NpdGlv",
-            "blJlcG9ydBIPCgdhZGRyZXNzGAIgASgJMvUHCg9TZW5zb3JTdHJlYW1pbmcS",
-            "ZQoSU3RyZWFtQ2FtZXJhU2Vuc29yEicuc2Vuc29yc3RyZWFtaW5nLkNhbWVy",
-            "YVN0cmVhbWluZ1JlcXVlc3QaIi5zZW5zb3JzdHJlYW1pbmcuU3RyZWFtaW5n",
-            "UmVzcG9uc2UiACgBEmMKEVN0cmVhbUxpZGFyU2Vuc29yEiYuc2Vuc29yc3Ry",
-            "ZWFtaW5nLkxpZGFyU3RyZWFtaW5nUmVxdWVzdBoiLnNlbnNvcnN0cmVhbWlu",
-            "Zy5TdHJlYW1pbmdSZXNwb25zZSIAKAESYwoRU3RyZWFtUmFkYXJTZW5zb3IS",
-            "Ji5zZW5zb3JzdHJlYW1pbmcuUmFkYXJTdHJlYW1pbmdSZXF1ZXN0GiIuc2Vu",
-            "c29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3BvbnNlIgAoARJjChFTdHJlYW1E",
-            "ZXB0aFNlbnNvchImLnNlbnNvcnN0cmVhbWluZy5EZXB0aFN0cmVhbWluZ1Jl",
-            "cXVlc3QaIi5zZW5zb3JzdHJlYW1pbmcuU3RyZWFtaW5nUmVzcG9uc2UiACgB",
-            "El8KD1N0cmVhbUR2bFNlbnNvchIkLnNlbnNvcnN0cmVhbWluZy5EdmxTdHJl",
-            "YW1pbmdSZXF1ZXN0GiIuc2Vuc29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3Bv",
-            "bnNlIgAoARJhChBTdHJlYW1HbnNzU2Vuc29yEiUuc2Vuc29yc3RyZWFtaW5n",
-            "Lkduc3NTdHJlYW1pbmdSZXF1ZXN0GiIuc2Vuc29yc3RyZWFtaW5nLlN0cmVh",
-            "bWluZ1Jlc3BvbnNlIgAoARJfCg9TdHJlYW1JbXVTZW5zb3ISJC5zZW5zb3Jz",
-            "dHJlYW1pbmcuSW11U3RyZWFtaW5nUmVxdWVzdBoiLnNlbnNvcnN0cmVhbWlu",
-            "Zy5TdHJlYW1pbmdSZXNwb25zZSIAKAESYQoQU3RyZWFtUG9zZVNlbnNvchIl",
-            "LnNlbnNvcnN0cmVhbWluZy5Qb3NlU3RyZWFtaW5nUmVxdWVzdBoiLnNlbnNv",
-            "cnN0cmVhbWluZy5TdHJlYW1pbmdSZXNwb25zZSIAKAESYwoRU3RyZWFtU29u",
-            "YXJTZW5zb3ISJi5zZW5zb3JzdHJlYW1pbmcuU29uYXJTdHJlYW1pbmdSZXF1",
-            "ZXN0GiIuc2Vuc29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3BvbnNlIgAoARJf",
-            "Cg9TdHJlYW1BaXNTZW5zb3ISJC5zZW5zb3JzdHJlYW1pbmcuQUlTU3RyZWFt",
-            "aW5nUmVxdWVzdBoiLnNlbnNvcnN0cmVhbWluZy5TdHJlYW1pbmdSZXNwb25z",
-            "ZSIAKAFCOwogaW8uZ3JwYy5leGFtcGxlcy5zZW5zb3JzdHJlYW1pbmdCD1Nl",
-            "bnNvclN0cmVhbWluZ1ABogIDSExXYgZwcm90bzM="));
+            "b21ldHJ5LnByb3RvGgxzZW5zb3IucHJvdG8aDG1hcmluZS5wcm90bxoJYXV2",
+            "LnByb3RvImkKFkNhbWVyYVN0cmVhbWluZ1JlcXVlc3QSDAoEZGF0YRgBIAEo",
+            "DBIRCgl0aW1lU3RhbXAYAiABKAESDQoFd2lkdGgYAyABKA0SDgoGaGVpZ2h0",
+            "GAQgASgNEg8KB2FkZHJlc3MYBSABKAkiJAoRU3RyZWFtaW5nUmVzcG9uc2US",
+            "DwoHc3VjY2VzcxgBIAEoCCJKChVMaWRhclN0cmVhbWluZ1JlcXVlc3QSIAoE",
+            "ZGF0YRgBIAEoCzISLnNlbnNvci5Qb2ludENsb3VkEg8KB2FkZHJlc3MYAiAB",
+            "KAkiTAoWTGlkYXJTdHJlYW1pbmdSZXF1ZXN0MhIhCgRkYXRhGAEgASgLMhMu",
+            "c2Vuc29yLlBvaW50Q2xvdWQyEg8KB2FkZHJlc3MYAiABKAki0wEKFVJhZGFy",
+            "U3RyZWFtaW5nUmVxdWVzdBIWCg5yYW5nZUluY3JlbWVudBgBIAEoAhISCgpy",
+            "YW5nZVN0YXJ0GAIgASgCEhIKCm51bVNhbXBsZXMYAyABKA0SEQoJbnVtU3Bv",
+            "a2VzGAQgASgNEhQKDG1pbkludGVuc2l0eRgFIAEoDRIUCgxtYXhJbnRlbnNp",
+            "dHkYBiABKA0SFQoNdGltZUluU2Vjb25kcxgHIAMoARIPCgdhemltdXRoGAgg",
+            "AygCEhMKC3JhZGFyU3Bva2VzGAkgASgMIlsKFURlcHRoU3RyZWFtaW5nUmVx",
+            "dWVzdBIxCgRkYXRhGAEgASgLMiMuZ2VvbWV0cnkuUG9zZVdpdGhDb3Zhcmlh",
+            "bmNlU3RhbXBlZBIPCgdhZGRyZXNzGAIgASgJIloKE0R2bFN0cmVhbWluZ1Jl",
+            "cXVlc3QSMgoEZGF0YRgBIAEoCzIkLmdlb21ldHJ5LlR3aXN0V2l0aENvdmFy",
+            "aWFuY2VTdGFtcGVkEg8KB2FkZHJlc3MYAiABKAkiSAoUR25zc1N0cmVhbWlu",
+            "Z1JlcXVlc3QSHwoEZGF0YRgBIAEoCzIRLnNlbnNvci5OYXZTYXRGaXgSDwoH",
+            "YWRkcmVzcxgCIAEoCSJBChNJbXVTdHJlYW1pbmdSZXF1ZXN0EhkKBGRhdGEY",
+            "ASABKAsyCy5zZW5zb3IuSW11Eg8KB2FkZHJlc3MYAiABKAkiTAoUUG9zZVN0",
+            "cmVhbWluZ1JlcXVlc3QSIwoEZGF0YRgBIAEoCzIVLmF1di5OYXZpZ2F0aW9u",
+            "U3RhdHVzEg8KB2FkZHJlc3MYAiABKAkiSAoVU29uYXJTdHJlYW1pbmdSZXF1",
+            "ZXN0Eg0KBXJhbmdlGAEgASgCEg8KB2JlYXJpbmcYAiABKAISDwoHYWRkcmVz",
+            "cxgDIAEoCSJcChNBSVNTdHJlYW1pbmdSZXF1ZXN0EjQKEWFpc1Bvc2l0aW9u",
+            "UmVwb3J0GAEgASgLMhkubWFyaW5lLkFJU1Bvc2l0aW9uUmVwb3J0Eg8KB2Fk",
+            "ZHJlc3MYAiABKAky9QcKD1NlbnNvclN0cmVhbWluZxJlChJTdHJlYW1DYW1l",
+            "cmFTZW5zb3ISJy5zZW5zb3JzdHJlYW1pbmcuQ2FtZXJhU3RyZWFtaW5nUmVx",
+            "dWVzdBoiLnNlbnNvcnN0cmVhbWluZy5TdHJlYW1pbmdSZXNwb25zZSIAKAES",
+            "YwoRU3RyZWFtTGlkYXJTZW5zb3ISJi5zZW5zb3JzdHJlYW1pbmcuTGlkYXJT",
+            "dHJlYW1pbmdSZXF1ZXN0GiIuc2Vuc29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jl",
+            "c3BvbnNlIgAoARJjChFTdHJlYW1SYWRhclNlbnNvchImLnNlbnNvcnN0cmVh",
+            "bWluZy5SYWRhclN0cmVhbWluZ1JlcXVlc3QaIi5zZW5zb3JzdHJlYW1pbmcu",
+            "U3RyZWFtaW5nUmVzcG9uc2UiACgBEmMKEVN0cmVhbURlcHRoU2Vuc29yEiYu",
+            "c2Vuc29yc3RyZWFtaW5nLkRlcHRoU3RyZWFtaW5nUmVxdWVzdBoiLnNlbnNv",
+            "cnN0cmVhbWluZy5TdHJlYW1pbmdSZXNwb25zZSIAKAESXwoPU3RyZWFtRHZs",
+            "U2Vuc29yEiQuc2Vuc29yc3RyZWFtaW5nLkR2bFN0cmVhbWluZ1JlcXVlc3Qa",
+            "Ii5zZW5zb3JzdHJlYW1pbmcuU3RyZWFtaW5nUmVzcG9uc2UiACgBEmEKEFN0",
+            "cmVhbUduc3NTZW5zb3ISJS5zZW5zb3JzdHJlYW1pbmcuR25zc1N0cmVhbWlu",
+            "Z1JlcXVlc3QaIi5zZW5zb3JzdHJlYW1pbmcuU3RyZWFtaW5nUmVzcG9uc2Ui",
+            "ACgBEl8KD1N0cmVhbUltdVNlbnNvchIkLnNlbnNvcnN0cmVhbWluZy5JbXVT",
+            "dHJlYW1pbmdSZXF1ZXN0GiIuc2Vuc29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jl",
+            "c3BvbnNlIgAoARJhChBTdHJlYW1Qb3NlU2Vuc29yEiUuc2Vuc29yc3RyZWFt",
+            "aW5nLlBvc2VTdHJlYW1pbmdSZXF1ZXN0GiIuc2Vuc29yc3RyZWFtaW5nLlN0",
+            "cmVhbWluZ1Jlc3BvbnNlIgAoARJjChFTdHJlYW1Tb25hclNlbnNvchImLnNl",
+            "bnNvcnN0cmVhbWluZy5Tb25hclN0cmVhbWluZ1JlcXVlc3QaIi5zZW5zb3Jz",
+            "dHJlYW1pbmcuU3RyZWFtaW5nUmVzcG9uc2UiACgBEl8KD1N0cmVhbUFpc1Nl",
+            "bnNvchIkLnNlbnNvcnN0cmVhbWluZy5BSVNTdHJlYW1pbmdSZXF1ZXN0GiIu",
+            "c2Vuc29yc3RyZWFtaW5nLlN0cmVhbWluZ1Jlc3BvbnNlIgAoAUI7CiBpby5n",
+            "cnBjLmV4YW1wbGVzLnNlbnNvcnN0cmVhbWluZ0IPU2Vuc29yU3RyZWFtaW5n",
+            "UAGiAgNITFdiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Geometry.GeometryReflection.Descriptor, global::Sensor.SensorReflection.Descriptor, global::Marine.MarineReflection.Descriptor, global::Geographic.GeographicReflection.Descriptor, global::Auv.AuvReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Geometry.GeometryReflection.Descriptor, global::Sensor.SensorReflection.Descriptor, global::Marine.MarineReflection.Descriptor, global::Auv.AuvReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.CameraStreamingRequest), global::Sensorstreaming.CameraStreamingRequest.Parser, new[]{ "Data", "TimeStamp", "Width", "Height", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.StreamingResponse), global::Sensorstreaming.StreamingResponse.Parser, new[]{ "Success" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.PointField), global::Sensorstreaming.PointField.Parser, new[]{ "INT8", "UINT8", "INT16", "UINT16", "INT32", "UINT32", "FLOAT32", "FLOAT64", "Name", "Offset", "Datatype", "Count" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.LidarStreamingRequest), global::Sensorstreaming.LidarStreamingRequest.Parser, new[]{ "TimeInSeconds", "Height", "Width", "Fields", "IsBigEndian", "PointStep", "RowStep", "Data", "IsDense" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.LidarStreamingRequest), global::Sensorstreaming.LidarStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.LidarStreamingRequest2), global::Sensorstreaming.LidarStreamingRequest2.Parser, new[]{ "Data", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.RadarStreamingRequest), global::Sensorstreaming.RadarStreamingRequest.Parser, new[]{ "RangeIncrement", "RangeStart", "NumSamples", "NumSpokes", "MinIntensity", "MaxIntensity", "TimeInSeconds", "Azimuth", "RadarSpokes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.DepthStreamingRequest), global::Sensorstreaming.DepthStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.DvlStreamingRequest), global::Sensorstreaming.DvlStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
@@ -472,443 +466,6 @@ namespace Sensorstreaming {
 
   }
 
-  public sealed partial class PointField : pb::IMessage<PointField> {
-    private static readonly pb::MessageParser<PointField> _parser = new pb::MessageParser<PointField>(() => new PointField());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PointField> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PointField() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PointField(PointField other) : this() {
-      iNT8_ = other.iNT8_;
-      uINT8_ = other.uINT8_;
-      iNT16_ = other.iNT16_;
-      uINT16_ = other.uINT16_;
-      iNT32_ = other.iNT32_;
-      uINT32_ = other.uINT32_;
-      fLOAT32_ = other.fLOAT32_;
-      fLOAT64_ = other.fLOAT64_;
-      name_ = other.name_;
-      offset_ = other.offset_;
-      datatype_ = other.datatype_;
-      count_ = other.count_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PointField Clone() {
-      return new PointField(this);
-    }
-
-    /// <summary>Field number for the "INT8" field.</summary>
-    public const int INT8FieldNumber = 1;
-    private uint iNT8_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint INT8 {
-      get { return iNT8_; }
-      set {
-        iNT8_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "UINT8" field.</summary>
-    public const int UINT8FieldNumber = 2;
-    private uint uINT8_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint UINT8 {
-      get { return uINT8_; }
-      set {
-        uINT8_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "INT16" field.</summary>
-    public const int INT16FieldNumber = 3;
-    private uint iNT16_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint INT16 {
-      get { return iNT16_; }
-      set {
-        iNT16_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "UINT16" field.</summary>
-    public const int UINT16FieldNumber = 4;
-    private uint uINT16_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint UINT16 {
-      get { return uINT16_; }
-      set {
-        uINT16_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "INT32" field.</summary>
-    public const int INT32FieldNumber = 5;
-    private uint iNT32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint INT32 {
-      get { return iNT32_; }
-      set {
-        iNT32_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "UINT32" field.</summary>
-    public const int UINT32FieldNumber = 6;
-    private uint uINT32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint UINT32 {
-      get { return uINT32_; }
-      set {
-        uINT32_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "FLOAT32" field.</summary>
-    public const int FLOAT32FieldNumber = 7;
-    private uint fLOAT32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint FLOAT32 {
-      get { return fLOAT32_; }
-      set {
-        fLOAT32_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "FLOAT64" field.</summary>
-    public const int FLOAT64FieldNumber = 8;
-    private uint fLOAT64_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint FLOAT64 {
-      get { return fLOAT64_; }
-      set {
-        fLOAT64_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 9;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "offset" field.</summary>
-    public const int OffsetFieldNumber = 10;
-    private uint offset_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Offset {
-      get { return offset_; }
-      set {
-        offset_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "datatype" field.</summary>
-    public const int DatatypeFieldNumber = 11;
-    private uint datatype_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Datatype {
-      get { return datatype_; }
-      set {
-        datatype_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "count" field.</summary>
-    public const int CountFieldNumber = 12;
-    private uint count_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Count {
-      get { return count_; }
-      set {
-        count_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as PointField);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PointField other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (INT8 != other.INT8) return false;
-      if (UINT8 != other.UINT8) return false;
-      if (INT16 != other.INT16) return false;
-      if (UINT16 != other.UINT16) return false;
-      if (INT32 != other.INT32) return false;
-      if (UINT32 != other.UINT32) return false;
-      if (FLOAT32 != other.FLOAT32) return false;
-      if (FLOAT64 != other.FLOAT64) return false;
-      if (Name != other.Name) return false;
-      if (Offset != other.Offset) return false;
-      if (Datatype != other.Datatype) return false;
-      if (Count != other.Count) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (INT8 != 0) hash ^= INT8.GetHashCode();
-      if (UINT8 != 0) hash ^= UINT8.GetHashCode();
-      if (INT16 != 0) hash ^= INT16.GetHashCode();
-      if (UINT16 != 0) hash ^= UINT16.GetHashCode();
-      if (INT32 != 0) hash ^= INT32.GetHashCode();
-      if (UINT32 != 0) hash ^= UINT32.GetHashCode();
-      if (FLOAT32 != 0) hash ^= FLOAT32.GetHashCode();
-      if (FLOAT64 != 0) hash ^= FLOAT64.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Offset != 0) hash ^= Offset.GetHashCode();
-      if (Datatype != 0) hash ^= Datatype.GetHashCode();
-      if (Count != 0) hash ^= Count.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (INT8 != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(INT8);
-      }
-      if (UINT8 != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(UINT8);
-      }
-      if (INT16 != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(INT16);
-      }
-      if (UINT16 != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(UINT16);
-      }
-      if (INT32 != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(INT32);
-      }
-      if (UINT32 != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(UINT32);
-      }
-      if (FLOAT32 != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(FLOAT32);
-      }
-      if (FLOAT64 != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(FLOAT64);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(74);
-        output.WriteString(Name);
-      }
-      if (Offset != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Offset);
-      }
-      if (Datatype != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Datatype);
-      }
-      if (Count != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(Count);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (INT8 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INT8);
-      }
-      if (UINT8 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UINT8);
-      }
-      if (INT16 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INT16);
-      }
-      if (UINT16 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UINT16);
-      }
-      if (INT32 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INT32);
-      }
-      if (UINT32 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UINT32);
-      }
-      if (FLOAT32 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FLOAT32);
-      }
-      if (FLOAT64 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FLOAT64);
-      }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Offset != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Offset);
-      }
-      if (Datatype != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Datatype);
-      }
-      if (Count != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PointField other) {
-      if (other == null) {
-        return;
-      }
-      if (other.INT8 != 0) {
-        INT8 = other.INT8;
-      }
-      if (other.UINT8 != 0) {
-        UINT8 = other.UINT8;
-      }
-      if (other.INT16 != 0) {
-        INT16 = other.INT16;
-      }
-      if (other.UINT16 != 0) {
-        UINT16 = other.UINT16;
-      }
-      if (other.INT32 != 0) {
-        INT32 = other.INT32;
-      }
-      if (other.UINT32 != 0) {
-        UINT32 = other.UINT32;
-      }
-      if (other.FLOAT32 != 0) {
-        FLOAT32 = other.FLOAT32;
-      }
-      if (other.FLOAT64 != 0) {
-        FLOAT64 = other.FLOAT64;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Offset != 0) {
-        Offset = other.Offset;
-      }
-      if (other.Datatype != 0) {
-        Datatype = other.Datatype;
-      }
-      if (other.Count != 0) {
-        Count = other.Count;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            INT8 = input.ReadUInt32();
-            break;
-          }
-          case 16: {
-            UINT8 = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            INT16 = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            UINT16 = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            INT32 = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            UINT32 = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            FLOAT32 = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            FLOAT64 = input.ReadUInt32();
-            break;
-          }
-          case 74: {
-            Name = input.ReadString();
-            break;
-          }
-          case 80: {
-            Offset = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            Datatype = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            Count = input.ReadUInt32();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
   public sealed partial class LidarStreamingRequest : pb::IMessage<LidarStreamingRequest> {
     private static readonly pb::MessageParser<LidarStreamingRequest> _parser = new pb::MessageParser<LidarStreamingRequest>(() => new LidarStreamingRequest());
     private pb::UnknownFieldSet _unknownFields;
@@ -917,7 +474,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -934,15 +491,8 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LidarStreamingRequest(LidarStreamingRequest other) : this() {
-      timeInSeconds_ = other.timeInSeconds_;
-      height_ = other.height_;
-      width_ = other.width_;
-      fields_ = other.fields_.Clone();
-      isBigEndian_ = other.isBigEndian_;
-      pointStep_ = other.pointStep_;
-      rowStep_ = other.rowStep_;
-      data_ = other.data_;
-      isDense_ = other.isDense_;
+      data_ = other.data_ != null ? other.data_.Clone() : null;
+      address_ = other.address_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -951,101 +501,25 @@ namespace Sensorstreaming {
       return new LidarStreamingRequest(this);
     }
 
-    /// <summary>Field number for the "timeInSeconds" field.</summary>
-    public const int TimeInSecondsFieldNumber = 1;
-    private double timeInSeconds_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double TimeInSeconds {
-      get { return timeInSeconds_; }
-      set {
-        timeInSeconds_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "height" field.</summary>
-    public const int HeightFieldNumber = 2;
-    private uint height_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Height {
-      get { return height_; }
-      set {
-        height_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "width" field.</summary>
-    public const int WidthFieldNumber = 3;
-    private uint width_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Width {
-      get { return width_; }
-      set {
-        width_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "fields" field.</summary>
-    public const int FieldsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Sensorstreaming.PointField> _repeated_fields_codec
-        = pb::FieldCodec.ForMessage(34, global::Sensorstreaming.PointField.Parser);
-    private readonly pbc::RepeatedField<global::Sensorstreaming.PointField> fields_ = new pbc::RepeatedField<global::Sensorstreaming.PointField>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Sensorstreaming.PointField> Fields {
-      get { return fields_; }
-    }
-
-    /// <summary>Field number for the "isBigEndian" field.</summary>
-    public const int IsBigEndianFieldNumber = 5;
-    private bool isBigEndian_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool IsBigEndian {
-      get { return isBigEndian_; }
-      set {
-        isBigEndian_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "point_step" field.</summary>
-    public const int PointStepFieldNumber = 6;
-    private uint pointStep_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint PointStep {
-      get { return pointStep_; }
-      set {
-        pointStep_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "row_step" field.</summary>
-    public const int RowStepFieldNumber = 7;
-    private uint rowStep_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint RowStep {
-      get { return rowStep_; }
-      set {
-        rowStep_ = value;
-      }
-    }
-
     /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 8;
-    private pb::ByteString data_ = pb::ByteString.Empty;
+    public const int DataFieldNumber = 1;
+    private global::Sensor.PointCloud data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString Data {
+    public global::Sensor.PointCloud Data {
       get { return data_; }
       set {
-        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        data_ = value;
       }
     }
 
-    /// <summary>Field number for the "is_dense" field.</summary>
-    public const int IsDenseFieldNumber = 9;
-    private bool isDense_;
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 2;
+    private string address_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool IsDense {
-      get { return isDense_; }
+    public string Address {
+      get { return address_; }
       set {
-        isDense_ = value;
+        address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1062,30 +536,16 @@ namespace Sensorstreaming {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TimeInSeconds, other.TimeInSeconds)) return false;
-      if (Height != other.Height) return false;
-      if (Width != other.Width) return false;
-      if(!fields_.Equals(other.fields_)) return false;
-      if (IsBigEndian != other.IsBigEndian) return false;
-      if (PointStep != other.PointStep) return false;
-      if (RowStep != other.RowStep) return false;
-      if (Data != other.Data) return false;
-      if (IsDense != other.IsDense) return false;
+      if (!object.Equals(Data, other.Data)) return false;
+      if (Address != other.Address) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TimeInSeconds != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TimeInSeconds);
-      if (Height != 0) hash ^= Height.GetHashCode();
-      if (Width != 0) hash ^= Width.GetHashCode();
-      hash ^= fields_.GetHashCode();
-      if (IsBigEndian != false) hash ^= IsBigEndian.GetHashCode();
-      if (PointStep != 0) hash ^= PointStep.GetHashCode();
-      if (RowStep != 0) hash ^= RowStep.GetHashCode();
-      if (Data.Length != 0) hash ^= Data.GetHashCode();
-      if (IsDense != false) hash ^= IsDense.GetHashCode();
+      if (data_ != null) hash ^= Data.GetHashCode();
+      if (Address.Length != 0) hash ^= Address.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1099,38 +559,13 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TimeInSeconds != 0D) {
-        output.WriteRawTag(9);
-        output.WriteDouble(TimeInSeconds);
+      if (data_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Data);
       }
-      if (Height != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Height);
-      }
-      if (Width != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Width);
-      }
-      fields_.WriteTo(output, _repeated_fields_codec);
-      if (IsBigEndian != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsBigEndian);
-      }
-      if (PointStep != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(PointStep);
-      }
-      if (RowStep != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(RowStep);
-      }
-      if (Data.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteBytes(Data);
-      }
-      if (IsDense != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(IsDense);
+      if (Address.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Address);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1140,30 +575,11 @@ namespace Sensorstreaming {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TimeInSeconds != 0D) {
-        size += 1 + 8;
+      if (data_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
-      if (Height != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Height);
-      }
-      if (Width != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Width);
-      }
-      size += fields_.CalculateSize(_repeated_fields_codec);
-      if (IsBigEndian != false) {
-        size += 1 + 1;
-      }
-      if (PointStep != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PointStep);
-      }
-      if (RowStep != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RowStep);
-      }
-      if (Data.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
-      }
-      if (IsDense != false) {
-        size += 1 + 1;
+      if (Address.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1176,30 +592,14 @@ namespace Sensorstreaming {
       if (other == null) {
         return;
       }
-      if (other.TimeInSeconds != 0D) {
-        TimeInSeconds = other.TimeInSeconds;
+      if (other.data_ != null) {
+        if (data_ == null) {
+          data_ = new global::Sensor.PointCloud();
+        }
+        Data.MergeFrom(other.Data);
       }
-      if (other.Height != 0) {
-        Height = other.Height;
-      }
-      if (other.Width != 0) {
-        Width = other.Width;
-      }
-      fields_.Add(other.fields_);
-      if (other.IsBigEndian != false) {
-        IsBigEndian = other.IsBigEndian;
-      }
-      if (other.PointStep != 0) {
-        PointStep = other.PointStep;
-      }
-      if (other.RowStep != 0) {
-        RowStep = other.RowStep;
-      }
-      if (other.Data.Length != 0) {
-        Data = other.Data;
-      }
-      if (other.IsDense != false) {
-        IsDense = other.IsDense;
+      if (other.Address.Length != 0) {
+        Address = other.Address;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1212,40 +612,178 @@ namespace Sensorstreaming {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 9: {
-            TimeInSeconds = input.ReadDouble();
+          case 10: {
+            if (data_ == null) {
+              data_ = new global::Sensor.PointCloud();
+            }
+            input.ReadMessage(data_);
             break;
           }
-          case 16: {
-            Height = input.ReadUInt32();
+          case 18: {
+            Address = input.ReadString();
             break;
           }
-          case 24: {
-            Width = input.ReadUInt32();
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class LidarStreamingRequest2 : pb::IMessage<LidarStreamingRequest2> {
+    private static readonly pb::MessageParser<LidarStreamingRequest2> _parser = new pb::MessageParser<LidarStreamingRequest2>(() => new LidarStreamingRequest2());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<LidarStreamingRequest2> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LidarStreamingRequest2() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LidarStreamingRequest2(LidarStreamingRequest2 other) : this() {
+      data_ = other.data_ != null ? other.data_.Clone() : null;
+      address_ = other.address_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LidarStreamingRequest2 Clone() {
+      return new LidarStreamingRequest2(this);
+    }
+
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 1;
+    private global::Sensor.PointCloud2 data_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Sensor.PointCloud2 Data {
+      get { return data_; }
+      set {
+        data_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 2;
+    private string address_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Address {
+      get { return address_; }
+      set {
+        address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as LidarStreamingRequest2);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(LidarStreamingRequest2 other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Data, other.Data)) return false;
+      if (Address != other.Address) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (data_ != null) hash ^= Data.GetHashCode();
+      if (Address.Length != 0) hash ^= Address.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (data_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Data);
+      }
+      if (Address.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Address);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (data_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
+      }
+      if (Address.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(LidarStreamingRequest2 other) {
+      if (other == null) {
+        return;
+      }
+      if (other.data_ != null) {
+        if (data_ == null) {
+          data_ = new global::Sensor.PointCloud2();
+        }
+        Data.MergeFrom(other.Data);
+      }
+      if (other.Address.Length != 0) {
+        Address = other.Address;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (data_ == null) {
+              data_ = new global::Sensor.PointCloud2();
+            }
+            input.ReadMessage(data_);
             break;
           }
-          case 34: {
-            fields_.AddEntriesFrom(input, _repeated_fields_codec);
-            break;
-          }
-          case 40: {
-            IsBigEndian = input.ReadBool();
-            break;
-          }
-          case 48: {
-            PointStep = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            RowStep = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            Data = input.ReadBytes();
-            break;
-          }
-          case 72: {
-            IsDense = input.ReadBool();
+          case 18: {
+            Address = input.ReadString();
             break;
           }
         }
