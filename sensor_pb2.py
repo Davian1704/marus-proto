@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='sensor',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0csensor.proto\x12\x06sensor\x1a\tstd.proto\x1a\x0egeometry.proto\"\x90\x02\n\x03Imu\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12)\n\x0borientation\x18\x02 \x01(\x0b\x32\x14.geometry.Quaternion\x12\x1d\n\x15orientationCovariance\x18\x03 \x03(\x01\x12*\n\x0f\x61ngularVelocity\x18\x04 \x01(\x0b\x32\x11.geometry.Vector3\x12!\n\x19\x61ngularVelocityCovariance\x18\x05 \x03(\x01\x12-\n\x12linearAcceleration\x18\x06 \x01(\x0b\x32\x11.geometry.Vector3\x12$\n\x1clinearAccelerationCovariance\x18\x07 \x03(\x01\"\xf3\x01\n\x0cNavSatStatus\x12+\n\x06status\x18\x01 \x01(\x0e\x32\x1b.sensor.NavSatStatus.Status\x12-\n\x07service\x18\x02 \x01(\x0e\x32\x1c.sensor.NavSatStatus.Service\"B\n\x06Status\x12\x07\n\x03\x46IX\x10\x00\x12\x0c\n\x08SBAS_FIX\x10\x01\x12\x0c\n\x08GBAS_FIX\x10\x02\x12\x13\n\x06NO_FIX\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\"C\n\x07Service\x12\x08\n\x04NONE\x10\x00\x12\x07\n\x03GPS\x10\x01\x12\x0b\n\x07GLONASS\x10\x02\x12\x0b\n\x07\x43OMPASS\x10\x04\x12\x0b\n\x07GALILEO\x10\x08\"\xa2\x01\n\tNavSatFix\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12$\n\x06status\x18\x02 \x01(\x0b\x32\x14.sensor.NavSatStatus\x12\x10\n\x08latitude\x18\x03 \x01(\x01\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x10\n\x08\x61ltitude\x18\x05 \x01(\x01\x12\x1b\n\x13position_covariance\x18\x06 \x03(\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x0csensor.proto\x12\x06sensor\x1a\tstd.proto\x1a\x0egeometry.proto\"\x90\x02\n\x03Imu\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12)\n\x0borientation\x18\x02 \x01(\x0b\x32\x14.geometry.Quaternion\x12\x1d\n\x15orientationCovariance\x18\x03 \x03(\x01\x12*\n\x0f\x61ngularVelocity\x18\x04 \x01(\x0b\x32\x11.geometry.Vector3\x12!\n\x19\x61ngularVelocityCovariance\x18\x05 \x03(\x01\x12-\n\x12linearAcceleration\x18\x06 \x01(\x0b\x32\x11.geometry.Vector3\x12$\n\x1clinearAccelerationCovariance\x18\x07 \x03(\x01\"\xf3\x01\n\x0cNavSatStatus\x12+\n\x06status\x18\x01 \x01(\x0e\x32\x1b.sensor.NavSatStatus.Status\x12-\n\x07service\x18\x02 \x01(\x0e\x32\x1c.sensor.NavSatStatus.Service\"B\n\x06Status\x12\x07\n\x03\x46IX\x10\x00\x12\x0c\n\x08SBAS_FIX\x10\x01\x12\x0c\n\x08GBAS_FIX\x10\x02\x12\x13\n\x06NO_FIX\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\"C\n\x07Service\x12\x08\n\x04NONE\x10\x00\x12\x07\n\x03GPS\x10\x01\x12\x0b\n\x07GLONASS\x10\x02\x12\x0b\n\x07\x43OMPASS\x10\x04\x12\x0b\n\x07GALILEO\x10\x08\"\xa2\x01\n\tNavSatFix\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12$\n\x06status\x18\x02 \x01(\x0b\x32\x14.sensor.NavSatStatus\x12\x10\n\x08latitude\x18\x03 \x01(\x01\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x10\n\x08\x61ltitude\x18\x05 \x01(\x01\x12\x1b\n\x13position_covariance\x18\x06 \x03(\x01\"\'\n\x07\x43hannel\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06values\x18\x02 \x03(\x01\"\xc8\x01\n\nPointField\x12\x0c\n\x04INT8\x18\x01 \x01(\r\x12\r\n\x05UINT8\x18\x02 \x01(\r\x12\r\n\x05INT16\x18\x03 \x01(\r\x12\x0e\n\x06UINT16\x18\x04 \x01(\r\x12\r\n\x05INT32\x18\x05 \x01(\r\x12\x0e\n\x06UINT32\x18\x06 \x01(\r\x12\x0f\n\x07\x46LOAT32\x18\x07 \x01(\r\x12\x0f\n\x07\x46LOAT64\x18\x08 \x01(\r\x12\x0c\n\x04name\x18\t \x01(\t\x12\x0e\n\x06offset\x18\n \x01(\r\x12\x10\n\x08\x64\x61tatype\x18\x0b \x01(\r\x12\r\n\x05\x63ount\x18\x0c \x01(\r\"m\n\nPointCloud\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x1f\n\x06points\x18\x02 \x03(\x0b\x32\x0f.geometry.Point\x12!\n\x08\x63hannels\x18\x03 \x03(\x0b\x32\x0f.sensor.Channel\"\xdf\x01\n\x0bPointCloud2\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x15\n\rtimeInSeconds\x18\x02 \x01(\x01\x12\x0e\n\x06height\x18\x03 \x01(\r\x12\r\n\x05width\x18\x04 \x01(\r\x12\"\n\x06\x66ields\x18\x05 \x03(\x0b\x32\x12.sensor.PointField\x12\x13\n\x0bisBigEndian\x18\x06 \x01(\x08\x12\x12\n\npoint_step\x18\x07 \x01(\r\x12\x10\n\x08row_step\x18\x08 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\t \x01(\x0c\x12\x10\n\x08is_dense\x18\n \x01(\x08\x62\x06proto3')
   ,
   dependencies=[std__pb2.DESCRIPTOR,geometry__pb2.DESCRIPTOR,])
 
@@ -270,6 +270,291 @@ _NAVSATFIX = _descriptor.Descriptor(
   serialized_end=735,
 )
 
+
+_CHANNEL = _descriptor.Descriptor(
+  name='Channel',
+  full_name='sensor.Channel',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='sensor.Channel.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='values', full_name='sensor.Channel.values', index=1,
+      number=2, type=1, cpp_type=5, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=737,
+  serialized_end=776,
+)
+
+
+_POINTFIELD = _descriptor.Descriptor(
+  name='PointField',
+  full_name='sensor.PointField',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='INT8', full_name='sensor.PointField.INT8', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='UINT8', full_name='sensor.PointField.UINT8', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='INT16', full_name='sensor.PointField.INT16', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='UINT16', full_name='sensor.PointField.UINT16', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='INT32', full_name='sensor.PointField.INT32', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='UINT32', full_name='sensor.PointField.UINT32', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FLOAT32', full_name='sensor.PointField.FLOAT32', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='FLOAT64', full_name='sensor.PointField.FLOAT64', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='sensor.PointField.name', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='offset', full_name='sensor.PointField.offset', index=9,
+      number=10, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='datatype', full_name='sensor.PointField.datatype', index=10,
+      number=11, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='sensor.PointField.count', index=11,
+      number=12, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=779,
+  serialized_end=979,
+)
+
+
+_POINTCLOUD = _descriptor.Descriptor(
+  name='PointCloud',
+  full_name='sensor.PointCloud',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='sensor.PointCloud.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='points', full_name='sensor.PointCloud.points', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='channels', full_name='sensor.PointCloud.channels', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=981,
+  serialized_end=1090,
+)
+
+
+_POINTCLOUD2 = _descriptor.Descriptor(
+  name='PointCloud2',
+  full_name='sensor.PointCloud2',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='sensor.PointCloud2.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='timeInSeconds', full_name='sensor.PointCloud2.timeInSeconds', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='height', full_name='sensor.PointCloud2.height', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='width', full_name='sensor.PointCloud2.width', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='fields', full_name='sensor.PointCloud2.fields', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='isBigEndian', full_name='sensor.PointCloud2.isBigEndian', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='point_step', full_name='sensor.PointCloud2.point_step', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='row_step', full_name='sensor.PointCloud2.row_step', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data', full_name='sensor.PointCloud2.data', index=8,
+      number=9, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='is_dense', full_name='sensor.PointCloud2.is_dense', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1093,
+  serialized_end=1316,
+)
+
 _IMU.fields_by_name['header'].message_type = std__pb2._HEADER
 _IMU.fields_by_name['orientation'].message_type = geometry__pb2._QUATERNION
 _IMU.fields_by_name['angularVelocity'].message_type = geometry__pb2._VECTOR3
@@ -280,9 +565,18 @@ _NAVSATSTATUS_STATUS.containing_type = _NAVSATSTATUS
 _NAVSATSTATUS_SERVICE.containing_type = _NAVSATSTATUS
 _NAVSATFIX.fields_by_name['header'].message_type = std__pb2._HEADER
 _NAVSATFIX.fields_by_name['status'].message_type = _NAVSATSTATUS
+_POINTCLOUD.fields_by_name['header'].message_type = std__pb2._HEADER
+_POINTCLOUD.fields_by_name['points'].message_type = geometry__pb2._POINT
+_POINTCLOUD.fields_by_name['channels'].message_type = _CHANNEL
+_POINTCLOUD2.fields_by_name['header'].message_type = std__pb2._HEADER
+_POINTCLOUD2.fields_by_name['fields'].message_type = _POINTFIELD
 DESCRIPTOR.message_types_by_name['Imu'] = _IMU
 DESCRIPTOR.message_types_by_name['NavSatStatus'] = _NAVSATSTATUS
 DESCRIPTOR.message_types_by_name['NavSatFix'] = _NAVSATFIX
+DESCRIPTOR.message_types_by_name['Channel'] = _CHANNEL
+DESCRIPTOR.message_types_by_name['PointField'] = _POINTFIELD
+DESCRIPTOR.message_types_by_name['PointCloud'] = _POINTCLOUD
+DESCRIPTOR.message_types_by_name['PointCloud2'] = _POINTCLOUD2
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Imu = _reflection.GeneratedProtocolMessageType('Imu', (_message.Message,), dict(
@@ -305,6 +599,34 @@ NavSatFix = _reflection.GeneratedProtocolMessageType('NavSatFix', (_message.Mess
   # @@protoc_insertion_point(class_scope:sensor.NavSatFix)
   ))
 _sym_db.RegisterMessage(NavSatFix)
+
+Channel = _reflection.GeneratedProtocolMessageType('Channel', (_message.Message,), dict(
+  DESCRIPTOR = _CHANNEL,
+  __module__ = 'sensor_pb2'
+  # @@protoc_insertion_point(class_scope:sensor.Channel)
+  ))
+_sym_db.RegisterMessage(Channel)
+
+PointField = _reflection.GeneratedProtocolMessageType('PointField', (_message.Message,), dict(
+  DESCRIPTOR = _POINTFIELD,
+  __module__ = 'sensor_pb2'
+  # @@protoc_insertion_point(class_scope:sensor.PointField)
+  ))
+_sym_db.RegisterMessage(PointField)
+
+PointCloud = _reflection.GeneratedProtocolMessageType('PointCloud', (_message.Message,), dict(
+  DESCRIPTOR = _POINTCLOUD,
+  __module__ = 'sensor_pb2'
+  # @@protoc_insertion_point(class_scope:sensor.PointCloud)
+  ))
+_sym_db.RegisterMessage(PointCloud)
+
+PointCloud2 = _reflection.GeneratedProtocolMessageType('PointCloud2', (_message.Message,), dict(
+  DESCRIPTOR = _POINTCLOUD2,
+  __module__ = 'sensor_pb2'
+  # @@protoc_insertion_point(class_scope:sensor.PointCloud2)
+  ))
+_sym_db.RegisterMessage(PointCloud2)
 
 
 # @@protoc_insertion_point(module_scope)
