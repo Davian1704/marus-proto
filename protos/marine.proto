@@ -11,7 +11,7 @@ message Dvl {
         WATER = 1;
         BOTTOM = 2;
     }
-    
+
     std.Header header = 1;
     geometry.Vector3 velocity = 2;
     repeated double velocityCovariance = 3;

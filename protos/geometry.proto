@@ -16,10 +16,10 @@ message Point {
 }
 
 message Quaternion {
-    double x = 1; 
-    double y = 2; 
-    double z = 3; 
-    double w = 4; 
+    double x = 1;
+    double y = 2;
+    double z = 3;
+    double w = 4;
 }
 
 message Twist
@@ -57,4 +57,3 @@ message TwistWithCovarianceStamped {
     std.Header header = 1;
     TwistWithCovariance twist = 2;
 }
-

@@ -1,9 +1,8 @@
 syntax = "proto3";
+package tf;
 
 import "std.proto";
 import "geometry.proto";
-
-package tf;
 
 service Tf {
     rpc GetAllFrames(std.Empty) returns (TfFrameList) {}

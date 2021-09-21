@@ -1,4 +1,5 @@
 syntax = "proto3";
+package remotecontrol;
 
 import "std.proto";
 
@@ -6,8 +7,6 @@ option java_multiple_files = true;
 option java_package = "io.grpc.examples.remotecontrol";
 option java_outer_classname = "RemoteControl";
 option objc_class_prefix = "HLW";
-
-package remotecontrol;
 
 service RemoteControl {
     rpc ApplyForce(ForceRequest) returns (stream ForceResponse) {}

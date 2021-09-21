@@ -5,40 +5,80 @@ import "std.proto";
 import "geometry.proto";
 
 message Imu {
-  std.Header header = 1;
-  geometry.Quaternion orientation = 2;
-  repeated double orientationCovariance = 3;
-  geometry.Vector3 angularVelocity = 4;
-  repeated double angularVelocityCovariance = 5;
-  geometry.Vector3 linearAcceleration = 6;
-  repeated double linearAccelerationCovariance = 7;
+    std.Header header = 1;
+    geometry.Quaternion orientation = 2;
+    repeated double orientationCovariance = 3;
+    geometry.Vector3 angularVelocity = 4;
+    repeated double angularVelocityCovariance = 5;
+    geometry.Vector3 linearAcceleration = 6;
+    repeated double linearAccelerationCovariance = 7;
 }
 
 message NavSatStatus {
-  enum Status {
-    FIX = 0;
-    SBAS_FIX = 1;
-    GBAS_FIX = 2;
-    NO_FIX = -1;
-  }
-  
-  enum Service {
-    NONE = 0;
-    GPS = 1;
-    GLONASS = 2;
-    COMPASS = 4;
-    GALILEO = 8;
-  }
-  
-  Status status = 1;
-  Service service = 2;
+    enum Status {
+        FIX = 0;
+        SBAS_FIX = 1;
+        GBAS_FIX = 2;
+        NO_FIX = -1;
+    }
+
+    enum Service {
+        NONE = 0;
+        GPS = 1;
+        GLONASS = 2;
+        COMPASS = 4;
+        GALILEO = 8;
+    }
+
+    Status status = 1;
+    Service service = 2;
 }
 
 message NavSatFix {
-  std.Header header = 1;
-  NavSatStatus status = 2;
-  double latitude = 3;
-  double longitude = 4;
-  double altitude = 5;
-  repeated double position_covariance = 6;
+    std.Header header = 1;
+    NavSatStatus status = 2;
+    double latitude = 3;
+    double longitude = 4;
+    double altitude = 5;
+    repeated double position_covariance = 6;
+}
+
+message Channel {
+    string name = 1;
+    repeated double values = 2;
+}
+
+message PointField {
+    uint32 INT8 = 1;
+    uint32 UINT8 = 2;
+    uint32 INT16 = 3;
+    uint32 UINT16 = 4;
+    uint32 INT32 = 5;
+    uint32 UINT32 = 6;
+    uint32 FLOAT32 = 7;
+    uint32 FLOAT64 = 8;
+
+    string name = 9;
+    uint32 offset = 10;
+    uint32 datatype = 11;
+    uint32 count = 12;
+}
+
+message PointCloud {
+    std.Header header = 1;
+    repeated geometry.Point points = 2;
+    repeated Channel channels = 3;
+}
+
+message PointCloud2 {
+    std.Header header = 1;
+    double timeInSeconds = 2;
+    uint32 height = 3;
+    uint32 width = 4;
+    repeated PointField fields = 5;
+    bool isBigEndian = 6;
+    uint32 point_step = 7;
+    uint32 row_step = 8;
+    bytes data = 9;
+    bool is_dense = 10;
 }

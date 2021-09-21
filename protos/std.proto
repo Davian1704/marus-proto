@@ -9,5 +9,5 @@ message Header {
 }
 
 message Float32Array {
-    repeated float data = 1; 
+    repeated float data = 1;
 }
