@@ -13,14 +13,14 @@ option objc_class_prefix = "HLW";
 
 service SensorStreaming {
     rpc StreamCameraSensor(stream CameraStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamLidarSensor(stream LidarStreamingRequest) returns (StreamingResponse) {}
+    rpc StreamLidarSensor(stream PointCloudStreamingRequest) returns (StreamingResponse) {}
+    rpc StreamSonarSensor(stream PointCloudStreamingRequest) returns (StreamingResponse) {}
     rpc StreamRadarSensor(stream RadarStreamingRequest) returns (StreamingResponse) {}
     rpc StreamDepthSensor(stream DepthStreamingRequest) returns (StreamingResponse) {}
     rpc StreamDvlSensor(stream DvlStreamingRequest) returns (StreamingResponse) {}
     rpc StreamGnssSensor(stream GnssStreamingRequest) returns (StreamingResponse) {}
     rpc StreamImuSensor(stream ImuStreamingRequest) returns (StreamingResponse) {}
     rpc StreamPoseSensor(stream PoseStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamSonarSensor(stream SonarStreamingRequest) returns (StreamingResponse) {}
     rpc StreamAisSensor(stream AISStreamingRequest) returns (StreamingResponse) {}
 }
 
@@ -36,12 +36,12 @@ message StreamingResponse {
     bool success = 1;
 }
 
-message LidarStreamingRequest {
+message PointCloudStreamingRequest {
     sensor.PointCloud data = 1;
     string address = 2;
 }
 
-message LidarStreamingRequest2 {
+message PointCloud2StreamingRequest {
     sensor.PointCloud2 data = 1;
     string address = 2;
 }
