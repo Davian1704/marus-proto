@@ -14,14 +14,13 @@ namespace Sensorstreaming {
 
     static readonly grpc::Marshaller<global::Sensorstreaming.CameraStreamingRequest> __Marshaller_sensorstreaming_CameraStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.CameraStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.StreamingResponse> __Marshaller_sensorstreaming_StreamingResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.StreamingResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Sensorstreaming.LidarStreamingRequest> __Marshaller_sensorstreaming_LidarStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.LidarStreamingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Sensorstreaming.PointCloudStreamingRequest> __Marshaller_sensorstreaming_PointCloudStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.PointCloudStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.RadarStreamingRequest> __Marshaller_sensorstreaming_RadarStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.RadarStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.DepthStreamingRequest> __Marshaller_sensorstreaming_DepthStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.DepthStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.DvlStreamingRequest> __Marshaller_sensorstreaming_DvlStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.DvlStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.GnssStreamingRequest> __Marshaller_sensorstreaming_GnssStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.GnssStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.ImuStreamingRequest> __Marshaller_sensorstreaming_ImuStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.ImuStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.PoseStreamingRequest> __Marshaller_sensorstreaming_PoseStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.PoseStreamingRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Sensorstreaming.SonarStreamingRequest> __Marshaller_sensorstreaming_SonarStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.SonarStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.AISStreamingRequest> __Marshaller_sensorstreaming_AISStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.AISStreamingRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Sensorstreaming.CameraStreamingRequest, global::Sensorstreaming.StreamingResponse> __Method_StreamCameraSensor = new grpc::Method<global::Sensorstreaming.CameraStreamingRequest, global::Sensorstreaming.StreamingResponse>(
@@ -31,11 +30,18 @@ namespace Sensorstreaming {
         __Marshaller_sensorstreaming_CameraStreamingRequest,
         __Marshaller_sensorstreaming_StreamingResponse);
 
-    static readonly grpc::Method<global::Sensorstreaming.LidarStreamingRequest, global::Sensorstreaming.StreamingResponse> __Method_StreamLidarSensor = new grpc::Method<global::Sensorstreaming.LidarStreamingRequest, global::Sensorstreaming.StreamingResponse>(
+    static readonly grpc::Method<global::Sensorstreaming.PointCloudStreamingRequest, global::Sensorstreaming.StreamingResponse> __Method_StreamLidarSensor = new grpc::Method<global::Sensorstreaming.PointCloudStreamingRequest, global::Sensorstreaming.StreamingResponse>(
         grpc::MethodType.ClientStreaming,
         __ServiceName,
         "StreamLidarSensor",
-        __Marshaller_sensorstreaming_LidarStreamingRequest,
+        __Marshaller_sensorstreaming_PointCloudStreamingRequest,
+        __Marshaller_sensorstreaming_StreamingResponse);
+
+    static readonly grpc::Method<global::Sensorstreaming.PointCloudStreamingRequest, global::Sensorstreaming.StreamingResponse> __Method_StreamSonarSensor = new grpc::Method<global::Sensorstreaming.PointCloudStreamingRequest, global::Sensorstreaming.StreamingResponse>(
+        grpc::MethodType.ClientStreaming,
+        __ServiceName,
+        "StreamSonarSensor",
+        __Marshaller_sensorstreaming_PointCloudStreamingRequest,
         __Marshaller_sensorstreaming_StreamingResponse);
 
     static readonly grpc::Method<global::Sensorstreaming.RadarStreamingRequest, global::Sensorstreaming.StreamingResponse> __Method_StreamRadarSensor = new grpc::Method<global::Sensorstreaming.RadarStreamingRequest, global::Sensorstreaming.StreamingResponse>(
@@ -80,13 +86,6 @@ namespace Sensorstreaming {
         __Marshaller_sensorstreaming_PoseStreamingRequest,
         __Marshaller_sensorstreaming_StreamingResponse);
 
-    static readonly grpc::Method<global::Sensorstreaming.SonarStreamingRequest, global::Sensorstreaming.StreamingResponse> __Method_StreamSonarSensor = new grpc::Method<global::Sensorstreaming.SonarStreamingRequest, global::Sensorstreaming.StreamingResponse>(
-        grpc::MethodType.ClientStreaming,
-        __ServiceName,
-        "StreamSonarSensor",
-        __Marshaller_sensorstreaming_SonarStreamingRequest,
-        __Marshaller_sensorstreaming_StreamingResponse);
-
     static readonly grpc::Method<global::Sensorstreaming.AISStreamingRequest, global::Sensorstreaming.StreamingResponse> __Method_StreamAisSensor = new grpc::Method<global::Sensorstreaming.AISStreamingRequest, global::Sensorstreaming.StreamingResponse>(
         grpc::MethodType.ClientStreaming,
         __ServiceName,
@@ -108,7 +107,12 @@ namespace Sensorstreaming {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Sensorstreaming.StreamingResponse> StreamLidarSensor(grpc::IAsyncStreamReader<global::Sensorstreaming.LidarStreamingRequest> requestStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Sensorstreaming.StreamingResponse> StreamLidarSensor(grpc::IAsyncStreamReader<global::Sensorstreaming.PointCloudStreamingRequest> requestStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Sensorstreaming.StreamingResponse> StreamSonarSensor(grpc::IAsyncStreamReader<global::Sensorstreaming.PointCloudStreamingRequest> requestStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -139,11 +143,6 @@ namespace Sensorstreaming {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::Sensorstreaming.StreamingResponse> StreamPoseSensor(grpc::IAsyncStreamReader<global::Sensorstreaming.PoseStreamingRequest> requestStream, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      public virtual global::System.Threading.Tasks.Task<global::Sensorstreaming.StreamingResponse> StreamSonarSensor(grpc::IAsyncStreamReader<global::Sensorstreaming.SonarStreamingRequest> requestStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -186,13 +185,21 @@ namespace Sensorstreaming {
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_StreamCameraSensor, null, options);
       }
-      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.LidarStreamingRequest, global::Sensorstreaming.StreamingResponse> StreamLidarSensor(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.PointCloudStreamingRequest, global::Sensorstreaming.StreamingResponse> StreamLidarSensor(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamLidarSensor(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.LidarStreamingRequest, global::Sensorstreaming.StreamingResponse> StreamLidarSensor(grpc::CallOptions options)
+      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.PointCloudStreamingRequest, global::Sensorstreaming.StreamingResponse> StreamLidarSensor(grpc::CallOptions options)
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_StreamLidarSensor, null, options);
+      }
+      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.PointCloudStreamingRequest, global::Sensorstreaming.StreamingResponse> StreamSonarSensor(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamSonarSensor(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.PointCloudStreamingRequest, global::Sensorstreaming.StreamingResponse> StreamSonarSensor(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncClientStreamingCall(__Method_StreamSonarSensor, null, options);
       }
       public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.RadarStreamingRequest, global::Sensorstreaming.StreamingResponse> StreamRadarSensor(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -242,14 +249,6 @@ namespace Sensorstreaming {
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_StreamPoseSensor, null, options);
       }
-      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.SonarStreamingRequest, global::Sensorstreaming.StreamingResponse> StreamSonarSensor(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return StreamSonarSensor(new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.SonarStreamingRequest, global::Sensorstreaming.StreamingResponse> StreamSonarSensor(grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncClientStreamingCall(__Method_StreamSonarSensor, null, options);
-      }
       public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.AISStreamingRequest, global::Sensorstreaming.StreamingResponse> StreamAisSensor(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamAisSensor(new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -272,13 +271,13 @@ namespace Sensorstreaming {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_StreamCameraSensor, serviceImpl.StreamCameraSensor)
           .AddMethod(__Method_StreamLidarSensor, serviceImpl.StreamLidarSensor)
+          .AddMethod(__Method_StreamSonarSensor, serviceImpl.StreamSonarSensor)
           .AddMethod(__Method_StreamRadarSensor, serviceImpl.StreamRadarSensor)
           .AddMethod(__Method_StreamDepthSensor, serviceImpl.StreamDepthSensor)
           .AddMethod(__Method_StreamDvlSensor, serviceImpl.StreamDvlSensor)
           .AddMethod(__Method_StreamGnssSensor, serviceImpl.StreamGnssSensor)
           .AddMethod(__Method_StreamImuSensor, serviceImpl.StreamImuSensor)
           .AddMethod(__Method_StreamPoseSensor, serviceImpl.StreamPoseSensor)
-          .AddMethod(__Method_StreamSonarSensor, serviceImpl.StreamSonarSensor)
           .AddMethod(__Method_StreamAisSensor, serviceImpl.StreamAisSensor).Build();
     }
 
