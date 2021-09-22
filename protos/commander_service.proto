@@ -1,0 +1,14 @@
+syntax = "proto3";
+package service;
+
+import "std.proto";
+import "labust.proto";
+
+service Commander {
+    rpc PrimitivePointer (labust.PointerPrimitiveService) returns (PrimitivePointerResponse) {}
+}
+
+
+message PrimitivePointerResponse {
+    bool success = 1;
+}
