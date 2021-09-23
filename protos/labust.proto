@@ -26,7 +26,8 @@ message PointerPrimitiveService {
   geometry.Vector3 guidanceTarget = 3;
   bool guidanceEnable = 4;
   bool wrappingEnable = 5;
-  bool streamlineOrientation = 6;
-  string guidanceTopic = 7;
-  string radiusTopic = 8;
+  bool fovGuidance = 6;
+  bool streamlineOrientation = 7;
+  string guidanceTopic = 8;
+  string radiusTopic = 9;
 }
