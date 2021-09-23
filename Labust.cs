@@ -31,17 +31,18 @@ namespace Labust {
             "B3BpVGlsZGEYByABKAESHgoDZHJQGAggASgLMhEuZ2VvbWV0cnkuVmVjdG9y",
             "MxIjCghwb3NpdGlvbhgJIAEoCzIRLmdlb21ldHJ5LlZlY3RvcjMSJgoLb3Jp",
             "ZW50YXRpb24YCiABKAsyES5nZW9tZXRyeS5WZWN0b3IzEhEKCWN1cnZhdHVy",
-            "ZRgLIAEoARIPCgd0b3JzaW9uGAwgASgBIugBChdQb2ludGVyUHJpbWl0aXZl",
+            "ZRgLIAEoARIPCgd0b3JzaW9uGAwgASgBIv0BChdQb2ludGVyUHJpbWl0aXZl",
             "U2VydmljZRIOCgZyYWRpdXMYASABKAESFwoPdmVydGljYWxfb2Zmc2V0GAIg",
             "ASgBEikKDmd1aWRhbmNlVGFyZ2V0GAMgASgLMhEuZ2VvbWV0cnkuVmVjdG9y",
             "MxIWCg5ndWlkYW5jZUVuYWJsZRgEIAEoCBIWCg53cmFwcGluZ0VuYWJsZRgF",
-            "IAEoCBIdChVzdHJlYW1saW5lT3JpZW50YXRpb24YBiABKAgSFQoNZ3VpZGFu",
-            "Y2VUb3BpYxgHIAEoCRITCgtyYWRpdXNUb3BpYxgIIAEoCWIGcHJvdG8z"));
+            "IAEoCBITCgtmb3ZHdWlkYW5jZRgGIAEoCBIdChVzdHJlYW1saW5lT3JpZW50",
+            "YXRpb24YByABKAgSFQoNZ3VpZGFuY2VUb3BpYxgIIAEoCRITCgtyYWRpdXNU",
+            "b3BpYxgJIAEoCWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geographic.GeographicReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Labust.FSPathInfo), global::Labust.FSPathInfo.Parser, new[]{ "Header", "DeltaR", "K", "XiR", "DxiR", "Pi", "PiTilda", "DrP", "Position", "Orientation", "Curvature", "Torsion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.PointerPrimitiveService), global::Labust.PointerPrimitiveService.Parser, new[]{ "Radius", "VerticalOffset", "GuidanceTarget", "GuidanceEnable", "WrappingEnable", "StreamlineOrientation", "GuidanceTopic", "RadiusTopic" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.PointerPrimitiveService), global::Labust.PointerPrimitiveService.Parser, new[]{ "Radius", "VerticalOffset", "GuidanceTarget", "GuidanceEnable", "WrappingEnable", "FovGuidance", "StreamlineOrientation", "GuidanceTopic", "RadiusTopic" }, null, null, null)
           }));
     }
     #endregion
@@ -539,6 +540,7 @@ namespace Labust {
       guidanceTarget_ = other.guidanceTarget_ != null ? other.guidanceTarget_.Clone() : null;
       guidanceEnable_ = other.guidanceEnable_;
       wrappingEnable_ = other.wrappingEnable_;
+      fovGuidance_ = other.fovGuidance_;
       streamlineOrientation_ = other.streamlineOrientation_;
       guidanceTopic_ = other.guidanceTopic_;
       radiusTopic_ = other.radiusTopic_;
@@ -605,8 +607,19 @@ namespace Labust {
       }
     }
 
+    /// <summary>Field number for the "fovGuidance" field.</summary>
+    public const int FovGuidanceFieldNumber = 6;
+    private bool fovGuidance_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool FovGuidance {
+      get { return fovGuidance_; }
+      set {
+        fovGuidance_ = value;
+      }
+    }
+
     /// <summary>Field number for the "streamlineOrientation" field.</summary>
-    public const int StreamlineOrientationFieldNumber = 6;
+    public const int StreamlineOrientationFieldNumber = 7;
     private bool streamlineOrientation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool StreamlineOrientation {
@@ -617,7 +630,7 @@ namespace Labust {
     }
 
     /// <summary>Field number for the "guidanceTopic" field.</summary>
-    public const int GuidanceTopicFieldNumber = 7;
+    public const int GuidanceTopicFieldNumber = 8;
     private string guidanceTopic_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GuidanceTopic {
@@ -628,7 +641,7 @@ namespace Labust {
     }
 
     /// <summary>Field number for the "radiusTopic" field.</summary>
-    public const int RadiusTopicFieldNumber = 8;
+    public const int RadiusTopicFieldNumber = 9;
     private string radiusTopic_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RadiusTopic {
@@ -656,6 +669,7 @@ namespace Labust {
       if (!object.Equals(GuidanceTarget, other.GuidanceTarget)) return false;
       if (GuidanceEnable != other.GuidanceEnable) return false;
       if (WrappingEnable != other.WrappingEnable) return false;
+      if (FovGuidance != other.FovGuidance) return false;
       if (StreamlineOrientation != other.StreamlineOrientation) return false;
       if (GuidanceTopic != other.GuidanceTopic) return false;
       if (RadiusTopic != other.RadiusTopic) return false;
@@ -670,6 +684,7 @@ namespace Labust {
       if (guidanceTarget_ != null) hash ^= GuidanceTarget.GetHashCode();
       if (GuidanceEnable != false) hash ^= GuidanceEnable.GetHashCode();
       if (WrappingEnable != false) hash ^= WrappingEnable.GetHashCode();
+      if (FovGuidance != false) hash ^= FovGuidance.GetHashCode();
       if (StreamlineOrientation != false) hash ^= StreamlineOrientation.GetHashCode();
       if (GuidanceTopic.Length != 0) hash ^= GuidanceTopic.GetHashCode();
       if (RadiusTopic.Length != 0) hash ^= RadiusTopic.GetHashCode();
@@ -706,16 +721,20 @@ namespace Labust {
         output.WriteRawTag(40);
         output.WriteBool(WrappingEnable);
       }
-      if (StreamlineOrientation != false) {
+      if (FovGuidance != false) {
         output.WriteRawTag(48);
+        output.WriteBool(FovGuidance);
+      }
+      if (StreamlineOrientation != false) {
+        output.WriteRawTag(56);
         output.WriteBool(StreamlineOrientation);
       }
       if (GuidanceTopic.Length != 0) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(66);
         output.WriteString(GuidanceTopic);
       }
       if (RadiusTopic.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(74);
         output.WriteString(RadiusTopic);
       }
       if (_unknownFields != null) {
@@ -739,6 +758,9 @@ namespace Labust {
         size += 1 + 1;
       }
       if (WrappingEnable != false) {
+        size += 1 + 1;
+      }
+      if (FovGuidance != false) {
         size += 1 + 1;
       }
       if (StreamlineOrientation != false) {
@@ -778,6 +800,9 @@ namespace Labust {
       }
       if (other.WrappingEnable != false) {
         WrappingEnable = other.WrappingEnable;
+      }
+      if (other.FovGuidance != false) {
+        FovGuidance = other.FovGuidance;
       }
       if (other.StreamlineOrientation != false) {
         StreamlineOrientation = other.StreamlineOrientation;
@@ -823,14 +848,18 @@ namespace Labust {
             break;
           }
           case 48: {
+            FovGuidance = input.ReadBool();
+            break;
+          }
+          case 56: {
             StreamlineOrientation = input.ReadBool();
             break;
           }
-          case 58: {
+          case 66: {
             GuidanceTopic = input.ReadString();
             break;
           }
-          case 66: {
+          case 74: {
             RadiusTopic = input.ReadString();
             break;
           }
