@@ -26,16 +26,16 @@ namespace Auv {
           string.Concat(
             "CglhdXYucHJvdG8SA2F1dhoJc3RkLnByb3RvGhBnZW9ncmFwaGljLnByb3Rv",
             "Gg5nZW9tZXRyeS5wcm90byIxCgNORUQSDQoFbm9ydGgYASABKAESDAoEZWFz",
-            "dBgCIAEoARINCgVkZXB0aBgDIAEoASKgAwoQTmF2aWdhdGlvblN0YXR1cxIb",
+            "dBgCIAEoARINCgVkZXB0aBgDIAEoASKdAwoQTmF2aWdhdGlvblN0YXR1cxIb",
             "CgZoZWFkZXIYASABKAsyCy5zdGQuSGVhZGVyEiwKDmdsb2JhbFBvc2l0aW9u",
             "GAIgASgLMhQuZ2VvZ3JhcGhpYy5HZW9Qb2ludBIkCgZvcmlnaW4YAyABKAsy",
             "FC5nZW9ncmFwaGljLkdlb1BvaW50EhoKCHBvc2l0aW9uGAQgASgLMgguYXV2",
             "Lk5FRBInCgxib2R5VmVsb2NpdHkYBSABKAsyES5nZW9tZXRyeS5WZWN0b3Iz",
             "EisKEHNlYWZsb29yVmVsb2NpdHkYBiABKAsyES5nZW9tZXRyeS5WZWN0b3Iz",
-            "EiYKC29yaWVudGF0aW9uGAcgASgLMhEuZ2VvbWV0cnkuVmVjdG9yMxIrChBv",
-            "cmllbnRhdGlvbl9yYXRlGAggASgLMhEuZ2VvbWV0cnkuVmVjdG9yMxIjChFw",
-            "b3NpdGlvbl92YXJpYW5jZRgJIAEoCzIILmF1di5ORUQSLwoUb3JpZW50YXRp",
-            "b25fdmFyaWFuY2UYCiABKAsyES5nZW9tZXRyeS5WZWN0b3IzYgZwcm90bzM="));
+            "EiYKC29yaWVudGF0aW9uGAcgASgLMhEuZ2VvbWV0cnkuVmVjdG9yMxIqCg9v",
+            "cmllbnRhdGlvblJhdGUYCCABKAsyES5nZW9tZXRyeS5WZWN0b3IzEiIKEHBv",
+            "c2l0aW9uVmFyaWFuY2UYCSABKAsyCC5hdXYuTkVEEi4KE29yaWVudGF0aW9u",
+            "VmFyaWFuY2UYCiABKAsyES5nZW9tZXRyeS5WZWN0b3IzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geographic.GeographicReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -352,7 +352,7 @@ namespace Auv {
       }
     }
 
-    /// <summary>Field number for the "orientation_rate" field.</summary>
+    /// <summary>Field number for the "orientationRate" field.</summary>
     public const int OrientationRateFieldNumber = 8;
     private global::Geometry.Vector3 orientationRate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -363,7 +363,7 @@ namespace Auv {
       }
     }
 
-    /// <summary>Field number for the "position_variance" field.</summary>
+    /// <summary>Field number for the "positionVariance" field.</summary>
     public const int PositionVarianceFieldNumber = 9;
     private global::Auv.NED positionVariance_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -374,7 +374,7 @@ namespace Auv {
       }
     }
 
-    /// <summary>Field number for the "orientation_variance" field.</summary>
+    /// <summary>Field number for the "orientationVariance" field.</summary>
     public const int OrientationVarianceFieldNumber = 10;
     private global::Geometry.Vector3 orientationVariance_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
