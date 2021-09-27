@@ -31,13 +31,13 @@ namespace Labust {
             "B3BpVGlsZGEYByABKAESHgoDZHJQGAggASgLMhEuZ2VvbWV0cnkuVmVjdG9y",
             "MxIjCghwb3NpdGlvbhgJIAEoCzIRLmdlb21ldHJ5LlZlY3RvcjMSJgoLb3Jp",
             "ZW50YXRpb24YCiABKAsyES5nZW9tZXRyeS5WZWN0b3IzEhEKCWN1cnZhdHVy",
-            "ZRgLIAEoARIPCgd0b3JzaW9uGAwgASgBIv0BChdQb2ludGVyUHJpbWl0aXZl",
-            "U2VydmljZRIOCgZyYWRpdXMYASABKAESFwoPdmVydGljYWxfb2Zmc2V0GAIg",
-            "ASgBEikKDmd1aWRhbmNlVGFyZ2V0GAMgASgLMhEuZ2VvbWV0cnkuVmVjdG9y",
-            "MxIWCg5ndWlkYW5jZUVuYWJsZRgEIAEoCBIWCg53cmFwcGluZ0VuYWJsZRgF",
-            "IAEoCBITCgtmb3ZHdWlkYW5jZRgGIAEoCBIdChVzdHJlYW1saW5lT3JpZW50",
-            "YXRpb24YByABKAgSFQoNZ3VpZGFuY2VUb3BpYxgIIAEoCRITCgtyYWRpdXNU",
-            "b3BpYxgJIAEoCWIGcHJvdG8z"));
+            "ZRgLIAEoARIPCgd0b3JzaW9uGAwgASgBIvwBChdQb2ludGVyUHJpbWl0aXZl",
+            "U2VydmljZRIOCgZyYWRpdXMYASABKAESFgoOdmVydGljYWxPZmZzZXQYAiAB",
+            "KAESKQoOZ3VpZGFuY2VUYXJnZXQYAyABKAsyES5nZW9tZXRyeS5WZWN0b3Iz",
+            "EhYKDmd1aWRhbmNlRW5hYmxlGAQgASgIEhYKDndyYXBwaW5nRW5hYmxlGAUg",
+            "ASgIEhMKC2Zvdkd1aWRhbmNlGAYgASgIEh0KFXN0cmVhbWxpbmVPcmllbnRh",
+            "dGlvbhgHIAEoCBIVCg1ndWlkYW5jZVRvcGljGAggASgJEhMKC3JhZGl1c1Rv",
+            "cGljGAkgASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geographic.GeographicReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -563,7 +563,7 @@ namespace Labust {
       }
     }
 
-    /// <summary>Field number for the "vertical_offset" field.</summary>
+    /// <summary>Field number for the "verticalOffset" field.</summary>
     public const int VerticalOffsetFieldNumber = 2;
     private double verticalOffset_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
