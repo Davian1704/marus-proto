@@ -20,7 +20,7 @@ message NavigationStatus {
     geometry.Vector3 bodyVelocity = 5;
     geometry.Vector3 seafloorVelocity = 6;
     geometry.Vector3 orientation = 7;
-    geometry.Vector3 orientation_rate = 8;
-    auv.NED position_variance = 9;
-    geometry.Vector3 orientation_variance = 10;
+    geometry.Vector3 orientationRate = 8;
+    auv.NED positionVariance = 9;
+    geometry.Vector3 orientationVariance = 10;
 }
