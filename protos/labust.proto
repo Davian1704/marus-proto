@@ -22,7 +22,7 @@ message FSPathInfo {
 
 message PointerPrimitiveService {
   double radius = 1;
-  double vertical_offset = 2;
+  double verticalOffset = 2;
   geometry.Vector3 guidanceTarget = 3;
   bool guidanceEnable = 4;
   bool wrappingEnable = 5;
