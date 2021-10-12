@@ -15,12 +15,12 @@ class SimulationControlStub(object):
       channel: A grpc.Channel.
     """
     self.Step = channel.unary_unary(
-        '/simulatoncontrol.SimulationControl/Step',
+        '/simulationcontrol.SimulationControl/Step',
         request_serializer=simulation__control__pb2.StepRequest.SerializeToString,
         response_deserializer=simulation__control__pb2.StepResponse.FromString,
         )
     self.SetStartTime = channel.unary_unary(
-        '/simulatoncontrol.SimulationControl/SetStartTime',
+        '/simulationcontrol.SimulationControl/SetStartTime',
         request_serializer=simulation__control__pb2.SetStartTimeRequest.SerializeToString,
         response_deserializer=simulation__control__pb2.SetStartTimeResponse.FromString,
         )
@@ -59,5 +59,5 @@ def add_SimulationControlServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'simulatoncontrol.SimulationControl', rpc_method_handlers)
+      'simulationcontrol.SimulationControl', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))
