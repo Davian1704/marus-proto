@@ -41,9 +41,9 @@ namespace Sensor {
             "FC5zZW5zb3IuTmF2U2F0U3RhdHVzEhAKCGxhdGl0dWRlGAMgASgBEhEKCWxv",
             "bmdpdHVkZRgEIAEoARIQCghhbHRpdHVkZRgFIAEoARIbChNwb3NpdGlvbl9j",
             "b3ZhcmlhbmNlGAYgAygBIicKB0NoYW5uZWwSDAoEbmFtZRgBIAEoCRIOCgZ2",
-            "YWx1ZXMYAiADKAEi0QEKClBvaW50RmllbGQSDAoEbmFtZRgJIAEoCRIOCgZv",
-            "ZmZzZXQYCiABKA0SLQoIZGF0YXR5cGUYCyABKA4yGy5zZW5zb3IuUG9pbnRG",
-            "aWVsZC5EYXRhVHlwZRINCgVjb3VudBgMIAEoDSJnCghEYXRhVHlwZRIICgRJ",
+            "YWx1ZXMYAiADKAEi0QEKClBvaW50RmllbGQSDAoEbmFtZRgBIAEoCRIOCgZv",
+            "ZmZzZXQYAiABKA0SLQoIZGF0YXR5cGUYAyABKA4yGy5zZW5zb3IuUG9pbnRG",
+            "aWVsZC5EYXRhVHlwZRINCgVjb3VudBgEIAEoDSJnCghEYXRhVHlwZRIICgRJ",
             "TlQ4EAASCQoFVUlOVDgQARIJCgVJTlQxNhACEgoKBlVJTlQxNhADEgkKBUlO",
             "VDMyEAQSCgoGVUlOVDMyEAUSCwoHRkxPQVQzMhAGEgsKB0ZMT0FUNjQQByJt",
             "CgpQb2ludENsb3VkEhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISHwoG",
@@ -1011,7 +1011,7 @@ namespace Sensor {
     }
 
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 9;
+    public const int NameFieldNumber = 1;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1022,7 +1022,7 @@ namespace Sensor {
     }
 
     /// <summary>Field number for the "offset" field.</summary>
-    public const int OffsetFieldNumber = 10;
+    public const int OffsetFieldNumber = 2;
     private uint offset_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint Offset {
@@ -1033,7 +1033,7 @@ namespace Sensor {
     }
 
     /// <summary>Field number for the "datatype" field.</summary>
-    public const int DatatypeFieldNumber = 11;
+    public const int DatatypeFieldNumber = 3;
     private global::Sensor.PointField.Types.DataType datatype_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Sensor.PointField.Types.DataType Datatype {
@@ -1044,7 +1044,7 @@ namespace Sensor {
     }
 
     /// <summary>Field number for the "count" field.</summary>
-    public const int CountFieldNumber = 12;
+    public const int CountFieldNumber = 4;
     private uint count_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint Count {
@@ -1095,19 +1095,19 @@ namespace Sensor {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (Name.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(10);
         output.WriteString(Name);
       }
       if (Offset != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(16);
         output.WriteUInt32(Offset);
       }
       if (Datatype != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteEnum((int) Datatype);
       }
       if (Count != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(Count);
       }
       if (_unknownFields != null) {
@@ -1164,19 +1164,19 @@ namespace Sensor {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
+          case 10: {
             Name = input.ReadString();
             break;
           }
-          case 80: {
+          case 16: {
             Offset = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 24: {
             datatype_ = (global::Sensor.PointField.Types.DataType) input.ReadEnum();
             break;
           }
-          case 96: {
+          case 32: {
             Count = input.ReadUInt32();
             break;
           }
