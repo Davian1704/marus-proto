@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Simulatoncontrol {
+namespace Simulationcontrol {
 
   /// <summary>Holder for reflection information generated from simulation_control.proto</summary>
   public static partial class SimulationControlReflection {
@@ -24,23 +24,23 @@ namespace Simulatoncontrol {
     static SimulationControlReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhzaW11bGF0aW9uX2NvbnRyb2wucHJvdG8SEHNpbXVsYXRvbmNvbnRyb2wi",
-            "PAoLU3RlcFJlcXVlc3QSFQoNdG90YWxUaW1lU2VjcxgBIAEoDRIWCg50b3Rh",
-            "bFRpbWVOc2VjcxgCIAEoDSIfCgxTdGVwUmVzcG9uc2USDwoHc3VjY2VzcxgB",
-            "IAEoCCI6ChNTZXRTdGFydFRpbWVSZXF1ZXN0EhAKCHRpbWVTZWNzGAEgASgN",
-            "EhEKCXRpbWVOc2VjcxgCIAEoDSInChRTZXRTdGFydFRpbWVSZXNwb25zZRIP",
-            "CgdzdWNjZXNzGAEgASgIMr0BChFTaW11bGF0aW9uQ29udHJvbBJHCgRTdGVw",
-            "Eh0uc2ltdWxhdG9uY29udHJvbC5TdGVwUmVxdWVzdBoeLnNpbXVsYXRvbmNv",
-            "bnRyb2wuU3RlcFJlc3BvbnNlIgASXwoMU2V0U3RhcnRUaW1lEiUuc2ltdWxh",
-            "dG9uY29udHJvbC5TZXRTdGFydFRpbWVSZXF1ZXN0GiYuc2ltdWxhdG9uY29u",
-            "dHJvbC5TZXRTdGFydFRpbWVSZXNwb25zZSIAYgZwcm90bzM="));
+            "ChhzaW11bGF0aW9uX2NvbnRyb2wucHJvdG8SEXNpbXVsYXRpb25jb250cm9s",
+            "IjwKC1N0ZXBSZXF1ZXN0EhUKDXRvdGFsVGltZVNlY3MYASABKA0SFgoOdG90",
+            "YWxUaW1lTnNlY3MYAiABKA0iHwoMU3RlcFJlc3BvbnNlEg8KB3N1Y2Nlc3MY",
+            "ASABKAgiOgoTU2V0U3RhcnRUaW1lUmVxdWVzdBIQCgh0aW1lU2VjcxgBIAEo",
+            "DRIRCgl0aW1lTnNlY3MYAiABKA0iJwoUU2V0U3RhcnRUaW1lUmVzcG9uc2US",
+            "DwoHc3VjY2VzcxgBIAEoCDLBAQoRU2ltdWxhdGlvbkNvbnRyb2wSSQoEU3Rl",
+            "cBIeLnNpbXVsYXRpb25jb250cm9sLlN0ZXBSZXF1ZXN0Gh8uc2ltdWxhdGlv",
+            "bmNvbnRyb2wuU3RlcFJlc3BvbnNlIgASYQoMU2V0U3RhcnRUaW1lEiYuc2lt",
+            "dWxhdGlvbmNvbnRyb2wuU2V0U3RhcnRUaW1lUmVxdWVzdBonLnNpbXVsYXRp",
+            "b25jb250cm9sLlNldFN0YXJ0VGltZVJlc3BvbnNlIgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Simulatoncontrol.StepRequest), global::Simulatoncontrol.StepRequest.Parser, new[]{ "TotalTimeSecs", "TotalTimeNsecs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Simulatoncontrol.StepResponse), global::Simulatoncontrol.StepResponse.Parser, new[]{ "Success" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Simulatoncontrol.SetStartTimeRequest), global::Simulatoncontrol.SetStartTimeRequest.Parser, new[]{ "TimeSecs", "TimeNsecs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Simulatoncontrol.SetStartTimeResponse), global::Simulatoncontrol.SetStartTimeResponse.Parser, new[]{ "Success" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.StepRequest), global::Simulationcontrol.StepRequest.Parser, new[]{ "TotalTimeSecs", "TotalTimeNsecs" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.StepResponse), global::Simulationcontrol.StepResponse.Parser, new[]{ "Success" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.SetStartTimeRequest), global::Simulationcontrol.SetStartTimeRequest.Parser, new[]{ "TimeSecs", "TimeNsecs" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.SetStartTimeResponse), global::Simulationcontrol.SetStartTimeResponse.Parser, new[]{ "Success" }, null, null, null)
           }));
     }
     #endregion
@@ -55,7 +55,7 @@ namespace Simulatoncontrol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Simulatoncontrol.SimulationControlReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Simulationcontrol.SimulationControlReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -212,7 +212,7 @@ namespace Simulatoncontrol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Simulatoncontrol.SimulationControlReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Simulationcontrol.SimulationControlReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -341,7 +341,7 @@ namespace Simulatoncontrol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Simulatoncontrol.SimulationControlReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Simulationcontrol.SimulationControlReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -498,7 +498,7 @@ namespace Simulatoncontrol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Simulatoncontrol.SimulationControlReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Simulationcontrol.SimulationControlReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

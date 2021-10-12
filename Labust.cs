@@ -24,25 +24,39 @@ namespace Labust {
     static LabustReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxsYWJ1c3QucHJvdG8SBmxhYnVzdBoJc3RkLnByb3RvGhBnZW9ncmFwaGlj",
-            "LnByb3RvGg5nZW9tZXRyeS5wcm90byKNAgoKRlNQYXRoSW5mbxIbCgZoZWFk",
-            "ZXIYASABKAsyCy5zdGQuSGVhZGVyEg4KBmRlbHRhUhgCIAEoARIJCgFrGAMg",
-            "ASgBEgsKA3hpUhgEIAEoARIMCgRkeGlSGAUgASgBEgoKAnBpGAYgASgBEg8K",
-            "B3BpVGlsZGEYByABKAESHgoDZHJQGAggASgLMhEuZ2VvbWV0cnkuVmVjdG9y",
-            "MxIjCghwb3NpdGlvbhgJIAEoCzIRLmdlb21ldHJ5LlZlY3RvcjMSJgoLb3Jp",
-            "ZW50YXRpb24YCiABKAsyES5nZW9tZXRyeS5WZWN0b3IzEhEKCWN1cnZhdHVy",
-            "ZRgLIAEoARIPCgd0b3JzaW9uGAwgASgBIvwBChdQb2ludGVyUHJpbWl0aXZl",
-            "U2VydmljZRIOCgZyYWRpdXMYASABKAESFgoOdmVydGljYWxPZmZzZXQYAiAB",
-            "KAESKQoOZ3VpZGFuY2VUYXJnZXQYAyABKAsyES5nZW9tZXRyeS5WZWN0b3Iz",
-            "EhYKDmd1aWRhbmNlRW5hYmxlGAQgASgIEhYKDndyYXBwaW5nRW5hYmxlGAUg",
-            "ASgIEhMKC2Zvdkd1aWRhbmNlGAYgASgIEh0KFXN0cmVhbWxpbmVPcmllbnRh",
-            "dGlvbhgHIAEoCBIVCg1ndWlkYW5jZVRvcGljGAggASgJEhMKC3JhZGl1c1Rv",
-            "cGljGAkgASgJYgZwcm90bzM="));
+            "CgxsYWJ1c3QucHJvdG8SBmxhYnVzdBoJc3RkLnByb3RvGg5nZW9tZXRyeS5w",
+            "cm90byKNAgoKRlNQYXRoSW5mbxIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVh",
+            "ZGVyEg4KBmRlbHRhUhgCIAEoARIJCgFrGAMgASgBEgsKA3hpUhgEIAEoARIM",
+            "CgRkeGlSGAUgASgBEgoKAnBpGAYgASgBEg8KB3BpVGlsZGEYByABKAESHgoD",
+            "ZHJQGAggASgLMhEuZ2VvbWV0cnkuVmVjdG9yMxIjCghwb3NpdGlvbhgJIAEo",
+            "CzIRLmdlb21ldHJ5LlZlY3RvcjMSJgoLb3JpZW50YXRpb24YCiABKAsyES5n",
+            "ZW9tZXRyeS5WZWN0b3IzEhEKCWN1cnZhdHVyZRgLIAEoARIPCgd0b3JzaW9u",
+            "GAwgASgBIvwBChdQb2ludGVyUHJpbWl0aXZlU2VydmljZRIOCgZyYWRpdXMY",
+            "ASABKAESFgoOdmVydGljYWxPZmZzZXQYAiABKAESKQoOZ3VpZGFuY2VUYXJn",
+            "ZXQYAyABKAsyES5nZW9tZXRyeS5WZWN0b3IzEhYKDmd1aWRhbmNlRW5hYmxl",
+            "GAQgASgIEhYKDndyYXBwaW5nRW5hYmxlGAUgASgIEhMKC2Zvdkd1aWRhbmNl",
+            "GAYgASgIEh0KFXN0cmVhbWxpbmVPcmllbnRhdGlvbhgHIAEoCBIVCg1ndWlk",
+            "YW5jZVRvcGljGAggASgJEhMKC3JhZGl1c1RvcGljGAkgASgJIpICChBOYW5v",
+            "bW9kZW1SZXF1ZXN0EhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISLwoI",
+            "cmVxX3R5cGUYAiABKA4yHS5sYWJ1c3QuTmFub21vZGVtUmVxdWVzdC5UeXBl",
+            "EhEKCXNjaGVkdWxlZBgDIAEoCBILCgNtc2cYBCABKAkSCgoCaWQYBSABKA0i",
+            "gwEKBFR5cGUSCgoGQlJEQ1NUEAASCgoGVU5JQ1NUEAESCgoGUElOR0lEEAIS",
+            "CgoGVk9MVElEEAMSCgoGQ0hOR0lEEAQSCgoGU1RBVFVTEAUSDAoIVU5JU1RB",
+            "Q0sQBhILCgdURVNUTVNHEAcSCwoHRUNIT01TRxAIEgsKB1FVQUxJVFkQCSKg",
+            "AQoQTmFub21vZGVtUGF5bG9hZBIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVh",
+            "ZGVyEgsKA21zZxgCIAEoCRIRCglzZW5kZXJfaWQYAyABKAUSLwoIbXNnX3R5",
+            "cGUYBCABKA4yHS5sYWJ1c3QuTmFub21vZGVtUGF5bG9hZC5UeXBlIh4KBFR5",
+            "cGUSCgoGQlJEQ1NUEAASCgoGVU5JQ1NUEAEiWQoOTmFub21vZGVtUmFuZ2US",
+            "GwoGaGVhZGVyGAEgASgLMgsuc3RkLkhlYWRlchINCgVyYW5nZRgCIAEoBRIP",
+            "CgdyYW5nZV9tGAMgASgBEgoKAmlkGAQgASgFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geographic.GeographicReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Labust.FSPathInfo), global::Labust.FSPathInfo.Parser, new[]{ "Header", "DeltaR", "K", "XiR", "DxiR", "Pi", "PiTilda", "DrP", "Position", "Orientation", "Curvature", "Torsion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.PointerPrimitiveService), global::Labust.PointerPrimitiveService.Parser, new[]{ "Radius", "VerticalOffset", "GuidanceTarget", "GuidanceEnable", "WrappingEnable", "FovGuidance", "StreamlineOrientation", "GuidanceTopic", "RadiusTopic" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.PointerPrimitiveService), global::Labust.PointerPrimitiveService.Parser, new[]{ "Radius", "VerticalOffset", "GuidanceTarget", "GuidanceEnable", "WrappingEnable", "FovGuidance", "StreamlineOrientation", "GuidanceTopic", "RadiusTopic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.NanomodemRequest), global::Labust.NanomodemRequest.Parser, new[]{ "Header", "ReqType", "Scheduled", "Msg", "Id" }, null, new[]{ typeof(global::Labust.NanomodemRequest.Types.Type) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.NanomodemPayload), global::Labust.NanomodemPayload.Parser, new[]{ "Header", "Msg", "SenderId", "MsgType" }, null, new[]{ typeof(global::Labust.NanomodemPayload.Types.Type) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.NanomodemRange), global::Labust.NanomodemRange.Parser, new[]{ "Header", "Range", "RangeM", "Id" }, null, null, null)
           }));
     }
     #endregion
@@ -861,6 +875,723 @@ namespace Labust {
           }
           case 74: {
             RadiusTopic = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class NanomodemRequest : pb::IMessage<NanomodemRequest> {
+    private static readonly pb::MessageParser<NanomodemRequest> _parser = new pb::MessageParser<NanomodemRequest>(() => new NanomodemRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NanomodemRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Labust.LabustReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NanomodemRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NanomodemRequest(NanomodemRequest other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      reqType_ = other.reqType_;
+      scheduled_ = other.scheduled_;
+      msg_ = other.msg_;
+      id_ = other.id_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NanomodemRequest Clone() {
+      return new NanomodemRequest(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "req_type" field.</summary>
+    public const int ReqTypeFieldNumber = 2;
+    private global::Labust.NanomodemRequest.Types.Type reqType_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Labust.NanomodemRequest.Types.Type ReqType {
+      get { return reqType_; }
+      set {
+        reqType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "scheduled" field.</summary>
+    public const int ScheduledFieldNumber = 3;
+    private bool scheduled_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Scheduled {
+      get { return scheduled_; }
+      set {
+        scheduled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "msg" field.</summary>
+    public const int MsgFieldNumber = 4;
+    private string msg_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Msg {
+      get { return msg_; }
+      set {
+        msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 5;
+    private uint id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NanomodemRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NanomodemRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if (ReqType != other.ReqType) return false;
+      if (Scheduled != other.Scheduled) return false;
+      if (Msg != other.Msg) return false;
+      if (Id != other.Id) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      if (ReqType != 0) hash ^= ReqType.GetHashCode();
+      if (Scheduled != false) hash ^= Scheduled.GetHashCode();
+      if (Msg.Length != 0) hash ^= Msg.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (ReqType != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ReqType);
+      }
+      if (Scheduled != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Scheduled);
+      }
+      if (Msg.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Msg);
+      }
+      if (Id != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Id);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      if (ReqType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReqType);
+      }
+      if (Scheduled != false) {
+        size += 1 + 1;
+      }
+      if (Msg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
+      }
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NanomodemRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      if (other.ReqType != 0) {
+        ReqType = other.ReqType;
+      }
+      if (other.Scheduled != false) {
+        Scheduled = other.Scheduled;
+      }
+      if (other.Msg.Length != 0) {
+        Msg = other.Msg;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 16: {
+            reqType_ = (global::Labust.NanomodemRequest.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Scheduled = input.ReadBool();
+            break;
+          }
+          case 34: {
+            Msg = input.ReadString();
+            break;
+          }
+          case 40: {
+            Id = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NanomodemRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Type {
+        [pbr::OriginalName("BRDCST")] Brdcst = 0,
+        [pbr::OriginalName("UNICST")] Unicst = 1,
+        [pbr::OriginalName("PINGID")] Pingid = 2,
+        [pbr::OriginalName("VOLTID")] Voltid = 3,
+        [pbr::OriginalName("CHNGID")] Chngid = 4,
+        [pbr::OriginalName("STATUS")] Status = 5,
+        [pbr::OriginalName("UNISTACK")] Unistack = 6,
+        [pbr::OriginalName("TESTMSG")] Testmsg = 7,
+        [pbr::OriginalName("ECHOMSG")] Echomsg = 8,
+        [pbr::OriginalName("QUALITY")] Quality = 9,
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class NanomodemPayload : pb::IMessage<NanomodemPayload> {
+    private static readonly pb::MessageParser<NanomodemPayload> _parser = new pb::MessageParser<NanomodemPayload>(() => new NanomodemPayload());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NanomodemPayload> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Labust.LabustReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NanomodemPayload() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NanomodemPayload(NanomodemPayload other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      msg_ = other.msg_;
+      senderId_ = other.senderId_;
+      msgType_ = other.msgType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NanomodemPayload Clone() {
+      return new NanomodemPayload(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "msg" field.</summary>
+    public const int MsgFieldNumber = 2;
+    private string msg_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Msg {
+      get { return msg_; }
+      set {
+        msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sender_id" field.</summary>
+    public const int SenderIdFieldNumber = 3;
+    private int senderId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SenderId {
+      get { return senderId_; }
+      set {
+        senderId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "msg_type" field.</summary>
+    public const int MsgTypeFieldNumber = 4;
+    private global::Labust.NanomodemPayload.Types.Type msgType_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Labust.NanomodemPayload.Types.Type MsgType {
+      get { return msgType_; }
+      set {
+        msgType_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NanomodemPayload);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NanomodemPayload other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if (Msg != other.Msg) return false;
+      if (SenderId != other.SenderId) return false;
+      if (MsgType != other.MsgType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      if (Msg.Length != 0) hash ^= Msg.GetHashCode();
+      if (SenderId != 0) hash ^= SenderId.GetHashCode();
+      if (MsgType != 0) hash ^= MsgType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (Msg.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Msg);
+      }
+      if (SenderId != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(SenderId);
+      }
+      if (MsgType != 0) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MsgType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      if (Msg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
+      }
+      if (SenderId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SenderId);
+      }
+      if (MsgType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MsgType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NanomodemPayload other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      if (other.Msg.Length != 0) {
+        Msg = other.Msg;
+      }
+      if (other.SenderId != 0) {
+        SenderId = other.SenderId;
+      }
+      if (other.MsgType != 0) {
+        MsgType = other.MsgType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 18: {
+            Msg = input.ReadString();
+            break;
+          }
+          case 24: {
+            SenderId = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            msgType_ = (global::Labust.NanomodemPayload.Types.Type) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NanomodemPayload message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Type {
+        [pbr::OriginalName("BRDCST")] Brdcst = 0,
+        [pbr::OriginalName("UNICST")] Unicst = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  public sealed partial class NanomodemRange : pb::IMessage<NanomodemRange> {
+    private static readonly pb::MessageParser<NanomodemRange> _parser = new pb::MessageParser<NanomodemRange>(() => new NanomodemRange());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NanomodemRange> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Labust.LabustReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NanomodemRange() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NanomodemRange(NanomodemRange other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      range_ = other.range_;
+      rangeM_ = other.rangeM_;
+      id_ = other.id_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NanomodemRange Clone() {
+      return new NanomodemRange(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "range" field.</summary>
+    public const int RangeFieldNumber = 2;
+    private int range_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Range {
+      get { return range_; }
+      set {
+        range_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "range_m" field.</summary>
+    public const int RangeMFieldNumber = 3;
+    private double rangeM_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double RangeM {
+      get { return rangeM_; }
+      set {
+        rangeM_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 4;
+    private int id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NanomodemRange);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NanomodemRange other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if (Range != other.Range) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(RangeM, other.RangeM)) return false;
+      if (Id != other.Id) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      if (Range != 0) hash ^= Range.GetHashCode();
+      if (RangeM != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RangeM);
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (Range != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Range);
+      }
+      if (RangeM != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(RangeM);
+      }
+      if (Id != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Id);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      if (Range != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Range);
+      }
+      if (RangeM != 0D) {
+        size += 1 + 8;
+      }
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NanomodemRange other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      if (other.Range != 0) {
+        Range = other.Range;
+      }
+      if (other.RangeM != 0D) {
+        RangeM = other.RangeM;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 16: {
+            Range = input.ReadInt32();
+            break;
+          }
+          case 25: {
+            RangeM = input.ReadDouble();
+            break;
+          }
+          case 32: {
+            Id = input.ReadInt32();
             break;
           }
         }

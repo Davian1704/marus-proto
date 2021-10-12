@@ -7,45 +7,45 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Simulatoncontrol {
+namespace Simulationcontrol {
   public static partial class SimulationControl
   {
-    static readonly string __ServiceName = "simulatoncontrol.SimulationControl";
+    static readonly string __ServiceName = "simulationcontrol.SimulationControl";
 
-    static readonly grpc::Marshaller<global::Simulatoncontrol.StepRequest> __Marshaller_simulatoncontrol_StepRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Simulatoncontrol.StepRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Simulatoncontrol.StepResponse> __Marshaller_simulatoncontrol_StepResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Simulatoncontrol.StepResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Simulatoncontrol.SetStartTimeRequest> __Marshaller_simulatoncontrol_SetStartTimeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Simulatoncontrol.SetStartTimeRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Simulatoncontrol.SetStartTimeResponse> __Marshaller_simulatoncontrol_SetStartTimeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Simulatoncontrol.SetStartTimeResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Simulationcontrol.StepRequest> __Marshaller_simulationcontrol_StepRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Simulationcontrol.StepRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Simulationcontrol.StepResponse> __Marshaller_simulationcontrol_StepResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Simulationcontrol.StepResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Simulationcontrol.SetStartTimeRequest> __Marshaller_simulationcontrol_SetStartTimeRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Simulationcontrol.SetStartTimeRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Simulationcontrol.SetStartTimeResponse> __Marshaller_simulationcontrol_SetStartTimeResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Simulationcontrol.SetStartTimeResponse.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Simulatoncontrol.StepRequest, global::Simulatoncontrol.StepResponse> __Method_Step = new grpc::Method<global::Simulatoncontrol.StepRequest, global::Simulatoncontrol.StepResponse>(
+    static readonly grpc::Method<global::Simulationcontrol.StepRequest, global::Simulationcontrol.StepResponse> __Method_Step = new grpc::Method<global::Simulationcontrol.StepRequest, global::Simulationcontrol.StepResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Step",
-        __Marshaller_simulatoncontrol_StepRequest,
-        __Marshaller_simulatoncontrol_StepResponse);
+        __Marshaller_simulationcontrol_StepRequest,
+        __Marshaller_simulationcontrol_StepResponse);
 
-    static readonly grpc::Method<global::Simulatoncontrol.SetStartTimeRequest, global::Simulatoncontrol.SetStartTimeResponse> __Method_SetStartTime = new grpc::Method<global::Simulatoncontrol.SetStartTimeRequest, global::Simulatoncontrol.SetStartTimeResponse>(
+    static readonly grpc::Method<global::Simulationcontrol.SetStartTimeRequest, global::Simulationcontrol.SetStartTimeResponse> __Method_SetStartTime = new grpc::Method<global::Simulationcontrol.SetStartTimeRequest, global::Simulationcontrol.SetStartTimeResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SetStartTime",
-        __Marshaller_simulatoncontrol_SetStartTimeRequest,
-        __Marshaller_simulatoncontrol_SetStartTimeResponse);
+        __Marshaller_simulationcontrol_SetStartTimeRequest,
+        __Marshaller_simulationcontrol_SetStartTimeResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Simulatoncontrol.SimulationControlReflection.Descriptor.Services[0]; }
+      get { return global::Simulationcontrol.SimulationControlReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of SimulationControl</summary>
     public abstract partial class SimulationControlBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Simulatoncontrol.StepResponse> Step(global::Simulatoncontrol.StepRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Simulationcontrol.StepResponse> Step(global::Simulationcontrol.StepRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Simulatoncontrol.SetStartTimeResponse> SetStartTime(global::Simulatoncontrol.SetStartTimeRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Simulationcontrol.SetStartTimeResponse> SetStartTime(global::Simulationcontrol.SetStartTimeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -75,35 +75,35 @@ namespace Simulatoncontrol {
       {
       }
 
-      public virtual global::Simulatoncontrol.StepResponse Step(global::Simulatoncontrol.StepRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Simulationcontrol.StepResponse Step(global::Simulationcontrol.StepRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Step(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Simulatoncontrol.StepResponse Step(global::Simulatoncontrol.StepRequest request, grpc::CallOptions options)
+      public virtual global::Simulationcontrol.StepResponse Step(global::Simulationcontrol.StepRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Step, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Simulatoncontrol.StepResponse> StepAsync(global::Simulatoncontrol.StepRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Simulationcontrol.StepResponse> StepAsync(global::Simulationcontrol.StepRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StepAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Simulatoncontrol.StepResponse> StepAsync(global::Simulatoncontrol.StepRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Simulationcontrol.StepResponse> StepAsync(global::Simulationcontrol.StepRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Step, null, options, request);
       }
-      public virtual global::Simulatoncontrol.SetStartTimeResponse SetStartTime(global::Simulatoncontrol.SetStartTimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Simulationcontrol.SetStartTimeResponse SetStartTime(global::Simulationcontrol.SetStartTimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetStartTime(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Simulatoncontrol.SetStartTimeResponse SetStartTime(global::Simulatoncontrol.SetStartTimeRequest request, grpc::CallOptions options)
+      public virtual global::Simulationcontrol.SetStartTimeResponse SetStartTime(global::Simulationcontrol.SetStartTimeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetStartTime, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Simulatoncontrol.SetStartTimeResponse> SetStartTimeAsync(global::Simulatoncontrol.SetStartTimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Simulationcontrol.SetStartTimeResponse> SetStartTimeAsync(global::Simulationcontrol.SetStartTimeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetStartTimeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Simulatoncontrol.SetStartTimeResponse> SetStartTimeAsync(global::Simulatoncontrol.SetStartTimeRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Simulationcontrol.SetStartTimeResponse> SetStartTimeAsync(global::Simulationcontrol.SetStartTimeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetStartTime, null, options, request);
       }
