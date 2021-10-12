@@ -41,19 +41,19 @@ namespace Sensor {
             "FC5zZW5zb3IuTmF2U2F0U3RhdHVzEhAKCGxhdGl0dWRlGAMgASgBEhEKCWxv",
             "bmdpdHVkZRgEIAEoARIQCghhbHRpdHVkZRgFIAEoARIbChNwb3NpdGlvbl9j",
             "b3ZhcmlhbmNlGAYgAygBIicKB0NoYW5uZWwSDAoEbmFtZRgBIAEoCRIOCgZ2",
-            "YWx1ZXMYAiADKAEiyAEKClBvaW50RmllbGQSDAoESU5UOBgBIAEoDRINCgVV",
-            "SU5UOBgCIAEoDRINCgVJTlQxNhgDIAEoDRIOCgZVSU5UMTYYBCABKA0SDQoF",
-            "SU5UMzIYBSABKA0SDgoGVUlOVDMyGAYgASgNEg8KB0ZMT0FUMzIYByABKA0S",
-            "DwoHRkxPQVQ2NBgIIAEoDRIMCgRuYW1lGAkgASgJEg4KBm9mZnNldBgKIAEo",
-            "DRIQCghkYXRhdHlwZRgLIAEoDRINCgVjb3VudBgMIAEoDSJtCgpQb2ludENs",
-            "b3VkEhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISHwoGcG9pbnRzGAIg",
-            "AygLMg8uZ2VvbWV0cnkuUG9pbnQSIQoIY2hhbm5lbHMYAyADKAsyDy5zZW5z",
-            "b3IuQ2hhbm5lbCLfAQoLUG9pbnRDbG91ZDISGwoGaGVhZGVyGAEgASgLMgsu",
-            "c3RkLkhlYWRlchIVCg10aW1lSW5TZWNvbmRzGAIgASgBEg4KBmhlaWdodBgD",
-            "IAEoDRINCgV3aWR0aBgEIAEoDRIiCgZmaWVsZHMYBSADKAsyEi5zZW5zb3Iu",
-            "UG9pbnRGaWVsZBITCgtpc0JpZ0VuZGlhbhgGIAEoCBISCgpwb2ludF9zdGVw",
-            "GAcgASgNEhAKCHJvd19zdGVwGAggASgNEgwKBGRhdGEYCSABKAwSEAoIaXNf",
-            "ZGVuc2UYCiABKAhiBnByb3RvMw=="));
+            "YWx1ZXMYAiADKAEi0QEKClBvaW50RmllbGQSDAoEbmFtZRgJIAEoCRIOCgZv",
+            "ZmZzZXQYCiABKA0SLQoIZGF0YXR5cGUYCyABKA4yGy5zZW5zb3IuUG9pbnRG",
+            "aWVsZC5EYXRhVHlwZRINCgVjb3VudBgMIAEoDSJnCghEYXRhVHlwZRIICgRJ",
+            "TlQ4EAASCQoFVUlOVDgQARIJCgVJTlQxNhACEgoKBlVJTlQxNhADEgkKBUlO",
+            "VDMyEAQSCgoGVUlOVDMyEAUSCwoHRkxPQVQzMhAGEgsKB0ZMT0FUNjQQByJt",
+            "CgpQb2ludENsb3VkEhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISHwoG",
+            "cG9pbnRzGAIgAygLMg8uZ2VvbWV0cnkuUG9pbnQSIQoIY2hhbm5lbHMYAyAD",
+            "KAsyDy5zZW5zb3IuQ2hhbm5lbCLfAQoLUG9pbnRDbG91ZDISGwoGaGVhZGVy",
+            "GAEgASgLMgsuc3RkLkhlYWRlchIVCg10aW1lSW5TZWNvbmRzGAIgASgBEg4K",
+            "BmhlaWdodBgDIAEoDRINCgV3aWR0aBgEIAEoDRIiCgZmaWVsZHMYBSADKAsy",
+            "Ei5zZW5zb3IuUG9pbnRGaWVsZBITCgtpc0JpZ0VuZGlhbhgGIAEoCBISCgpw",
+            "b2ludF9zdGVwGAcgASgNEhAKCHJvd19zdGVwGAggASgNEgwKBGRhdGEYCSAB",
+            "KAwSEAoIaXNfZGVuc2UYCiABKAhiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,7 +61,7 @@ namespace Sensor {
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatStatus), global::Sensor.NavSatStatus.Parser, new[]{ "Status", "Service" }, null, new[]{ typeof(global::Sensor.NavSatStatus.Types.Status), typeof(global::Sensor.NavSatStatus.Types.Service) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatFix), global::Sensor.NavSatFix.Parser, new[]{ "Header", "Status", "Latitude", "Longitude", "Altitude", "PositionCovariance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Channel), global::Sensor.Channel.Parser, new[]{ "Name", "Values" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointField), global::Sensor.PointField.Parser, new[]{ "INT8", "UINT8", "INT16", "UINT16", "INT32", "UINT32", "FLOAT32", "FLOAT64", "Name", "Offset", "Datatype", "Count" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointField), global::Sensor.PointField.Parser, new[]{ "Name", "Offset", "Datatype", "Count" }, null, new[]{ typeof(global::Sensor.PointField.Types.DataType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud), global::Sensor.PointCloud.Parser, new[]{ "Header", "Points", "Channels" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud2), global::Sensor.PointCloud2.Parser, new[]{ "Header", "TimeInSeconds", "Height", "Width", "Fields", "IsBigEndian", "PointStep", "RowStep", "Data", "IsDense" }, null, null, null)
           }));
@@ -998,14 +998,6 @@ namespace Sensor {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PointField(PointField other) : this() {
-      iNT8_ = other.iNT8_;
-      uINT8_ = other.uINT8_;
-      iNT16_ = other.iNT16_;
-      uINT16_ = other.uINT16_;
-      iNT32_ = other.iNT32_;
-      uINT32_ = other.uINT32_;
-      fLOAT32_ = other.fLOAT32_;
-      fLOAT64_ = other.fLOAT64_;
       name_ = other.name_;
       offset_ = other.offset_;
       datatype_ = other.datatype_;
@@ -1016,94 +1008,6 @@ namespace Sensor {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PointField Clone() {
       return new PointField(this);
-    }
-
-    /// <summary>Field number for the "INT8" field.</summary>
-    public const int INT8FieldNumber = 1;
-    private uint iNT8_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint INT8 {
-      get { return iNT8_; }
-      set {
-        iNT8_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "UINT8" field.</summary>
-    public const int UINT8FieldNumber = 2;
-    private uint uINT8_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint UINT8 {
-      get { return uINT8_; }
-      set {
-        uINT8_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "INT16" field.</summary>
-    public const int INT16FieldNumber = 3;
-    private uint iNT16_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint INT16 {
-      get { return iNT16_; }
-      set {
-        iNT16_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "UINT16" field.</summary>
-    public const int UINT16FieldNumber = 4;
-    private uint uINT16_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint UINT16 {
-      get { return uINT16_; }
-      set {
-        uINT16_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "INT32" field.</summary>
-    public const int INT32FieldNumber = 5;
-    private uint iNT32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint INT32 {
-      get { return iNT32_; }
-      set {
-        iNT32_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "UINT32" field.</summary>
-    public const int UINT32FieldNumber = 6;
-    private uint uINT32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint UINT32 {
-      get { return uINT32_; }
-      set {
-        uINT32_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "FLOAT32" field.</summary>
-    public const int FLOAT32FieldNumber = 7;
-    private uint fLOAT32_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint FLOAT32 {
-      get { return fLOAT32_; }
-      set {
-        fLOAT32_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "FLOAT64" field.</summary>
-    public const int FLOAT64FieldNumber = 8;
-    private uint fLOAT64_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint FLOAT64 {
-      get { return fLOAT64_; }
-      set {
-        fLOAT64_ = value;
-      }
     }
 
     /// <summary>Field number for the "name" field.</summary>
@@ -1130,9 +1034,9 @@ namespace Sensor {
 
     /// <summary>Field number for the "datatype" field.</summary>
     public const int DatatypeFieldNumber = 11;
-    private uint datatype_;
+    private global::Sensor.PointField.Types.DataType datatype_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Datatype {
+    public global::Sensor.PointField.Types.DataType Datatype {
       get { return datatype_; }
       set {
         datatype_ = value;
@@ -1163,14 +1067,6 @@ namespace Sensor {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (INT8 != other.INT8) return false;
-      if (UINT8 != other.UINT8) return false;
-      if (INT16 != other.INT16) return false;
-      if (UINT16 != other.UINT16) return false;
-      if (INT32 != other.INT32) return false;
-      if (UINT32 != other.UINT32) return false;
-      if (FLOAT32 != other.FLOAT32) return false;
-      if (FLOAT64 != other.FLOAT64) return false;
       if (Name != other.Name) return false;
       if (Offset != other.Offset) return false;
       if (Datatype != other.Datatype) return false;
@@ -1181,14 +1077,6 @@ namespace Sensor {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (INT8 != 0) hash ^= INT8.GetHashCode();
-      if (UINT8 != 0) hash ^= UINT8.GetHashCode();
-      if (INT16 != 0) hash ^= INT16.GetHashCode();
-      if (UINT16 != 0) hash ^= UINT16.GetHashCode();
-      if (INT32 != 0) hash ^= INT32.GetHashCode();
-      if (UINT32 != 0) hash ^= UINT32.GetHashCode();
-      if (FLOAT32 != 0) hash ^= FLOAT32.GetHashCode();
-      if (FLOAT64 != 0) hash ^= FLOAT64.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Offset != 0) hash ^= Offset.GetHashCode();
       if (Datatype != 0) hash ^= Datatype.GetHashCode();
@@ -1206,38 +1094,6 @@ namespace Sensor {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (INT8 != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(INT8);
-      }
-      if (UINT8 != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(UINT8);
-      }
-      if (INT16 != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(INT16);
-      }
-      if (UINT16 != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(UINT16);
-      }
-      if (INT32 != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(INT32);
-      }
-      if (UINT32 != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(UINT32);
-      }
-      if (FLOAT32 != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(FLOAT32);
-      }
-      if (FLOAT64 != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(FLOAT64);
-      }
       if (Name.Length != 0) {
         output.WriteRawTag(74);
         output.WriteString(Name);
@@ -1248,7 +1104,7 @@ namespace Sensor {
       }
       if (Datatype != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(Datatype);
+        output.WriteEnum((int) Datatype);
       }
       if (Count != 0) {
         output.WriteRawTag(96);
@@ -1262,30 +1118,6 @@ namespace Sensor {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (INT8 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INT8);
-      }
-      if (UINT8 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UINT8);
-      }
-      if (INT16 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INT16);
-      }
-      if (UINT16 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UINT16);
-      }
-      if (INT32 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INT32);
-      }
-      if (UINT32 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UINT32);
-      }
-      if (FLOAT32 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FLOAT32);
-      }
-      if (FLOAT64 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FLOAT64);
-      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -1293,7 +1125,7 @@ namespace Sensor {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Offset);
       }
       if (Datatype != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Datatype);
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Datatype);
       }
       if (Count != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
@@ -1308,30 +1140,6 @@ namespace Sensor {
     public void MergeFrom(PointField other) {
       if (other == null) {
         return;
-      }
-      if (other.INT8 != 0) {
-        INT8 = other.INT8;
-      }
-      if (other.UINT8 != 0) {
-        UINT8 = other.UINT8;
-      }
-      if (other.INT16 != 0) {
-        INT16 = other.INT16;
-      }
-      if (other.UINT16 != 0) {
-        UINT16 = other.UINT16;
-      }
-      if (other.INT32 != 0) {
-        INT32 = other.INT32;
-      }
-      if (other.UINT32 != 0) {
-        UINT32 = other.UINT32;
-      }
-      if (other.FLOAT32 != 0) {
-        FLOAT32 = other.FLOAT32;
-      }
-      if (other.FLOAT64 != 0) {
-        FLOAT64 = other.FLOAT64;
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
@@ -1356,38 +1164,6 @@ namespace Sensor {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            INT8 = input.ReadUInt32();
-            break;
-          }
-          case 16: {
-            UINT8 = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            INT16 = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            UINT16 = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            INT32 = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            UINT32 = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            FLOAT32 = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            FLOAT64 = input.ReadUInt32();
-            break;
-          }
           case 74: {
             Name = input.ReadString();
             break;
@@ -1397,7 +1173,7 @@ namespace Sensor {
             break;
           }
           case 88: {
-            Datatype = input.ReadUInt32();
+            datatype_ = (global::Sensor.PointField.Types.DataType) input.ReadEnum();
             break;
           }
           case 96: {
@@ -1407,6 +1183,24 @@ namespace Sensor {
         }
       }
     }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PointField message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum DataType {
+        [pbr::OriginalName("INT8")] Int8 = 0,
+        [pbr::OriginalName("UINT8")] Uint8 = 1,
+        [pbr::OriginalName("INT16")] Int16 = 2,
+        [pbr::OriginalName("UINT16")] Uint16 = 3,
+        [pbr::OriginalName("INT32")] Int32 = 4,
+        [pbr::OriginalName("UINT32")] Uint32 = 5,
+        [pbr::OriginalName("FLOAT32")] Float32 = 6,
+        [pbr::OriginalName("FLOAT64")] Float64 = 7,
+      }
+
+    }
+    #endregion
 
   }
 
