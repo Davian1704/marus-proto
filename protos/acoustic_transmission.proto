@@ -1,0 +1,24 @@
+syntax = "proto3";
+package acoustictransmission;
+
+import "labust.proto";
+
+service AcousticTransmission {
+    rpc GetAcousticRequest(CommandRequest) returns (stream AcousticResponse) {}
+    rpc ReturnAcousticPayload(AcousticPayload) returns (stream AcousticResponse) {}
+}
+
+message CommandRequest {
+    string address = 1;
+}
+
+message AcousticPayload {
+	string address = 1;
+    labust.NanomodemPayload payload = 2;
+    labust.NanomodemRange range = 3;
+}
+
+message AcousticResponse {
+    bool success = 1;
+    labust.NanomodemRequest request = 2;
+}

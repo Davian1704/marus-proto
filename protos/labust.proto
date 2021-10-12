@@ -2,7 +2,6 @@ syntax = "proto3";
 package labust;
 
 import "std.proto";
-import "geographic.proto";
 import "geometry.proto";
 
 message FSPathInfo {
@@ -30,4 +29,44 @@ message PointerPrimitiveService {
   bool streamlineOrientation = 7;
   string guidanceTopic = 8;
   string radiusTopic = 9;
+}
+
+message NanomodemRequest {
+	enum Type {
+		BRDCST = 0;
+		UNICST = 1;
+		PINGID = 2;
+		VOLTID = 3;
+		CHNGID = 4;
+		STATUS = 5;
+		UNISTACK = 6;
+		TESTMSG = 7;
+		ECHOMSG = 8;
+		QUALITY = 9;
+	}
+
+  std.Header header = 1;
+	Type req_type = 2;
+	bool scheduled = 3;
+	string msg = 4;
+	uint32 id = 5;
+}
+
+message NanomodemPayload {
+	enum Type {
+		BRDCST = 0;
+		UNICST = 1;
+	}
+
+  std.Header header = 1;
+  string msg = 2;
+  int32 sender_id = 3;
+	Type msg_type = 4;
+}
+
+message NanomodemRange {
+  std.Header header = 1;
+	int32 range = 2;
+	double range_m = 3;
+	int32 id = 4;
 }

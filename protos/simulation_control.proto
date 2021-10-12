@@ -1,5 +1,5 @@
 syntax = "proto3";
-package simulatoncontrol;
+package simulationcontrol;
 
 service SimulationControl {
     rpc Step(StepRequest) returns (StepResponse) {}
