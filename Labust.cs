@@ -36,19 +36,19 @@ namespace Labust {
             "ZXQYAyABKAsyES5nZW9tZXRyeS5WZWN0b3IzEhYKDmd1aWRhbmNlRW5hYmxl",
             "GAQgASgIEhYKDndyYXBwaW5nRW5hYmxlGAUgASgIEhMKC2Zvdkd1aWRhbmNl",
             "GAYgASgIEh0KFXN0cmVhbWxpbmVPcmllbnRhdGlvbhgHIAEoCBIVCg1ndWlk",
-            "YW5jZVRvcGljGAggASgJEhMKC3JhZGl1c1RvcGljGAkgASgJIpICChBOYW5v",
-            "bW9kZW1SZXF1ZXN0EhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISLwoI",
-            "cmVxX3R5cGUYAiABKA4yHS5sYWJ1c3QuTmFub21vZGVtUmVxdWVzdC5UeXBl",
-            "EhEKCXNjaGVkdWxlZBgDIAEoCBILCgNtc2cYBCABKAkSCgoCaWQYBSABKA0i",
-            "gwEKBFR5cGUSCgoGQlJEQ1NUEAASCgoGVU5JQ1NUEAESCgoGUElOR0lEEAIS",
-            "CgoGVk9MVElEEAMSCgoGQ0hOR0lEEAQSCgoGU1RBVFVTEAUSDAoIVU5JU1RB",
-            "Q0sQBhILCgdURVNUTVNHEAcSCwoHRUNIT01TRxAIEgsKB1FVQUxJVFkQCSKg",
-            "AQoQTmFub21vZGVtUGF5bG9hZBIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVh",
-            "ZGVyEgsKA21zZxgCIAEoCRIRCglzZW5kZXJfaWQYAyABKAUSLwoIbXNnX3R5",
-            "cGUYBCABKA4yHS5sYWJ1c3QuTmFub21vZGVtUGF5bG9hZC5UeXBlIh4KBFR5",
-            "cGUSCgoGQlJEQ1NUEAASCgoGVU5JQ1NUEAEiWQoOTmFub21vZGVtUmFuZ2US",
-            "GwoGaGVhZGVyGAEgASgLMgsuc3RkLkhlYWRlchINCgVyYW5nZRgCIAEoBRIP",
-            "CgdyYW5nZV9tGAMgASgBEgoKAmlkGAQgASgFYgZwcm90bzM="));
+            "YW5jZVRvcGljGAggASgJEhMKC3JhZGl1c1RvcGljGAkgASgJIpECChBOYW5v",
+            "bW9kZW1SZXF1ZXN0EhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISLgoH",
+            "cmVxVHlwZRgCIAEoDjIdLmxhYnVzdC5OYW5vbW9kZW1SZXF1ZXN0LlR5cGUS",
+            "EQoJc2NoZWR1bGVkGAMgASgIEgsKA21zZxgEIAEoCRIKCgJpZBgFIAEoDSKD",
+            "AQoEVHlwZRIKCgZCUkRDU1QQABIKCgZVTklDU1QQARIKCgZQSU5HSUQQAhIK",
+            "CgZWT0xUSUQQAxIKCgZDSE5HSUQQBBIKCgZTVEFUVVMQBRIMCghVTklTVEFD",
+            "SxAGEgsKB1RFU1RNU0cQBxILCgdFQ0hPTVNHEAgSCwoHUVVBTElUWRAJIp4B",
+            "ChBOYW5vbW9kZW1QYXlsb2FkEhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFk",
+            "ZXISCwoDbXNnGAIgASgJEhAKCHNlbmRlcklkGAMgASgFEi4KB21zZ1R5cGUY",
+            "BCABKA4yHS5sYWJ1c3QuTmFub21vZGVtUGF5bG9hZC5UeXBlIh4KBFR5cGUS",
+            "CgoGQlJEQ1NUEAASCgoGVU5JQ1NUEAEiWAoOTmFub21vZGVtUmFuZ2USGwoG",
+            "aGVhZGVyGAEgASgLMgsuc3RkLkhlYWRlchINCgVyYW5nZRgCIAEoBRIOCgZy",
+            "YW5nZU0YAyABKAESCgoCaWQYBCABKAViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -932,7 +932,7 @@ namespace Labust {
       }
     }
 
-    /// <summary>Field number for the "req_type" field.</summary>
+    /// <summary>Field number for the "reqType" field.</summary>
     public const int ReqTypeFieldNumber = 2;
     private global::Labust.NanomodemRequest.Types.Type reqType_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1209,7 +1209,7 @@ namespace Labust {
       }
     }
 
-    /// <summary>Field number for the "sender_id" field.</summary>
+    /// <summary>Field number for the "senderId" field.</summary>
     public const int SenderIdFieldNumber = 3;
     private int senderId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1220,7 +1220,7 @@ namespace Labust {
       }
     }
 
-    /// <summary>Field number for the "msg_type" field.</summary>
+    /// <summary>Field number for the "msgType" field.</summary>
     public const int MsgTypeFieldNumber = 4;
     private global::Labust.NanomodemPayload.Types.Type msgType_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1440,7 +1440,7 @@ namespace Labust {
       }
     }
 
-    /// <summary>Field number for the "range_m" field.</summary>
+    /// <summary>Field number for the "rangeM" field.</summary>
     public const int RangeMFieldNumber = 3;
     private double rangeM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
