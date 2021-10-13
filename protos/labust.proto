@@ -46,7 +46,7 @@ message NanomodemRequest {
 	}
 
   std.Header header = 1;
-	Type req_type = 2;
+	Type reqType = 2;
 	bool scheduled = 3;
 	string msg = 4;
 	uint32 id = 5;
@@ -60,13 +60,13 @@ message NanomodemPayload {
 
   std.Header header = 1;
   string msg = 2;
-  int32 sender_id = 3;
-	Type msg_type = 4;
+  int32 senderId = 3;
+	Type msgType = 4;
 }
 
 message NanomodemRange {
   std.Header header = 1;
 	int32 range = 2;
-	double range_m = 3;
+	double rangeM = 3;
 	int32 id = 4;
 }
