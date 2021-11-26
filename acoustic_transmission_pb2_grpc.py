@@ -2,6 +2,7 @@
 import grpc
 
 import acoustic_transmission_pb2 as acoustic__transmission__pb2
+import std_pb2 as std__pb2
 
 
 class AcousticTransmissionStub(object):
@@ -14,15 +15,15 @@ class AcousticTransmissionStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.GetAcousticRequest = channel.unary_stream(
-        '/acoustictransmission.AcousticTransmission/GetAcousticRequest',
+    self.StreamAcousticRequests = channel.unary_stream(
+        '/acoustictransmission.AcousticTransmission/StreamAcousticRequests',
         request_serializer=acoustic__transmission__pb2.CommandRequest.SerializeToString,
-        response_deserializer=acoustic__transmission__pb2.AcousticResponse.FromString,
+        response_deserializer=acoustic__transmission__pb2.AcousticRequest.FromString,
         )
-    self.ReturnAcousticPayload = channel.unary_stream(
+    self.ReturnAcousticPayload = channel.unary_unary(
         '/acoustictransmission.AcousticTransmission/ReturnAcousticPayload',
-        request_serializer=acoustic__transmission__pb2.AcousticPayload.SerializeToString,
-        response_deserializer=acoustic__transmission__pb2.AcousticResponse.FromString,
+        request_serializer=acoustic__transmission__pb2.AcousticResponse.SerializeToString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
 
 
@@ -30,7 +31,7 @@ class AcousticTransmissionServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def GetAcousticRequest(self, request, context):
+  def StreamAcousticRequests(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -47,15 +48,15 @@ class AcousticTransmissionServicer(object):
 
 def add_AcousticTransmissionServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'GetAcousticRequest': grpc.unary_stream_rpc_method_handler(
-          servicer.GetAcousticRequest,
+      'StreamAcousticRequests': grpc.unary_stream_rpc_method_handler(
+          servicer.StreamAcousticRequests,
           request_deserializer=acoustic__transmission__pb2.CommandRequest.FromString,
-          response_serializer=acoustic__transmission__pb2.AcousticResponse.SerializeToString,
+          response_serializer=acoustic__transmission__pb2.AcousticRequest.SerializeToString,
       ),
-      'ReturnAcousticPayload': grpc.unary_stream_rpc_method_handler(
+      'ReturnAcousticPayload': grpc.unary_unary_rpc_method_handler(
           servicer.ReturnAcousticPayload,
-          request_deserializer=acoustic__transmission__pb2.AcousticPayload.FromString,
-          response_serializer=acoustic__transmission__pb2.AcousticResponse.SerializeToString,
+          request_deserializer=acoustic__transmission__pb2.AcousticResponse.FromString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
