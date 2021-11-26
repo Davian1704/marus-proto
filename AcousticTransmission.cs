@@ -25,24 +25,24 @@ namespace Acoustictransmission {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChthY291c3RpY190cmFuc21pc3Npb24ucHJvdG8SFGFjb3VzdGljdHJhbnNt",
-            "aXNzaW9uGgxsYWJ1c3QucHJvdG8iIQoOQ29tbWFuZFJlcXVlc3QSDwoHYWRk",
-            "cmVzcxgBIAEoCSJ0Cg9BY291c3RpY1BheWxvYWQSDwoHYWRkcmVzcxgBIAEo",
-            "CRIpCgdwYXlsb2FkGAIgASgLMhgubGFidXN0Lk5hbm9tb2RlbVBheWxvYWQS",
-            "JQoFcmFuZ2UYAyABKAsyFi5sYWJ1c3QuTmFub21vZGVtUmFuZ2UiTgoQQWNv",
-            "dXN0aWNSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIEikKB3JlcXVlc3QYAiAB",
-            "KAsyGC5sYWJ1c3QuTmFub21vZGVtUmVxdWVzdDLqAQoUQWNvdXN0aWNUcmFu",
-            "c21pc3Npb24SZgoSR2V0QWNvdXN0aWNSZXF1ZXN0EiQuYWNvdXN0aWN0cmFu",
-            "c21pc3Npb24uQ29tbWFuZFJlcXVlc3QaJi5hY291c3RpY3RyYW5zbWlzc2lv",
-            "bi5BY291c3RpY1Jlc3BvbnNlIgAwARJqChVSZXR1cm5BY291c3RpY1BheWxv",
-            "YWQSJS5hY291c3RpY3RyYW5zbWlzc2lvbi5BY291c3RpY1BheWxvYWQaJi5h",
-            "Y291c3RpY3RyYW5zbWlzc2lvbi5BY291c3RpY1Jlc3BvbnNlIgAwAWIGcHJv",
-            "dG8z"));
+            "aXNzaW9uGgxsYWJ1c3QucHJvdG8aCXN0ZC5wcm90byIhCg5Db21tYW5kUmVx",
+            "dWVzdBIPCgdhZGRyZXNzGAEgASgJIpEBChBBY291c3RpY1Jlc3BvbnNlEg8K",
+            "B2FkZHJlc3MYASABKAkSDwoHc3VjY2VzcxgCIAEoCBIrCgdwYXlsb2FkGAMg",
+            "ASgLMhgubGFidXN0Lk5hbm9tb2RlbVBheWxvYWRIABInCgVyYW5nZRgEIAEo",
+            "CzIWLmxhYnVzdC5OYW5vbW9kZW1SYW5nZUgAQgUKA21zZyJNCg9BY291c3Rp",
+            "Y1JlcXVlc3QSDwoHc3VjY2VzcxgBIAEoCBIpCgdyZXF1ZXN0GAIgASgLMhgu",
+            "bGFidXN0Lk5hbm9tb2RlbVJlcXVlc3Qy0AEKFEFjb3VzdGljVHJhbnNtaXNz",
+            "aW9uEmkKFlN0cmVhbUFjb3VzdGljUmVxdWVzdHMSJC5hY291c3RpY3RyYW5z",
+            "bWlzc2lvbi5Db21tYW5kUmVxdWVzdBolLmFjb3VzdGljdHJhbnNtaXNzaW9u",
+            "LkFjb3VzdGljUmVxdWVzdCIAMAESTQoVUmV0dXJuQWNvdXN0aWNQYXlsb2Fk",
+            "EiYuYWNvdXN0aWN0cmFuc21pc3Npb24uQWNvdXN0aWNSZXNwb25zZRoKLnN0",
+            "ZC5FbXB0eSIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Labust.LabustReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Labust.LabustReflection.Descriptor, global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.CommandRequest), global::Acoustictransmission.CommandRequest.Parser, new[]{ "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.AcousticPayload), global::Acoustictransmission.AcousticPayload.Parser, new[]{ "Address", "Payload", "Range" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.AcousticResponse), global::Acoustictransmission.AcousticResponse.Parser, new[]{ "Success", "Request" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.AcousticResponse), global::Acoustictransmission.AcousticResponse.Parser, new[]{ "Address", "Success", "Payload", "Range" }, new[]{ "Msg" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.AcousticRequest), global::Acoustictransmission.AcousticRequest.Parser, new[]{ "Success", "Request" }, null, null, null)
           }));
     }
     #endregion
@@ -178,11 +178,11 @@ namespace Acoustictransmission {
 
   }
 
-  public sealed partial class AcousticPayload : pb::IMessage<AcousticPayload> {
-    private static readonly pb::MessageParser<AcousticPayload> _parser = new pb::MessageParser<AcousticPayload>(() => new AcousticPayload());
+  public sealed partial class AcousticResponse : pb::IMessage<AcousticResponse> {
+    private static readonly pb::MessageParser<AcousticResponse> _parser = new pb::MessageParser<AcousticResponse>(() => new AcousticResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AcousticPayload> Parser { get { return _parser; } }
+    public static pb::MessageParser<AcousticResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -195,23 +195,31 @@ namespace Acoustictransmission {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AcousticPayload() {
+    public AcousticResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AcousticPayload(AcousticPayload other) : this() {
+    public AcousticResponse(AcousticResponse other) : this() {
       address_ = other.address_;
-      payload_ = other.payload_ != null ? other.payload_.Clone() : null;
-      range_ = other.range_ != null ? other.range_.Clone() : null;
+      success_ = other.success_;
+      switch (other.MsgCase) {
+        case MsgOneofCase.Payload:
+          Payload = other.Payload.Clone();
+          break;
+        case MsgOneofCase.Range:
+          Range = other.Range.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AcousticPayload Clone() {
-      return new AcousticPayload(this);
+    public AcousticResponse Clone() {
+      return new AcousticResponse(this);
     }
 
     /// <summary>Field number for the "address" field.</summary>
@@ -225,35 +233,65 @@ namespace Acoustictransmission {
       }
     }
 
+    /// <summary>Field number for the "success" field.</summary>
+    public const int SuccessFieldNumber = 2;
+    private bool success_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Success {
+      get { return success_; }
+      set {
+        success_ = value;
+      }
+    }
+
     /// <summary>Field number for the "payload" field.</summary>
-    public const int PayloadFieldNumber = 2;
-    private global::Labust.NanomodemPayload payload_;
+    public const int PayloadFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Labust.NanomodemPayload Payload {
-      get { return payload_; }
+      get { return msgCase_ == MsgOneofCase.Payload ? (global::Labust.NanomodemPayload) msg_ : null; }
       set {
-        payload_ = value;
+        msg_ = value;
+        msgCase_ = value == null ? MsgOneofCase.None : MsgOneofCase.Payload;
       }
     }
 
     /// <summary>Field number for the "range" field.</summary>
-    public const int RangeFieldNumber = 3;
-    private global::Labust.NanomodemRange range_;
+    public const int RangeFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Labust.NanomodemRange Range {
-      get { return range_; }
+      get { return msgCase_ == MsgOneofCase.Range ? (global::Labust.NanomodemRange) msg_ : null; }
       set {
-        range_ = value;
+        msg_ = value;
+        msgCase_ = value == null ? MsgOneofCase.None : MsgOneofCase.Range;
       }
+    }
+
+    private object msg_;
+    /// <summary>Enum of possible cases for the "msg" oneof.</summary>
+    public enum MsgOneofCase {
+      None = 0,
+      Payload = 3,
+      Range = 4,
+    }
+    private MsgOneofCase msgCase_ = MsgOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MsgOneofCase MsgCase {
+      get { return msgCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearMsg() {
+      msgCase_ = MsgOneofCase.None;
+      msg_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as AcousticPayload);
+      return Equals(other as AcousticResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AcousticPayload other) {
+    public bool Equals(AcousticResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -261,8 +299,10 @@ namespace Acoustictransmission {
         return true;
       }
       if (Address != other.Address) return false;
+      if (Success != other.Success) return false;
       if (!object.Equals(Payload, other.Payload)) return false;
       if (!object.Equals(Range, other.Range)) return false;
+      if (MsgCase != other.MsgCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -270,8 +310,10 @@ namespace Acoustictransmission {
     public override int GetHashCode() {
       int hash = 1;
       if (Address.Length != 0) hash ^= Address.GetHashCode();
-      if (payload_ != null) hash ^= Payload.GetHashCode();
-      if (range_ != null) hash ^= Range.GetHashCode();
+      if (Success != false) hash ^= Success.GetHashCode();
+      if (msgCase_ == MsgOneofCase.Payload) hash ^= Payload.GetHashCode();
+      if (msgCase_ == MsgOneofCase.Range) hash ^= Range.GetHashCode();
+      hash ^= (int) msgCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -289,12 +331,16 @@ namespace Acoustictransmission {
         output.WriteRawTag(10);
         output.WriteString(Address);
       }
-      if (payload_ != null) {
-        output.WriteRawTag(18);
+      if (Success != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Success);
+      }
+      if (msgCase_ == MsgOneofCase.Payload) {
+        output.WriteRawTag(26);
         output.WriteMessage(Payload);
       }
-      if (range_ != null) {
-        output.WriteRawTag(26);
+      if (msgCase_ == MsgOneofCase.Range) {
+        output.WriteRawTag(34);
         output.WriteMessage(Range);
       }
       if (_unknownFields != null) {
@@ -308,10 +354,13 @@ namespace Acoustictransmission {
       if (Address.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
       }
-      if (payload_ != null) {
+      if (Success != false) {
+        size += 1 + 1;
+      }
+      if (msgCase_ == MsgOneofCase.Payload) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Payload);
       }
-      if (range_ != null) {
+      if (msgCase_ == MsgOneofCase.Range) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Range);
       }
       if (_unknownFields != null) {
@@ -321,25 +370,31 @@ namespace Acoustictransmission {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AcousticPayload other) {
+    public void MergeFrom(AcousticResponse other) {
       if (other == null) {
         return;
       }
       if (other.Address.Length != 0) {
         Address = other.Address;
       }
-      if (other.payload_ != null) {
-        if (payload_ == null) {
-          payload_ = new global::Labust.NanomodemPayload();
-        }
-        Payload.MergeFrom(other.Payload);
+      if (other.Success != false) {
+        Success = other.Success;
       }
-      if (other.range_ != null) {
-        if (range_ == null) {
-          range_ = new global::Labust.NanomodemRange();
-        }
-        Range.MergeFrom(other.Range);
+      switch (other.MsgCase) {
+        case MsgOneofCase.Payload:
+          if (Payload == null) {
+            Payload = new global::Labust.NanomodemPayload();
+          }
+          Payload.MergeFrom(other.Payload);
+          break;
+        case MsgOneofCase.Range:
+          if (Range == null) {
+            Range = new global::Labust.NanomodemRange();
+          }
+          Range.MergeFrom(other.Range);
+          break;
       }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -355,18 +410,26 @@ namespace Acoustictransmission {
             Address = input.ReadString();
             break;
           }
-          case 18: {
-            if (payload_ == null) {
-              payload_ = new global::Labust.NanomodemPayload();
-            }
-            input.ReadMessage(payload_);
+          case 16: {
+            Success = input.ReadBool();
             break;
           }
           case 26: {
-            if (range_ == null) {
-              range_ = new global::Labust.NanomodemRange();
+            global::Labust.NanomodemPayload subBuilder = new global::Labust.NanomodemPayload();
+            if (msgCase_ == MsgOneofCase.Payload) {
+              subBuilder.MergeFrom(Payload);
             }
-            input.ReadMessage(range_);
+            input.ReadMessage(subBuilder);
+            Payload = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Labust.NanomodemRange subBuilder = new global::Labust.NanomodemRange();
+            if (msgCase_ == MsgOneofCase.Range) {
+              subBuilder.MergeFrom(Range);
+            }
+            input.ReadMessage(subBuilder);
+            Range = subBuilder;
             break;
           }
         }
@@ -375,11 +438,11 @@ namespace Acoustictransmission {
 
   }
 
-  public sealed partial class AcousticResponse : pb::IMessage<AcousticResponse> {
-    private static readonly pb::MessageParser<AcousticResponse> _parser = new pb::MessageParser<AcousticResponse>(() => new AcousticResponse());
+  public sealed partial class AcousticRequest : pb::IMessage<AcousticRequest> {
+    private static readonly pb::MessageParser<AcousticRequest> _parser = new pb::MessageParser<AcousticRequest>(() => new AcousticRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AcousticResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<AcousticRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -392,22 +455,22 @@ namespace Acoustictransmission {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AcousticResponse() {
+    public AcousticRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AcousticResponse(AcousticResponse other) : this() {
+    public AcousticRequest(AcousticRequest other) : this() {
       success_ = other.success_;
       request_ = other.request_ != null ? other.request_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AcousticResponse Clone() {
-      return new AcousticResponse(this);
+    public AcousticRequest Clone() {
+      return new AcousticRequest(this);
     }
 
     /// <summary>Field number for the "success" field.</summary>
@@ -434,11 +497,11 @@ namespace Acoustictransmission {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as AcousticResponse);
+      return Equals(other as AcousticRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AcousticResponse other) {
+    public bool Equals(AcousticRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -497,7 +560,7 @@ namespace Acoustictransmission {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AcousticResponse other) {
+    public void MergeFrom(AcousticRequest other) {
       if (other == null) {
         return;
       }
