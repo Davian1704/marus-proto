@@ -16,7 +16,7 @@ message CommandRequest {
 message AcousticResponse {
     string address = 1;
     bool success = 2;
-    oneof payload {
+    oneof msg {
         labust.NanomodemPayload payload = 3;
         labust.NanomodemRange range = 4;
     }
