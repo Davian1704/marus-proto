@@ -2,23 +2,27 @@ syntax = "proto3";
 package acoustictransmission;
 
 import "labust.proto";
+import "std.proto";
 
 service AcousticTransmission {
-    rpc GetAcousticRequest(CommandRequest) returns (stream AcousticResponse) {}
-    rpc ReturnAcousticPayload(AcousticPayload) returns (stream AcousticResponse) {}
+    rpc StreamAcousticRequests(CommandRequest) returns (stream AcousticRequest) {}
+    rpc ReturnAcousticPayload(AcousticResponse) returns (std.Empty) {}
 }
 
 message CommandRequest {
     string address = 1;
 }
 
-message AcousticPayload {
-	string address = 1;
-    labust.NanomodemPayload payload = 2;
-    labust.NanomodemRange range = 3;
+message AcousticResponse {
+    string address = 1;
+    bool success = 2;
+    oneof payload {
+        labust.NanomodemPayload payload = 3;
+        labust.NanomodemRange range = 4;
+    }
 }
 
-message AcousticResponse {
+message AcousticRequest {
     bool success = 1;
     labust.NanomodemRequest request = 2;
 }
