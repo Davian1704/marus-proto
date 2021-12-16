@@ -35,6 +35,11 @@ class TfStub(object):
         request_serializer=tf__pb2.TfFrameRequest.SerializeToString,
         response_deserializer=tf__pb2.TfFrame.FromString,
         )
+    self.PublishFrame = channel.stream_unary(
+        '/tf.Tf/PublishFrame',
+        request_serializer=tf__pb2.TfFrame.SerializeToString,
+        response_deserializer=std__pb2.Empty.FromString,
+        )
 
 
 class TfServicer(object):
@@ -69,6 +74,13 @@ class TfServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def PublishFrame(self, request_iterator, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_TfServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -91,6 +103,11 @@ def add_TfServicer_to_server(servicer, server):
           servicer.StreamFrame,
           request_deserializer=tf__pb2.TfFrameRequest.FromString,
           response_serializer=tf__pb2.TfFrame.SerializeToString,
+      ),
+      'PublishFrame': grpc.stream_unary_rpc_method_handler(
+          servicer.PublishFrame,
+          request_deserializer=tf__pb2.TfFrame.FromString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

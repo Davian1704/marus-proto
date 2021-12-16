@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='tf',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x08tf.proto\x12\x02tf\x1a\tstd.proto\x1a\x0egeometry.proto\"7\n\x0eTfFrameRequest\x12\x0f\n\x07\x66rameId\x18\x01 \x01(\t\x12\x14\n\x0c\x63hildFrameId\x18\x02 \x01(\t\"\x80\x01\n\x07TfFrame\x12\x0f\n\x07\x66rameId\x18\x01 \x01(\t\x12\x14\n\x0c\x63hildFrameId\x18\x02 \x01(\t\x12&\n\x0btranslation\x18\x03 \x01(\x0b\x32\x11.geometry.Vector3\x12&\n\x08rotation\x18\x04 \x01(\x0b\x32\x14.geometry.Quaternion\"*\n\x0bTfFrameList\x12\x1b\n\x06\x66rames\x18\x01 \x03(\x0b\x32\x0b.tf.TfFrame2\xca\x01\n\x02Tf\x12-\n\x0cGetAllFrames\x12\n.std.Empty\x1a\x0f.tf.TfFrameList\"\x00\x12-\n\x08GetFrame\x12\x12.tf.TfFrameRequest\x1a\x0b.tf.TfFrame\"\x00\x12\x32\n\x0fStreamAllFrames\x12\n.std.Empty\x1a\x0f.tf.TfFrameList\"\x00\x30\x01\x12\x32\n\x0bStreamFrame\x12\x12.tf.TfFrameRequest\x1a\x0b.tf.TfFrame\"\x00\x30\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x08tf.proto\x12\x02tf\x1a\tstd.proto\x1a\x0egeometry.proto\"7\n\x0eTfFrameRequest\x12\x0f\n\x07\x66rameId\x18\x01 \x01(\t\x12\x14\n\x0c\x63hildFrameId\x18\x02 \x01(\t\"\xae\x01\n\x07TfFrame\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x66rameId\x18\x02 \x01(\t\x12\x14\n\x0c\x63hildFrameId\x18\x03 \x01(\t\x12&\n\x0btranslation\x18\x04 \x01(\x0b\x32\x11.geometry.Vector3\x12&\n\x08rotation\x18\x05 \x01(\x0b\x32\x14.geometry.Quaternion\x12\x0f\n\x07\x61\x64\x64ress\x18\x06 \x01(\t\"*\n\x0bTfFrameList\x12\x1b\n\x06\x66rames\x18\x01 \x03(\x0b\x32\x0b.tf.TfFrame2\xf7\x01\n\x02Tf\x12-\n\x0cGetAllFrames\x12\n.std.Empty\x1a\x0f.tf.TfFrameList\"\x00\x12-\n\x08GetFrame\x12\x12.tf.TfFrameRequest\x1a\x0b.tf.TfFrame\"\x00\x12\x32\n\x0fStreamAllFrames\x12\n.std.Empty\x1a\x0f.tf.TfFrameList\"\x00\x30\x01\x12\x32\n\x0bStreamFrame\x12\x12.tf.TfFrameRequest\x1a\x0b.tf.TfFrame\"\x00\x30\x01\x12+\n\x0cPublishFrame\x12\x0b.tf.TfFrame\x1a\n.std.Empty\"\x00(\x01\x62\x06proto3')
   ,
   dependencies=[std__pb2.DESCRIPTOR,geometry__pb2.DESCRIPTOR,])
 
@@ -74,30 +74,44 @@ _TFFRAME = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='frameId', full_name='tf.TfFrame.frameId', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='header', full_name='tf.TfFrame.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='childFrameId', full_name='tf.TfFrame.childFrameId', index=1,
+      name='frameId', full_name='tf.TfFrame.frameId', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='translation', full_name='tf.TfFrame.translation', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      name='childFrameId', full_name='tf.TfFrame.childFrameId', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='translation', full_name='tf.TfFrame.translation', index=3,
+      number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='rotation', full_name='tf.TfFrame.rotation', index=3,
-      number=4, type=11, cpp_type=10, label=1,
+      name='rotation', full_name='tf.TfFrame.rotation', index=4,
+      number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='address', full_name='tf.TfFrame.address', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -114,7 +128,7 @@ _TFFRAME = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=101,
-  serialized_end=229,
+  serialized_end=275,
 )
 
 
@@ -144,10 +158,11 @@ _TFFRAMELIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=231,
-  serialized_end=273,
+  serialized_start=277,
+  serialized_end=319,
 )
 
+_TFFRAME.fields_by_name['header'].message_type = std__pb2._HEADER
 _TFFRAME.fields_by_name['translation'].message_type = geometry__pb2._VECTOR3
 _TFFRAME.fields_by_name['rotation'].message_type = geometry__pb2._QUATERNION
 _TFFRAMELIST.fields_by_name['frames'].message_type = _TFFRAME
@@ -185,8 +200,8 @@ _TF = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=276,
-  serialized_end=478,
+  serialized_start=322,
+  serialized_end=569,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetAllFrames',
@@ -222,6 +237,15 @@ _TF = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_TFFRAMEREQUEST,
     output_type=_TFFRAME,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='PublishFrame',
+    full_name='tf.Tf.PublishFrame',
+    index=4,
+    containing_service=None,
+    input_type=_TFFRAME,
+    output_type=std__pb2._EMPTY,
     serialized_options=None,
   ),
 ])
