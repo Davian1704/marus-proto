@@ -5,68 +5,68 @@ import "std.proto";
 import "geometry.proto";
 
 message FSPathInfo {
-  std.Header header = 1;
-  double deltaR = 2;
-  double k = 3;
-  double xiR = 4;
-  double dxiR = 5;
-  double pi = 6;
-  double piTilda = 7;
-  geometry.Vector3 drP = 8;
-  geometry.Vector3 position = 9;
-  geometry.Vector3 orientation = 10;
-  double curvature = 11;
-  double torsion = 12;
+    std.Header header = 1;
+    double deltaR = 2;
+    double k = 3;
+    double xiR = 4;
+    double dxiR = 5;
+    double pi = 6;
+    double piTilda = 7;
+    geometry.Vector3 drP = 8;
+    geometry.Vector3 position = 9;
+    geometry.Vector3 orientation = 10;
+    double curvature = 11;
+    double torsion = 12;
 }
 
 message PointerPrimitiveService {
-  double radius = 1;
-  double verticalOffset = 2;
-  geometry.Vector3 guidanceTarget = 3;
-  bool guidanceEnable = 4;
-  bool wrappingEnable = 5;
-  bool fovGuidance = 6;
-  bool streamlineOrientation = 7;
-  string guidanceTopic = 8;
-  string radiusTopic = 9;
+    double radius = 1;
+    double verticalOffset = 2;
+    geometry.Vector3 guidanceTarget = 3;
+    bool guidanceEnable = 4;
+    bool wrappingEnable = 5;
+    bool fovGuidance = 6;
+    bool streamlineOrientation = 7;
+    string guidanceTopic = 8;
+    string radiusTopic = 9;
 }
 
 message NanomodemRequest {
-	enum Type {
-		BRDCST = 0;
-		UNICST = 1;
-		PINGID = 2;
-		VOLTID = 3;
-		CHNGID = 4;
-		STATUS = 5;
-		UNISTACK = 6;
-		TESTMSG = 7;
-		ECHOMSG = 8;
-		QUALITY = 9;
-	}
+    enum Type {
+        BRDCST = 0;
+        UNICST = 1;
+        PINGID = 2;
+        VOLTID = 3;
+        CHNGID = 4;
+        STATUS = 5;
+        UNISTACK = 6;
+        TESTMSG = 7;
+        ECHOMSG = 8;
+        QUALITY = 9;
+    }
 
-  std.Header header = 1;
-	Type reqType = 2;
-	bool scheduled = 3;
-	string msg = 4;
-	uint32 id = 5;
+    std.Header header = 1;
+    Type reqType = 2;
+    bool scheduled = 3;
+    string msg = 4;
+    uint32 id = 5;
 }
 
 message NanomodemPayload {
-	enum Type {
-		BRDCST = 0;
-		UNICST = 1;
-	}
+    enum Type {
+        BRDCST = 0;
+        UNICST = 1;
+    }
 
-  std.Header header = 1;
-  string msg = 2;
-  int32 senderId = 3;
-	Type msgType = 4;
+    std.Header header = 1;
+    string msg = 2;
+    int32 senderId = 3;
+    Type msgType = 4;
 }
 
 message NanomodemRange {
-  std.Header header = 1;
-	int32 range = 2;
-	double rangeM = 3;
-	int32 id = 4;
+    std.Header header = 1;
+    int32 range = 2;
+    double rangeM = 3;
+    int32 id = 4;
 }

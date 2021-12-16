@@ -9,6 +9,7 @@ service Tf {
     rpc GetFrame(TfFrameRequest) returns (TfFrame) {}
     rpc StreamAllFrames(std.Empty) returns (stream TfFrameList) {}
     rpc StreamFrame(TfFrameRequest) returns (stream TfFrame) {}
+    rpc PublishFrame(stream TfFrame) returns (std.Empty) {}
 }
 
 
@@ -18,10 +19,12 @@ message TfFrameRequest {
 }
 
 message TfFrame {
-    string frameId = 1;
-    string childFrameId = 2;
-    geometry.Vector3 translation = 3;
-    geometry.Quaternion rotation = 4;
+    std.Header header = 1;
+    string frameId = 2;
+    string childFrameId = 3;
+    geometry.Vector3 translation = 4;
+    geometry.Quaternion rotation = 5;
+    string address = 6;
 }
 
 message TfFrameList {
