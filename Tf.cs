@@ -26,20 +26,22 @@ namespace Tf {
           string.Concat(
             "Cgh0Zi5wcm90bxICdGYaCXN0ZC5wcm90bxoOZ2VvbWV0cnkucHJvdG8iNwoO",
             "VGZGcmFtZVJlcXVlc3QSDwoHZnJhbWVJZBgBIAEoCRIUCgxjaGlsZEZyYW1l",
-            "SWQYAiABKAkigAEKB1RmRnJhbWUSDwoHZnJhbWVJZBgBIAEoCRIUCgxjaGls",
-            "ZEZyYW1lSWQYAiABKAkSJgoLdHJhbnNsYXRpb24YAyABKAsyES5nZW9tZXRy",
-            "eS5WZWN0b3IzEiYKCHJvdGF0aW9uGAQgASgLMhQuZ2VvbWV0cnkuUXVhdGVy",
-            "bmlvbiIqCgtUZkZyYW1lTGlzdBIbCgZmcmFtZXMYASADKAsyCy50Zi5UZkZy",
-            "YW1lMsoBCgJUZhItCgxHZXRBbGxGcmFtZXMSCi5zdGQuRW1wdHkaDy50Zi5U",
-            "ZkZyYW1lTGlzdCIAEi0KCEdldEZyYW1lEhIudGYuVGZGcmFtZVJlcXVlc3Qa",
-            "Cy50Zi5UZkZyYW1lIgASMgoPU3RyZWFtQWxsRnJhbWVzEgouc3RkLkVtcHR5",
-            "Gg8udGYuVGZGcmFtZUxpc3QiADABEjIKC1N0cmVhbUZyYW1lEhIudGYuVGZG",
-            "cmFtZVJlcXVlc3QaCy50Zi5UZkZyYW1lIgAwAWIGcHJvdG8z"));
+            "SWQYAiABKAkirgEKB1RmRnJhbWUSGwoGaGVhZGVyGAEgASgLMgsuc3RkLkhl",
+            "YWRlchIPCgdmcmFtZUlkGAIgASgJEhQKDGNoaWxkRnJhbWVJZBgDIAEoCRIm",
+            "Cgt0cmFuc2xhdGlvbhgEIAEoCzIRLmdlb21ldHJ5LlZlY3RvcjMSJgoIcm90",
+            "YXRpb24YBSABKAsyFC5nZW9tZXRyeS5RdWF0ZXJuaW9uEg8KB2FkZHJlc3MY",
+            "BiABKAkiKgoLVGZGcmFtZUxpc3QSGwoGZnJhbWVzGAEgAygLMgsudGYuVGZG",
+            "cmFtZTL3AQoCVGYSLQoMR2V0QWxsRnJhbWVzEgouc3RkLkVtcHR5Gg8udGYu",
+            "VGZGcmFtZUxpc3QiABItCghHZXRGcmFtZRISLnRmLlRmRnJhbWVSZXF1ZXN0",
+            "GgsudGYuVGZGcmFtZSIAEjIKD1N0cmVhbUFsbEZyYW1lcxIKLnN0ZC5FbXB0",
+            "eRoPLnRmLlRmRnJhbWVMaXN0IgAwARIyCgtTdHJlYW1GcmFtZRISLnRmLlRm",
+            "RnJhbWVSZXF1ZXN0GgsudGYuVGZGcmFtZSIAMAESKwoMUHVibGlzaEZyYW1l",
+            "EgsudGYuVGZGcmFtZRoKLnN0ZC5FbXB0eSIAKAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrameRequest), global::Tf.TfFrameRequest.Parser, new[]{ "FrameId", "ChildFrameId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrame), global::Tf.TfFrame.Parser, new[]{ "FrameId", "ChildFrameId", "Translation", "Rotation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrame), global::Tf.TfFrame.Parser, new[]{ "Header", "FrameId", "ChildFrameId", "Translation", "Rotation", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrameList), global::Tf.TfFrameList.Parser, new[]{ "Frames" }, null, null, null)
           }));
     }
@@ -229,10 +231,12 @@ namespace Tf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TfFrame(TfFrame other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
       frameId_ = other.frameId_;
       childFrameId_ = other.childFrameId_;
       translation_ = other.translation_ != null ? other.translation_.Clone() : null;
       rotation_ = other.rotation_ != null ? other.rotation_.Clone() : null;
+      address_ = other.address_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -241,8 +245,19 @@ namespace Tf {
       return new TfFrame(this);
     }
 
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
     /// <summary>Field number for the "frameId" field.</summary>
-    public const int FrameIdFieldNumber = 1;
+    public const int FrameIdFieldNumber = 2;
     private string frameId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FrameId {
@@ -253,7 +268,7 @@ namespace Tf {
     }
 
     /// <summary>Field number for the "childFrameId" field.</summary>
-    public const int ChildFrameIdFieldNumber = 2;
+    public const int ChildFrameIdFieldNumber = 3;
     private string childFrameId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ChildFrameId {
@@ -264,7 +279,7 @@ namespace Tf {
     }
 
     /// <summary>Field number for the "translation" field.</summary>
-    public const int TranslationFieldNumber = 3;
+    public const int TranslationFieldNumber = 4;
     private global::Geometry.Vector3 translation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Geometry.Vector3 Translation {
@@ -275,13 +290,24 @@ namespace Tf {
     }
 
     /// <summary>Field number for the "rotation" field.</summary>
-    public const int RotationFieldNumber = 4;
+    public const int RotationFieldNumber = 5;
     private global::Geometry.Quaternion rotation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Geometry.Quaternion Rotation {
       get { return rotation_; }
       set {
         rotation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 6;
+    private string address_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Address {
+      get { return address_; }
+      set {
+        address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -298,20 +324,24 @@ namespace Tf {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(Header, other.Header)) return false;
       if (FrameId != other.FrameId) return false;
       if (ChildFrameId != other.ChildFrameId) return false;
       if (!object.Equals(Translation, other.Translation)) return false;
       if (!object.Equals(Rotation, other.Rotation)) return false;
+      if (Address != other.Address) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
       if (FrameId.Length != 0) hash ^= FrameId.GetHashCode();
       if (ChildFrameId.Length != 0) hash ^= ChildFrameId.GetHashCode();
       if (translation_ != null) hash ^= Translation.GetHashCode();
       if (rotation_ != null) hash ^= Rotation.GetHashCode();
+      if (Address.Length != 0) hash ^= Address.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -325,21 +355,29 @@ namespace Tf {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (FrameId.Length != 0) {
+      if (header_ != null) {
         output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (FrameId.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(FrameId);
       }
       if (ChildFrameId.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(ChildFrameId);
       }
       if (translation_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteMessage(Translation);
       }
       if (rotation_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteMessage(Rotation);
+      }
+      if (Address.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Address);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -349,6 +387,9 @@ namespace Tf {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
       if (FrameId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FrameId);
       }
@@ -361,6 +402,9 @@ namespace Tf {
       if (rotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rotation);
       }
+      if (Address.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -371,6 +415,12 @@ namespace Tf {
     public void MergeFrom(TfFrame other) {
       if (other == null) {
         return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
       }
       if (other.FrameId.Length != 0) {
         FrameId = other.FrameId;
@@ -390,6 +440,9 @@ namespace Tf {
         }
         Rotation.MergeFrom(other.Rotation);
       }
+      if (other.Address.Length != 0) {
+        Address = other.Address;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -402,25 +455,36 @@ namespace Tf {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            FrameId = input.ReadString();
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
             break;
           }
           case 18: {
-            ChildFrameId = input.ReadString();
+            FrameId = input.ReadString();
             break;
           }
           case 26: {
+            ChildFrameId = input.ReadString();
+            break;
+          }
+          case 34: {
             if (translation_ == null) {
               translation_ = new global::Geometry.Vector3();
             }
             input.ReadMessage(translation_);
             break;
           }
-          case 34: {
+          case 42: {
             if (rotation_ == null) {
               rotation_ = new global::Geometry.Quaternion();
             }
             input.ReadMessage(rotation_);
+            break;
+          }
+          case 50: {
+            Address = input.ReadString();
             break;
           }
         }

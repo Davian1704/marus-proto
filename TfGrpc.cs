@@ -45,6 +45,13 @@ namespace Tf {
         __Marshaller_tf_TfFrameRequest,
         __Marshaller_tf_TfFrame);
 
+    static readonly grpc::Method<global::Tf.TfFrame, global::Std.Empty> __Method_PublishFrame = new grpc::Method<global::Tf.TfFrame, global::Std.Empty>(
+        grpc::MethodType.ClientStreaming,
+        __ServiceName,
+        "PublishFrame",
+        __Marshaller_tf_TfFrame,
+        __Marshaller_std_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -70,6 +77,11 @@ namespace Tf {
       }
 
       public virtual global::System.Threading.Tasks.Task StreamFrame(global::Tf.TfFrameRequest request, grpc::IServerStreamWriter<global::Tf.TfFrame> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Std.Empty> PublishFrame(grpc::IAsyncStreamReader<global::Tf.TfFrame> requestStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -147,6 +159,14 @@ namespace Tf {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_StreamFrame, null, options, request);
       }
+      public virtual grpc::AsyncClientStreamingCall<global::Tf.TfFrame, global::Std.Empty> PublishFrame(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PublishFrame(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncClientStreamingCall<global::Tf.TfFrame, global::Std.Empty> PublishFrame(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncClientStreamingCall(__Method_PublishFrame, null, options);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override TfClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -162,7 +182,8 @@ namespace Tf {
           .AddMethod(__Method_GetAllFrames, serviceImpl.GetAllFrames)
           .AddMethod(__Method_GetFrame, serviceImpl.GetFrame)
           .AddMethod(__Method_StreamAllFrames, serviceImpl.StreamAllFrames)
-          .AddMethod(__Method_StreamFrame, serviceImpl.StreamFrame).Build();
+          .AddMethod(__Method_StreamFrame, serviceImpl.StreamFrame)
+          .AddMethod(__Method_PublishFrame, serviceImpl.PublishFrame).Build();
     }
 
   }
