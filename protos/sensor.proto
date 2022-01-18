@@ -79,8 +79,8 @@ message PointCloud2 {
     uint32 width = 4;
     repeated PointField fields = 5;
     bool isBigEndian = 6;
-    uint32 point_step = 7;
-    uint32 row_step = 8;
+    uint32 pointStep = 7;
+    uint32 rowStep = 8;
     bytes data = 9;
     bool is_dense = 10;
 }
