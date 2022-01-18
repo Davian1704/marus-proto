@@ -48,12 +48,12 @@ namespace Sensor {
             "VDMyEAQSCgoGVUlOVDMyEAUSCwoHRkxPQVQzMhAGEgsKB0ZMT0FUNjQQByJt",
             "CgpQb2ludENsb3VkEhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISHwoG",
             "cG9pbnRzGAIgAygLMg8uZ2VvbWV0cnkuUG9pbnQSIQoIY2hhbm5lbHMYAyAD",
-            "KAsyDy5zZW5zb3IuQ2hhbm5lbCLfAQoLUG9pbnRDbG91ZDISGwoGaGVhZGVy",
+            "KAsyDy5zZW5zb3IuQ2hhbm5lbCLdAQoLUG9pbnRDbG91ZDISGwoGaGVhZGVy",
             "GAEgASgLMgsuc3RkLkhlYWRlchIVCg10aW1lSW5TZWNvbmRzGAIgASgBEg4K",
             "BmhlaWdodBgDIAEoDRINCgV3aWR0aBgEIAEoDRIiCgZmaWVsZHMYBSADKAsy",
-            "Ei5zZW5zb3IuUG9pbnRGaWVsZBITCgtpc0JpZ0VuZGlhbhgGIAEoCBISCgpw",
-            "b2ludF9zdGVwGAcgASgNEhAKCHJvd19zdGVwGAggASgNEgwKBGRhdGEYCSAB",
-            "KAwSEAoIaXNfZGVuc2UYCiABKAhiBnByb3RvMw=="));
+            "Ei5zZW5zb3IuUG9pbnRGaWVsZBITCgtpc0JpZ0VuZGlhbhgGIAEoCBIRCglw",
+            "b2ludFN0ZXAYByABKA0SDwoHcm93U3RlcBgIIAEoDRIMCgRkYXRhGAkgASgM",
+            "EhAKCGlzX2RlbnNlGAogASgIYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -1487,7 +1487,7 @@ namespace Sensor {
       }
     }
 
-    /// <summary>Field number for the "point_step" field.</summary>
+    /// <summary>Field number for the "pointStep" field.</summary>
     public const int PointStepFieldNumber = 7;
     private uint pointStep_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1498,7 +1498,7 @@ namespace Sensor {
       }
     }
 
-    /// <summary>Field number for the "row_step" field.</summary>
+    /// <summary>Field number for the "rowStep" field.</summary>
     public const int RowStepFieldNumber = 8;
     private uint rowStep_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
