@@ -29,6 +29,16 @@ class SensorStreamingStub(object):
         request_serializer=sensor__streaming__pb2.PointCloudStreamingRequest.SerializeToString,
         response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
         )
+    self.StreamPointCloud = channel.stream_unary(
+        '/sensorstreaming.SensorStreaming/StreamPointCloud',
+        request_serializer=sensor__streaming__pb2.PointCloudStreamingRequest.SerializeToString,
+        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        )
+    self.StreamPointCloud2 = channel.stream_unary(
+        '/sensorstreaming.SensorStreaming/StreamPointCloud2',
+        request_serializer=sensor__streaming__pb2.PointCloud2StreamingRequest.SerializeToString,
+        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        )
     self.StreamRadarSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamRadarSensor',
         request_serializer=sensor__streaming__pb2.RadarStreamingRequest.SerializeToString,
@@ -85,6 +95,20 @@ class SensorStreamingServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def StreamSonarSensor(self, request_iterator, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def StreamPointCloud(self, request_iterator, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def StreamPointCloud2(self, request_iterator, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -156,6 +180,16 @@ def add_SensorStreamingServicer_to_server(servicer, server):
       'StreamSonarSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamSonarSensor,
           request_deserializer=sensor__streaming__pb2.PointCloudStreamingRequest.FromString,
+          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+      ),
+      'StreamPointCloud': grpc.stream_unary_rpc_method_handler(
+          servicer.StreamPointCloud,
+          request_deserializer=sensor__streaming__pb2.PointCloudStreamingRequest.FromString,
+          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+      ),
+      'StreamPointCloud2': grpc.stream_unary_rpc_method_handler(
+          servicer.StreamPointCloud2,
+          request_deserializer=sensor__streaming__pb2.PointCloud2StreamingRequest.FromString,
           response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
       ),
       'StreamRadarSensor': grpc.stream_unary_rpc_method_handler(
