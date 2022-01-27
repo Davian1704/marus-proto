@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='std',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\tstd.proto\x12\x03std\"\x07\n\x05\x45mpty\",\n\x06Header\x12\x11\n\ttimestamp\x18\x01 \x01(\x01\x12\x0f\n\x07\x66rameId\x18\x02 \x01(\t\"\x1c\n\x0c\x46loat32Array\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x02\x62\x06proto3')
+  serialized_pb=_b('\n\tstd.proto\x12\x03std\"\x07\n\x05\x45mpty\",\n\x06Header\x12\x11\n\ttimestamp\x18\x01 \x01(\x01\x12\x0f\n\x07\x66rameId\x18\x02 \x01(\t\"\x1c\n\x0c\x46loat32Array\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x02\"7\n\tColorRGBA\x12\t\n\x01r\x18\x01 \x01(\x02\x12\t\n\x01g\x18\x02 \x01(\x02\x12\t\n\x01\x62\x18\x03 \x01(\x02\x12\t\n\x01\x61\x18\x04 \x01(\x02\x62\x06proto3')
 )
 
 
@@ -117,9 +117,62 @@ _FLOAT32ARRAY = _descriptor.Descriptor(
   serialized_end=101,
 )
 
+
+_COLORRGBA = _descriptor.Descriptor(
+  name='ColorRGBA',
+  full_name='std.ColorRGBA',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='r', full_name='std.ColorRGBA.r', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='g', full_name='std.ColorRGBA.g', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='b', full_name='std.ColorRGBA.b', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='a', full_name='std.ColorRGBA.a', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=103,
+  serialized_end=158,
+)
+
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
 DESCRIPTOR.message_types_by_name['Header'] = _HEADER
 DESCRIPTOR.message_types_by_name['Float32Array'] = _FLOAT32ARRAY
+DESCRIPTOR.message_types_by_name['ColorRGBA'] = _COLORRGBA
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
@@ -142,6 +195,13 @@ Float32Array = _reflection.GeneratedProtocolMessageType('Float32Array', (_messag
   # @@protoc_insertion_point(class_scope:std.Float32Array)
   ))
 _sym_db.RegisterMessage(Float32Array)
+
+ColorRGBA = _reflection.GeneratedProtocolMessageType('ColorRGBA', (_message.Message,), dict(
+  DESCRIPTOR = _COLORRGBA,
+  __module__ = 'std_pb2'
+  # @@protoc_insertion_point(class_scope:std.ColorRGBA)
+  ))
+_sym_db.RegisterMessage(ColorRGBA)
 
 
 # @@protoc_insertion_point(module_scope)
