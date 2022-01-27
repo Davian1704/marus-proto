@@ -1,0 +1,63 @@
+syntax = "proto3";
+package visualization;
+import "std.proto";
+import "geometry.proto";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.visualization";
+option java_outer_classname = "Visualization";
+option objc_class_prefix = "HLW";
+
+service Visualization {
+    rpc SetMarker(MarkerRequest) returns (stream Marker) {}
+    rpc SetMarkerArray(MarkerRequest) returns (stream MarkerArray) {}
+}
+
+message MarkerRequest {
+    string address = 1;
+}
+
+message Marker {
+    enum Type {
+        ARROW = 0;
+        CUBE = 1;
+        SPHERE = 2;
+        CYLINDER = 3;
+        LINE_STRIP = 4;
+        LINE_LIST = 5;
+        CUBE_LIST = 6;
+        SPHERE_LIST = 7;
+        POINTS = 8;
+        TEXT_VIEW_FACING = 9;
+        MESH_RESOURCE = 10;
+        TRIANGLE_LIST = 11;
+    }
+
+    enum Action {
+        ADD = 0;
+        MODIFY = 1;
+        DELETE = 2;
+        DELETEALL = 3;
+    }
+
+    std.Header header = 1;
+    string ns = 2;
+    int32 id = 3;
+    Type type = 4;
+    Action action = 5;
+    geometry.Pose pose = 6;
+    geometry.Vector3 scale = 7;
+    std.ColorRGBA color = 8;
+    float lifetime = 9;
+    bool frameLocked = 10;
+    repeated geometry.Point points = 11;
+    repeated std.ColorRGBA colors = 12;
+    string text = 13;
+    string meshResource = 14;
+    bool meshUseEmbeddedMaterials = 15;
+}
+
+message MarkerArray {
+    std.Header header = 1;
+    repeated Marker markers = 2;
+}
