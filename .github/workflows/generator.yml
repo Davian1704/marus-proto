@@ -35,8 +35,7 @@ jobs:
           <PackageReference Include="Google.Protobuf" Version="3.20.1-rc1" />
           <PackageReference Include="Grpc.Net.Client" Version="2.45.0-pre1" />
           <PackageReference Include="Grpc.Tools" Version="2.45.0-pre1" />
-          <Protobuf Include="protos/**/*.proto" ProtoRoot="protos"
-          OutputDir="generated" CompileOutputs="false" />
+          <Protobuf Include="protos/**/*.proto" ProtoRoot="protos" CompileOutputs="false" />
           </ItemGroup>
           </Project>' >> ../grpc-dotnet/proj.csproj && dotnet build ../grpc-dotnet/proj.csproj
           && ls && ls .. && ls ../grpc-dotnet
@@ -91,7 +90,7 @@ jobs:
       - name: Save updated C# code (dotnet)
         run: |
           rm -f *.cs
-          mv ../grpc-dotnet/generated/*.cs .   
+          mv ../grpc-dotnet/obj/Debug/netstandard2.1/*.cs .   
           git add *
           if [[ -n $(git status -s) ]] 
           then
