@@ -27,7 +27,7 @@ jobs:
         run: protoc -I=protos --csharp-grpc_out=../csharp --csharp_out=../csharp --python-grpc_out=../python --python_out=../python protos/*
         
       - name: Generate code for grpc-dotnet
-        run:  touch ../grpc-dotnet/proj.csproj && '<Project Sdk="Microsoft.NET.Sdk">
+        run:  touch ../grpc-dotnet/proj.csproj && echo '<Project Sdk="Microsoft.NET.Sdk">
           <PropertyGroup>
           <TargetFramework>netstandard2.1</TargetFramework>
           </PropertyGroup>
