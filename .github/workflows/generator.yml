@@ -90,7 +90,7 @@ jobs:
       - name: Save updated C# code (dotnet)
         run: |
           rm -f *.cs
-          mv ../grpc-dotnet/generated/*.cs .   
+          mv generated/*.cs .   
           git add *
           if [[ -n $(git status -s) ]] 
           then
