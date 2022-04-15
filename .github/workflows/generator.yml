@@ -39,6 +39,7 @@ jobs:
           OutputDir="generated" CompileOutputs="false" />
           </ItemGroup>
           </Project>' >> ../grpc-dotnet/proj.csproj && dotnet build ../grpc-dotnet/proj.csproj
+          && ls && ls .. && ls ../grpc-dotnet
       
       - name: Prepare Github
         run: |
@@ -90,7 +91,7 @@ jobs:
       - name: Save updated C# code (dotnet)
         run: |
           rm -f *.cs
-          mv generated/*.cs .   
+          mv ../grpc-dotnet/generated/*.cs .   
           git add *
           if [[ -n $(git status -s) ]] 
           then
