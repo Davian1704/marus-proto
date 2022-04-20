@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Loracommunication {
+namespace Rfcommunication {
 
   /// <summary>Holder for reflection information generated from rf_coms.proto</summary>
   public static partial class RfComsReflection {
@@ -24,35 +24,35 @@ namespace Loracommunication {
     static RfComsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg1yZl9jb21zLnByb3RvEhFsb3JhY29tbXVuaWNhdGlvbhoJc3RkLnByb3Rv",
-            "IncKC1JhbmdlaW5nTXNnEhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXIS",
-            "DwoHYWRkcmVzcxgCIAEoCRIQCghzb3VyY2VJZBgDIAEoDRIoCgZyYW5nZXMY",
-            "BCADKAsyGC5sb3JhY29tbXVuaWNhdGlvbi5SYW5nZSLvAQoHTG9yYU1zZxIP",
-            "CgdhZGRyZXNzGAEgASgJEg8KB3N1Y2Nlc3MYAiABKAgSMwoHcGF5bG9hZBgD",
-            "IAEoCzIgLmxvcmFjb21tdW5pY2F0aW9uLlN0cmluZ1BheWxvYWRIABI0Cgdj",
-            "b21tYW5kGAQgASgLMiEubG9yYWNvbW11bmljYXRpb24uQXV2R290b0NvbW1h",
-            "bmRIABJQChdwb3NzaWJsZVRhcmdldERpcmVjdGlvbhgFIAEoCzItLmxvcmFj",
-            "b21tdW5pY2F0aW9uLkF1dlBvc3NpYmxlVGFyZ2V0RGlyZWN0aW9uSABCBQoD",
-            "bXNnIjkKDVN0cmluZ1BheWxvYWQSGwoGaGVhZGVyGAEgASgLMgsuc3RkLkhl",
-            "YWRlchILCgNtc2cYAiABKAkiQwoOQXV2R290b0NvbW1hbmQSGwoGaGVhZGVy",
-            "GAEgASgLMgsuc3RkLkhlYWRlchIJCgF4GAIgASgBEgkKAXkYAyABKAEiSgoa",
-            "QXV2UG9zc2libGVUYXJnZXREaXJlY3Rpb24SGwoGaGVhZGVyGAEgASgLMgsu",
-            "c3RkLkhlYWRlchIPCgdoZWFkaW5nGAIgASgBIigKBVJhbmdlEhAKCHRhcmdl",
-            "dElkGAEgASgNEg0KBXJhbmdlGAIgASgBMtYBCg5SZlRyYW5zbWlzc2lvbhJE",
-            "ChJTdHJlYW1SYW5nZWluZ01zZ3MSHi5sb3JhY29tbXVuaWNhdGlvbi5SYW5n",
-            "ZWluZ01zZxoKLnN0ZC5FbXB0eSIAKAESQQoTUmVjZWl2ZUxvcmFNZXNzYWdl",
-            "cxIKLnN0ZC5FbXB0eRoaLmxvcmFjb21tdW5pY2F0aW9uLkxvcmFNc2ciADAB",
-            "EjsKD1NlbmRMb3JhTWVzc2FnZRIaLmxvcmFjb21tdW5pY2F0aW9uLkxvcmFN",
-            "c2caCi5zdGQuRW1wdHkiAGIGcHJvdG8z"));
+            "Cg1yZl9jb21zLnByb3RvEg9yZmNvbW11bmljYXRpb24aCXN0ZC5wcm90byJ1",
+            "CgtSYW5nZWluZ01zZxIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVhZGVyEg8K",
+            "B2FkZHJlc3MYAiABKAkSEAoIc291cmNlSWQYAyABKA0SJgoGcmFuZ2VzGAQg",
+            "AygLMhYucmZjb21tdW5pY2F0aW9uLlJhbmdlIukBCgdMb3JhTXNnEg8KB2Fk",
+            "ZHJlc3MYASABKAkSDwoHc3VjY2VzcxgCIAEoCBIxCgdwYXlsb2FkGAMgASgL",
+            "Mh4ucmZjb21tdW5pY2F0aW9uLlN0cmluZ1BheWxvYWRIABIyCgdjb21tYW5k",
+            "GAQgASgLMh8ucmZjb21tdW5pY2F0aW9uLkF1dkdvdG9Db21tYW5kSAASTgoX",
+            "cG9zc2libGVUYXJnZXREaXJlY3Rpb24YBSABKAsyKy5yZmNvbW11bmljYXRp",
+            "b24uQXV2UG9zc2libGVUYXJnZXREaXJlY3Rpb25IAEIFCgNtc2ciOQoNU3Ry",
+            "aW5nUGF5bG9hZBIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVhZGVyEgsKA21z",
+            "ZxgCIAEoCSJDCg5BdXZHb3RvQ29tbWFuZBIbCgZoZWFkZXIYASABKAsyCy5z",
+            "dGQuSGVhZGVyEgkKAXgYAiABKAESCQoBeRgDIAEoASJKChpBdXZQb3NzaWJs",
+            "ZVRhcmdldERpcmVjdGlvbhIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVhZGVy",
+            "Eg8KB2hlYWRpbmcYAiABKAEiKAoFUmFuZ2USEAoIdGFyZ2V0SWQYASABKA0S",
+            "DQoFcmFuZ2UYAiABKAEy0gEKEExvcmFUcmFuc21pc3Npb24SQgoSU3RyZWFt",
+            "UmFuZ2VpbmdNc2dzEhwucmZjb21tdW5pY2F0aW9uLlJhbmdlaW5nTXNnGgou",
+            "c3RkLkVtcHR5IgAoARI/ChNSZWNlaXZlTG9yYU1lc3NhZ2VzEgouc3RkLkVt",
+            "cHR5GhgucmZjb21tdW5pY2F0aW9uLkxvcmFNc2ciADABEjkKD1NlbmRMb3Jh",
+            "TWVzc2FnZRIYLnJmY29tbXVuaWNhdGlvbi5Mb3JhTXNnGgouc3RkLkVtcHR5",
+            "IgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Loracommunication.RangeingMsg), global::Loracommunication.RangeingMsg.Parser, new[]{ "Header", "Address", "SourceId", "Ranges" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Loracommunication.LoraMsg), global::Loracommunication.LoraMsg.Parser, new[]{ "Address", "Success", "Payload", "Command", "PossibleTargetDirection" }, new[]{ "Msg" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Loracommunication.StringPayload), global::Loracommunication.StringPayload.Parser, new[]{ "Header", "Msg" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Loracommunication.AuvGotoCommand), global::Loracommunication.AuvGotoCommand.Parser, new[]{ "Header", "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Loracommunication.AuvPossibleTargetDirection), global::Loracommunication.AuvPossibleTargetDirection.Parser, new[]{ "Header", "Heading" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Loracommunication.Range), global::Loracommunication.Range.Parser, new[]{ "TargetId", "Range_" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.RangeingMsg), global::Rfcommunication.RangeingMsg.Parser, new[]{ "Header", "Address", "SourceId", "Ranges" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.LoraMsg), global::Rfcommunication.LoraMsg.Parser, new[]{ "Address", "Success", "Payload", "Command", "PossibleTargetDirection" }, new[]{ "Msg" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.StringPayload), global::Rfcommunication.StringPayload.Parser, new[]{ "Header", "Msg" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvGotoCommand), global::Rfcommunication.AuvGotoCommand.Parser, new[]{ "Header", "X", "Y" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvPossibleTargetDirection), global::Rfcommunication.AuvPossibleTargetDirection.Parser, new[]{ "Header", "Heading" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.Range), global::Rfcommunication.Range.Parser, new[]{ "TargetId", "Range_" }, null, null, null)
           }));
     }
     #endregion
@@ -67,7 +67,7 @@ namespace Loracommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Loracommunication.RfComsReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -131,11 +131,11 @@ namespace Loracommunication {
 
     /// <summary>Field number for the "ranges" field.</summary>
     public const int RangesFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Loracommunication.Range> _repeated_ranges_codec
-        = pb::FieldCodec.ForMessage(34, global::Loracommunication.Range.Parser);
-    private readonly pbc::RepeatedField<global::Loracommunication.Range> ranges_ = new pbc::RepeatedField<global::Loracommunication.Range>();
+    private static readonly pb::FieldCodec<global::Rfcommunication.Range> _repeated_ranges_codec
+        = pb::FieldCodec.ForMessage(34, global::Rfcommunication.Range.Parser);
+    private readonly pbc::RepeatedField<global::Rfcommunication.Range> ranges_ = new pbc::RepeatedField<global::Rfcommunication.Range>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Loracommunication.Range> Ranges {
+    public pbc::RepeatedField<global::Rfcommunication.Range> Ranges {
       get { return ranges_; }
     }
 
@@ -278,7 +278,7 @@ namespace Loracommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Loracommunication.RfComsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -342,8 +342,8 @@ namespace Loracommunication {
     /// <summary>Field number for the "payload" field.</summary>
     public const int PayloadFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Loracommunication.StringPayload Payload {
-      get { return msgCase_ == MsgOneofCase.Payload ? (global::Loracommunication.StringPayload) msg_ : null; }
+    public global::Rfcommunication.StringPayload Payload {
+      get { return msgCase_ == MsgOneofCase.Payload ? (global::Rfcommunication.StringPayload) msg_ : null; }
       set {
         msg_ = value;
         msgCase_ = value == null ? MsgOneofCase.None : MsgOneofCase.Payload;
@@ -353,8 +353,8 @@ namespace Loracommunication {
     /// <summary>Field number for the "command" field.</summary>
     public const int CommandFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Loracommunication.AuvGotoCommand Command {
-      get { return msgCase_ == MsgOneofCase.Command ? (global::Loracommunication.AuvGotoCommand) msg_ : null; }
+    public global::Rfcommunication.AuvGotoCommand Command {
+      get { return msgCase_ == MsgOneofCase.Command ? (global::Rfcommunication.AuvGotoCommand) msg_ : null; }
       set {
         msg_ = value;
         msgCase_ = value == null ? MsgOneofCase.None : MsgOneofCase.Command;
@@ -364,8 +364,8 @@ namespace Loracommunication {
     /// <summary>Field number for the "possibleTargetDirection" field.</summary>
     public const int PossibleTargetDirectionFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Loracommunication.AuvPossibleTargetDirection PossibleTargetDirection {
-      get { return msgCase_ == MsgOneofCase.PossibleTargetDirection ? (global::Loracommunication.AuvPossibleTargetDirection) msg_ : null; }
+    public global::Rfcommunication.AuvPossibleTargetDirection PossibleTargetDirection {
+      get { return msgCase_ == MsgOneofCase.PossibleTargetDirection ? (global::Rfcommunication.AuvPossibleTargetDirection) msg_ : null; }
       set {
         msg_ = value;
         msgCase_ = value == null ? MsgOneofCase.None : MsgOneofCase.PossibleTargetDirection;
@@ -499,19 +499,19 @@ namespace Loracommunication {
       switch (other.MsgCase) {
         case MsgOneofCase.Payload:
           if (Payload == null) {
-            Payload = new global::Loracommunication.StringPayload();
+            Payload = new global::Rfcommunication.StringPayload();
           }
           Payload.MergeFrom(other.Payload);
           break;
         case MsgOneofCase.Command:
           if (Command == null) {
-            Command = new global::Loracommunication.AuvGotoCommand();
+            Command = new global::Rfcommunication.AuvGotoCommand();
           }
           Command.MergeFrom(other.Command);
           break;
         case MsgOneofCase.PossibleTargetDirection:
           if (PossibleTargetDirection == null) {
-            PossibleTargetDirection = new global::Loracommunication.AuvPossibleTargetDirection();
+            PossibleTargetDirection = new global::Rfcommunication.AuvPossibleTargetDirection();
           }
           PossibleTargetDirection.MergeFrom(other.PossibleTargetDirection);
           break;
@@ -537,7 +537,7 @@ namespace Loracommunication {
             break;
           }
           case 26: {
-            global::Loracommunication.StringPayload subBuilder = new global::Loracommunication.StringPayload();
+            global::Rfcommunication.StringPayload subBuilder = new global::Rfcommunication.StringPayload();
             if (msgCase_ == MsgOneofCase.Payload) {
               subBuilder.MergeFrom(Payload);
             }
@@ -546,7 +546,7 @@ namespace Loracommunication {
             break;
           }
           case 34: {
-            global::Loracommunication.AuvGotoCommand subBuilder = new global::Loracommunication.AuvGotoCommand();
+            global::Rfcommunication.AuvGotoCommand subBuilder = new global::Rfcommunication.AuvGotoCommand();
             if (msgCase_ == MsgOneofCase.Command) {
               subBuilder.MergeFrom(Command);
             }
@@ -555,7 +555,7 @@ namespace Loracommunication {
             break;
           }
           case 42: {
-            global::Loracommunication.AuvPossibleTargetDirection subBuilder = new global::Loracommunication.AuvPossibleTargetDirection();
+            global::Rfcommunication.AuvPossibleTargetDirection subBuilder = new global::Rfcommunication.AuvPossibleTargetDirection();
             if (msgCase_ == MsgOneofCase.PossibleTargetDirection) {
               subBuilder.MergeFrom(PossibleTargetDirection);
             }
@@ -577,7 +577,7 @@ namespace Loracommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Loracommunication.RfComsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -740,7 +740,7 @@ namespace Loracommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Loracommunication.RfComsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -931,7 +931,7 @@ namespace Loracommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Loracommunication.RfComsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1094,7 +1094,7 @@ namespace Loracommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Loracommunication.RfComsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

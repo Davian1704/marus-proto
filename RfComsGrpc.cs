@@ -7,127 +7,127 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Loracommunication {
-  public static partial class RfTransmission
+namespace Rfcommunication {
+  public static partial class LoraTransmission
   {
-    static readonly string __ServiceName = "loracommunication.RfTransmission";
+    static readonly string __ServiceName = "rfcommunication.LoraTransmission";
 
-    static readonly grpc::Marshaller<global::Loracommunication.RangeingMsg> __Marshaller_loracommunication_RangeingMsg = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Loracommunication.RangeingMsg.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Rfcommunication.RangeingMsg> __Marshaller_rfcommunication_RangeingMsg = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Rfcommunication.RangeingMsg.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Std.Empty> __Marshaller_std_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Std.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Loracommunication.LoraMsg> __Marshaller_loracommunication_LoraMsg = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Loracommunication.LoraMsg.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Rfcommunication.LoraMsg> __Marshaller_rfcommunication_LoraMsg = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Rfcommunication.LoraMsg.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Loracommunication.RangeingMsg, global::Std.Empty> __Method_StreamRangeingMsgs = new grpc::Method<global::Loracommunication.RangeingMsg, global::Std.Empty>(
+    static readonly grpc::Method<global::Rfcommunication.RangeingMsg, global::Std.Empty> __Method_StreamRangeingMsgs = new grpc::Method<global::Rfcommunication.RangeingMsg, global::Std.Empty>(
         grpc::MethodType.ClientStreaming,
         __ServiceName,
         "StreamRangeingMsgs",
-        __Marshaller_loracommunication_RangeingMsg,
+        __Marshaller_rfcommunication_RangeingMsg,
         __Marshaller_std_Empty);
 
-    static readonly grpc::Method<global::Std.Empty, global::Loracommunication.LoraMsg> __Method_ReceiveLoraMessages = new grpc::Method<global::Std.Empty, global::Loracommunication.LoraMsg>(
+    static readonly grpc::Method<global::Std.Empty, global::Rfcommunication.LoraMsg> __Method_ReceiveLoraMessages = new grpc::Method<global::Std.Empty, global::Rfcommunication.LoraMsg>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "ReceiveLoraMessages",
         __Marshaller_std_Empty,
-        __Marshaller_loracommunication_LoraMsg);
+        __Marshaller_rfcommunication_LoraMsg);
 
-    static readonly grpc::Method<global::Loracommunication.LoraMsg, global::Std.Empty> __Method_SendLoraMessage = new grpc::Method<global::Loracommunication.LoraMsg, global::Std.Empty>(
+    static readonly grpc::Method<global::Rfcommunication.LoraMsg, global::Std.Empty> __Method_SendLoraMessage = new grpc::Method<global::Rfcommunication.LoraMsg, global::Std.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SendLoraMessage",
-        __Marshaller_loracommunication_LoraMsg,
+        __Marshaller_rfcommunication_LoraMsg,
         __Marshaller_std_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Loracommunication.RfComsReflection.Descriptor.Services[0]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of RfTransmission</summary>
-    public abstract partial class RfTransmissionBase
+    /// <summary>Base class for server-side implementations of LoraTransmission</summary>
+    public abstract partial class LoraTransmissionBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Std.Empty> StreamRangeingMsgs(grpc::IAsyncStreamReader<global::Loracommunication.RangeingMsg> requestStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Std.Empty> StreamRangeingMsgs(grpc::IAsyncStreamReader<global::Rfcommunication.RangeingMsg> requestStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task ReceiveLoraMessages(global::Std.Empty request, grpc::IServerStreamWriter<global::Loracommunication.LoraMsg> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task ReceiveLoraMessages(global::Std.Empty request, grpc::IServerStreamWriter<global::Rfcommunication.LoraMsg> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Std.Empty> SendLoraMessage(global::Loracommunication.LoraMsg request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Std.Empty> SendLoraMessage(global::Rfcommunication.LoraMsg request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
-    /// <summary>Client for RfTransmission</summary>
-    public partial class RfTransmissionClient : grpc::ClientBase<RfTransmissionClient>
+    /// <summary>Client for LoraTransmission</summary>
+    public partial class LoraTransmissionClient : grpc::ClientBase<LoraTransmissionClient>
     {
-      /// <summary>Creates a new client for RfTransmission</summary>
+      /// <summary>Creates a new client for LoraTransmission</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public RfTransmissionClient(grpc::Channel channel) : base(channel)
+      public LoraTransmissionClient(grpc::Channel channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for RfTransmission that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for LoraTransmission that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public RfTransmissionClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public LoraTransmissionClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      protected RfTransmissionClient() : base()
+      protected LoraTransmissionClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
-      protected RfTransmissionClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected LoraTransmissionClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
-      public virtual grpc::AsyncClientStreamingCall<global::Loracommunication.RangeingMsg, global::Std.Empty> StreamRangeingMsgs(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncClientStreamingCall<global::Rfcommunication.RangeingMsg, global::Std.Empty> StreamRangeingMsgs(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamRangeingMsgs(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncClientStreamingCall<global::Loracommunication.RangeingMsg, global::Std.Empty> StreamRangeingMsgs(grpc::CallOptions options)
+      public virtual grpc::AsyncClientStreamingCall<global::Rfcommunication.RangeingMsg, global::Std.Empty> StreamRangeingMsgs(grpc::CallOptions options)
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_StreamRangeingMsgs, null, options);
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Loracommunication.LoraMsg> ReceiveLoraMessages(global::Std.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Rfcommunication.LoraMsg> ReceiveLoraMessages(global::Std.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReceiveLoraMessages(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Loracommunication.LoraMsg> ReceiveLoraMessages(global::Std.Empty request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::Rfcommunication.LoraMsg> ReceiveLoraMessages(global::Std.Empty request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_ReceiveLoraMessages, null, options, request);
       }
-      public virtual global::Std.Empty SendLoraMessage(global::Loracommunication.LoraMsg request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Std.Empty SendLoraMessage(global::Rfcommunication.LoraMsg request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendLoraMessage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Std.Empty SendLoraMessage(global::Loracommunication.LoraMsg request, grpc::CallOptions options)
+      public virtual global::Std.Empty SendLoraMessage(global::Rfcommunication.LoraMsg request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SendLoraMessage, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Std.Empty> SendLoraMessageAsync(global::Loracommunication.LoraMsg request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Std.Empty> SendLoraMessageAsync(global::Rfcommunication.LoraMsg request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendLoraMessageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Std.Empty> SendLoraMessageAsync(global::Loracommunication.LoraMsg request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Std.Empty> SendLoraMessageAsync(global::Rfcommunication.LoraMsg request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SendLoraMessage, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      protected override RfTransmissionClient NewInstance(ClientBaseConfiguration configuration)
+      protected override LoraTransmissionClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new RfTransmissionClient(configuration);
+        return new LoraTransmissionClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(RfTransmissionBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(LoraTransmissionBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_StreamRangeingMsgs, serviceImpl.StreamRangeingMsgs)
