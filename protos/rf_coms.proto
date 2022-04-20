@@ -4,8 +4,8 @@ import "std.proto";
 
 service RfTransmission {
     rpc StreamRangeingMsgs(stream RangeingMsg) returns (std.Empty) {}
-    rpc ReceiveRfMessages(std.Empty) returns (stream Any) {}
-    rpc SendRfMessage(Any) returns (std.Empty) {}
+    rpc ReceiveLoraMessages(std.Empty) returns (stream LoraMsg) {}
+    rpc SendLoraMessage(LoraMsg) returns (std.Empty) {}
 }
 
 message RangeingMsg {
