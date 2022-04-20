@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='rfcommunication',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rrf_coms.proto\x12\x0frfcommunication\x1a\tstd.proto\"u\n\x0bRangeingMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08sourceId\x18\x03 \x01(\r\x12&\n\x06ranges\x18\x04 \x03(\x0b\x32\x16.rfcommunication.Range\"\xe9\x01\n\x07LoraMsg\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x12\x0f\n\x07success\x18\x02 \x01(\x08\x12\x31\n\x07payload\x18\x03 \x01(\x0b\x32\x1e.rfcommunication.StringPayloadH\x00\x12\x32\n\x07\x63ommand\x18\x04 \x01(\x0b\x32\x1f.rfcommunication.AuvGotoCommandH\x00\x12N\n\x17possibleTargetDirection\x18\x05 \x01(\x0b\x32+.rfcommunication.AuvPossibleTargetDirectionH\x00\x42\x05\n\x03msg\"9\n\rStringPayload\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0b\n\x03msg\x18\x02 \x01(\t\"C\n\x0e\x41uvGotoCommand\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\t\n\x01x\x18\x02 \x01(\x01\x12\t\n\x01y\x18\x03 \x01(\x01\"J\n\x1a\x41uvPossibleTargetDirection\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07heading\x18\x02 \x01(\x01\"(\n\x05Range\x12\x10\n\x08targetId\x18\x01 \x01(\r\x12\r\n\x05range\x18\x02 \x01(\x01\x32\xd2\x01\n\x10LoraTransmission\x12\x42\n\x12StreamRangeingMsgs\x12\x1c.rfcommunication.RangeingMsg\x1a\n.std.Empty\"\x00(\x01\x12?\n\x13ReceiveLoraMessages\x12\n.std.Empty\x1a\x18.rfcommunication.LoraMsg\"\x00\x30\x01\x12\x39\n\x0fSendLoraMessage\x12\x18.rfcommunication.LoraMsg\x1a\n.std.Empty\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\rrf_coms.proto\x12\x0frfcommunication\x1a\tstd.proto\"u\n\x0bRangeingMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08sourceId\x18\x03 \x01(\r\x12&\n\x06ranges\x18\x04 \x03(\x0b\x32\x16.rfcommunication.Range\"\xe6\x01\n\x07LoraMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x0f\n\x07success\x18\x03 \x01(\x08\x12\x11\n\x07payload\x18\x04 \x01(\tH\x00\x12\x32\n\x07\x63ommand\x18\x05 \x01(\x0b\x32\x1f.rfcommunication.AuvGotoCommandH\x00\x12N\n\x17possibleTargetDirection\x18\x06 \x01(\x0b\x32+.rfcommunication.AuvPossibleTargetDirectionH\x00\x42\x05\n\x03msg\"&\n\x0e\x41uvGotoCommand\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"-\n\x1a\x41uvPossibleTargetDirection\x12\x0f\n\x07heading\x18\x01 \x01(\x01\"(\n\x05Range\x12\x10\n\x08targetId\x18\x01 \x01(\r\x12\r\n\x05range\x18\x02 \x01(\x01\x32\xd2\x01\n\x10LoraTransmission\x12\x42\n\x12StreamRangeingMsgs\x12\x1c.rfcommunication.RangeingMsg\x1a\n.std.Empty\"\x00(\x01\x12?\n\x13ReceiveLoraMessages\x12\n.std.Empty\x1a\x18.rfcommunication.LoraMsg\"\x00\x30\x01\x12\x39\n\x0fSendLoraMessage\x12\x18.rfcommunication.LoraMsg\x1a\n.std.Empty\"\x00\x62\x06proto3')
   ,
   dependencies=[std__pb2.DESCRIPTOR,])
 
@@ -87,36 +87,43 @@ _LORAMSG = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='address', full_name='rfcommunication.LoraMsg.address', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      name='header', full_name='rfcommunication.LoraMsg.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='address', full_name='rfcommunication.LoraMsg.address', index=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='success', full_name='rfcommunication.LoraMsg.success', index=1,
-      number=2, type=8, cpp_type=7, label=1,
+      name='success', full_name='rfcommunication.LoraMsg.success', index=2,
+      number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='payload', full_name='rfcommunication.LoraMsg.payload', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='payload', full_name='rfcommunication.LoraMsg.payload', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='command', full_name='rfcommunication.LoraMsg.command', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='possibleTargetDirection', full_name='rfcommunication.LoraMsg.possibleTargetDirection', index=4,
+      name='command', full_name='rfcommunication.LoraMsg.command', index=4,
       number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='possibleTargetDirection', full_name='rfcommunication.LoraMsg.possibleTargetDirection', index=5,
+      number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -137,45 +144,7 @@ _LORAMSG = _descriptor.Descriptor(
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=165,
-  serialized_end=398,
-)
-
-
-_STRINGPAYLOAD = _descriptor.Descriptor(
-  name='StringPayload',
-  full_name='rfcommunication.StringPayload',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='header', full_name='rfcommunication.StringPayload.header', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='msg', full_name='rfcommunication.StringPayload.msg', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=400,
-  serialized_end=457,
+  serialized_end=395,
 )
 
 
@@ -187,22 +156,15 @@ _AUVGOTOCOMMAND = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='header', full_name='rfcommunication.AuvGotoCommand.header', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='x', full_name='rfcommunication.AuvGotoCommand.x', index=1,
-      number=2, type=1, cpp_type=5, label=1,
+      name='x', full_name='rfcommunication.AuvGotoCommand.x', index=0,
+      number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='y', full_name='rfcommunication.AuvGotoCommand.y', index=2,
-      number=3, type=1, cpp_type=5, label=1,
+      name='y', full_name='rfcommunication.AuvGotoCommand.y', index=1,
+      number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -219,8 +181,8 @@ _AUVGOTOCOMMAND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=459,
-  serialized_end=526,
+  serialized_start=397,
+  serialized_end=435,
 )
 
 
@@ -232,15 +194,8 @@ _AUVPOSSIBLETARGETDIRECTION = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='header', full_name='rfcommunication.AuvPossibleTargetDirection.header', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='heading', full_name='rfcommunication.AuvPossibleTargetDirection.heading', index=1,
-      number=2, type=1, cpp_type=5, label=1,
+      name='heading', full_name='rfcommunication.AuvPossibleTargetDirection.heading', index=0,
+      number=1, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -257,8 +212,8 @@ _AUVPOSSIBLETARGETDIRECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=528,
-  serialized_end=602,
+  serialized_start=437,
+  serialized_end=482,
 )
 
 
@@ -295,13 +250,13 @@ _RANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=604,
-  serialized_end=644,
+  serialized_start=484,
+  serialized_end=524,
 )
 
 _RANGEINGMSG.fields_by_name['header'].message_type = std__pb2._HEADER
 _RANGEINGMSG.fields_by_name['ranges'].message_type = _RANGE
-_LORAMSG.fields_by_name['payload'].message_type = _STRINGPAYLOAD
+_LORAMSG.fields_by_name['header'].message_type = std__pb2._HEADER
 _LORAMSG.fields_by_name['command'].message_type = _AUVGOTOCOMMAND
 _LORAMSG.fields_by_name['possibleTargetDirection'].message_type = _AUVPOSSIBLETARGETDIRECTION
 _LORAMSG.oneofs_by_name['msg'].fields.append(
@@ -313,12 +268,8 @@ _LORAMSG.fields_by_name['command'].containing_oneof = _LORAMSG.oneofs_by_name['m
 _LORAMSG.oneofs_by_name['msg'].fields.append(
   _LORAMSG.fields_by_name['possibleTargetDirection'])
 _LORAMSG.fields_by_name['possibleTargetDirection'].containing_oneof = _LORAMSG.oneofs_by_name['msg']
-_STRINGPAYLOAD.fields_by_name['header'].message_type = std__pb2._HEADER
-_AUVGOTOCOMMAND.fields_by_name['header'].message_type = std__pb2._HEADER
-_AUVPOSSIBLETARGETDIRECTION.fields_by_name['header'].message_type = std__pb2._HEADER
 DESCRIPTOR.message_types_by_name['RangeingMsg'] = _RANGEINGMSG
 DESCRIPTOR.message_types_by_name['LoraMsg'] = _LORAMSG
-DESCRIPTOR.message_types_by_name['StringPayload'] = _STRINGPAYLOAD
 DESCRIPTOR.message_types_by_name['AuvGotoCommand'] = _AUVGOTOCOMMAND
 DESCRIPTOR.message_types_by_name['AuvPossibleTargetDirection'] = _AUVPOSSIBLETARGETDIRECTION
 DESCRIPTOR.message_types_by_name['Range'] = _RANGE
@@ -337,13 +288,6 @@ LoraMsg = _reflection.GeneratedProtocolMessageType('LoraMsg', (_message.Message,
   # @@protoc_insertion_point(class_scope:rfcommunication.LoraMsg)
   ))
 _sym_db.RegisterMessage(LoraMsg)
-
-StringPayload = _reflection.GeneratedProtocolMessageType('StringPayload', (_message.Message,), dict(
-  DESCRIPTOR = _STRINGPAYLOAD,
-  __module__ = 'rf_coms_pb2'
-  # @@protoc_insertion_point(class_scope:rfcommunication.StringPayload)
-  ))
-_sym_db.RegisterMessage(StringPayload)
 
 AuvGotoCommand = _reflection.GeneratedProtocolMessageType('AuvGotoCommand', (_message.Message,), dict(
   DESCRIPTOR = _AUVGOTOCOMMAND,
@@ -374,8 +318,8 @@ _LORATRANSMISSION = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=647,
-  serialized_end=857,
+  serialized_start=527,
+  serialized_end=737,
   methods=[
   _descriptor.MethodDescriptor(
     name='StreamRangeingMsgs',
