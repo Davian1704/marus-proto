@@ -1,0 +1,47 @@
+syntax = "proto3";
+package loracommunication;
+import "std.proto";
+
+service RfTransmission {
+    rpc StreamRangeingMsgs(stream RangeingMsg) returns (std.Empty) {}
+    rpc ReceiveRfMessages(std.Empty) returns (stream Any) {}
+    rpc SendRfMessage(Any) returns (std.Empty) {}
+}
+
+message RangeingMsg {
+    std.Header header = 1;
+    string address = 2;
+    uint32 sourceId = 3;
+    repeated Range ranges = 4;
+}
+
+message LoraMsg {
+    string address = 1;
+    bool success = 2;
+    oneof msg {
+        StringPayload payload = 3;
+        AuvGotoCommand command = 4;
+        AuvPossibleTargetDirection possibleTargetDirection = 5;
+    }
+}
+
+message StringPayload {
+    std.Header header = 1;
+    string msg = 2;
+}
+
+message AuvGotoCommand {
+    std.Header header = 1;
+    double x = 2;
+    double y = 3;
+}
+
+message AuvPossibleTargetDirection {
+    std.Header header = 1;
+    double heading = 2;
+}
+
+message Range {
+    uint32 targetId = 1;
+    double range = 2;
+}
