@@ -18,7 +18,7 @@ message RangeingMsg {
 message LoraMsg {
     std.Header header = 1;
     string address = 2;
-    bool success = 3;
+    uint32 sourceId = 3;
     oneof msg {
         string payload = 4;
         AuvGotoCommand command = 5;
