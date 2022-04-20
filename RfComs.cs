@@ -27,31 +27,27 @@ namespace Rfcommunication {
             "Cg1yZl9jb21zLnByb3RvEg9yZmNvbW11bmljYXRpb24aCXN0ZC5wcm90byJ1",
             "CgtSYW5nZWluZ01zZxIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVhZGVyEg8K",
             "B2FkZHJlc3MYAiABKAkSEAoIc291cmNlSWQYAyABKA0SJgoGcmFuZ2VzGAQg",
-            "AygLMhYucmZjb21tdW5pY2F0aW9uLlJhbmdlIukBCgdMb3JhTXNnEg8KB2Fk",
-            "ZHJlc3MYASABKAkSDwoHc3VjY2VzcxgCIAEoCBIxCgdwYXlsb2FkGAMgASgL",
-            "Mh4ucmZjb21tdW5pY2F0aW9uLlN0cmluZ1BheWxvYWRIABIyCgdjb21tYW5k",
-            "GAQgASgLMh8ucmZjb21tdW5pY2F0aW9uLkF1dkdvdG9Db21tYW5kSAASTgoX",
-            "cG9zc2libGVUYXJnZXREaXJlY3Rpb24YBSABKAsyKy5yZmNvbW11bmljYXRp",
-            "b24uQXV2UG9zc2libGVUYXJnZXREaXJlY3Rpb25IAEIFCgNtc2ciOQoNU3Ry",
-            "aW5nUGF5bG9hZBIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVhZGVyEgsKA21z",
-            "ZxgCIAEoCSJDCg5BdXZHb3RvQ29tbWFuZBIbCgZoZWFkZXIYASABKAsyCy5z",
-            "dGQuSGVhZGVyEgkKAXgYAiABKAESCQoBeRgDIAEoASJKChpBdXZQb3NzaWJs",
-            "ZVRhcmdldERpcmVjdGlvbhIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVhZGVy",
-            "Eg8KB2hlYWRpbmcYAiABKAEiKAoFUmFuZ2USEAoIdGFyZ2V0SWQYASABKA0S",
-            "DQoFcmFuZ2UYAiABKAEy0gEKEExvcmFUcmFuc21pc3Npb24SQgoSU3RyZWFt",
-            "UmFuZ2VpbmdNc2dzEhwucmZjb21tdW5pY2F0aW9uLlJhbmdlaW5nTXNnGgou",
-            "c3RkLkVtcHR5IgAoARI/ChNSZWNlaXZlTG9yYU1lc3NhZ2VzEgouc3RkLkVt",
-            "cHR5GhgucmZjb21tdW5pY2F0aW9uLkxvcmFNc2ciADABEjkKD1NlbmRMb3Jh",
-            "TWVzc2FnZRIYLnJmY29tbXVuaWNhdGlvbi5Mb3JhTXNnGgouc3RkLkVtcHR5",
-            "IgBiBnByb3RvMw=="));
+            "AygLMhYucmZjb21tdW5pY2F0aW9uLlJhbmdlIuYBCgdMb3JhTXNnEhsKBmhl",
+            "YWRlchgBIAEoCzILLnN0ZC5IZWFkZXISDwoHYWRkcmVzcxgCIAEoCRIPCgdz",
+            "dWNjZXNzGAMgASgIEhEKB3BheWxvYWQYBCABKAlIABIyCgdjb21tYW5kGAUg",
+            "ASgLMh8ucmZjb21tdW5pY2F0aW9uLkF1dkdvdG9Db21tYW5kSAASTgoXcG9z",
+            "c2libGVUYXJnZXREaXJlY3Rpb24YBiABKAsyKy5yZmNvbW11bmljYXRpb24u",
+            "QXV2UG9zc2libGVUYXJnZXREaXJlY3Rpb25IAEIFCgNtc2ciJgoOQXV2R290",
+            "b0NvbW1hbmQSCQoBeBgBIAEoARIJCgF5GAIgASgBIi0KGkF1dlBvc3NpYmxl",
+            "VGFyZ2V0RGlyZWN0aW9uEg8KB2hlYWRpbmcYASABKAEiKAoFUmFuZ2USEAoI",
+            "dGFyZ2V0SWQYASABKA0SDQoFcmFuZ2UYAiABKAEy0gEKEExvcmFUcmFuc21p",
+            "c3Npb24SQgoSU3RyZWFtUmFuZ2VpbmdNc2dzEhwucmZjb21tdW5pY2F0aW9u",
+            "LlJhbmdlaW5nTXNnGgouc3RkLkVtcHR5IgAoARI/ChNSZWNlaXZlTG9yYU1l",
+            "c3NhZ2VzEgouc3RkLkVtcHR5GhgucmZjb21tdW5pY2F0aW9uLkxvcmFNc2ci",
+            "ADABEjkKD1NlbmRMb3JhTWVzc2FnZRIYLnJmY29tbXVuaWNhdGlvbi5Mb3Jh",
+            "TXNnGgouc3RkLkVtcHR5IgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.RangeingMsg), global::Rfcommunication.RangeingMsg.Parser, new[]{ "Header", "Address", "SourceId", "Ranges" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.LoraMsg), global::Rfcommunication.LoraMsg.Parser, new[]{ "Address", "Success", "Payload", "Command", "PossibleTargetDirection" }, new[]{ "Msg" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.StringPayload), global::Rfcommunication.StringPayload.Parser, new[]{ "Header", "Msg" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvGotoCommand), global::Rfcommunication.AuvGotoCommand.Parser, new[]{ "Header", "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvPossibleTargetDirection), global::Rfcommunication.AuvPossibleTargetDirection.Parser, new[]{ "Header", "Heading" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.LoraMsg), global::Rfcommunication.LoraMsg.Parser, new[]{ "Header", "Address", "Success", "Payload", "Command", "PossibleTargetDirection" }, new[]{ "Msg" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvGotoCommand), global::Rfcommunication.AuvGotoCommand.Parser, new[]{ "X", "Y" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvPossibleTargetDirection), global::Rfcommunication.AuvPossibleTargetDirection.Parser, new[]{ "Heading" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.Range), global::Rfcommunication.Range.Parser, new[]{ "TargetId", "Range_" }, null, null, null)
           }));
     }
@@ -295,11 +291,12 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LoraMsg(LoraMsg other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
       address_ = other.address_;
       success_ = other.success_;
       switch (other.MsgCase) {
         case MsgOneofCase.Payload:
-          Payload = other.Payload.Clone();
+          Payload = other.Payload;
           break;
         case MsgOneofCase.Command:
           Command = other.Command.Clone();
@@ -317,8 +314,19 @@ namespace Rfcommunication {
       return new LoraMsg(this);
     }
 
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
     /// <summary>Field number for the "address" field.</summary>
-    public const int AddressFieldNumber = 1;
+    public const int AddressFieldNumber = 2;
     private string address_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Address {
@@ -329,7 +337,7 @@ namespace Rfcommunication {
     }
 
     /// <summary>Field number for the "success" field.</summary>
-    public const int SuccessFieldNumber = 2;
+    public const int SuccessFieldNumber = 3;
     private bool success_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Success {
@@ -340,18 +348,18 @@ namespace Rfcommunication {
     }
 
     /// <summary>Field number for the "payload" field.</summary>
-    public const int PayloadFieldNumber = 3;
+    public const int PayloadFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Rfcommunication.StringPayload Payload {
-      get { return msgCase_ == MsgOneofCase.Payload ? (global::Rfcommunication.StringPayload) msg_ : null; }
+    public string Payload {
+      get { return msgCase_ == MsgOneofCase.Payload ? (string) msg_ : ""; }
       set {
-        msg_ = value;
-        msgCase_ = value == null ? MsgOneofCase.None : MsgOneofCase.Payload;
+        msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        msgCase_ = MsgOneofCase.Payload;
       }
     }
 
     /// <summary>Field number for the "command" field.</summary>
-    public const int CommandFieldNumber = 4;
+    public const int CommandFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Rfcommunication.AuvGotoCommand Command {
       get { return msgCase_ == MsgOneofCase.Command ? (global::Rfcommunication.AuvGotoCommand) msg_ : null; }
@@ -362,7 +370,7 @@ namespace Rfcommunication {
     }
 
     /// <summary>Field number for the "possibleTargetDirection" field.</summary>
-    public const int PossibleTargetDirectionFieldNumber = 5;
+    public const int PossibleTargetDirectionFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Rfcommunication.AuvPossibleTargetDirection PossibleTargetDirection {
       get { return msgCase_ == MsgOneofCase.PossibleTargetDirection ? (global::Rfcommunication.AuvPossibleTargetDirection) msg_ : null; }
@@ -376,9 +384,9 @@ namespace Rfcommunication {
     /// <summary>Enum of possible cases for the "msg" oneof.</summary>
     public enum MsgOneofCase {
       None = 0,
-      Payload = 3,
-      Command = 4,
-      PossibleTargetDirection = 5,
+      Payload = 4,
+      Command = 5,
+      PossibleTargetDirection = 6,
     }
     private MsgOneofCase msgCase_ = MsgOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -405,9 +413,10 @@ namespace Rfcommunication {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(Header, other.Header)) return false;
       if (Address != other.Address) return false;
       if (Success != other.Success) return false;
-      if (!object.Equals(Payload, other.Payload)) return false;
+      if (Payload != other.Payload) return false;
       if (!object.Equals(Command, other.Command)) return false;
       if (!object.Equals(PossibleTargetDirection, other.PossibleTargetDirection)) return false;
       if (MsgCase != other.MsgCase) return false;
@@ -417,6 +426,7 @@ namespace Rfcommunication {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
       if (Address.Length != 0) hash ^= Address.GetHashCode();
       if (Success != false) hash ^= Success.GetHashCode();
       if (msgCase_ == MsgOneofCase.Payload) hash ^= Payload.GetHashCode();
@@ -436,24 +446,28 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Address.Length != 0) {
+      if (header_ != null) {
         output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (Address.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Address);
       }
       if (Success != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteBool(Success);
       }
       if (msgCase_ == MsgOneofCase.Payload) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Payload);
+        output.WriteRawTag(34);
+        output.WriteString(Payload);
       }
       if (msgCase_ == MsgOneofCase.Command) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteMessage(Command);
       }
       if (msgCase_ == MsgOneofCase.PossibleTargetDirection) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteMessage(PossibleTargetDirection);
       }
       if (_unknownFields != null) {
@@ -464,6 +478,9 @@ namespace Rfcommunication {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
       if (Address.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
       }
@@ -471,7 +488,7 @@ namespace Rfcommunication {
         size += 1 + 1;
       }
       if (msgCase_ == MsgOneofCase.Payload) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Payload);
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Payload);
       }
       if (msgCase_ == MsgOneofCase.Command) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Command);
@@ -490,6 +507,12 @@ namespace Rfcommunication {
       if (other == null) {
         return;
       }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
       if (other.Address.Length != 0) {
         Address = other.Address;
       }
@@ -498,10 +521,7 @@ namespace Rfcommunication {
       }
       switch (other.MsgCase) {
         case MsgOneofCase.Payload:
-          if (Payload == null) {
-            Payload = new global::Rfcommunication.StringPayload();
-          }
-          Payload.MergeFrom(other.Payload);
+          Payload = other.Payload;
           break;
         case MsgOneofCase.Command:
           if (Command == null) {
@@ -529,23 +549,25 @@ namespace Rfcommunication {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 18: {
             Address = input.ReadString();
             break;
           }
-          case 16: {
+          case 24: {
             Success = input.ReadBool();
             break;
           }
-          case 26: {
-            global::Rfcommunication.StringPayload subBuilder = new global::Rfcommunication.StringPayload();
-            if (msgCase_ == MsgOneofCase.Payload) {
-              subBuilder.MergeFrom(Payload);
-            }
-            input.ReadMessage(subBuilder);
-            Payload = subBuilder;
+          case 34: {
+            Payload = input.ReadString();
             break;
           }
-          case 34: {
+          case 42: {
             global::Rfcommunication.AuvGotoCommand subBuilder = new global::Rfcommunication.AuvGotoCommand();
             if (msgCase_ == MsgOneofCase.Command) {
               subBuilder.MergeFrom(Command);
@@ -554,176 +576,13 @@ namespace Rfcommunication {
             Command = subBuilder;
             break;
           }
-          case 42: {
+          case 50: {
             global::Rfcommunication.AuvPossibleTargetDirection subBuilder = new global::Rfcommunication.AuvPossibleTargetDirection();
             if (msgCase_ == MsgOneofCase.PossibleTargetDirection) {
               subBuilder.MergeFrom(PossibleTargetDirection);
             }
             input.ReadMessage(subBuilder);
             PossibleTargetDirection = subBuilder;
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class StringPayload : pb::IMessage<StringPayload> {
-    private static readonly pb::MessageParser<StringPayload> _parser = new pb::MessageParser<StringPayload>(() => new StringPayload());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<StringPayload> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public StringPayload() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public StringPayload(StringPayload other) : this() {
-      header_ = other.header_ != null ? other.header_.Clone() : null;
-      msg_ = other.msg_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public StringPayload Clone() {
-      return new StringPayload(this);
-    }
-
-    /// <summary>Field number for the "header" field.</summary>
-    public const int HeaderFieldNumber = 1;
-    private global::Std.Header header_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Std.Header Header {
-      get { return header_; }
-      set {
-        header_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "msg" field.</summary>
-    public const int MsgFieldNumber = 2;
-    private string msg_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Msg {
-      get { return msg_; }
-      set {
-        msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as StringPayload);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(StringPayload other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Header, other.Header)) return false;
-      if (Msg != other.Msg) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (header_ != null) hash ^= Header.GetHashCode();
-      if (Msg.Length != 0) hash ^= Msg.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (header_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Header);
-      }
-      if (Msg.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Msg);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (header_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
-      }
-      if (Msg.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(StringPayload other) {
-      if (other == null) {
-        return;
-      }
-      if (other.header_ != null) {
-        if (header_ == null) {
-          header_ = new global::Std.Header();
-        }
-        Header.MergeFrom(other.Header);
-      }
-      if (other.Msg.Length != 0) {
-        Msg = other.Msg;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (header_ == null) {
-              header_ = new global::Std.Header();
-            }
-            input.ReadMessage(header_);
-            break;
-          }
-          case 18: {
-            Msg = input.ReadString();
             break;
           }
         }
@@ -740,7 +599,7 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -757,7 +616,6 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AuvGotoCommand(AuvGotoCommand other) : this() {
-      header_ = other.header_ != null ? other.header_.Clone() : null;
       x_ = other.x_;
       y_ = other.y_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -768,19 +626,8 @@ namespace Rfcommunication {
       return new AuvGotoCommand(this);
     }
 
-    /// <summary>Field number for the "header" field.</summary>
-    public const int HeaderFieldNumber = 1;
-    private global::Std.Header header_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Std.Header Header {
-      get { return header_; }
-      set {
-        header_ = value;
-      }
-    }
-
     /// <summary>Field number for the "x" field.</summary>
-    public const int XFieldNumber = 2;
+    public const int XFieldNumber = 1;
     private double x_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double X {
@@ -791,7 +638,7 @@ namespace Rfcommunication {
     }
 
     /// <summary>Field number for the "y" field.</summary>
-    public const int YFieldNumber = 3;
+    public const int YFieldNumber = 2;
     private double y_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double Y {
@@ -814,7 +661,6 @@ namespace Rfcommunication {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Header, other.Header)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(X, other.X)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Y, other.Y)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -823,7 +669,6 @@ namespace Rfcommunication {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (header_ != null) hash ^= Header.GetHashCode();
       if (X != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(X);
       if (Y != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Y);
       if (_unknownFields != null) {
@@ -839,16 +684,12 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (header_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Header);
-      }
       if (X != 0D) {
-        output.WriteRawTag(17);
+        output.WriteRawTag(9);
         output.WriteDouble(X);
       }
       if (Y != 0D) {
-        output.WriteRawTag(25);
+        output.WriteRawTag(17);
         output.WriteDouble(Y);
       }
       if (_unknownFields != null) {
@@ -859,9 +700,6 @@ namespace Rfcommunication {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (header_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
-      }
       if (X != 0D) {
         size += 1 + 8;
       }
@@ -878,12 +716,6 @@ namespace Rfcommunication {
     public void MergeFrom(AuvGotoCommand other) {
       if (other == null) {
         return;
-      }
-      if (other.header_ != null) {
-        if (header_ == null) {
-          header_ = new global::Std.Header();
-        }
-        Header.MergeFrom(other.Header);
       }
       if (other.X != 0D) {
         X = other.X;
@@ -902,18 +734,11 @@ namespace Rfcommunication {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (header_ == null) {
-              header_ = new global::Std.Header();
-            }
-            input.ReadMessage(header_);
-            break;
-          }
-          case 17: {
+          case 9: {
             X = input.ReadDouble();
             break;
           }
-          case 25: {
+          case 17: {
             Y = input.ReadDouble();
             break;
           }
@@ -931,7 +756,7 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -948,7 +773,6 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AuvPossibleTargetDirection(AuvPossibleTargetDirection other) : this() {
-      header_ = other.header_ != null ? other.header_.Clone() : null;
       heading_ = other.heading_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -958,19 +782,8 @@ namespace Rfcommunication {
       return new AuvPossibleTargetDirection(this);
     }
 
-    /// <summary>Field number for the "header" field.</summary>
-    public const int HeaderFieldNumber = 1;
-    private global::Std.Header header_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Std.Header Header {
-      get { return header_; }
-      set {
-        header_ = value;
-      }
-    }
-
     /// <summary>Field number for the "heading" field.</summary>
-    public const int HeadingFieldNumber = 2;
+    public const int HeadingFieldNumber = 1;
     private double heading_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double Heading {
@@ -993,7 +806,6 @@ namespace Rfcommunication {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Header, other.Header)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Heading, other.Heading)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1001,7 +813,6 @@ namespace Rfcommunication {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (header_ != null) hash ^= Header.GetHashCode();
       if (Heading != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Heading);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1016,12 +827,8 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (header_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Header);
-      }
       if (Heading != 0D) {
-        output.WriteRawTag(17);
+        output.WriteRawTag(9);
         output.WriteDouble(Heading);
       }
       if (_unknownFields != null) {
@@ -1032,9 +839,6 @@ namespace Rfcommunication {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (header_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
-      }
       if (Heading != 0D) {
         size += 1 + 8;
       }
@@ -1048,12 +852,6 @@ namespace Rfcommunication {
     public void MergeFrom(AuvPossibleTargetDirection other) {
       if (other == null) {
         return;
-      }
-      if (other.header_ != null) {
-        if (header_ == null) {
-          header_ = new global::Std.Header();
-        }
-        Header.MergeFrom(other.Header);
       }
       if (other.Heading != 0D) {
         Heading = other.Heading;
@@ -1069,14 +867,7 @@ namespace Rfcommunication {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (header_ == null) {
-              header_ = new global::Std.Header();
-            }
-            input.ReadMessage(header_);
-            break;
-          }
-          case 17: {
+          case 9: {
             Heading = input.ReadDouble();
             break;
           }
@@ -1094,7 +885,7 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
