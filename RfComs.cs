@@ -27,25 +27,22 @@ namespace Rfcommunication {
             "Cg1yZl9jb21zLnByb3RvEg9yZmNvbW11bmljYXRpb24aCXN0ZC5wcm90byJ1",
             "CgtSYW5nZWluZ01zZxIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVhZGVyEg8K",
             "B2FkZHJlc3MYAiABKAkSEAoIc291cmNlSWQYAyABKA0SJgoGcmFuZ2VzGAQg",
-            "AygLMhYucmZjb21tdW5pY2F0aW9uLlJhbmdlIvkBCgdMb3JhTXNnEhsKBmhl",
-            "YWRlchgBIAEoCzILLnN0ZC5IZWFkZXISDwoHYWRkcmVzcxgCIAEoCRIQCghz",
-            "b3VyY2VJZBgDIAEoDRIQCgh0YXJnZXRJZBgEIAEoDRIRCgdwYXlsb2FkGAUg",
-            "ASgJSAASMgoHY29tbWFuZBgGIAEoCzIfLnJmY29tbXVuaWNhdGlvbi5BdXZH",
-            "b3RvQ29tbWFuZEgAEk4KF3Bvc3NpYmxlVGFyZ2V0RGlyZWN0aW9uGAcgASgL",
-            "MisucmZjb21tdW5pY2F0aW9uLkF1dlBvc3NpYmxlVGFyZ2V0RGlyZWN0aW9u",
-            "SABCBQoDbXNnIiYKDkF1dkdvdG9Db21tYW5kEgkKAXgYASABKAESCQoBeRgC",
-            "IAEoASItChpBdXZQb3NzaWJsZVRhcmdldERpcmVjdGlvbhIPCgdoZWFkaW5n",
-            "GAEgASgBIigKBVJhbmdlEhAKCHRhcmdldElkGAEgASgNEg0KBXJhbmdlGAIg",
-            "ASgBMtIBChBMb3JhVHJhbnNtaXNzaW9uEkIKElN0cmVhbVJhbmdlaW5nTXNn",
-            "cxIcLnJmY29tbXVuaWNhdGlvbi5SYW5nZWluZ01zZxoKLnN0ZC5FbXB0eSIA",
-            "KAESPwoTUmVjZWl2ZUxvcmFNZXNzYWdlcxIKLnN0ZC5FbXB0eRoYLnJmY29t",
-            "bXVuaWNhdGlvbi5Mb3JhTXNnIgAwARI5Cg9TZW5kTG9yYU1lc3NhZ2USGC5y",
-            "ZmNvbW11bmljYXRpb24uTG9yYU1zZxoKLnN0ZC5FbXB0eSIAYgZwcm90bzM="));
+            "AygLMhYucmZjb21tdW5pY2F0aW9uLlJhbmdlImgKB0xvcmFNc2cSGwoGaGVh",
+            "ZGVyGAEgASgLMgsuc3RkLkhlYWRlchIPCgdhZGRyZXNzGAIgASgJEhAKCHNv",
+            "dXJjZUlkGAMgASgNEhAKCHRhcmdldElkGAQgASgNEgsKA21zZxgFIAEoDCIm",
+            "Cg5BdXZHb3RvQ29tbWFuZBIJCgF4GAEgASgBEgkKAXkYAiABKAEiLQoaQXV2",
+            "UG9zc2libGVUYXJnZXREaXJlY3Rpb24SDwoHaGVhZGluZxgBIAEoASIoCgVS",
+            "YW5nZRIQCgh0YXJnZXRJZBgBIAEoDRINCgVyYW5nZRgCIAEoATLSAQoQTG9y",
+            "YVRyYW5zbWlzc2lvbhJCChJTdHJlYW1SYW5nZWluZ01zZ3MSHC5yZmNvbW11",
+            "bmljYXRpb24uUmFuZ2VpbmdNc2caCi5zdGQuRW1wdHkiACgBEj8KE1JlY2Vp",
+            "dmVMb3JhTWVzc2FnZXMSCi5zdGQuRW1wdHkaGC5yZmNvbW11bmljYXRpb24u",
+            "TG9yYU1zZyIAMAESOQoPU2VuZExvcmFNZXNzYWdlEhgucmZjb21tdW5pY2F0",
+            "aW9uLkxvcmFNc2caCi5zdGQuRW1wdHkiAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.RangeingMsg), global::Rfcommunication.RangeingMsg.Parser, new[]{ "Header", "Address", "SourceId", "Ranges" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.LoraMsg), global::Rfcommunication.LoraMsg.Parser, new[]{ "Header", "Address", "SourceId", "TargetId", "Payload", "Command", "PossibleTargetDirection" }, new[]{ "Msg" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.LoraMsg), global::Rfcommunication.LoraMsg.Parser, new[]{ "Header", "Address", "SourceId", "TargetId", "Msg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvGotoCommand), global::Rfcommunication.AuvGotoCommand.Parser, new[]{ "X", "Y" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvPossibleTargetDirection), global::Rfcommunication.AuvPossibleTargetDirection.Parser, new[]{ "Heading" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.Range), global::Rfcommunication.Range.Parser, new[]{ "TargetId", "Range_" }, null, null, null, null)
@@ -391,18 +388,7 @@ namespace Rfcommunication {
       address_ = other.address_;
       sourceId_ = other.sourceId_;
       targetId_ = other.targetId_;
-      switch (other.MsgCase) {
-        case MsgOneofCase.Payload:
-          Payload = other.Payload;
-          break;
-        case MsgOneofCase.Command:
-          Command = other.Command.Clone();
-          break;
-        case MsgOneofCase.PossibleTargetDirection:
-          PossibleTargetDirection = other.PossibleTargetDirection.Clone();
-          break;
-      }
-
+      msg_ = other.msg_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -460,62 +446,16 @@ namespace Rfcommunication {
       }
     }
 
-    /// <summary>Field number for the "payload" field.</summary>
-    public const int PayloadFieldNumber = 5;
+    /// <summary>Field number for the "msg" field.</summary>
+    public const int MsgFieldNumber = 5;
+    private pb::ByteString msg_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Payload {
-      get { return msgCase_ == MsgOneofCase.Payload ? (string) msg_ : ""; }
+    public pb::ByteString Msg {
+      get { return msg_; }
       set {
         msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        msgCase_ = MsgOneofCase.Payload;
       }
-    }
-
-    /// <summary>Field number for the "command" field.</summary>
-    public const int CommandFieldNumber = 6;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Rfcommunication.AuvGotoCommand Command {
-      get { return msgCase_ == MsgOneofCase.Command ? (global::Rfcommunication.AuvGotoCommand) msg_ : null; }
-      set {
-        msg_ = value;
-        msgCase_ = value == null ? MsgOneofCase.None : MsgOneofCase.Command;
-      }
-    }
-
-    /// <summary>Field number for the "possibleTargetDirection" field.</summary>
-    public const int PossibleTargetDirectionFieldNumber = 7;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Rfcommunication.AuvPossibleTargetDirection PossibleTargetDirection {
-      get { return msgCase_ == MsgOneofCase.PossibleTargetDirection ? (global::Rfcommunication.AuvPossibleTargetDirection) msg_ : null; }
-      set {
-        msg_ = value;
-        msgCase_ = value == null ? MsgOneofCase.None : MsgOneofCase.PossibleTargetDirection;
-      }
-    }
-
-    private object msg_;
-    /// <summary>Enum of possible cases for the "msg" oneof.</summary>
-    public enum MsgOneofCase {
-      None = 0,
-      Payload = 5,
-      Command = 6,
-      PossibleTargetDirection = 7,
-    }
-    private MsgOneofCase msgCase_ = MsgOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MsgOneofCase MsgCase {
-      get { return msgCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearMsg() {
-      msgCase_ = MsgOneofCase.None;
-      msg_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -537,10 +477,7 @@ namespace Rfcommunication {
       if (Address != other.Address) return false;
       if (SourceId != other.SourceId) return false;
       if (TargetId != other.TargetId) return false;
-      if (Payload != other.Payload) return false;
-      if (!object.Equals(Command, other.Command)) return false;
-      if (!object.Equals(PossibleTargetDirection, other.PossibleTargetDirection)) return false;
-      if (MsgCase != other.MsgCase) return false;
+      if (Msg != other.Msg) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -552,10 +489,7 @@ namespace Rfcommunication {
       if (Address.Length != 0) hash ^= Address.GetHashCode();
       if (SourceId != 0) hash ^= SourceId.GetHashCode();
       if (TargetId != 0) hash ^= TargetId.GetHashCode();
-      if (msgCase_ == MsgOneofCase.Payload) hash ^= Payload.GetHashCode();
-      if (msgCase_ == MsgOneofCase.Command) hash ^= Command.GetHashCode();
-      if (msgCase_ == MsgOneofCase.PossibleTargetDirection) hash ^= PossibleTargetDirection.GetHashCode();
-      hash ^= (int) msgCase_;
+      if (Msg.Length != 0) hash ^= Msg.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -590,17 +524,9 @@ namespace Rfcommunication {
         output.WriteRawTag(32);
         output.WriteUInt32(TargetId);
       }
-      if (msgCase_ == MsgOneofCase.Payload) {
+      if (Msg.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteString(Payload);
-      }
-      if (msgCase_ == MsgOneofCase.Command) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Command);
-      }
-      if (msgCase_ == MsgOneofCase.PossibleTargetDirection) {
-        output.WriteRawTag(58);
-        output.WriteMessage(PossibleTargetDirection);
+        output.WriteBytes(Msg);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -628,17 +554,9 @@ namespace Rfcommunication {
         output.WriteRawTag(32);
         output.WriteUInt32(TargetId);
       }
-      if (msgCase_ == MsgOneofCase.Payload) {
+      if (Msg.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteString(Payload);
-      }
-      if (msgCase_ == MsgOneofCase.Command) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Command);
-      }
-      if (msgCase_ == MsgOneofCase.PossibleTargetDirection) {
-        output.WriteRawTag(58);
-        output.WriteMessage(PossibleTargetDirection);
+        output.WriteBytes(Msg);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -662,14 +580,8 @@ namespace Rfcommunication {
       if (TargetId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetId);
       }
-      if (msgCase_ == MsgOneofCase.Payload) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Payload);
-      }
-      if (msgCase_ == MsgOneofCase.Command) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Command);
-      }
-      if (msgCase_ == MsgOneofCase.PossibleTargetDirection) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PossibleTargetDirection);
+      if (Msg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Msg);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -698,24 +610,9 @@ namespace Rfcommunication {
       if (other.TargetId != 0) {
         TargetId = other.TargetId;
       }
-      switch (other.MsgCase) {
-        case MsgOneofCase.Payload:
-          Payload = other.Payload;
-          break;
-        case MsgOneofCase.Command:
-          if (Command == null) {
-            Command = new global::Rfcommunication.AuvGotoCommand();
-          }
-          Command.MergeFrom(other.Command);
-          break;
-        case MsgOneofCase.PossibleTargetDirection:
-          if (PossibleTargetDirection == null) {
-            PossibleTargetDirection = new global::Rfcommunication.AuvPossibleTargetDirection();
-          }
-          PossibleTargetDirection.MergeFrom(other.PossibleTargetDirection);
-          break;
+      if (other.Msg.Length != 0) {
+        Msg = other.Msg;
       }
-
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -751,25 +648,7 @@ namespace Rfcommunication {
             break;
           }
           case 42: {
-            Payload = input.ReadString();
-            break;
-          }
-          case 50: {
-            global::Rfcommunication.AuvGotoCommand subBuilder = new global::Rfcommunication.AuvGotoCommand();
-            if (msgCase_ == MsgOneofCase.Command) {
-              subBuilder.MergeFrom(Command);
-            }
-            input.ReadMessage(subBuilder);
-            Command = subBuilder;
-            break;
-          }
-          case 58: {
-            global::Rfcommunication.AuvPossibleTargetDirection subBuilder = new global::Rfcommunication.AuvPossibleTargetDirection();
-            if (msgCase_ == MsgOneofCase.PossibleTargetDirection) {
-              subBuilder.MergeFrom(PossibleTargetDirection);
-            }
-            input.ReadMessage(subBuilder);
-            PossibleTargetDirection = subBuilder;
+            Msg = input.ReadBytes();
             break;
           }
         }
@@ -807,25 +686,7 @@ namespace Rfcommunication {
             break;
           }
           case 42: {
-            Payload = input.ReadString();
-            break;
-          }
-          case 50: {
-            global::Rfcommunication.AuvGotoCommand subBuilder = new global::Rfcommunication.AuvGotoCommand();
-            if (msgCase_ == MsgOneofCase.Command) {
-              subBuilder.MergeFrom(Command);
-            }
-            input.ReadMessage(subBuilder);
-            Command = subBuilder;
-            break;
-          }
-          case 58: {
-            global::Rfcommunication.AuvPossibleTargetDirection subBuilder = new global::Rfcommunication.AuvPossibleTargetDirection();
-            if (msgCase_ == MsgOneofCase.PossibleTargetDirection) {
-              subBuilder.MergeFrom(PossibleTargetDirection);
-            }
-            input.ReadMessage(subBuilder);
-            PossibleTargetDirection = subBuilder;
+            Msg = input.ReadBytes();
             break;
           }
         }
