@@ -24,23 +24,25 @@ namespace Rfcommunication {
     static RfComsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg1yZl9jb21zLnByb3RvEg9yZmNvbW11bmljYXRpb24aCXN0ZC5wcm90byJ1",
-            "CgtSYW5nZWluZ01zZxIbCgZoZWFkZXIYASABKAsyCy5zdGQuSGVhZGVyEg8K",
-            "B2FkZHJlc3MYAiABKAkSEAoIc291cmNlSWQYAyABKA0SJgoGcmFuZ2VzGAQg",
-            "AygLMhYucmZjb21tdW5pY2F0aW9uLlJhbmdlImgKB0xvcmFNc2cSGwoGaGVh",
-            "ZGVyGAEgASgLMgsuc3RkLkhlYWRlchIPCgdhZGRyZXNzGAIgASgJEhAKCHNv",
-            "dXJjZUlkGAMgASgNEhAKCHRhcmdldElkGAQgASgNEgsKA21zZxgFIAEoDCIm",
-            "Cg5BdXZHb3RvQ29tbWFuZBIJCgF4GAEgASgBEgkKAXkYAiABKAEiLQoaQXV2",
-            "UG9zc2libGVUYXJnZXREaXJlY3Rpb24SDwoHaGVhZGluZxgBIAEoASIoCgVS",
-            "YW5nZRIQCgh0YXJnZXRJZBgBIAEoDRINCgVyYW5nZRgCIAEoATLSAQoQTG9y",
-            "YVRyYW5zbWlzc2lvbhJCChJTdHJlYW1SYW5nZWluZ01zZ3MSHC5yZmNvbW11",
-            "bmljYXRpb24uUmFuZ2VpbmdNc2caCi5zdGQuRW1wdHkiACgBEj8KE1JlY2Vp",
-            "dmVMb3JhTWVzc2FnZXMSCi5zdGQuRW1wdHkaGC5yZmNvbW11bmljYXRpb24u",
-            "TG9yYU1zZyIAMAESOQoPU2VuZExvcmFNZXNzYWdlEhgucmZjb21tdW5pY2F0",
-            "aW9uLkxvcmFNc2caCi5zdGQuRW1wdHkiAGIGcHJvdG8z"));
+            "Cg1yZl9jb21zLnByb3RvEg9yZmNvbW11bmljYXRpb24aCXN0ZC5wcm90byIn",
+            "ChRSZWNlaXZlU3RyZWFtUmVxdWVzdBIPCgdhZGRyZXNzGAEgASgJInUKC1Jh",
+            "bmdlaW5nTXNnEhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISDwoHYWRk",
+            "cmVzcxgCIAEoCRIQCghzb3VyY2VJZBgDIAEoDRImCgZyYW5nZXMYBCADKAsy",
+            "Fi5yZmNvbW11bmljYXRpb24uUmFuZ2UiaAoHTG9yYU1zZxIbCgZoZWFkZXIY",
+            "ASABKAsyCy5zdGQuSGVhZGVyEg8KB2FkZHJlc3MYAiABKAkSEAoIc291cmNl",
+            "SWQYAyABKA0SEAoIdGFyZ2V0SWQYBCABKA0SCwoDbXNnGAUgASgMIiYKDkF1",
+            "dkdvdG9Db21tYW5kEgkKAXgYASABKAESCQoBeRgCIAEoASItChpBdXZQb3Nz",
+            "aWJsZVRhcmdldERpcmVjdGlvbhIPCgdoZWFkaW5nGAEgASgBIigKBVJhbmdl",
+            "EhAKCHRhcmdldElkGAEgASgNEg0KBXJhbmdlGAIgASgBMtIBChBMb3JhVHJh",
+            "bnNtaXNzaW9uEkIKElN0cmVhbVJhbmdlaW5nTXNncxIcLnJmY29tbXVuaWNh",
+            "dGlvbi5SYW5nZWluZ01zZxoKLnN0ZC5FbXB0eSIAKAESPwoTUmVjZWl2ZUxv",
+            "cmFNZXNzYWdlcxIKLnN0ZC5FbXB0eRoYLnJmY29tbXVuaWNhdGlvbi5Mb3Jh",
+            "TXNnIgAwARI5Cg9TZW5kTG9yYU1lc3NhZ2USGC5yZmNvbW11bmljYXRpb24u",
+            "TG9yYU1zZxoKLnN0ZC5FbXB0eSIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.ReceiveStreamRequest), global::Rfcommunication.ReceiveStreamRequest.Parser, new[]{ "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.RangeingMsg), global::Rfcommunication.RangeingMsg.Parser, new[]{ "Header", "Address", "SourceId", "Ranges" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.LoraMsg), global::Rfcommunication.LoraMsg.Parser, new[]{ "Header", "Address", "SourceId", "TargetId", "Msg" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvGotoCommand), global::Rfcommunication.AuvGotoCommand.Parser, new[]{ "X", "Y" }, null, null, null),
@@ -52,6 +54,135 @@ namespace Rfcommunication {
 
   }
   #region Messages
+  public sealed partial class ReceiveStreamRequest : pb::IMessage<ReceiveStreamRequest> {
+    private static readonly pb::MessageParser<ReceiveStreamRequest> _parser = new pb::MessageParser<ReceiveStreamRequest>(() => new ReceiveStreamRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ReceiveStreamRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReceiveStreamRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReceiveStreamRequest(ReceiveStreamRequest other) : this() {
+      address_ = other.address_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReceiveStreamRequest Clone() {
+      return new ReceiveStreamRequest(this);
+    }
+
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 1;
+    private string address_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Address {
+      get { return address_; }
+      set {
+        address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ReceiveStreamRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ReceiveStreamRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Address != other.Address) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Address.Length != 0) hash ^= Address.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Address.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Address);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Address.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ReceiveStreamRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Address.Length != 0) {
+        Address = other.Address;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Address = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class RangeingMsg : pb::IMessage<RangeingMsg> {
     private static readonly pb::MessageParser<RangeingMsg> _parser = new pb::MessageParser<RangeingMsg>(() => new RangeingMsg());
     private pb::UnknownFieldSet _unknownFields;
@@ -60,7 +191,7 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -271,7 +402,7 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -518,7 +649,7 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -675,7 +806,7 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -804,7 +935,7 @@ namespace Rfcommunication {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Rfcommunication.RfComsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
