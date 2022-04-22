@@ -22,7 +22,7 @@ class LoraTransmissionStub(object):
         )
     self.ReceiveLoraMessages = channel.unary_stream(
         '/rfcommunication.LoraTransmission/ReceiveLoraMessages',
-        request_serializer=std__pb2.Empty.SerializeToString,
+        request_serializer=rf__coms__pb2.ReceiveStreamRequest.SerializeToString,
         response_deserializer=rf__coms__pb2.LoraMsg.FromString,
         )
     self.SendLoraMessage = channel.unary_unary(
@@ -67,7 +67,7 @@ def add_LoraTransmissionServicer_to_server(servicer, server):
       ),
       'ReceiveLoraMessages': grpc.unary_stream_rpc_method_handler(
           servicer.ReceiveLoraMessages,
-          request_deserializer=std__pb2.Empty.FromString,
+          request_deserializer=rf__coms__pb2.ReceiveStreamRequest.FromString,
           response_serializer=rf__coms__pb2.LoraMsg.SerializeToString,
       ),
       'SendLoraMessage': grpc.unary_unary_rpc_method_handler(

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='rfcommunication',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rrf_coms.proto\x12\x0frfcommunication\x1a\tstd.proto\"\'\n\x14ReceiveStreamRequest\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\"u\n\x0bRangeingMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08sourceId\x18\x03 \x01(\r\x12&\n\x06ranges\x18\x04 \x03(\x0b\x32\x16.rfcommunication.Range\"h\n\x07LoraMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08sourceId\x18\x03 \x01(\r\x12\x10\n\x08targetId\x18\x04 \x01(\r\x12\x0b\n\x03msg\x18\x05 \x01(\x0c\"&\n\x0e\x41uvGotoCommand\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"-\n\x1a\x41uvPossibleTargetDirection\x12\x0f\n\x07heading\x18\x01 \x01(\x01\"(\n\x05Range\x12\x10\n\x08targetId\x18\x01 \x01(\r\x12\r\n\x05range\x18\x02 \x01(\x01\x32\xd2\x01\n\x10LoraTransmission\x12\x42\n\x12StreamRangeingMsgs\x12\x1c.rfcommunication.RangeingMsg\x1a\n.std.Empty\"\x00(\x01\x12?\n\x13ReceiveLoraMessages\x12\n.std.Empty\x1a\x18.rfcommunication.LoraMsg\"\x00\x30\x01\x12\x39\n\x0fSendLoraMessage\x12\x18.rfcommunication.LoraMsg\x1a\n.std.Empty\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\rrf_coms.proto\x12\x0frfcommunication\x1a\tstd.proto\"\'\n\x14ReceiveStreamRequest\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\"u\n\x0bRangeingMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08sourceId\x18\x03 \x01(\r\x12&\n\x06ranges\x18\x04 \x03(\x0b\x32\x16.rfcommunication.Range\"h\n\x07LoraMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08sourceId\x18\x03 \x01(\r\x12\x10\n\x08targetId\x18\x04 \x01(\r\x12\x0b\n\x03msg\x18\x05 \x01(\x0c\"&\n\x0e\x41uvGotoCommand\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"-\n\x1a\x41uvPossibleTargetDirection\x12\x0f\n\x07heading\x18\x01 \x01(\x01\"(\n\x05Range\x12\x10\n\x08targetId\x18\x01 \x01(\r\x12\r\n\x05range\x18\x02 \x01(\x01\x32\xed\x01\n\x10LoraTransmission\x12\x42\n\x12StreamRangeingMsgs\x12\x1c.rfcommunication.RangeingMsg\x1a\n.std.Empty\"\x00(\x01\x12Z\n\x13ReceiveLoraMessages\x12%.rfcommunication.ReceiveStreamRequest\x1a\x18.rfcommunication.LoraMsg\"\x00\x30\x01\x12\x39\n\x0fSendLoraMessage\x12\x18.rfcommunication.LoraMsg\x1a\n.std.Empty\"\x00\x62\x06proto3')
   ,
   dependencies=[std__pb2.DESCRIPTOR,])
 
@@ -337,7 +337,7 @@ _LORATRANSMISSION = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   serialized_start=441,
-  serialized_end=651,
+  serialized_end=678,
   methods=[
   _descriptor.MethodDescriptor(
     name='StreamRangeingMsgs',
@@ -353,7 +353,7 @@ _LORATRANSMISSION = _descriptor.ServiceDescriptor(
     full_name='rfcommunication.LoraTransmission.ReceiveLoraMessages',
     index=1,
     containing_service=None,
-    input_type=std__pb2._EMPTY,
+    input_type=_RECEIVESTREAMREQUEST,
     output_type=_LORAMSG,
     serialized_options=None,
   ),
