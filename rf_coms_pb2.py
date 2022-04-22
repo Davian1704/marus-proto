@@ -20,11 +20,42 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='rfcommunication',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rrf_coms.proto\x12\x0frfcommunication\x1a\tstd.proto\"u\n\x0bRangeingMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08sourceId\x18\x03 \x01(\r\x12&\n\x06ranges\x18\x04 \x03(\x0b\x32\x16.rfcommunication.Range\"h\n\x07LoraMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08sourceId\x18\x03 \x01(\r\x12\x10\n\x08targetId\x18\x04 \x01(\r\x12\x0b\n\x03msg\x18\x05 \x01(\x0c\"&\n\x0e\x41uvGotoCommand\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"-\n\x1a\x41uvPossibleTargetDirection\x12\x0f\n\x07heading\x18\x01 \x01(\x01\"(\n\x05Range\x12\x10\n\x08targetId\x18\x01 \x01(\r\x12\r\n\x05range\x18\x02 \x01(\x01\x32\xd2\x01\n\x10LoraTransmission\x12\x42\n\x12StreamRangeingMsgs\x12\x1c.rfcommunication.RangeingMsg\x1a\n.std.Empty\"\x00(\x01\x12?\n\x13ReceiveLoraMessages\x12\n.std.Empty\x1a\x18.rfcommunication.LoraMsg\"\x00\x30\x01\x12\x39\n\x0fSendLoraMessage\x12\x18.rfcommunication.LoraMsg\x1a\n.std.Empty\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\rrf_coms.proto\x12\x0frfcommunication\x1a\tstd.proto\"\'\n\x14ReceiveStreamRequest\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\"u\n\x0bRangeingMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08sourceId\x18\x03 \x01(\r\x12&\n\x06ranges\x18\x04 \x03(\x0b\x32\x16.rfcommunication.Range\"h\n\x07LoraMsg\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08sourceId\x18\x03 \x01(\r\x12\x10\n\x08targetId\x18\x04 \x01(\r\x12\x0b\n\x03msg\x18\x05 \x01(\x0c\"&\n\x0e\x41uvGotoCommand\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\"-\n\x1a\x41uvPossibleTargetDirection\x12\x0f\n\x07heading\x18\x01 \x01(\x01\"(\n\x05Range\x12\x10\n\x08targetId\x18\x01 \x01(\r\x12\r\n\x05range\x18\x02 \x01(\x01\x32\xd2\x01\n\x10LoraTransmission\x12\x42\n\x12StreamRangeingMsgs\x12\x1c.rfcommunication.RangeingMsg\x1a\n.std.Empty\"\x00(\x01\x12?\n\x13ReceiveLoraMessages\x12\n.std.Empty\x1a\x18.rfcommunication.LoraMsg\"\x00\x30\x01\x12\x39\n\x0fSendLoraMessage\x12\x18.rfcommunication.LoraMsg\x1a\n.std.Empty\"\x00\x62\x06proto3')
   ,
   dependencies=[std__pb2.DESCRIPTOR,])
 
 
+
+
+_RECEIVESTREAMREQUEST = _descriptor.Descriptor(
+  name='ReceiveStreamRequest',
+  full_name='rfcommunication.ReceiveStreamRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='address', full_name='rfcommunication.ReceiveStreamRequest.address', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=45,
+  serialized_end=84,
+)
 
 
 _RANGEINGMSG = _descriptor.Descriptor(
@@ -74,8 +105,8 @@ _RANGEINGMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45,
-  serialized_end=162,
+  serialized_start=86,
+  serialized_end=203,
 )
 
 
@@ -133,8 +164,8 @@ _LORAMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=164,
-  serialized_end=268,
+  serialized_start=205,
+  serialized_end=309,
 )
 
 
@@ -171,8 +202,8 @@ _AUVGOTOCOMMAND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=270,
-  serialized_end=308,
+  serialized_start=311,
+  serialized_end=349,
 )
 
 
@@ -202,8 +233,8 @@ _AUVPOSSIBLETARGETDIRECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=310,
-  serialized_end=355,
+  serialized_start=351,
+  serialized_end=396,
 )
 
 
@@ -240,19 +271,27 @@ _RANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=357,
-  serialized_end=397,
+  serialized_start=398,
+  serialized_end=438,
 )
 
 _RANGEINGMSG.fields_by_name['header'].message_type = std__pb2._HEADER
 _RANGEINGMSG.fields_by_name['ranges'].message_type = _RANGE
 _LORAMSG.fields_by_name['header'].message_type = std__pb2._HEADER
+DESCRIPTOR.message_types_by_name['ReceiveStreamRequest'] = _RECEIVESTREAMREQUEST
 DESCRIPTOR.message_types_by_name['RangeingMsg'] = _RANGEINGMSG
 DESCRIPTOR.message_types_by_name['LoraMsg'] = _LORAMSG
 DESCRIPTOR.message_types_by_name['AuvGotoCommand'] = _AUVGOTOCOMMAND
 DESCRIPTOR.message_types_by_name['AuvPossibleTargetDirection'] = _AUVPOSSIBLETARGETDIRECTION
 DESCRIPTOR.message_types_by_name['Range'] = _RANGE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+ReceiveStreamRequest = _reflection.GeneratedProtocolMessageType('ReceiveStreamRequest', (_message.Message,), dict(
+  DESCRIPTOR = _RECEIVESTREAMREQUEST,
+  __module__ = 'rf_coms_pb2'
+  # @@protoc_insertion_point(class_scope:rfcommunication.ReceiveStreamRequest)
+  ))
+_sym_db.RegisterMessage(ReceiveStreamRequest)
 
 RangeingMsg = _reflection.GeneratedProtocolMessageType('RangeingMsg', (_message.Message,), dict(
   DESCRIPTOR = _RANGEINGMSG,
@@ -297,8 +336,8 @@ _LORATRANSMISSION = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=400,
-  serialized_end=610,
+  serialized_start=441,
+  serialized_end=651,
   methods=[
   _descriptor.MethodDescriptor(
     name='StreamRangeingMsgs',
