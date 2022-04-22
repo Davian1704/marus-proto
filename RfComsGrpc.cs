@@ -50,6 +50,8 @@ namespace Rfcommunication {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Std.Empty> __Marshaller_std_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Std.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Rfcommunication.ReceiveStreamRequest> __Marshaller_rfcommunication_ReceiveStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Rfcommunication.ReceiveStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Rfcommunication.LoraMsg> __Marshaller_rfcommunication_LoraMsg = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Rfcommunication.LoraMsg.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -61,11 +63,11 @@ namespace Rfcommunication {
         __Marshaller_std_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Std.Empty, global::Rfcommunication.LoraMsg> __Method_ReceiveLoraMessages = new grpc::Method<global::Std.Empty, global::Rfcommunication.LoraMsg>(
+    static readonly grpc::Method<global::Rfcommunication.ReceiveStreamRequest, global::Rfcommunication.LoraMsg> __Method_ReceiveLoraMessages = new grpc::Method<global::Rfcommunication.ReceiveStreamRequest, global::Rfcommunication.LoraMsg>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "ReceiveLoraMessages",
-        __Marshaller_std_Empty,
+        __Marshaller_rfcommunication_ReceiveStreamRequest,
         __Marshaller_rfcommunication_LoraMsg);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -93,7 +95,7 @@ namespace Rfcommunication {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task ReceiveLoraMessages(global::Std.Empty request, grpc::IServerStreamWriter<global::Rfcommunication.LoraMsg> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task ReceiveLoraMessages(global::Rfcommunication.ReceiveStreamRequest request, grpc::IServerStreamWriter<global::Rfcommunication.LoraMsg> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -144,12 +146,12 @@ namespace Rfcommunication {
         return CallInvoker.AsyncClientStreamingCall(__Method_StreamRangeingMsgs, null, options);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncServerStreamingCall<global::Rfcommunication.LoraMsg> ReceiveLoraMessages(global::Std.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Rfcommunication.LoraMsg> ReceiveLoraMessages(global::Rfcommunication.ReceiveStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReceiveLoraMessages(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncServerStreamingCall<global::Rfcommunication.LoraMsg> ReceiveLoraMessages(global::Std.Empty request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::Rfcommunication.LoraMsg> ReceiveLoraMessages(global::Rfcommunication.ReceiveStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_ReceiveLoraMessages, null, options, request);
       }
@@ -200,7 +202,7 @@ namespace Rfcommunication {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, LoraTransmissionBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_StreamRangeingMsgs, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Rfcommunication.RangeingMsg, global::Std.Empty>(serviceImpl.StreamRangeingMsgs));
-      serviceBinder.AddMethod(__Method_ReceiveLoraMessages, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Std.Empty, global::Rfcommunication.LoraMsg>(serviceImpl.ReceiveLoraMessages));
+      serviceBinder.AddMethod(__Method_ReceiveLoraMessages, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Rfcommunication.ReceiveStreamRequest, global::Rfcommunication.LoraMsg>(serviceImpl.ReceiveLoraMessages));
       serviceBinder.AddMethod(__Method_SendLoraMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Rfcommunication.LoraMsg, global::Std.Empty>(serviceImpl.SendLoraMessage));
     }
 
