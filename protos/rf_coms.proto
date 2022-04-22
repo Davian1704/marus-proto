@@ -20,11 +20,7 @@ message LoraMsg {
     string address = 2;
     uint32 sourceId = 3;
     uint32 targetId = 4;
-    oneof msg {
-        string payload = 5;
-        AuvGotoCommand command = 6;
-        AuvPossibleTargetDirection possibleTargetDirection = 7;
-    }
+    bytes msg = 5;
 }
 
 message AuvGotoCommand {
