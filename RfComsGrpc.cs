@@ -14,6 +14,7 @@ namespace Rfcommunication {
 
     static readonly grpc::Marshaller<global::Rfcommunication.RangeingMsg> __Marshaller_rfcommunication_RangeingMsg = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Rfcommunication.RangeingMsg.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Std.Empty> __Marshaller_std_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Std.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Rfcommunication.ReceiveStreamRequest> __Marshaller_rfcommunication_ReceiveStreamRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Rfcommunication.ReceiveStreamRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Rfcommunication.LoraMsg> __Marshaller_rfcommunication_LoraMsg = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Rfcommunication.LoraMsg.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Rfcommunication.RangeingMsg, global::Std.Empty> __Method_StreamRangeingMsgs = new grpc::Method<global::Rfcommunication.RangeingMsg, global::Std.Empty>(
@@ -23,11 +24,11 @@ namespace Rfcommunication {
         __Marshaller_rfcommunication_RangeingMsg,
         __Marshaller_std_Empty);
 
-    static readonly grpc::Method<global::Std.Empty, global::Rfcommunication.LoraMsg> __Method_ReceiveLoraMessages = new grpc::Method<global::Std.Empty, global::Rfcommunication.LoraMsg>(
+    static readonly grpc::Method<global::Rfcommunication.ReceiveStreamRequest, global::Rfcommunication.LoraMsg> __Method_ReceiveLoraMessages = new grpc::Method<global::Rfcommunication.ReceiveStreamRequest, global::Rfcommunication.LoraMsg>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "ReceiveLoraMessages",
-        __Marshaller_std_Empty,
+        __Marshaller_rfcommunication_ReceiveStreamRequest,
         __Marshaller_rfcommunication_LoraMsg);
 
     static readonly grpc::Method<global::Rfcommunication.LoraMsg, global::Std.Empty> __Method_SendLoraMessage = new grpc::Method<global::Rfcommunication.LoraMsg, global::Std.Empty>(
@@ -51,7 +52,7 @@ namespace Rfcommunication {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task ReceiveLoraMessages(global::Std.Empty request, grpc::IServerStreamWriter<global::Rfcommunication.LoraMsg> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task ReceiveLoraMessages(global::Rfcommunication.ReceiveStreamRequest request, grpc::IServerStreamWriter<global::Rfcommunication.LoraMsg> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -94,11 +95,11 @@ namespace Rfcommunication {
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_StreamRangeingMsgs, null, options);
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Rfcommunication.LoraMsg> ReceiveLoraMessages(global::Std.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Rfcommunication.LoraMsg> ReceiveLoraMessages(global::Rfcommunication.ReceiveStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReceiveLoraMessages(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Rfcommunication.LoraMsg> ReceiveLoraMessages(global::Std.Empty request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::Rfcommunication.LoraMsg> ReceiveLoraMessages(global::Rfcommunication.ReceiveStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_ReceiveLoraMessages, null, options, request);
       }

@@ -33,12 +33,13 @@ namespace Rfcommunication {
             "SWQYAyABKA0SEAoIdGFyZ2V0SWQYBCABKA0SCwoDbXNnGAUgASgMIiYKDkF1",
             "dkdvdG9Db21tYW5kEgkKAXgYASABKAESCQoBeRgCIAEoASItChpBdXZQb3Nz",
             "aWJsZVRhcmdldERpcmVjdGlvbhIPCgdoZWFkaW5nGAEgASgBIigKBVJhbmdl",
-            "EhAKCHRhcmdldElkGAEgASgNEg0KBXJhbmdlGAIgASgBMtIBChBMb3JhVHJh",
+            "EhAKCHRhcmdldElkGAEgASgNEg0KBXJhbmdlGAIgASgBMu0BChBMb3JhVHJh",
             "bnNtaXNzaW9uEkIKElN0cmVhbVJhbmdlaW5nTXNncxIcLnJmY29tbXVuaWNh",
-            "dGlvbi5SYW5nZWluZ01zZxoKLnN0ZC5FbXB0eSIAKAESPwoTUmVjZWl2ZUxv",
-            "cmFNZXNzYWdlcxIKLnN0ZC5FbXB0eRoYLnJmY29tbXVuaWNhdGlvbi5Mb3Jh",
-            "TXNnIgAwARI5Cg9TZW5kTG9yYU1lc3NhZ2USGC5yZmNvbW11bmljYXRpb24u",
-            "TG9yYU1zZxoKLnN0ZC5FbXB0eSIAYgZwcm90bzM="));
+            "dGlvbi5SYW5nZWluZ01zZxoKLnN0ZC5FbXB0eSIAKAESWgoTUmVjZWl2ZUxv",
+            "cmFNZXNzYWdlcxIlLnJmY29tbXVuaWNhdGlvbi5SZWNlaXZlU3RyZWFtUmVx",
+            "dWVzdBoYLnJmY29tbXVuaWNhdGlvbi5Mb3JhTXNnIgAwARI5Cg9TZW5kTG9y",
+            "YU1lc3NhZ2USGC5yZmNvbW11bmljYXRpb24uTG9yYU1zZxoKLnN0ZC5FbXB0",
+            "eSIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
