@@ -4,7 +4,7 @@ import "std.proto";
 
 service LoraTransmission {
     rpc StreamRangeingMsgs(stream RangeingMsg) returns (std.Empty) {}
-    rpc ReceiveLoraMessages(std.Empty) returns (stream LoraMsg) {}
+    rpc ReceiveLoraMessages(ReceiveStreamRequest) returns (stream LoraMsg) {}
     rpc SendLoraMessage(LoraMsg) returns (std.Empty) {}
 }
 
