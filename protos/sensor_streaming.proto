@@ -12,18 +12,18 @@ option java_outer_classname = "SensorStreaming";
 option objc_class_prefix = "HLW";
 
 service SensorStreaming {
-    rpc StreamCameraSensor(stream CameraStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamLidarSensor(stream PointCloudStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamSonarSensor(stream PointCloudStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamPointCloud(stream PointCloudStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamPointCloud2(stream PointCloud2StreamingRequest) returns (StreamingResponse) {}
-    rpc StreamRadarSensor(stream RadarStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamDepthSensor(stream DepthStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamDvlSensor(stream DvlStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamGnssSensor(stream GnssStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamImuSensor(stream ImuStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamPoseSensor(stream PoseStreamingRequest) returns (StreamingResponse) {}
-    rpc StreamAisSensor(stream AISStreamingRequest) returns (StreamingResponse) {}
+    rpc StreamCameraSensor(stream CameraStreamingRequest) returns (std.Empty) {}
+    rpc StreamLidarSensor(stream PointCloudStreamingRequest) returns (std.Empty) {}
+    rpc StreamSonarSensor(stream PointCloudStreamingRequest) returns (std.Empty) {}
+    rpc StreamPointCloud(stream PointCloudStreamingRequest) returns (std.Empty) {}
+    rpc StreamPointCloud2(stream PointCloud2StreamingRequest) returns (std.Empty) {}
+    rpc StreamRadarSensor(stream RadarStreamingRequest) returns (std.Empty) {}
+    rpc StreamDepthSensor(stream DepthStreamingRequest) returns (std.Empty) {}
+    rpc StreamDvlSensor(stream DvlStreamingRequest) returns (std.Empty) {}
+    rpc StreamGnssSensor(stream GnssStreamingRequest) returns (std.Empty) {}
+    rpc StreamImuSensor(stream ImuStreamingRequest) returns (std.Empty) {}
+    rpc StreamPoseSensor(stream PoseStreamingRequest) returns (std.Empty) {}
+    rpc StreamAisSensor(stream AISStreamingRequest) returns (std.Empty) {}
 }
 
 message CameraStreamingRequest {
@@ -34,9 +34,6 @@ message CameraStreamingRequest {
     string address = 5;
 }
 
-message StreamingResponse {
-    bool success = 1;
-}
 
 message PointCloudStreamingRequest {
     sensor.PointCloud data = 1;
