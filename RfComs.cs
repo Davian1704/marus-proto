@@ -27,28 +27,28 @@ namespace Rfcommunication {
             "Cg1yZl9jb21zLnByb3RvEg9yZmNvbW11bmljYXRpb24aCXN0ZC5wcm90byIn",
             "ChRSZWNlaXZlU3RyZWFtUmVxdWVzdBIPCgdhZGRyZXNzGAEgASgJInUKC1Jh",
             "bmdlaW5nTXNnEhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISDwoHYWRk",
-            "cmVzcxgCIAEoCRIQCghzb3VyY2VJZBgDIAEoDRImCgZyYW5nZXMYBCADKAsy",
+            "cmVzcxgCIAEoCRIQCghtYXN0ZXJJZBgDIAEoDRImCgZyYW5nZXMYBCADKAsy",
             "Fi5yZmNvbW11bmljYXRpb24uUmFuZ2UiaAoHTG9yYU1zZxIbCgZoZWFkZXIY",
             "ASABKAsyCy5zdGQuSGVhZGVyEg8KB2FkZHJlc3MYAiABKAkSEAoIc291cmNl",
             "SWQYAyABKA0SEAoIdGFyZ2V0SWQYBCABKA0SCwoDbXNnGAUgASgMIiYKDkF1",
             "dkdvdG9Db21tYW5kEgkKAXgYASABKAESCQoBeRgCIAEoASItChpBdXZQb3Nz",
-            "aWJsZVRhcmdldERpcmVjdGlvbhIPCgdoZWFkaW5nGAEgASgBIigKBVJhbmdl",
-            "EhAKCHRhcmdldElkGAEgASgNEg0KBXJhbmdlGAIgASgBMu0BChBMb3JhVHJh",
-            "bnNtaXNzaW9uEkIKElN0cmVhbVJhbmdlaW5nTXNncxIcLnJmY29tbXVuaWNh",
-            "dGlvbi5SYW5nZWluZ01zZxoKLnN0ZC5FbXB0eSIAKAESWgoTUmVjZWl2ZUxv",
-            "cmFNZXNzYWdlcxIlLnJmY29tbXVuaWNhdGlvbi5SZWNlaXZlU3RyZWFtUmVx",
-            "dWVzdBoYLnJmY29tbXVuaWNhdGlvbi5Mb3JhTXNnIgAwARI5Cg9TZW5kTG9y",
-            "YU1lc3NhZ2USGC5yZmNvbW11bmljYXRpb24uTG9yYU1zZxoKLnN0ZC5FbXB0",
-            "eSIAYgZwcm90bzM="));
+            "aWJsZVRhcmdldERpcmVjdGlvbhIPCgdoZWFkaW5nGAEgASgBIjoKBVJhbmdl",
+            "EhAKCHNvdXJjZUlkGAEgASgNEhAKCHRhcmdldElkGAIgASgNEg0KBXJhbmdl",
+            "GAMgASgBMu0BChBMb3JhVHJhbnNtaXNzaW9uEkIKElN0cmVhbVJhbmdlaW5n",
+            "TXNncxIcLnJmY29tbXVuaWNhdGlvbi5SYW5nZWluZ01zZxoKLnN0ZC5FbXB0",
+            "eSIAKAESWgoTUmVjZWl2ZUxvcmFNZXNzYWdlcxIlLnJmY29tbXVuaWNhdGlv",
+            "bi5SZWNlaXZlU3RyZWFtUmVxdWVzdBoYLnJmY29tbXVuaWNhdGlvbi5Mb3Jh",
+            "TXNnIgAwARI5Cg9TZW5kTG9yYU1lc3NhZ2USGC5yZmNvbW11bmljYXRpb24u",
+            "TG9yYU1zZxoKLnN0ZC5FbXB0eSIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.ReceiveStreamRequest), global::Rfcommunication.ReceiveStreamRequest.Parser, new[]{ "Address" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.RangeingMsg), global::Rfcommunication.RangeingMsg.Parser, new[]{ "Header", "Address", "SourceId", "Ranges" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.RangeingMsg), global::Rfcommunication.RangeingMsg.Parser, new[]{ "Header", "Address", "MasterId", "Ranges" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.LoraMsg), global::Rfcommunication.LoraMsg.Parser, new[]{ "Header", "Address", "SourceId", "TargetId", "Msg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvGotoCommand), global::Rfcommunication.AuvGotoCommand.Parser, new[]{ "X", "Y" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvPossibleTargetDirection), global::Rfcommunication.AuvPossibleTargetDirection.Parser, new[]{ "Heading" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.Range), global::Rfcommunication.Range.Parser, new[]{ "TargetId", "Range_" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.Range), global::Rfcommunication.Range.Parser, new[]{ "SourceId", "TargetId", "Range_" }, null, null, null, null)
           }));
     }
     #endregion
@@ -280,7 +280,7 @@ namespace Rfcommunication {
     public RangeingMsg(RangeingMsg other) : this() {
       header_ = other.header_ != null ? other.header_.Clone() : null;
       address_ = other.address_;
-      sourceId_ = other.sourceId_;
+      masterId_ = other.masterId_;
       ranges_ = other.ranges_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -315,15 +315,15 @@ namespace Rfcommunication {
       }
     }
 
-    /// <summary>Field number for the "sourceId" field.</summary>
-    public const int SourceIdFieldNumber = 3;
-    private uint sourceId_;
+    /// <summary>Field number for the "masterId" field.</summary>
+    public const int MasterIdFieldNumber = 3;
+    private uint masterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SourceId {
-      get { return sourceId_; }
+    public uint MasterId {
+      get { return masterId_; }
       set {
-        sourceId_ = value;
+        masterId_ = value;
       }
     }
 
@@ -355,7 +355,7 @@ namespace Rfcommunication {
       }
       if (!object.Equals(Header, other.Header)) return false;
       if (Address != other.Address) return false;
-      if (SourceId != other.SourceId) return false;
+      if (MasterId != other.MasterId) return false;
       if(!ranges_.Equals(other.ranges_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -366,7 +366,7 @@ namespace Rfcommunication {
       int hash = 1;
       if (header_ != null) hash ^= Header.GetHashCode();
       if (Address.Length != 0) hash ^= Address.GetHashCode();
-      if (SourceId != 0) hash ^= SourceId.GetHashCode();
+      if (MasterId != 0) hash ^= MasterId.GetHashCode();
       hash ^= ranges_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -394,9 +394,9 @@ namespace Rfcommunication {
         output.WriteRawTag(18);
         output.WriteString(Address);
       }
-      if (SourceId != 0) {
+      if (MasterId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(SourceId);
+        output.WriteUInt32(MasterId);
       }
       ranges_.WriteTo(output, _repeated_ranges_codec);
       if (_unknownFields != null) {
@@ -417,9 +417,9 @@ namespace Rfcommunication {
         output.WriteRawTag(18);
         output.WriteString(Address);
       }
-      if (SourceId != 0) {
+      if (MasterId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(SourceId);
+        output.WriteUInt32(MasterId);
       }
       ranges_.WriteTo(ref output, _repeated_ranges_codec);
       if (_unknownFields != null) {
@@ -438,8 +438,8 @@ namespace Rfcommunication {
       if (Address.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
       }
-      if (SourceId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceId);
+      if (MasterId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MasterId);
       }
       size += ranges_.CalculateSize(_repeated_ranges_codec);
       if (_unknownFields != null) {
@@ -463,8 +463,8 @@ namespace Rfcommunication {
       if (other.Address.Length != 0) {
         Address = other.Address;
       }
-      if (other.SourceId != 0) {
-        SourceId = other.SourceId;
+      if (other.MasterId != 0) {
+        MasterId = other.MasterId;
       }
       ranges_.Add(other.ranges_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -494,7 +494,7 @@ namespace Rfcommunication {
             break;
           }
           case 24: {
-            SourceId = input.ReadUInt32();
+            MasterId = input.ReadUInt32();
             break;
           }
           case 34: {
@@ -528,7 +528,7 @@ namespace Rfcommunication {
             break;
           }
           case 24: {
-            SourceId = input.ReadUInt32();
+            MasterId = input.ReadUInt32();
             break;
           }
           case 34: {
@@ -1337,6 +1337,7 @@ namespace Rfcommunication {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Range(Range other) : this() {
+      sourceId_ = other.sourceId_;
       targetId_ = other.targetId_;
       range_ = other.range_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1348,8 +1349,20 @@ namespace Rfcommunication {
       return new Range(this);
     }
 
+    /// <summary>Field number for the "sourceId" field.</summary>
+    public const int SourceIdFieldNumber = 1;
+    private uint sourceId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SourceId {
+      get { return sourceId_; }
+      set {
+        sourceId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "targetId" field.</summary>
-    public const int TargetIdFieldNumber = 1;
+    public const int TargetIdFieldNumber = 2;
     private uint targetId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1361,7 +1374,7 @@ namespace Rfcommunication {
     }
 
     /// <summary>Field number for the "range" field.</summary>
-    public const int Range_FieldNumber = 2;
+    public const int Range_FieldNumber = 3;
     private double range_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1387,6 +1400,7 @@ namespace Rfcommunication {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (SourceId != other.SourceId) return false;
       if (TargetId != other.TargetId) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Range_, other.Range_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1396,6 +1410,7 @@ namespace Rfcommunication {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (SourceId != 0) hash ^= SourceId.GetHashCode();
       if (TargetId != 0) hash ^= TargetId.GetHashCode();
       if (Range_ != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Range_);
       if (_unknownFields != null) {
@@ -1416,12 +1431,16 @@ namespace Rfcommunication {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TargetId != 0) {
+      if (SourceId != 0) {
         output.WriteRawTag(8);
+        output.WriteUInt32(SourceId);
+      }
+      if (TargetId != 0) {
+        output.WriteRawTag(16);
         output.WriteUInt32(TargetId);
       }
       if (Range_ != 0D) {
-        output.WriteRawTag(17);
+        output.WriteRawTag(25);
         output.WriteDouble(Range_);
       }
       if (_unknownFields != null) {
@@ -1434,12 +1453,16 @@ namespace Rfcommunication {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TargetId != 0) {
+      if (SourceId != 0) {
         output.WriteRawTag(8);
+        output.WriteUInt32(SourceId);
+      }
+      if (TargetId != 0) {
+        output.WriteRawTag(16);
         output.WriteUInt32(TargetId);
       }
       if (Range_ != 0D) {
-        output.WriteRawTag(17);
+        output.WriteRawTag(25);
         output.WriteDouble(Range_);
       }
       if (_unknownFields != null) {
@@ -1452,6 +1475,9 @@ namespace Rfcommunication {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (SourceId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceId);
+      }
       if (TargetId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetId);
       }
@@ -1469,6 +1495,9 @@ namespace Rfcommunication {
     public void MergeFrom(Range other) {
       if (other == null) {
         return;
+      }
+      if (other.SourceId != 0) {
+        SourceId = other.SourceId;
       }
       if (other.TargetId != 0) {
         TargetId = other.TargetId;
@@ -1492,10 +1521,14 @@ namespace Rfcommunication {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
+            SourceId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
             TargetId = input.ReadUInt32();
             break;
           }
-          case 17: {
+          case 25: {
             Range_ = input.ReadDouble();
             break;
           }
@@ -1515,10 +1548,14 @@ namespace Rfcommunication {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
+            SourceId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
             TargetId = input.ReadUInt32();
             break;
           }
-          case 17: {
+          case 25: {
             Range_ = input.ReadDouble();
             break;
           }
