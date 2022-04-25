@@ -2,6 +2,7 @@
 import grpc
 
 import sensor_streaming_pb2 as sensor__streaming__pb2
+import std_pb2 as std__pb2
 
 
 class SensorStreamingStub(object):
@@ -17,62 +18,62 @@ class SensorStreamingStub(object):
     self.StreamCameraSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamCameraSensor',
         request_serializer=sensor__streaming__pb2.CameraStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamLidarSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamLidarSensor',
         request_serializer=sensor__streaming__pb2.PointCloudStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamSonarSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamSonarSensor',
         request_serializer=sensor__streaming__pb2.PointCloudStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamPointCloud = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamPointCloud',
         request_serializer=sensor__streaming__pb2.PointCloudStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamPointCloud2 = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamPointCloud2',
         request_serializer=sensor__streaming__pb2.PointCloud2StreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamRadarSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamRadarSensor',
         request_serializer=sensor__streaming__pb2.RadarStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamDepthSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamDepthSensor',
         request_serializer=sensor__streaming__pb2.DepthStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamDvlSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamDvlSensor',
         request_serializer=sensor__streaming__pb2.DvlStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamGnssSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamGnssSensor',
         request_serializer=sensor__streaming__pb2.GnssStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamImuSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamImuSensor',
         request_serializer=sensor__streaming__pb2.ImuStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamPoseSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamPoseSensor',
         request_serializer=sensor__streaming__pb2.PoseStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamAisSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamAisSensor',
         request_serializer=sensor__streaming__pb2.AISStreamingRequest.SerializeToString,
-        response_deserializer=sensor__streaming__pb2.StreamingResponse.FromString,
+        response_deserializer=std__pb2.Empty.FromString,
         )
 
 
@@ -170,62 +171,62 @@ def add_SensorStreamingServicer_to_server(servicer, server):
       'StreamCameraSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamCameraSensor,
           request_deserializer=sensor__streaming__pb2.CameraStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamLidarSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamLidarSensor,
           request_deserializer=sensor__streaming__pb2.PointCloudStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamSonarSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamSonarSensor,
           request_deserializer=sensor__streaming__pb2.PointCloudStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamPointCloud': grpc.stream_unary_rpc_method_handler(
           servicer.StreamPointCloud,
           request_deserializer=sensor__streaming__pb2.PointCloudStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamPointCloud2': grpc.stream_unary_rpc_method_handler(
           servicer.StreamPointCloud2,
           request_deserializer=sensor__streaming__pb2.PointCloud2StreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamRadarSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamRadarSensor,
           request_deserializer=sensor__streaming__pb2.RadarStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamDepthSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamDepthSensor,
           request_deserializer=sensor__streaming__pb2.DepthStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamDvlSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamDvlSensor,
           request_deserializer=sensor__streaming__pb2.DvlStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamGnssSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamGnssSensor,
           request_deserializer=sensor__streaming__pb2.GnssStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamImuSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamImuSensor,
           request_deserializer=sensor__streaming__pb2.ImuStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamPoseSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamPoseSensor,
           request_deserializer=sensor__streaming__pb2.PoseStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamAisSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamAisSensor,
           request_deserializer=sensor__streaming__pb2.AISStreamingRequest.FromString,
-          response_serializer=sensor__streaming__pb2.StreamingResponse.SerializeToString,
+          response_serializer=std__pb2.Empty.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
