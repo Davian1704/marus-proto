@@ -15,7 +15,7 @@ message ReceiveStreamRequest {
 message RangeingMsg {
     std.Header header = 1;
     string address = 2;
-    uint32 sourceId = 3;
+    uint32 masterId = 3;
     repeated Range ranges = 4;
 }
 
@@ -37,6 +37,7 @@ message AuvPossibleTargetDirection {
 }
 
 message Range {
-    uint32 targetId = 1;
-    double range = 2;
+    uint32 sourceId = 1;
+    uint32 targetId = 2;
+    double range = 3;
 }
