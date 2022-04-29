@@ -26,20 +26,20 @@ jobs:
       - name: Generate code
         run: protoc -I=protos --csharp-grpc_out=../csharp --csharp_out=../csharp --python-grpc_out=../python --python_out=../python protos/*
         
-      - name: Generate code for grpc-dotnet
-        run:  touch ../grpc-dotnet/proj.csproj && echo '<Project Sdk="Microsoft.NET.Sdk">
-          <PropertyGroup>
-          <TargetFramework>netstandard2.1</TargetFramework>
-          </PropertyGroup>
-          <ItemGroup>
-          <PackageReference Include="Google.Protobuf" Version="3.20.1-rc1" />
-          <PackageReference Include="Grpc.Net.Client" Version="2.45.0-pre1" />
-          <PackageReference Include="Grpc.Tools" Version="2.45.0-pre1" />
-          <Protobuf Include="../labustsim-proto/protos/**/*.proto" ProtoRoot="../labustsim-proto/protos" CompileOutputs="false" 
-          OutputDir="generated"/>
-          </ItemGroup>
-          </Project>' >> ../grpc-dotnet/proj.csproj && dotnet build ../grpc-dotnet/proj.csproj
-          && ls && ls .. && ls ../grpc-dotnet
+      #- name: Generate code for grpc-dotnet
+      #  run:  touch ../grpc-dotnet/proj.csproj && echo '<Project Sdk="Microsoft.NET.Sdk">
+      #    <PropertyGroup>
+      #    <TargetFramework>netstandard2.1</TargetFramework>
+      #    </PropertyGroup>
+      #    <ItemGroup>
+      #    <PackageReference Include="Google.Protobuf" Version="3.20.1-rc1" />
+      #    <PackageReference Include="Grpc.Net.Client" Version="2.45.0-pre1" />
+      #    <PackageReference Include="Grpc.Tools" Version="2.45.0-pre1" />
+      #    <Protobuf Include="../labustsim-proto/protos/**/*.proto" ProtoRoot="../labustsim-proto/protos" CompileOutputs="false" 
+      #    OutputDir="generated"/>
+      #    </ItemGroup>
+      #    </Project>' >> ../grpc-dotnet/proj.csproj && dotnet build ../grpc-dotnet/proj.csproj
+      #    && ls && ls .. && ls ../grpc-dotnet
       
       - name: Prepare Github
         run: |
@@ -85,19 +85,19 @@ jobs:
             echo "Files did not change in this revision."
           fi
 
-      - uses: actions/checkout@v2
-        with:
-          ref: grpc-dotnet    
-      - name: Save updated C# code (dotnet)
-        run: |
-          rm -f *.cs
-          mv ../grpc-dotnet/generated/*.cs .   
-          git add *
-          if [[ -n $(git status -s) ]] 
-          then
-            echo "Files have changed in this revision."
-            git commit -am "C# code generated based on revision $(git rev-parse --short "$GITHUB_SHA")."
-            git push
-          else
-            echo "Files did not change in this revision."
-          fi
+      #- uses: actions/checkout@v2
+      #  with:
+      #    ref: grpc-dotnet    
+      #- name: Save updated C# code (dotnet)
+      #  run: |
+      #    rm -f *.cs
+      #    mv ../grpc-dotnet/generated/*.cs .   
+      #    git add *
+      #    if [[ -n $(git status -s) ]] 
+      #    then
+      #      echo "Files have changed in this revision."
+      #      git commit -am "C# code generated based on revision $(git rev-parse --short "$GITHUB_SHA")."
+      #      git push
+      #    else
+      #      echo "Files did not change in this revision."
+      #    fi
