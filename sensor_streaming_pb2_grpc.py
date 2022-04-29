@@ -75,7 +75,7 @@ class SensorStreamingStub(object):
         request_serializer=sensor__streaming__pb2.AISStreamingRequest.SerializeToString,
         response_deserializer=std__pb2.Empty.FromString,
         )
-    self.RequestPointCloud2 = channel.unary_unary(
+    self.RequestPointCloud2 = channel.unary_stream(
         '/sensorstreaming.SensorStreaming/RequestPointCloud2',
         request_serializer=std__pb2.StandardRequest.SerializeToString,
         response_deserializer=sensor__streaming__pb2.PointCloud2StreamingRequest.FromString,
@@ -240,7 +240,7 @@ def add_SensorStreamingServicer_to_server(servicer, server):
           request_deserializer=sensor__streaming__pb2.AISStreamingRequest.FromString,
           response_serializer=std__pb2.Empty.SerializeToString,
       ),
-      'RequestPointCloud2': grpc.unary_unary_rpc_method_handler(
+      'RequestPointCloud2': grpc.unary_stream_rpc_method_handler(
           servicer.RequestPointCloud2,
           request_deserializer=std__pb2.StandardRequest.FromString,
           response_serializer=sensor__streaming__pb2.PointCloud2StreamingRequest.SerializeToString,
