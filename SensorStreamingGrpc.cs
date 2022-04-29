@@ -23,6 +23,7 @@ namespace Sensorstreaming {
     static readonly grpc::Marshaller<global::Sensorstreaming.ImuStreamingRequest> __Marshaller_sensorstreaming_ImuStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.ImuStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.PoseStreamingRequest> __Marshaller_sensorstreaming_PoseStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.PoseStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.AISStreamingRequest> __Marshaller_sensorstreaming_AISStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.AISStreamingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Std.StandardRequest> __Marshaller_std_StandardRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Std.StandardRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Sensorstreaming.CameraStreamingRequest, global::Std.Empty> __Method_StreamCameraSensor = new grpc::Method<global::Sensorstreaming.CameraStreamingRequest, global::Std.Empty>(
         grpc::MethodType.ClientStreaming,
@@ -108,6 +109,13 @@ namespace Sensorstreaming {
         __Marshaller_sensorstreaming_AISStreamingRequest,
         __Marshaller_std_Empty);
 
+    static readonly grpc::Method<global::Std.StandardRequest, global::Sensorstreaming.PointCloud2StreamingRequest> __Method_RequestPointCloud2 = new grpc::Method<global::Std.StandardRequest, global::Sensorstreaming.PointCloud2StreamingRequest>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RequestPointCloud2",
+        __Marshaller_std_StandardRequest,
+        __Marshaller_sensorstreaming_PointCloud2StreamingRequest);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -173,6 +181,11 @@ namespace Sensorstreaming {
       }
 
       public virtual global::System.Threading.Tasks.Task<global::Std.Empty> StreamAisSensor(grpc::IAsyncStreamReader<global::Sensorstreaming.AISStreamingRequest> requestStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Sensorstreaming.PointCloud2StreamingRequest> RequestPointCloud2(global::Std.StandardRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -298,6 +311,22 @@ namespace Sensorstreaming {
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_StreamAisSensor, null, options);
       }
+      public virtual global::Sensorstreaming.PointCloud2StreamingRequest RequestPointCloud2(global::Std.StandardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestPointCloud2(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Sensorstreaming.PointCloud2StreamingRequest RequestPointCloud2(global::Std.StandardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RequestPointCloud2, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Sensorstreaming.PointCloud2StreamingRequest> RequestPointCloud2Async(global::Std.StandardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestPointCloud2Async(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Sensorstreaming.PointCloud2StreamingRequest> RequestPointCloud2Async(global::Std.StandardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RequestPointCloud2, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override SensorStreamingClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -321,7 +350,8 @@ namespace Sensorstreaming {
           .AddMethod(__Method_StreamGnssSensor, serviceImpl.StreamGnssSensor)
           .AddMethod(__Method_StreamImuSensor, serviceImpl.StreamImuSensor)
           .AddMethod(__Method_StreamPoseSensor, serviceImpl.StreamPoseSensor)
-          .AddMethod(__Method_StreamAisSensor, serviceImpl.StreamAisSensor).Build();
+          .AddMethod(__Method_StreamAisSensor, serviceImpl.StreamAisSensor)
+          .AddMethod(__Method_RequestPointCloud2, serviceImpl.RequestPointCloud2).Build();
     }
 
   }

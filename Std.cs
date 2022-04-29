@@ -24,14 +24,16 @@ namespace Std {
     static StdReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CglzdGQucHJvdG8SA3N0ZCIHCgVFbXB0eSIsCgZIZWFkZXISEQoJdGltZXN0",
-            "YW1wGAEgASgBEg8KB2ZyYW1lSWQYAiABKAkiHAoMRmxvYXQzMkFycmF5EgwK",
-            "BGRhdGEYASADKAIiNwoJQ29sb3JSR0JBEgkKAXIYASABKAISCQoBZxgCIAEo",
-            "AhIJCgFiGAMgASgCEgkKAWEYBCABKAJiBnByb3RvMw=="));
+            "CglzdGQucHJvdG8SA3N0ZCIHCgVFbXB0eSIiCg9TdGFuZGFyZFJlcXVlc3QS",
+            "DwoHYWRkcmVzcxgBIAEoCSIsCgZIZWFkZXISEQoJdGltZXN0YW1wGAEgASgB",
+            "Eg8KB2ZyYW1lSWQYAiABKAkiHAoMRmxvYXQzMkFycmF5EgwKBGRhdGEYASAD",
+            "KAIiNwoJQ29sb3JSR0JBEgkKAXIYASABKAISCQoBZxgCIAEoAhIJCgFiGAMg",
+            "ASgCEgkKAWEYBCABKAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Std.Empty), global::Std.Empty.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Std.StandardRequest), global::Std.StandardRequest.Parser, new[]{ "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Std.Header), global::Std.Header.Parser, new[]{ "Timestamp", "FrameId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Std.Float32Array), global::Std.Float32Array.Parser, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Std.ColorRGBA), global::Std.ColorRGBA.Parser, new[]{ "R", "G", "B", "A" }, null, null, null)
@@ -142,6 +144,135 @@ namespace Std {
 
   }
 
+  public sealed partial class StandardRequest : pb::IMessage<StandardRequest> {
+    private static readonly pb::MessageParser<StandardRequest> _parser = new pb::MessageParser<StandardRequest>(() => new StandardRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<StandardRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Std.StdReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StandardRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StandardRequest(StandardRequest other) : this() {
+      address_ = other.address_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StandardRequest Clone() {
+      return new StandardRequest(this);
+    }
+
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 1;
+    private string address_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Address {
+      get { return address_; }
+      set {
+        address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as StandardRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(StandardRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Address != other.Address) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Address.Length != 0) hash ^= Address.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Address.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Address);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Address.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(StandardRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Address.Length != 0) {
+        Address = other.Address;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Address = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class Header : pb::IMessage<Header> {
     private static readonly pb::MessageParser<Header> _parser = new pb::MessageParser<Header>(() => new Header());
     private pb::UnknownFieldSet _unknownFields;
@@ -150,7 +281,7 @@ namespace Std {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Std.StdReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Std.StdReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -307,7 +438,7 @@ namespace Std {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Std.StdReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Std.StdReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -429,7 +560,7 @@ namespace Std {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Std.StdReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Std.StdReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

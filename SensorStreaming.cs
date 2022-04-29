@@ -49,7 +49,7 @@ namespace Sensorstreaming {
             "GAIgASgJIkgKFVNvbmFyU3RyZWFtaW5nUmVxdWVzdBINCgVyYW5nZRgBIAEo",
             "AhIPCgdiZWFyaW5nGAIgASgCEg8KB2FkZHJlc3MYAyABKAkiXAoTQUlTU3Ry",
             "ZWFtaW5nUmVxdWVzdBI0ChFhaXNQb3NpdGlvblJlcG9ydBgBIAEoCzIZLm1h",
-            "cmluZS5BSVNQb3NpdGlvblJlcG9ydBIPCgdhZGRyZXNzGAIgASgJMrMHCg9T",
+            "cmluZS5BSVNQb3NpdGlvblJlcG9ydBIPCgdhZGRyZXNzGAIgASgJMo8ICg9T",
             "ZW5zb3JTdHJlYW1pbmcSTQoSU3RyZWFtQ2FtZXJhU2Vuc29yEicuc2Vuc29y",
             "c3RyZWFtaW5nLkNhbWVyYVN0cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHki",
             "ACgBElAKEVN0cmVhbUxpZGFyU2Vuc29yEisuc2Vuc29yc3RyZWFtaW5nLlBv",
@@ -70,9 +70,11 @@ namespace Sensorstreaming {
             "dHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJJChBTdHJlYW1Qb3Nl",
             "U2Vuc29yEiUuc2Vuc29yc3RyZWFtaW5nLlBvc2VTdHJlYW1pbmdSZXF1ZXN0",
             "Ggouc3RkLkVtcHR5IgAoARJHCg9TdHJlYW1BaXNTZW5zb3ISJC5zZW5zb3Jz",
-            "dHJlYW1pbmcuQUlTU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAFC",
-            "OwogaW8uZ3JwYy5leGFtcGxlcy5zZW5zb3JzdHJlYW1pbmdCD1NlbnNvclN0",
-            "cmVhbWluZ1ABogIDSExXYgZwcm90bzM="));
+            "dHJlYW1pbmcuQUlTU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAES",
+            "WgoSUmVxdWVzdFBvaW50Q2xvdWQyEhQuc3RkLlN0YW5kYXJkUmVxdWVzdBos",
+            "LnNlbnNvcnN0cmVhbWluZy5Qb2ludENsb3VkMlN0cmVhbWluZ1JlcXVlc3Qi",
+            "AEI7CiBpby5ncnBjLmV4YW1wbGVzLnNlbnNvcnN0cmVhbWluZ0IPU2Vuc29y",
+            "U3RyZWFtaW5nUAGiAgNITFdiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Geometry.GeometryReflection.Descriptor, global::Sensor.SensorReflection.Descriptor, global::Marine.MarineReflection.Descriptor, global::Auv.AuvReflection.Descriptor, global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
