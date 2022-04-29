@@ -3,6 +3,10 @@ package std;
 
 message Empty {}
 
+message StandarsRequest {
+    string address = 1;
+}
+
 message Header {
     double timestamp = 1;
     string frameId = 2;

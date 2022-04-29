@@ -25,6 +25,7 @@ service SensorStreaming {
     rpc StreamImuSensor(stream ImuStreamingRequest) returns (std.Empty) {}
     rpc StreamPoseSensor(stream PoseStreamingRequest) returns (std.Empty) {}
     rpc StreamAisSensor(stream AISStreamingRequest) returns (std.Empty) {}
+    rpc RequestPointCloud2(std.StandardRequest) returns (PointCloud2StreamingRequest) {}
 }
 
 message CameraStreamingRequest {
