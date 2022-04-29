@@ -3,7 +3,7 @@ package std;
 
 message Empty {}
 
-message StandarsRequest {
+message StandardRequest {
     string address = 1;
 }
 
