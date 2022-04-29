@@ -75,6 +75,11 @@ class SensorStreamingStub(object):
         request_serializer=sensor__streaming__pb2.AISStreamingRequest.SerializeToString,
         response_deserializer=std__pb2.Empty.FromString,
         )
+    self.RequestPointCloud2 = channel.unary_unary(
+        '/sensorstreaming.SensorStreaming/RequestPointCloud2',
+        request_serializer=std__pb2.StandardRequest.SerializeToString,
+        response_deserializer=sensor__streaming__pb2.PointCloud2StreamingRequest.FromString,
+        )
 
 
 class SensorStreamingServicer(object):
@@ -165,6 +170,13 @@ class SensorStreamingServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def RequestPointCloud2(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_SensorStreamingServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -227,6 +239,11 @@ def add_SensorStreamingServicer_to_server(servicer, server):
           servicer.StreamAisSensor,
           request_deserializer=sensor__streaming__pb2.AISStreamingRequest.FromString,
           response_serializer=std__pb2.Empty.SerializeToString,
+      ),
+      'RequestPointCloud2': grpc.unary_unary_rpc_method_handler(
+          servicer.RequestPointCloud2,
+          request_deserializer=std__pb2.StandardRequest.FromString,
+          response_serializer=sensor__streaming__pb2.PointCloud2StreamingRequest.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

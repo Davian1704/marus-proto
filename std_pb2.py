@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='std',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\tstd.proto\x12\x03std\"\x07\n\x05\x45mpty\",\n\x06Header\x12\x11\n\ttimestamp\x18\x01 \x01(\x01\x12\x0f\n\x07\x66rameId\x18\x02 \x01(\t\"\x1c\n\x0c\x46loat32Array\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x02\"7\n\tColorRGBA\x12\t\n\x01r\x18\x01 \x01(\x02\x12\t\n\x01g\x18\x02 \x01(\x02\x12\t\n\x01\x62\x18\x03 \x01(\x02\x12\t\n\x01\x61\x18\x04 \x01(\x02\x62\x06proto3')
+  serialized_pb=_b('\n\tstd.proto\x12\x03std\"\x07\n\x05\x45mpty\"\"\n\x0fStandardRequest\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\",\n\x06Header\x12\x11\n\ttimestamp\x18\x01 \x01(\x01\x12\x0f\n\x07\x66rameId\x18\x02 \x01(\t\"\x1c\n\x0c\x46loat32Array\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x02\"7\n\tColorRGBA\x12\t\n\x01r\x18\x01 \x01(\x02\x12\t\n\x01g\x18\x02 \x01(\x02\x12\t\n\x01\x62\x18\x03 \x01(\x02\x12\t\n\x01\x61\x18\x04 \x01(\x02\x62\x06proto3')
 )
 
 
@@ -46,6 +46,37 @@ _EMPTY = _descriptor.Descriptor(
   ],
   serialized_start=18,
   serialized_end=25,
+)
+
+
+_STANDARDREQUEST = _descriptor.Descriptor(
+  name='StandardRequest',
+  full_name='std.StandardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='address', full_name='std.StandardRequest.address', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=27,
+  serialized_end=61,
 )
 
 
@@ -82,8 +113,8 @@ _HEADER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27,
-  serialized_end=71,
+  serialized_start=63,
+  serialized_end=107,
 )
 
 
@@ -113,8 +144,8 @@ _FLOAT32ARRAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=73,
-  serialized_end=101,
+  serialized_start=109,
+  serialized_end=137,
 )
 
 
@@ -165,11 +196,12 @@ _COLORRGBA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=103,
-  serialized_end=158,
+  serialized_start=139,
+  serialized_end=194,
 )
 
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
+DESCRIPTOR.message_types_by_name['StandardRequest'] = _STANDARDREQUEST
 DESCRIPTOR.message_types_by_name['Header'] = _HEADER
 DESCRIPTOR.message_types_by_name['Float32Array'] = _FLOAT32ARRAY
 DESCRIPTOR.message_types_by_name['ColorRGBA'] = _COLORRGBA
@@ -181,6 +213,13 @@ Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), d
   # @@protoc_insertion_point(class_scope:std.Empty)
   ))
 _sym_db.RegisterMessage(Empty)
+
+StandardRequest = _reflection.GeneratedProtocolMessageType('StandardRequest', (_message.Message,), dict(
+  DESCRIPTOR = _STANDARDREQUEST,
+  __module__ = 'std_pb2'
+  # @@protoc_insertion_point(class_scope:std.StandardRequest)
+  ))
+_sym_db.RegisterMessage(StandardRequest)
 
 Header = _reflection.GeneratedProtocolMessageType('Header', (_message.Message,), dict(
   DESCRIPTOR = _HEADER,
