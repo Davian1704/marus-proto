@@ -44,37 +44,37 @@ namespace Sensorstreaming {
             "ZGRyZXNzGAIgASgJIkgKFEduc3NTdHJlYW1pbmdSZXF1ZXN0Eh8KBGRhdGEY",
             "ASABKAsyES5zZW5zb3IuTmF2U2F0Rml4Eg8KB2FkZHJlc3MYAiABKAkiQQoT",
             "SW11U3RyZWFtaW5nUmVxdWVzdBIZCgRkYXRhGAEgASgLMgsuc2Vuc29yLklt",
-            "dRIPCgdhZGRyZXNzGAIgASgJIkwKFFBvc2VTdHJlYW1pbmdSZXF1ZXN0EiMK",
-            "BGRhdGEYASABKAsyFS5hdXYuTmF2aWdhdGlvblN0YXR1cxIPCgdhZGRyZXNz",
-            "GAIgASgJIkgKFVNvbmFyU3RyZWFtaW5nUmVxdWVzdBINCgVyYW5nZRgBIAEo",
-            "AhIPCgdiZWFyaW5nGAIgASgCEg8KB2FkZHJlc3MYAyABKAkiXAoTQUlTU3Ry",
-            "ZWFtaW5nUmVxdWVzdBI0ChFhaXNQb3NpdGlvblJlcG9ydBgBIAEoCzIZLm1h",
-            "cmluZS5BSVNQb3NpdGlvblJlcG9ydBIPCgdhZGRyZXNzGAIgASgJMpEICg9T",
-            "ZW5zb3JTdHJlYW1pbmcSTQoSU3RyZWFtQ2FtZXJhU2Vuc29yEicuc2Vuc29y",
-            "c3RyZWFtaW5nLkNhbWVyYVN0cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHki",
-            "ACgBElAKEVN0cmVhbUxpZGFyU2Vuc29yEisuc2Vuc29yc3RyZWFtaW5nLlBv",
-            "aW50Q2xvdWRTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJQChFT",
-            "dHJlYW1Tb25hclNlbnNvchIrLnNlbnNvcnN0cmVhbWluZy5Qb2ludENsb3Vk",
-            "U3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAESTwoQU3RyZWFtUG9p",
-            "bnRDbG91ZBIrLnNlbnNvcnN0cmVhbWluZy5Qb2ludENsb3VkU3RyZWFtaW5n",
-            "UmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAESUQoRU3RyZWFtUG9pbnRDbG91ZDIS",
-            "LC5zZW5zb3JzdHJlYW1pbmcuUG9pbnRDbG91ZDJTdHJlYW1pbmdSZXF1ZXN0",
-            "Ggouc3RkLkVtcHR5IgAoARJLChFTdHJlYW1SYWRhclNlbnNvchImLnNlbnNv",
-            "cnN0cmVhbWluZy5SYWRhclN0cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHki",
-            "ACgBEksKEVN0cmVhbURlcHRoU2Vuc29yEiYuc2Vuc29yc3RyZWFtaW5nLkRl",
-            "cHRoU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAESRwoPU3RyZWFt",
-            "RHZsU2Vuc29yEiQuc2Vuc29yc3RyZWFtaW5nLkR2bFN0cmVhbWluZ1JlcXVl",
-            "c3QaCi5zdGQuRW1wdHkiACgBEkkKEFN0cmVhbUduc3NTZW5zb3ISJS5zZW5z",
-            "b3JzdHJlYW1pbmcuR25zc1N0cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHki",
-            "ACgBEkcKD1N0cmVhbUltdVNlbnNvchIkLnNlbnNvcnN0cmVhbWluZy5JbXVT",
-            "dHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJJChBTdHJlYW1Qb3Nl",
-            "U2Vuc29yEiUuc2Vuc29yc3RyZWFtaW5nLlBvc2VTdHJlYW1pbmdSZXF1ZXN0",
-            "Ggouc3RkLkVtcHR5IgAoARJHCg9TdHJlYW1BaXNTZW5zb3ISJC5zZW5zb3Jz",
-            "dHJlYW1pbmcuQUlTU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAES",
-            "XAoSUmVxdWVzdFBvaW50Q2xvdWQyEhQuc3RkLlN0YW5kYXJkUmVxdWVzdBos",
-            "LnNlbnNvcnN0cmVhbWluZy5Qb2ludENsb3VkMlN0cmVhbWluZ1JlcXVlc3Qi",
-            "ADABQjsKIGlvLmdycGMuZXhhbXBsZXMuc2Vuc29yc3RyZWFtaW5nQg9TZW5z",
-            "b3JTdHJlYW1pbmdQAaICA0hMV2IGcHJvdG8z"));
+            "dRIPCgdhZGRyZXNzGAIgASgJIloKFFBvc2VTdHJlYW1pbmdSZXF1ZXN0EjEK",
+            "BGRhdGEYASABKAsyIy5nZW9tZXRyeS5Qb3NlV2l0aENvdmFyaWFuY2VTdGFt",
+            "cGVkEg8KB2FkZHJlc3MYAiABKAkiSAoVU29uYXJTdHJlYW1pbmdSZXF1ZXN0",
+            "Eg0KBXJhbmdlGAEgASgCEg8KB2JlYXJpbmcYAiABKAISDwoHYWRkcmVzcxgD",
+            "IAEoCSJcChNBSVNTdHJlYW1pbmdSZXF1ZXN0EjQKEWFpc1Bvc2l0aW9uUmVw",
+            "b3J0GAEgASgLMhkubWFyaW5lLkFJU1Bvc2l0aW9uUmVwb3J0Eg8KB2FkZHJl",
+            "c3MYAiABKAkykQgKD1NlbnNvclN0cmVhbWluZxJNChJTdHJlYW1DYW1lcmFT",
+            "ZW5zb3ISJy5zZW5zb3JzdHJlYW1pbmcuQ2FtZXJhU3RyZWFtaW5nUmVxdWVz",
+            "dBoKLnN0ZC5FbXB0eSIAKAESUAoRU3RyZWFtTGlkYXJTZW5zb3ISKy5zZW5z",
+            "b3JzdHJlYW1pbmcuUG9pbnRDbG91ZFN0cmVhbWluZ1JlcXVlc3QaCi5zdGQu",
+            "RW1wdHkiACgBElAKEVN0cmVhbVNvbmFyU2Vuc29yEisuc2Vuc29yc3RyZWFt",
+            "aW5nLlBvaW50Q2xvdWRTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAo",
+            "ARJPChBTdHJlYW1Qb2ludENsb3VkEisuc2Vuc29yc3RyZWFtaW5nLlBvaW50",
+            "Q2xvdWRTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJRChFTdHJl",
+            "YW1Qb2ludENsb3VkMhIsLnNlbnNvcnN0cmVhbWluZy5Qb2ludENsb3VkMlN0",
+            "cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBEksKEVN0cmVhbVJhZGFy",
+            "U2Vuc29yEiYuc2Vuc29yc3RyZWFtaW5nLlJhZGFyU3RyZWFtaW5nUmVxdWVz",
+            "dBoKLnN0ZC5FbXB0eSIAKAESSwoRU3RyZWFtRGVwdGhTZW5zb3ISJi5zZW5z",
+            "b3JzdHJlYW1pbmcuRGVwdGhTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5",
+            "IgAoARJHCg9TdHJlYW1EdmxTZW5zb3ISJC5zZW5zb3JzdHJlYW1pbmcuRHZs",
+            "U3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAESSQoQU3RyZWFtR25z",
+            "c1NlbnNvchIlLnNlbnNvcnN0cmVhbWluZy5HbnNzU3RyZWFtaW5nUmVxdWVz",
+            "dBoKLnN0ZC5FbXB0eSIAKAESRwoPU3RyZWFtSW11U2Vuc29yEiQuc2Vuc29y",
+            "c3RyZWFtaW5nLkltdVN0cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHkiACgB",
+            "EkkKEFN0cmVhbVBvc2VTZW5zb3ISJS5zZW5zb3JzdHJlYW1pbmcuUG9zZVN0",
+            "cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBEkcKD1N0cmVhbUFpc1Nl",
+            "bnNvchIkLnNlbnNvcnN0cmVhbWluZy5BSVNTdHJlYW1pbmdSZXF1ZXN0Ggou",
+            "c3RkLkVtcHR5IgAoARJcChJSZXF1ZXN0UG9pbnRDbG91ZDISFC5zdGQuU3Rh",
+            "bmRhcmRSZXF1ZXN0Giwuc2Vuc29yc3RyZWFtaW5nLlBvaW50Q2xvdWQyU3Ry",
+            "ZWFtaW5nUmVxdWVzdCIAMAFCOwogaW8uZ3JwYy5leGFtcGxlcy5zZW5zb3Jz",
+            "dHJlYW1pbmdCD1NlbnNvclN0cmVhbWluZ1ABogIDSExXYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Geometry.GeometryReflection.Descriptor, global::Sensor.SensorReflection.Descriptor, global::Marine.MarineReflection.Descriptor, global::Auv.AuvReflection.Descriptor, global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -1690,9 +1690,9 @@ namespace Sensorstreaming {
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
-    private global::Auv.NavigationStatus data_;
+    private global::Geometry.PoseWithCovarianceStamped data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Auv.NavigationStatus Data {
+    public global::Geometry.PoseWithCovarianceStamped Data {
       get { return data_; }
       set {
         data_ = value;
@@ -1781,7 +1781,7 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Auv.NavigationStatus();
+          data_ = new global::Geometry.PoseWithCovarianceStamped();
         }
         Data.MergeFrom(other.Data);
       }
@@ -1801,7 +1801,7 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (data_ == null) {
-              data_ = new global::Auv.NavigationStatus();
+              data_ = new global::Geometry.PoseWithCovarianceStamped();
             }
             input.ReadMessage(data_);
             break;
