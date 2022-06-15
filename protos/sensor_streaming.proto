@@ -80,7 +80,7 @@ message ImuStreamingRequest {
 }
 
 message PoseStreamingRequest {
-    auv.NavigationStatus data = 1;
+    geometry.PoseWithCovarianceStamped  data = 1;
     string address = 2;
 }
 
