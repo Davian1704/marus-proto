@@ -36,24 +36,29 @@ namespace Sensor {
             "LnNlbnNvci5OYXZTYXRTdGF0dXMuU2VydmljZSJCCgZTdGF0dXMSBwoDRklY",
             "EAASDAoIU0JBU19GSVgQARIMCghHQkFTX0ZJWBACEhMKBk5PX0ZJWBD/////",
             "//////8BIkMKB1NlcnZpY2USCAoETk9ORRAAEgcKA0dQUxABEgsKB0dMT05B",
-            "U1MQAhILCgdDT01QQVNTEAQSCwoHR0FMSUxFTxAIIqIBCglOYXZTYXRGaXgS",
+            "U1MQAhILCgdDT01QQVNTEAQSCwoHR0FMSUxFTxAIIqEBCglOYXZTYXRGaXgS",
             "GwoGaGVhZGVyGAEgASgLMgsuc3RkLkhlYWRlchIkCgZzdGF0dXMYAiABKAsy",
             "FC5zZW5zb3IuTmF2U2F0U3RhdHVzEhAKCGxhdGl0dWRlGAMgASgBEhEKCWxv",
-            "bmdpdHVkZRgEIAEoARIQCghhbHRpdHVkZRgFIAEoARIbChNwb3NpdGlvbl9j",
-            "b3ZhcmlhbmNlGAYgAygBIicKB0NoYW5uZWwSDAoEbmFtZRgBIAEoCRIOCgZ2",
-            "YWx1ZXMYAiADKAEi0QEKClBvaW50RmllbGQSDAoEbmFtZRgBIAEoCRIOCgZv",
-            "ZmZzZXQYAiABKA0SLQoIZGF0YXR5cGUYAyABKA4yGy5zZW5zb3IuUG9pbnRG",
-            "aWVsZC5EYXRhVHlwZRINCgVjb3VudBgEIAEoDSJnCghEYXRhVHlwZRIICgRJ",
-            "TlQ4EAASCQoFVUlOVDgQARIJCgVJTlQxNhACEgoKBlVJTlQxNhADEgkKBUlO",
-            "VDMyEAQSCgoGVUlOVDMyEAUSCwoHRkxPQVQzMhAGEgsKB0ZMT0FUNjQQByJt",
-            "CgpQb2ludENsb3VkEhsKBmhlYWRlchgBIAEoCzILLnN0ZC5IZWFkZXISHwoG",
-            "cG9pbnRzGAIgAygLMg8uZ2VvbWV0cnkuUG9pbnQSIQoIY2hhbm5lbHMYAyAD",
-            "KAsyDy5zZW5zb3IuQ2hhbm5lbCLdAQoLUG9pbnRDbG91ZDISGwoGaGVhZGVy",
-            "GAEgASgLMgsuc3RkLkhlYWRlchIVCg10aW1lSW5TZWNvbmRzGAIgASgBEg4K",
-            "BmhlaWdodBgDIAEoDRINCgV3aWR0aBgEIAEoDRIiCgZmaWVsZHMYBSADKAsy",
-            "Ei5zZW5zb3IuUG9pbnRGaWVsZBITCgtpc0JpZ0VuZGlhbhgGIAEoCBIRCglw",
-            "b2ludFN0ZXAYByABKA0SDwoHcm93U3RlcBgIIAEoDRIMCgRkYXRhGAkgASgM",
-            "EhAKCGlzX2RlbnNlGAogASgIYgZwcm90bzM="));
+            "bmdpdHVkZRgEIAEoARIQCghhbHRpdHVkZRgFIAEoARIaChJwb3NpdGlvbkNv",
+            "dmFyaWFuY2UYBiADKAEiJwoHQ2hhbm5lbBIMCgRuYW1lGAEgASgJEg4KBnZh",
+            "bHVlcxgCIAMoASLRAQoKUG9pbnRGaWVsZBIMCgRuYW1lGAEgASgJEg4KBm9m",
+            "ZnNldBgCIAEoDRItCghkYXRhdHlwZRgDIAEoDjIbLnNlbnNvci5Qb2ludEZp",
+            "ZWxkLkRhdGFUeXBlEg0KBWNvdW50GAQgASgNImcKCERhdGFUeXBlEggKBElO",
+            "VDgQABIJCgVVSU5UOBABEgkKBUlOVDE2EAISCgoGVUlOVDE2EAMSCQoFSU5U",
+            "MzIQBBIKCgZVSU5UMzIQBRILCgdGTE9BVDMyEAYSCwoHRkxPQVQ2NBAHIm0K",
+            "ClBvaW50Q2xvdWQSGwoGaGVhZGVyGAEgASgLMgsuc3RkLkhlYWRlchIfCgZw",
+            "b2ludHMYAiADKAsyDy5nZW9tZXRyeS5Qb2ludBIhCghjaGFubmVscxgDIAMo",
+            "CzIPLnNlbnNvci5DaGFubmVsItwBCgtQb2ludENsb3VkMhIbCgZoZWFkZXIY",
+            "ASABKAsyCy5zdGQuSGVhZGVyEhUKDXRpbWVJblNlY29uZHMYAiABKAESDgoG",
+            "aGVpZ2h0GAMgASgNEg0KBXdpZHRoGAQgASgNEiIKBmZpZWxkcxgFIAMoCzIS",
+            "LnNlbnNvci5Qb2ludEZpZWxkEhMKC2lzQmlnRW5kaWFuGAYgASgIEhEKCXBv",
+            "aW50U3RlcBgHIAEoDRIPCgdyb3dTdGVwGAggASgNEgwKBGRhdGEYCSABKAwS",
+            "DwoHaXNEZW5zZRgKIAEoCCKGAQoFSW1hZ2USGwoGaGVhZGVyGAEgASgLMgsu",
+            "c3RkLkhlYWRlchIOCgZoZWlnaHQYAiABKA0SDQoFd2lkdGgYAyABKA0SEAoI",
+            "ZW5jb2RpbmcYBCABKAkSEwoLaXNCaWdFbmRpYW4YBSABKAgSDAoEc3RlcBgG",
+            "IAEoDRIMCgRkYXRhGAcgASgMIkwKD0NvbXByZXNzZWRJbWFnZRIbCgZoZWFk",
+            "ZXIYASABKAsyCy5zdGQuSGVhZGVyEg4KBmZvcm1hdBgCIAEoCRIMCgRkYXRh",
+            "GAMgASgMYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -63,7 +68,9 @@ namespace Sensor {
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Channel), global::Sensor.Channel.Parser, new[]{ "Name", "Values" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointField), global::Sensor.PointField.Parser, new[]{ "Name", "Offset", "Datatype", "Count" }, null, new[]{ typeof(global::Sensor.PointField.Types.DataType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud), global::Sensor.PointCloud.Parser, new[]{ "Header", "Points", "Channels" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud2), global::Sensor.PointCloud2.Parser, new[]{ "Header", "TimeInSeconds", "Height", "Width", "Fields", "IsBigEndian", "PointStep", "RowStep", "Data", "IsDense" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud2), global::Sensor.PointCloud2.Parser, new[]{ "Header", "TimeInSeconds", "Height", "Width", "Fields", "IsBigEndian", "PointStep", "RowStep", "Data", "IsDense" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Image), global::Sensor.Image.Parser, new[]{ "Header", "Height", "Width", "Encoding", "IsBigEndian", "Step", "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.CompressedImage), global::Sensor.CompressedImage.Parser, new[]{ "Header", "Format", "Data" }, null, null, null)
           }));
     }
     #endregion
@@ -643,7 +650,7 @@ namespace Sensor {
       }
     }
 
-    /// <summary>Field number for the "position_covariance" field.</summary>
+    /// <summary>Field number for the "positionCovariance" field.</summary>
     public const int PositionCovarianceFieldNumber = 6;
     private static readonly pb::FieldCodec<double> _repeated_positionCovariance_codec
         = pb::FieldCodec.ForDouble(50);
@@ -1520,7 +1527,7 @@ namespace Sensor {
       }
     }
 
-    /// <summary>Field number for the "is_dense" field.</summary>
+    /// <summary>Field number for the "isDense" field.</summary>
     public const int IsDenseFieldNumber = 10;
     private bool isDense_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1750,6 +1757,500 @@ namespace Sensor {
           }
           case 80: {
             IsDense = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Image : pb::IMessage<Image> {
+    private static readonly pb::MessageParser<Image> _parser = new pb::MessageParser<Image>(() => new Image());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Image> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensor.SensorReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Image() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Image(Image other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      height_ = other.height_;
+      width_ = other.width_;
+      encoding_ = other.encoding_;
+      isBigEndian_ = other.isBigEndian_;
+      step_ = other.step_;
+      data_ = other.data_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Image Clone() {
+      return new Image(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "height" field.</summary>
+    public const int HeightFieldNumber = 2;
+    private uint height_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Height {
+      get { return height_; }
+      set {
+        height_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "width" field.</summary>
+    public const int WidthFieldNumber = 3;
+    private uint width_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Width {
+      get { return width_; }
+      set {
+        width_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encoding" field.</summary>
+    public const int EncodingFieldNumber = 4;
+    private string encoding_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Encoding {
+      get { return encoding_; }
+      set {
+        encoding_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "isBigEndian" field.</summary>
+    public const int IsBigEndianFieldNumber = 5;
+    private bool isBigEndian_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsBigEndian {
+      get { return isBigEndian_; }
+      set {
+        isBigEndian_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "step" field.</summary>
+    public const int StepFieldNumber = 6;
+    private uint step_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Step {
+      get { return step_; }
+      set {
+        step_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 7;
+    private pb::ByteString data_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Data {
+      get { return data_; }
+      set {
+        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Image);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Image other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if (Height != other.Height) return false;
+      if (Width != other.Width) return false;
+      if (Encoding != other.Encoding) return false;
+      if (IsBigEndian != other.IsBigEndian) return false;
+      if (Step != other.Step) return false;
+      if (Data != other.Data) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      if (Height != 0) hash ^= Height.GetHashCode();
+      if (Width != 0) hash ^= Width.GetHashCode();
+      if (Encoding.Length != 0) hash ^= Encoding.GetHashCode();
+      if (IsBigEndian != false) hash ^= IsBigEndian.GetHashCode();
+      if (Step != 0) hash ^= Step.GetHashCode();
+      if (Data.Length != 0) hash ^= Data.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (Height != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Height);
+      }
+      if (Width != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Width);
+      }
+      if (Encoding.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Encoding);
+      }
+      if (IsBigEndian != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsBigEndian);
+      }
+      if (Step != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Step);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteBytes(Data);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      if (Height != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Height);
+      }
+      if (Width != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Width);
+      }
+      if (Encoding.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Encoding);
+      }
+      if (IsBigEndian != false) {
+        size += 1 + 1;
+      }
+      if (Step != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Step);
+      }
+      if (Data.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Image other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      if (other.Height != 0) {
+        Height = other.Height;
+      }
+      if (other.Width != 0) {
+        Width = other.Width;
+      }
+      if (other.Encoding.Length != 0) {
+        Encoding = other.Encoding;
+      }
+      if (other.IsBigEndian != false) {
+        IsBigEndian = other.IsBigEndian;
+      }
+      if (other.Step != 0) {
+        Step = other.Step;
+      }
+      if (other.Data.Length != 0) {
+        Data = other.Data;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 16: {
+            Height = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Width = input.ReadUInt32();
+            break;
+          }
+          case 34: {
+            Encoding = input.ReadString();
+            break;
+          }
+          case 40: {
+            IsBigEndian = input.ReadBool();
+            break;
+          }
+          case 48: {
+            Step = input.ReadUInt32();
+            break;
+          }
+          case 58: {
+            Data = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class CompressedImage : pb::IMessage<CompressedImage> {
+    private static readonly pb::MessageParser<CompressedImage> _parser = new pb::MessageParser<CompressedImage>(() => new CompressedImage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CompressedImage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensor.SensorReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CompressedImage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CompressedImage(CompressedImage other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      format_ = other.format_;
+      data_ = other.data_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CompressedImage Clone() {
+      return new CompressedImage(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Std.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Std.Header Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "format" field.</summary>
+    public const int FormatFieldNumber = 2;
+    private string format_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Format {
+      get { return format_; }
+      set {
+        format_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 3;
+    private pb::ByteString data_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Data {
+      get { return data_; }
+      set {
+        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CompressedImage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CompressedImage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if (Format != other.Format) return false;
+      if (Data != other.Data) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      if (Format.Length != 0) hash ^= Format.GetHashCode();
+      if (Data.Length != 0) hash ^= Data.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (Format.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Format);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Data);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      if (Format.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Format);
+      }
+      if (Data.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CompressedImage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          header_ = new global::Std.Header();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      if (other.Format.Length != 0) {
+        Format = other.Format;
+      }
+      if (other.Data.Length != 0) {
+        Data = other.Data;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              header_ = new global::Std.Header();
+            }
+            input.ReadMessage(header_);
+            break;
+          }
+          case 18: {
+            Format = input.ReadString();
+            break;
+          }
+          case 26: {
+            Data = input.ReadBytes();
             break;
           }
         }
