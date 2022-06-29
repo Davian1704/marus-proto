@@ -40,7 +40,7 @@ message NavSatFix {
     double latitude = 3;
     double longitude = 4;
     double altitude = 5;
-    repeated double position_covariance = 6;
+    repeated double positionCovariance = 6;
 }
 
 message Channel {
@@ -82,5 +82,21 @@ message PointCloud2 {
     uint32 pointStep = 7;
     uint32 rowStep = 8;
     bytes data = 9;
-    bool is_dense = 10;
+    bool isDense = 10;
+}
+
+message Image {
+    std.Header header = 1;
+    uint32 height = 2;
+    uint32 width = 3;
+    string encoding = 4;
+    bool isBigEndian = 5;
+    uint32 step = 6;
+    bytes data = 7;
+}
+
+message CompressedImage {
+    std.Header header = 1;
+    string format = 2;
+    bytes data = 3;
 }
