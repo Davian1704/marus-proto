@@ -24,11 +24,56 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='sensorstreaming',
   syntax='proto3',
   serialized_options=_b('\n io.grpc.examples.sensorstreamingB\017SensorStreamingP\001\242\002\003HLW'),
-  serialized_pb=_b('\n\x16sensor_streaming.proto\x12\x0fsensorstreaming\x1a\x0egeometry.proto\x1a\x0csensor.proto\x1a\x0cmarine.proto\x1a\tauv.proto\x1a\tstd.proto\"E\n\x15ImageStreamingRequest\x12\x1b\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\r.sensor.Image\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"Y\n\x1f\x43ompressedImageStreamingRequest\x12%\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x17.sensor.CompressedImage\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"O\n\x1aPointCloudStreamingRequest\x12 \n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x12.sensor.PointCloud\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"Q\n\x1bPointCloud2StreamingRequest\x12!\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x13.sensor.PointCloud2\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"\xd3\x01\n\x15RadarStreamingRequest\x12\x16\n\x0erangeIncrement\x18\x01 \x01(\x02\x12\x12\n\nrangeStart\x18\x02 \x01(\x02\x12\x12\n\nnumSamples\x18\x03 \x01(\r\x12\x11\n\tnumSpokes\x18\x04 \x01(\r\x12\x14\n\x0cminIntensity\x18\x05 \x01(\r\x12\x14\n\x0cmaxIntensity\x18\x06 \x01(\r\x12\x15\n\rtimeInSeconds\x18\x07 \x03(\x01\x12\x0f\n\x07\x61zimuth\x18\x08 \x03(\x02\x12\x13\n\x0bradarSpokes\x18\t \x01(\x0c\"[\n\x15\x44\x65pthStreamingRequest\x12\x31\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32#.geometry.PoseWithCovarianceStamped\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"Z\n\x13\x44vlStreamingRequest\x12\x32\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32$.geometry.TwistWithCovarianceStamped\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"H\n\x14GnssStreamingRequest\x12\x1f\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x11.sensor.NavSatFix\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"A\n\x13ImuStreamingRequest\x12\x19\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0b.sensor.Imu\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"Z\n\x14PoseStreamingRequest\x12\x31\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32#.geometry.PoseWithCovarianceStamped\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"H\n\x15SonarStreamingRequest\x12\r\n\x05range\x18\x01 \x01(\x02\x12\x0f\n\x07\x62\x65\x61ring\x18\x02 \x01(\x02\x12\x0f\n\x07\x61\x64\x64ress\x18\x03 \x01(\t\"\\\n\x13\x41ISStreamingRequest\x12\x34\n\x11\x61isPositionReport\x18\x01 \x01(\x0b\x32\x19.marine.AISPositionReport\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t2\xf2\x08\n\x0fSensorStreaming\x12L\n\x12StreamCameraSensor\x12&.sensorstreaming.ImageStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12`\n\x1cStreamCameraSensorCompressed\x12\x30.sensorstreaming.CompressedImageStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12P\n\x11StreamLidarSensor\x12+.sensorstreaming.PointCloudStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12P\n\x11StreamSonarSensor\x12+.sensorstreaming.PointCloudStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12O\n\x10StreamPointCloud\x12+.sensorstreaming.PointCloudStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12Q\n\x11StreamPointCloud2\x12,.sensorstreaming.PointCloud2StreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12K\n\x11StreamRadarSensor\x12&.sensorstreaming.RadarStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12K\n\x11StreamDepthSensor\x12&.sensorstreaming.DepthStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12G\n\x0fStreamDvlSensor\x12$.sensorstreaming.DvlStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12I\n\x10StreamGnssSensor\x12%.sensorstreaming.GnssStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12G\n\x0fStreamImuSensor\x12$.sensorstreaming.ImuStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12I\n\x10StreamPoseSensor\x12%.sensorstreaming.PoseStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12G\n\x0fStreamAisSensor\x12$.sensorstreaming.AISStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12\\\n\x12RequestPointCloud2\x12\x14.std.StandardRequest\x1a,.sensorstreaming.PointCloud2StreamingRequest\"\x00\x30\x01\x42;\n io.grpc.examples.sensorstreamingB\x0fSensorStreamingP\x01\xa2\x02\x03HLWb\x06proto3')
+  serialized_pb=_b('\n\x16sensor_streaming.proto\x12\x0fsensorstreaming\x1a\x0egeometry.proto\x1a\x0csensor.proto\x1a\x0cmarine.proto\x1a\tauv.proto\x1a\tstd.proto\"y\n\x16\x43\x61meraStreamingRequest\x12\x1c\n\x05image\x18\x01 \x01(\x0b\x32\r.sensor.Image\x12\x30\n\x0f\x63ompressedImage\x18\x02 \x01(\x0b\x32\x17.sensor.CompressedImage\x12\x0f\n\x07\x61\x64\x64ress\x18\x03 \x01(\t\"E\n\x15ImageStreamingRequest\x12\x1b\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\r.sensor.Image\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"Y\n\x1f\x43ompressedImageStreamingRequest\x12%\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x17.sensor.CompressedImage\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"O\n\x1aPointCloudStreamingRequest\x12 \n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x12.sensor.PointCloud\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"Q\n\x1bPointCloud2StreamingRequest\x12!\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x13.sensor.PointCloud2\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"\xd3\x01\n\x15RadarStreamingRequest\x12\x16\n\x0erangeIncrement\x18\x01 \x01(\x02\x12\x12\n\nrangeStart\x18\x02 \x01(\x02\x12\x12\n\nnumSamples\x18\x03 \x01(\r\x12\x11\n\tnumSpokes\x18\x04 \x01(\r\x12\x14\n\x0cminIntensity\x18\x05 \x01(\r\x12\x14\n\x0cmaxIntensity\x18\x06 \x01(\r\x12\x15\n\rtimeInSeconds\x18\x07 \x03(\x01\x12\x0f\n\x07\x61zimuth\x18\x08 \x03(\x02\x12\x13\n\x0bradarSpokes\x18\t \x01(\x0c\"[\n\x15\x44\x65pthStreamingRequest\x12\x31\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32#.geometry.PoseWithCovarianceStamped\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"Z\n\x13\x44vlStreamingRequest\x12\x32\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32$.geometry.TwistWithCovarianceStamped\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"H\n\x14GnssStreamingRequest\x12\x1f\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x11.sensor.NavSatFix\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"A\n\x13ImuStreamingRequest\x12\x19\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0b.sensor.Imu\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"Z\n\x14PoseStreamingRequest\x12\x31\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32#.geometry.PoseWithCovarianceStamped\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\"H\n\x15SonarStreamingRequest\x12\r\n\x05range\x18\x01 \x01(\x02\x12\x0f\n\x07\x62\x65\x61ring\x18\x02 \x01(\x02\x12\x0f\n\x07\x61\x64\x64ress\x18\x03 \x01(\t\"\\\n\x13\x41ISStreamingRequest\x12\x34\n\x11\x61isPositionReport\x18\x01 \x01(\x0b\x32\x19.marine.AISPositionReport\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t2\x91\x08\n\x0fSensorStreaming\x12M\n\x12StreamCameraSensor\x12\'.sensorstreaming.CameraStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12P\n\x11StreamLidarSensor\x12+.sensorstreaming.PointCloudStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12P\n\x11StreamSonarSensor\x12+.sensorstreaming.PointCloudStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12O\n\x10StreamPointCloud\x12+.sensorstreaming.PointCloudStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12Q\n\x11StreamPointCloud2\x12,.sensorstreaming.PointCloud2StreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12K\n\x11StreamRadarSensor\x12&.sensorstreaming.RadarStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12K\n\x11StreamDepthSensor\x12&.sensorstreaming.DepthStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12G\n\x0fStreamDvlSensor\x12$.sensorstreaming.DvlStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12I\n\x10StreamGnssSensor\x12%.sensorstreaming.GnssStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12G\n\x0fStreamImuSensor\x12$.sensorstreaming.ImuStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12I\n\x10StreamPoseSensor\x12%.sensorstreaming.PoseStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12G\n\x0fStreamAisSensor\x12$.sensorstreaming.AISStreamingRequest\x1a\n.std.Empty\"\x00(\x01\x12\\\n\x12RequestPointCloud2\x12\x14.std.StandardRequest\x1a,.sensorstreaming.PointCloud2StreamingRequest\"\x00\x30\x01\x42;\n io.grpc.examples.sensorstreamingB\x0fSensorStreamingP\x01\xa2\x02\x03HLWb\x06proto3')
   ,
   dependencies=[geometry__pb2.DESCRIPTOR,sensor__pb2.DESCRIPTOR,marine__pb2.DESCRIPTOR,auv__pb2.DESCRIPTOR,std__pb2.DESCRIPTOR,])
 
 
+
+
+_CAMERASTREAMINGREQUEST = _descriptor.Descriptor(
+  name='CameraStreamingRequest',
+  full_name='sensorstreaming.CameraStreamingRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='image', full_name='sensorstreaming.CameraStreamingRequest.image', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='compressedImage', full_name='sensorstreaming.CameraStreamingRequest.compressedImage', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='address', full_name='sensorstreaming.CameraStreamingRequest.address', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=109,
+  serialized_end=230,
+)
 
 
 _IMAGESTREAMINGREQUEST = _descriptor.Descriptor(
@@ -64,8 +109,8 @@ _IMAGESTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=109,
-  serialized_end=178,
+  serialized_start=232,
+  serialized_end=301,
 )
 
 
@@ -102,8 +147,8 @@ _COMPRESSEDIMAGESTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=180,
-  serialized_end=269,
+  serialized_start=303,
+  serialized_end=392,
 )
 
 
@@ -140,8 +185,8 @@ _POINTCLOUDSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=271,
-  serialized_end=350,
+  serialized_start=394,
+  serialized_end=473,
 )
 
 
@@ -178,8 +223,8 @@ _POINTCLOUD2STREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=352,
-  serialized_end=433,
+  serialized_start=475,
+  serialized_end=556,
 )
 
 
@@ -265,8 +310,8 @@ _RADARSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=436,
-  serialized_end=647,
+  serialized_start=559,
+  serialized_end=770,
 )
 
 
@@ -303,8 +348,8 @@ _DEPTHSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=649,
-  serialized_end=740,
+  serialized_start=772,
+  serialized_end=863,
 )
 
 
@@ -341,8 +386,8 @@ _DVLSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=742,
-  serialized_end=832,
+  serialized_start=865,
+  serialized_end=955,
 )
 
 
@@ -379,8 +424,8 @@ _GNSSSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=834,
-  serialized_end=906,
+  serialized_start=957,
+  serialized_end=1029,
 )
 
 
@@ -417,8 +462,8 @@ _IMUSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=908,
-  serialized_end=973,
+  serialized_start=1031,
+  serialized_end=1096,
 )
 
 
@@ -455,8 +500,8 @@ _POSESTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=975,
-  serialized_end=1065,
+  serialized_start=1098,
+  serialized_end=1188,
 )
 
 
@@ -500,8 +545,8 @@ _SONARSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1067,
-  serialized_end=1139,
+  serialized_start=1190,
+  serialized_end=1262,
 )
 
 
@@ -538,10 +583,12 @@ _AISSTREAMINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1141,
-  serialized_end=1233,
+  serialized_start=1264,
+  serialized_end=1356,
 )
 
+_CAMERASTREAMINGREQUEST.fields_by_name['image'].message_type = sensor__pb2._IMAGE
+_CAMERASTREAMINGREQUEST.fields_by_name['compressedImage'].message_type = sensor__pb2._COMPRESSEDIMAGE
 _IMAGESTREAMINGREQUEST.fields_by_name['data'].message_type = sensor__pb2._IMAGE
 _COMPRESSEDIMAGESTREAMINGREQUEST.fields_by_name['data'].message_type = sensor__pb2._COMPRESSEDIMAGE
 _POINTCLOUDSTREAMINGREQUEST.fields_by_name['data'].message_type = sensor__pb2._POINTCLOUD
@@ -552,6 +599,7 @@ _GNSSSTREAMINGREQUEST.fields_by_name['data'].message_type = sensor__pb2._NAVSATF
 _IMUSTREAMINGREQUEST.fields_by_name['data'].message_type = sensor__pb2._IMU
 _POSESTREAMINGREQUEST.fields_by_name['data'].message_type = geometry__pb2._POSEWITHCOVARIANCESTAMPED
 _AISSTREAMINGREQUEST.fields_by_name['aisPositionReport'].message_type = marine__pb2._AISPOSITIONREPORT
+DESCRIPTOR.message_types_by_name['CameraStreamingRequest'] = _CAMERASTREAMINGREQUEST
 DESCRIPTOR.message_types_by_name['ImageStreamingRequest'] = _IMAGESTREAMINGREQUEST
 DESCRIPTOR.message_types_by_name['CompressedImageStreamingRequest'] = _COMPRESSEDIMAGESTREAMINGREQUEST
 DESCRIPTOR.message_types_by_name['PointCloudStreamingRequest'] = _POINTCLOUDSTREAMINGREQUEST
@@ -565,6 +613,13 @@ DESCRIPTOR.message_types_by_name['PoseStreamingRequest'] = _POSESTREAMINGREQUEST
 DESCRIPTOR.message_types_by_name['SonarStreamingRequest'] = _SONARSTREAMINGREQUEST
 DESCRIPTOR.message_types_by_name['AISStreamingRequest'] = _AISSTREAMINGREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+CameraStreamingRequest = _reflection.GeneratedProtocolMessageType('CameraStreamingRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CAMERASTREAMINGREQUEST,
+  __module__ = 'sensor_streaming_pb2'
+  # @@protoc_insertion_point(class_scope:sensorstreaming.CameraStreamingRequest)
+  ))
+_sym_db.RegisterMessage(CameraStreamingRequest)
 
 ImageStreamingRequest = _reflection.GeneratedProtocolMessageType('ImageStreamingRequest', (_message.Message,), dict(
   DESCRIPTOR = _IMAGESTREAMINGREQUEST,
@@ -659,31 +714,22 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1236,
-  serialized_end=2374,
+  serialized_start=1359,
+  serialized_end=2400,
   methods=[
   _descriptor.MethodDescriptor(
     name='StreamCameraSensor',
     full_name='sensorstreaming.SensorStreaming.StreamCameraSensor',
     index=0,
     containing_service=None,
-    input_type=_IMAGESTREAMINGREQUEST,
-    output_type=std__pb2._EMPTY,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='StreamCameraSensorCompressed',
-    full_name='sensorstreaming.SensorStreaming.StreamCameraSensorCompressed',
-    index=1,
-    containing_service=None,
-    input_type=_COMPRESSEDIMAGESTREAMINGREQUEST,
+    input_type=_CAMERASTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='StreamLidarSensor',
     full_name='sensorstreaming.SensorStreaming.StreamLidarSensor',
-    index=2,
+    index=1,
     containing_service=None,
     input_type=_POINTCLOUDSTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -692,7 +738,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StreamSonarSensor',
     full_name='sensorstreaming.SensorStreaming.StreamSonarSensor',
-    index=3,
+    index=2,
     containing_service=None,
     input_type=_POINTCLOUDSTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -701,7 +747,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StreamPointCloud',
     full_name='sensorstreaming.SensorStreaming.StreamPointCloud',
-    index=4,
+    index=3,
     containing_service=None,
     input_type=_POINTCLOUDSTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -710,7 +756,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StreamPointCloud2',
     full_name='sensorstreaming.SensorStreaming.StreamPointCloud2',
-    index=5,
+    index=4,
     containing_service=None,
     input_type=_POINTCLOUD2STREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -719,7 +765,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StreamRadarSensor',
     full_name='sensorstreaming.SensorStreaming.StreamRadarSensor',
-    index=6,
+    index=5,
     containing_service=None,
     input_type=_RADARSTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -728,7 +774,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StreamDepthSensor',
     full_name='sensorstreaming.SensorStreaming.StreamDepthSensor',
-    index=7,
+    index=6,
     containing_service=None,
     input_type=_DEPTHSTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -737,7 +783,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StreamDvlSensor',
     full_name='sensorstreaming.SensorStreaming.StreamDvlSensor',
-    index=8,
+    index=7,
     containing_service=None,
     input_type=_DVLSTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -746,7 +792,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StreamGnssSensor',
     full_name='sensorstreaming.SensorStreaming.StreamGnssSensor',
-    index=9,
+    index=8,
     containing_service=None,
     input_type=_GNSSSTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -755,7 +801,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StreamImuSensor',
     full_name='sensorstreaming.SensorStreaming.StreamImuSensor',
-    index=10,
+    index=9,
     containing_service=None,
     input_type=_IMUSTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -764,7 +810,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StreamPoseSensor',
     full_name='sensorstreaming.SensorStreaming.StreamPoseSensor',
-    index=11,
+    index=10,
     containing_service=None,
     input_type=_POSESTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -773,7 +819,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='StreamAisSensor',
     full_name='sensorstreaming.SensorStreaming.StreamAisSensor',
-    index=12,
+    index=11,
     containing_service=None,
     input_type=_AISSTREAMINGREQUEST,
     output_type=std__pb2._EMPTY,
@@ -782,7 +828,7 @@ _SENSORSTREAMING = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='RequestPointCloud2',
     full_name='sensorstreaming.SensorStreaming.RequestPointCloud2',
-    index=13,
+    index=12,
     containing_service=None,
     input_type=std__pb2._STANDARDREQUEST,
     output_type=_POINTCLOUD2STREAMINGREQUEST,
