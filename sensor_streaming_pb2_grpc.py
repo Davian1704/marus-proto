@@ -17,7 +17,12 @@ class SensorStreamingStub(object):
     """
     self.StreamCameraSensor = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamCameraSensor',
-        request_serializer=sensor__streaming__pb2.CameraStreamingRequest.SerializeToString,
+        request_serializer=sensor__streaming__pb2.ImageStreamingRequest.SerializeToString,
+        response_deserializer=std__pb2.Empty.FromString,
+        )
+    self.StreamCameraSensorCompressed = channel.stream_unary(
+        '/sensorstreaming.SensorStreaming/StreamCameraSensorCompressed',
+        request_serializer=sensor__streaming__pb2.CompressedImageStreamingRequest.SerializeToString,
         response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamLidarSensor = channel.stream_unary(
@@ -87,6 +92,13 @@ class SensorStreamingServicer(object):
   pass
 
   def StreamCameraSensor(self, request_iterator, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def StreamCameraSensorCompressed(self, request_iterator, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -182,7 +194,12 @@ def add_SensorStreamingServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'StreamCameraSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamCameraSensor,
-          request_deserializer=sensor__streaming__pb2.CameraStreamingRequest.FromString,
+          request_deserializer=sensor__streaming__pb2.ImageStreamingRequest.FromString,
+          response_serializer=std__pb2.Empty.SerializeToString,
+      ),
+      'StreamCameraSensorCompressed': grpc.stream_unary_rpc_method_handler(
+          servicer.StreamCameraSensorCompressed,
+          request_deserializer=sensor__streaming__pb2.CompressedImageStreamingRequest.FromString,
           response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamLidarSensor': grpc.stream_unary_rpc_method_handler(

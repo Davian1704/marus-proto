@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='sensor',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0csensor.proto\x12\x06sensor\x1a\tstd.proto\x1a\x0egeometry.proto\"\x90\x02\n\x03Imu\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12)\n\x0borientation\x18\x02 \x01(\x0b\x32\x14.geometry.Quaternion\x12\x1d\n\x15orientationCovariance\x18\x03 \x03(\x01\x12*\n\x0f\x61ngularVelocity\x18\x04 \x01(\x0b\x32\x11.geometry.Vector3\x12!\n\x19\x61ngularVelocityCovariance\x18\x05 \x03(\x01\x12-\n\x12linearAcceleration\x18\x06 \x01(\x0b\x32\x11.geometry.Vector3\x12$\n\x1clinearAccelerationCovariance\x18\x07 \x03(\x01\"\xf3\x01\n\x0cNavSatStatus\x12+\n\x06status\x18\x01 \x01(\x0e\x32\x1b.sensor.NavSatStatus.Status\x12-\n\x07service\x18\x02 \x01(\x0e\x32\x1c.sensor.NavSatStatus.Service\"B\n\x06Status\x12\x07\n\x03\x46IX\x10\x00\x12\x0c\n\x08SBAS_FIX\x10\x01\x12\x0c\n\x08GBAS_FIX\x10\x02\x12\x13\n\x06NO_FIX\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\"C\n\x07Service\x12\x08\n\x04NONE\x10\x00\x12\x07\n\x03GPS\x10\x01\x12\x0b\n\x07GLONASS\x10\x02\x12\x0b\n\x07\x43OMPASS\x10\x04\x12\x0b\n\x07GALILEO\x10\x08\"\xa2\x01\n\tNavSatFix\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12$\n\x06status\x18\x02 \x01(\x0b\x32\x14.sensor.NavSatStatus\x12\x10\n\x08latitude\x18\x03 \x01(\x01\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x10\n\x08\x61ltitude\x18\x05 \x01(\x01\x12\x1b\n\x13position_covariance\x18\x06 \x03(\x01\"\'\n\x07\x43hannel\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06values\x18\x02 \x03(\x01\"\xd1\x01\n\nPointField\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06offset\x18\x02 \x01(\r\x12-\n\x08\x64\x61tatype\x18\x03 \x01(\x0e\x32\x1b.sensor.PointField.DataType\x12\r\n\x05\x63ount\x18\x04 \x01(\r\"g\n\x08\x44\x61taType\x12\x08\n\x04INT8\x10\x00\x12\t\n\x05UINT8\x10\x01\x12\t\n\x05INT16\x10\x02\x12\n\n\x06UINT16\x10\x03\x12\t\n\x05INT32\x10\x04\x12\n\n\x06UINT32\x10\x05\x12\x0b\n\x07\x46LOAT32\x10\x06\x12\x0b\n\x07\x46LOAT64\x10\x07\"m\n\nPointCloud\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x1f\n\x06points\x18\x02 \x03(\x0b\x32\x0f.geometry.Point\x12!\n\x08\x63hannels\x18\x03 \x03(\x0b\x32\x0f.sensor.Channel\"\xdd\x01\n\x0bPointCloud2\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x15\n\rtimeInSeconds\x18\x02 \x01(\x01\x12\x0e\n\x06height\x18\x03 \x01(\r\x12\r\n\x05width\x18\x04 \x01(\r\x12\"\n\x06\x66ields\x18\x05 \x03(\x0b\x32\x12.sensor.PointField\x12\x13\n\x0bisBigEndian\x18\x06 \x01(\x08\x12\x11\n\tpointStep\x18\x07 \x01(\r\x12\x0f\n\x07rowStep\x18\x08 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\t \x01(\x0c\x12\x10\n\x08is_dense\x18\n \x01(\x08\x62\x06proto3')
+  serialized_pb=_b('\n\x0csensor.proto\x12\x06sensor\x1a\tstd.proto\x1a\x0egeometry.proto\"\x90\x02\n\x03Imu\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12)\n\x0borientation\x18\x02 \x01(\x0b\x32\x14.geometry.Quaternion\x12\x1d\n\x15orientationCovariance\x18\x03 \x03(\x01\x12*\n\x0f\x61ngularVelocity\x18\x04 \x01(\x0b\x32\x11.geometry.Vector3\x12!\n\x19\x61ngularVelocityCovariance\x18\x05 \x03(\x01\x12-\n\x12linearAcceleration\x18\x06 \x01(\x0b\x32\x11.geometry.Vector3\x12$\n\x1clinearAccelerationCovariance\x18\x07 \x03(\x01\"\xf3\x01\n\x0cNavSatStatus\x12+\n\x06status\x18\x01 \x01(\x0e\x32\x1b.sensor.NavSatStatus.Status\x12-\n\x07service\x18\x02 \x01(\x0e\x32\x1c.sensor.NavSatStatus.Service\"B\n\x06Status\x12\x07\n\x03\x46IX\x10\x00\x12\x0c\n\x08SBAS_FIX\x10\x01\x12\x0c\n\x08GBAS_FIX\x10\x02\x12\x13\n\x06NO_FIX\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\"C\n\x07Service\x12\x08\n\x04NONE\x10\x00\x12\x07\n\x03GPS\x10\x01\x12\x0b\n\x07GLONASS\x10\x02\x12\x0b\n\x07\x43OMPASS\x10\x04\x12\x0b\n\x07GALILEO\x10\x08\"\xa1\x01\n\tNavSatFix\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12$\n\x06status\x18\x02 \x01(\x0b\x32\x14.sensor.NavSatStatus\x12\x10\n\x08latitude\x18\x03 \x01(\x01\x12\x11\n\tlongitude\x18\x04 \x01(\x01\x12\x10\n\x08\x61ltitude\x18\x05 \x01(\x01\x12\x1a\n\x12positionCovariance\x18\x06 \x03(\x01\"\'\n\x07\x43hannel\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06values\x18\x02 \x03(\x01\"\xd1\x01\n\nPointField\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06offset\x18\x02 \x01(\r\x12-\n\x08\x64\x61tatype\x18\x03 \x01(\x0e\x32\x1b.sensor.PointField.DataType\x12\r\n\x05\x63ount\x18\x04 \x01(\r\"g\n\x08\x44\x61taType\x12\x08\n\x04INT8\x10\x00\x12\t\n\x05UINT8\x10\x01\x12\t\n\x05INT16\x10\x02\x12\n\n\x06UINT16\x10\x03\x12\t\n\x05INT32\x10\x04\x12\n\n\x06UINT32\x10\x05\x12\x0b\n\x07\x46LOAT32\x10\x06\x12\x0b\n\x07\x46LOAT64\x10\x07\"m\n\nPointCloud\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x1f\n\x06points\x18\x02 \x03(\x0b\x32\x0f.geometry.Point\x12!\n\x08\x63hannels\x18\x03 \x03(\x0b\x32\x0f.sensor.Channel\"\xdc\x01\n\x0bPointCloud2\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x15\n\rtimeInSeconds\x18\x02 \x01(\x01\x12\x0e\n\x06height\x18\x03 \x01(\r\x12\r\n\x05width\x18\x04 \x01(\r\x12\"\n\x06\x66ields\x18\x05 \x03(\x0b\x32\x12.sensor.PointField\x12\x13\n\x0bisBigEndian\x18\x06 \x01(\x08\x12\x11\n\tpointStep\x18\x07 \x01(\r\x12\x0f\n\x07rowStep\x18\x08 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\t \x01(\x0c\x12\x0f\n\x07isDense\x18\n \x01(\x08\"\x86\x01\n\x05Image\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0e\n\x06height\x18\x02 \x01(\r\x12\r\n\x05width\x18\x03 \x01(\r\x12\x10\n\x08\x65ncoding\x18\x04 \x01(\t\x12\x13\n\x0bisBigEndian\x18\x05 \x01(\x08\x12\x0c\n\x04step\x18\x06 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x07 \x01(\x0c\"L\n\x0f\x43ompressedImage\x12\x1b\n\x06header\x18\x01 \x01(\x0b\x32\x0b.std.Header\x12\x0e\n\x06\x66ormat\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\x62\x06proto3')
   ,
   dependencies=[std__pb2.DESCRIPTOR,geometry__pb2.DESCRIPTOR,])
 
@@ -132,8 +132,8 @@ _POINTFIELD_DATATYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=885,
-  serialized_end=988,
+  serialized_start=884,
+  serialized_end=987,
 )
 _sym_db.RegisterEnumDescriptor(_POINTFIELD_DATATYPE)
 
@@ -294,7 +294,7 @@ _NAVSATFIX = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='position_covariance', full_name='sensor.NavSatFix.position_covariance', index=5,
+      name='positionCovariance', full_name='sensor.NavSatFix.positionCovariance', index=5,
       number=6, type=1, cpp_type=5, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -313,7 +313,7 @@ _NAVSATFIX = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=573,
-  serialized_end=735,
+  serialized_end=734,
 )
 
 
@@ -350,8 +350,8 @@ _CHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=737,
-  serialized_end=776,
+  serialized_start=736,
+  serialized_end=775,
 )
 
 
@@ -403,8 +403,8 @@ _POINTFIELD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=779,
-  serialized_end=988,
+  serialized_start=778,
+  serialized_end=987,
 )
 
 
@@ -448,8 +448,8 @@ _POINTCLOUD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=990,
-  serialized_end=1099,
+  serialized_start=989,
+  serialized_end=1098,
 )
 
 
@@ -524,7 +524,7 @@ _POINTCLOUD2 = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='is_dense', full_name='sensor.PointCloud2.is_dense', index=9,
+      name='isDense', full_name='sensor.PointCloud2.isDense', index=9,
       number=10, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -542,8 +542,126 @@ _POINTCLOUD2 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1102,
-  serialized_end=1323,
+  serialized_start=1101,
+  serialized_end=1321,
+)
+
+
+_IMAGE = _descriptor.Descriptor(
+  name='Image',
+  full_name='sensor.Image',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='sensor.Image.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='height', full_name='sensor.Image.height', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='width', full_name='sensor.Image.width', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='encoding', full_name='sensor.Image.encoding', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='isBigEndian', full_name='sensor.Image.isBigEndian', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='step', full_name='sensor.Image.step', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data', full_name='sensor.Image.data', index=6,
+      number=7, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1324,
+  serialized_end=1458,
+)
+
+
+_COMPRESSEDIMAGE = _descriptor.Descriptor(
+  name='CompressedImage',
+  full_name='sensor.CompressedImage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='sensor.CompressedImage.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='format', full_name='sensor.CompressedImage.format', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='data', full_name='sensor.CompressedImage.data', index=2,
+      number=3, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1460,
+  serialized_end=1536,
 )
 
 _IMU.fields_by_name['header'].message_type = std__pb2._HEADER
@@ -563,6 +681,8 @@ _POINTCLOUD.fields_by_name['points'].message_type = geometry__pb2._POINT
 _POINTCLOUD.fields_by_name['channels'].message_type = _CHANNEL
 _POINTCLOUD2.fields_by_name['header'].message_type = std__pb2._HEADER
 _POINTCLOUD2.fields_by_name['fields'].message_type = _POINTFIELD
+_IMAGE.fields_by_name['header'].message_type = std__pb2._HEADER
+_COMPRESSEDIMAGE.fields_by_name['header'].message_type = std__pb2._HEADER
 DESCRIPTOR.message_types_by_name['Imu'] = _IMU
 DESCRIPTOR.message_types_by_name['NavSatStatus'] = _NAVSATSTATUS
 DESCRIPTOR.message_types_by_name['NavSatFix'] = _NAVSATFIX
@@ -570,6 +690,8 @@ DESCRIPTOR.message_types_by_name['Channel'] = _CHANNEL
 DESCRIPTOR.message_types_by_name['PointField'] = _POINTFIELD
 DESCRIPTOR.message_types_by_name['PointCloud'] = _POINTCLOUD
 DESCRIPTOR.message_types_by_name['PointCloud2'] = _POINTCLOUD2
+DESCRIPTOR.message_types_by_name['Image'] = _IMAGE
+DESCRIPTOR.message_types_by_name['CompressedImage'] = _COMPRESSEDIMAGE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Imu = _reflection.GeneratedProtocolMessageType('Imu', (_message.Message,), dict(
@@ -620,6 +742,20 @@ PointCloud2 = _reflection.GeneratedProtocolMessageType('PointCloud2', (_message.
   # @@protoc_insertion_point(class_scope:sensor.PointCloud2)
   ))
 _sym_db.RegisterMessage(PointCloud2)
+
+Image = _reflection.GeneratedProtocolMessageType('Image', (_message.Message,), dict(
+  DESCRIPTOR = _IMAGE,
+  __module__ = 'sensor_pb2'
+  # @@protoc_insertion_point(class_scope:sensor.Image)
+  ))
+_sym_db.RegisterMessage(Image)
+
+CompressedImage = _reflection.GeneratedProtocolMessageType('CompressedImage', (_message.Message,), dict(
+  DESCRIPTOR = _COMPRESSEDIMAGE,
+  __module__ = 'sensor_pb2'
+  # @@protoc_insertion_point(class_scope:sensor.CompressedImage)
+  ))
+_sym_db.RegisterMessage(CompressedImage)
 
 
 # @@protoc_insertion_point(module_scope)
