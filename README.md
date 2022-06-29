@@ -1,3 +1,5 @@
+[![Protobuf code generation](https://github.com/MARUSimulator/marus-proto/actions/workflows/generator.yml/badge.svg)](https://github.com/MARUSimulator/marus-proto/actions/workflows/generator.yml)
+
 # Introduction
 This repository contains the [Protocol Buffers](https://developers.google.com/protocol-buffers) 
 definitions used for communication with the LABUST marine simulator.
