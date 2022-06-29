@@ -26,62 +26,63 @@ namespace Sensorstreaming {
           string.Concat(
             "ChZzZW5zb3Jfc3RyZWFtaW5nLnByb3RvEg9zZW5zb3JzdHJlYW1pbmcaDmdl",
             "b21ldHJ5LnByb3RvGgxzZW5zb3IucHJvdG8aDG1hcmluZS5wcm90bxoJYXV2",
-            "LnByb3RvGglzdGQucHJvdG8iRQoVSW1hZ2VTdHJlYW1pbmdSZXF1ZXN0EhsK",
-            "BGRhdGEYASABKAsyDS5zZW5zb3IuSW1hZ2USDwoHYWRkcmVzcxgCIAEoCSJZ",
-            "Ch9Db21wcmVzc2VkSW1hZ2VTdHJlYW1pbmdSZXF1ZXN0EiUKBGRhdGEYASAB",
-            "KAsyFy5zZW5zb3IuQ29tcHJlc3NlZEltYWdlEg8KB2FkZHJlc3MYAiABKAki",
-            "TwoaUG9pbnRDbG91ZFN0cmVhbWluZ1JlcXVlc3QSIAoEZGF0YRgBIAEoCzIS",
-            "LnNlbnNvci5Qb2ludENsb3VkEg8KB2FkZHJlc3MYAiABKAkiUQobUG9pbnRD",
-            "bG91ZDJTdHJlYW1pbmdSZXF1ZXN0EiEKBGRhdGEYASABKAsyEy5zZW5zb3Iu",
-            "UG9pbnRDbG91ZDISDwoHYWRkcmVzcxgCIAEoCSLTAQoVUmFkYXJTdHJlYW1p",
-            "bmdSZXF1ZXN0EhYKDnJhbmdlSW5jcmVtZW50GAEgASgCEhIKCnJhbmdlU3Rh",
-            "cnQYAiABKAISEgoKbnVtU2FtcGxlcxgDIAEoDRIRCgludW1TcG9rZXMYBCAB",
-            "KA0SFAoMbWluSW50ZW5zaXR5GAUgASgNEhQKDG1heEludGVuc2l0eRgGIAEo",
-            "DRIVCg10aW1lSW5TZWNvbmRzGAcgAygBEg8KB2F6aW11dGgYCCADKAISEwoL",
-            "cmFkYXJTcG9rZXMYCSABKAwiWwoVRGVwdGhTdHJlYW1pbmdSZXF1ZXN0EjEK",
-            "BGRhdGEYASABKAsyIy5nZW9tZXRyeS5Qb3NlV2l0aENvdmFyaWFuY2VTdGFt",
-            "cGVkEg8KB2FkZHJlc3MYAiABKAkiWgoTRHZsU3RyZWFtaW5nUmVxdWVzdBIy",
-            "CgRkYXRhGAEgASgLMiQuZ2VvbWV0cnkuVHdpc3RXaXRoQ292YXJpYW5jZVN0",
-            "YW1wZWQSDwoHYWRkcmVzcxgCIAEoCSJIChRHbnNzU3RyZWFtaW5nUmVxdWVz",
-            "dBIfCgRkYXRhGAEgASgLMhEuc2Vuc29yLk5hdlNhdEZpeBIPCgdhZGRyZXNz",
-            "GAIgASgJIkEKE0ltdVN0cmVhbWluZ1JlcXVlc3QSGQoEZGF0YRgBIAEoCzIL",
-            "LnNlbnNvci5JbXUSDwoHYWRkcmVzcxgCIAEoCSJaChRQb3NlU3RyZWFtaW5n",
-            "UmVxdWVzdBIxCgRkYXRhGAEgASgLMiMuZ2VvbWV0cnkuUG9zZVdpdGhDb3Zh",
-            "cmlhbmNlU3RhbXBlZBIPCgdhZGRyZXNzGAIgASgJIkgKFVNvbmFyU3RyZWFt",
-            "aW5nUmVxdWVzdBINCgVyYW5nZRgBIAEoAhIPCgdiZWFyaW5nGAIgASgCEg8K",
-            "B2FkZHJlc3MYAyABKAkiXAoTQUlTU3RyZWFtaW5nUmVxdWVzdBI0ChFhaXNQ",
-            "b3NpdGlvblJlcG9ydBgBIAEoCzIZLm1hcmluZS5BSVNQb3NpdGlvblJlcG9y",
-            "dBIPCgdhZGRyZXNzGAIgASgJMvIICg9TZW5zb3JTdHJlYW1pbmcSTAoSU3Ry",
-            "ZWFtQ2FtZXJhU2Vuc29yEiYuc2Vuc29yc3RyZWFtaW5nLkltYWdlU3RyZWFt",
-            "aW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAESYAocU3RyZWFtQ2FtZXJhU2Vu",
-            "c29yQ29tcHJlc3NlZBIwLnNlbnNvcnN0cmVhbWluZy5Db21wcmVzc2VkSW1h",
-            "Z2VTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJQChFTdHJlYW1M",
-            "aWRhclNlbnNvchIrLnNlbnNvcnN0cmVhbWluZy5Qb2ludENsb3VkU3RyZWFt",
-            "aW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAESUAoRU3RyZWFtU29uYXJTZW5z",
-            "b3ISKy5zZW5zb3JzdHJlYW1pbmcuUG9pbnRDbG91ZFN0cmVhbWluZ1JlcXVl",
-            "c3QaCi5zdGQuRW1wdHkiACgBEk8KEFN0cmVhbVBvaW50Q2xvdWQSKy5zZW5z",
-            "b3JzdHJlYW1pbmcuUG9pbnRDbG91ZFN0cmVhbWluZ1JlcXVlc3QaCi5zdGQu",
-            "RW1wdHkiACgBElEKEVN0cmVhbVBvaW50Q2xvdWQyEiwuc2Vuc29yc3RyZWFt",
-            "aW5nLlBvaW50Q2xvdWQyU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIA",
-            "KAESSwoRU3RyZWFtUmFkYXJTZW5zb3ISJi5zZW5zb3JzdHJlYW1pbmcuUmFk",
-            "YXJTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJLChFTdHJlYW1E",
-            "ZXB0aFNlbnNvchImLnNlbnNvcnN0cmVhbWluZy5EZXB0aFN0cmVhbWluZ1Jl",
-            "cXVlc3QaCi5zdGQuRW1wdHkiACgBEkcKD1N0cmVhbUR2bFNlbnNvchIkLnNl",
-            "bnNvcnN0cmVhbWluZy5EdmxTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5",
-            "IgAoARJJChBTdHJlYW1HbnNzU2Vuc29yEiUuc2Vuc29yc3RyZWFtaW5nLkdu",
-            "c3NTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJHCg9TdHJlYW1J",
-            "bXVTZW5zb3ISJC5zZW5zb3JzdHJlYW1pbmcuSW11U3RyZWFtaW5nUmVxdWVz",
-            "dBoKLnN0ZC5FbXB0eSIAKAESSQoQU3RyZWFtUG9zZVNlbnNvchIlLnNlbnNv",
-            "cnN0cmVhbWluZy5Qb3NlU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIA",
-            "KAESRwoPU3RyZWFtQWlzU2Vuc29yEiQuc2Vuc29yc3RyZWFtaW5nLkFJU1N0",
-            "cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBElwKElJlcXVlc3RQb2lu",
-            "dENsb3VkMhIULnN0ZC5TdGFuZGFyZFJlcXVlc3QaLC5zZW5zb3JzdHJlYW1p",
-            "bmcuUG9pbnRDbG91ZDJTdHJlYW1pbmdSZXF1ZXN0IgAwAUI7CiBpby5ncnBj",
-            "LmV4YW1wbGVzLnNlbnNvcnN0cmVhbWluZ0IPU2Vuc29yU3RyZWFtaW5nUAGi",
-            "AgNITFdiBnByb3RvMw=="));
+            "LnByb3RvGglzdGQucHJvdG8ieQoWQ2FtZXJhU3RyZWFtaW5nUmVxdWVzdBIc",
+            "CgVpbWFnZRgBIAEoCzINLnNlbnNvci5JbWFnZRIwCg9jb21wcmVzc2VkSW1h",
+            "Z2UYAiABKAsyFy5zZW5zb3IuQ29tcHJlc3NlZEltYWdlEg8KB2FkZHJlc3MY",
+            "AyABKAkiRQoVSW1hZ2VTdHJlYW1pbmdSZXF1ZXN0EhsKBGRhdGEYASABKAsy",
+            "DS5zZW5zb3IuSW1hZ2USDwoHYWRkcmVzcxgCIAEoCSJZCh9Db21wcmVzc2Vk",
+            "SW1hZ2VTdHJlYW1pbmdSZXF1ZXN0EiUKBGRhdGEYASABKAsyFy5zZW5zb3Iu",
+            "Q29tcHJlc3NlZEltYWdlEg8KB2FkZHJlc3MYAiABKAkiTwoaUG9pbnRDbG91",
+            "ZFN0cmVhbWluZ1JlcXVlc3QSIAoEZGF0YRgBIAEoCzISLnNlbnNvci5Qb2lu",
+            "dENsb3VkEg8KB2FkZHJlc3MYAiABKAkiUQobUG9pbnRDbG91ZDJTdHJlYW1p",
+            "bmdSZXF1ZXN0EiEKBGRhdGEYASABKAsyEy5zZW5zb3IuUG9pbnRDbG91ZDIS",
+            "DwoHYWRkcmVzcxgCIAEoCSLTAQoVUmFkYXJTdHJlYW1pbmdSZXF1ZXN0EhYK",
+            "DnJhbmdlSW5jcmVtZW50GAEgASgCEhIKCnJhbmdlU3RhcnQYAiABKAISEgoK",
+            "bnVtU2FtcGxlcxgDIAEoDRIRCgludW1TcG9rZXMYBCABKA0SFAoMbWluSW50",
+            "ZW5zaXR5GAUgASgNEhQKDG1heEludGVuc2l0eRgGIAEoDRIVCg10aW1lSW5T",
+            "ZWNvbmRzGAcgAygBEg8KB2F6aW11dGgYCCADKAISEwoLcmFkYXJTcG9rZXMY",
+            "CSABKAwiWwoVRGVwdGhTdHJlYW1pbmdSZXF1ZXN0EjEKBGRhdGEYASABKAsy",
+            "Iy5nZW9tZXRyeS5Qb3NlV2l0aENvdmFyaWFuY2VTdGFtcGVkEg8KB2FkZHJl",
+            "c3MYAiABKAkiWgoTRHZsU3RyZWFtaW5nUmVxdWVzdBIyCgRkYXRhGAEgASgL",
+            "MiQuZ2VvbWV0cnkuVHdpc3RXaXRoQ292YXJpYW5jZVN0YW1wZWQSDwoHYWRk",
+            "cmVzcxgCIAEoCSJIChRHbnNzU3RyZWFtaW5nUmVxdWVzdBIfCgRkYXRhGAEg",
+            "ASgLMhEuc2Vuc29yLk5hdlNhdEZpeBIPCgdhZGRyZXNzGAIgASgJIkEKE0lt",
+            "dVN0cmVhbWluZ1JlcXVlc3QSGQoEZGF0YRgBIAEoCzILLnNlbnNvci5JbXUS",
+            "DwoHYWRkcmVzcxgCIAEoCSJaChRQb3NlU3RyZWFtaW5nUmVxdWVzdBIxCgRk",
+            "YXRhGAEgASgLMiMuZ2VvbWV0cnkuUG9zZVdpdGhDb3ZhcmlhbmNlU3RhbXBl",
+            "ZBIPCgdhZGRyZXNzGAIgASgJIkgKFVNvbmFyU3RyZWFtaW5nUmVxdWVzdBIN",
+            "CgVyYW5nZRgBIAEoAhIPCgdiZWFyaW5nGAIgASgCEg8KB2FkZHJlc3MYAyAB",
+            "KAkiXAoTQUlTU3RyZWFtaW5nUmVxdWVzdBI0ChFhaXNQb3NpdGlvblJlcG9y",
+            "dBgBIAEoCzIZLm1hcmluZS5BSVNQb3NpdGlvblJlcG9ydBIPCgdhZGRyZXNz",
+            "GAIgASgJMpEICg9TZW5zb3JTdHJlYW1pbmcSTQoSU3RyZWFtQ2FtZXJhU2Vu",
+            "c29yEicuc2Vuc29yc3RyZWFtaW5nLkNhbWVyYVN0cmVhbWluZ1JlcXVlc3Qa",
+            "Ci5zdGQuRW1wdHkiACgBElAKEVN0cmVhbUxpZGFyU2Vuc29yEisuc2Vuc29y",
+            "c3RyZWFtaW5nLlBvaW50Q2xvdWRTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVt",
+            "cHR5IgAoARJQChFTdHJlYW1Tb25hclNlbnNvchIrLnNlbnNvcnN0cmVhbWlu",
+            "Zy5Qb2ludENsb3VkU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAES",
+            "TwoQU3RyZWFtUG9pbnRDbG91ZBIrLnNlbnNvcnN0cmVhbWluZy5Qb2ludENs",
+            "b3VkU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAESUQoRU3RyZWFt",
+            "UG9pbnRDbG91ZDISLC5zZW5zb3JzdHJlYW1pbmcuUG9pbnRDbG91ZDJTdHJl",
+            "YW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJLChFTdHJlYW1SYWRhclNl",
+            "bnNvchImLnNlbnNvcnN0cmVhbWluZy5SYWRhclN0cmVhbWluZ1JlcXVlc3Qa",
+            "Ci5zdGQuRW1wdHkiACgBEksKEVN0cmVhbURlcHRoU2Vuc29yEiYuc2Vuc29y",
+            "c3RyZWFtaW5nLkRlcHRoU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIA",
+            "KAESRwoPU3RyZWFtRHZsU2Vuc29yEiQuc2Vuc29yc3RyZWFtaW5nLkR2bFN0",
+            "cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBEkkKEFN0cmVhbUduc3NT",
+            "ZW5zb3ISJS5zZW5zb3JzdHJlYW1pbmcuR25zc1N0cmVhbWluZ1JlcXVlc3Qa",
+            "Ci5zdGQuRW1wdHkiACgBEkcKD1N0cmVhbUltdVNlbnNvchIkLnNlbnNvcnN0",
+            "cmVhbWluZy5JbXVTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJJ",
+            "ChBTdHJlYW1Qb3NlU2Vuc29yEiUuc2Vuc29yc3RyZWFtaW5nLlBvc2VTdHJl",
+            "YW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJHCg9TdHJlYW1BaXNTZW5z",
+            "b3ISJC5zZW5zb3JzdHJlYW1pbmcuQUlTU3RyZWFtaW5nUmVxdWVzdBoKLnN0",
+            "ZC5FbXB0eSIAKAESXAoSUmVxdWVzdFBvaW50Q2xvdWQyEhQuc3RkLlN0YW5k",
+            "YXJkUmVxdWVzdBosLnNlbnNvcnN0cmVhbWluZy5Qb2ludENsb3VkMlN0cmVh",
+            "bWluZ1JlcXVlc3QiADABQjsKIGlvLmdycGMuZXhhbXBsZXMuc2Vuc29yc3Ry",
+            "ZWFtaW5nQg9TZW5zb3JTdHJlYW1pbmdQAaICA0hMV2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Geometry.GeometryReflection.Descriptor, global::Sensor.SensorReflection.Descriptor, global::Marine.MarineReflection.Descriptor, global::Auv.AuvReflection.Descriptor, global::Std.StdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.CameraStreamingRequest), global::Sensorstreaming.CameraStreamingRequest.Parser, new[]{ "Image", "CompressedImage", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.ImageStreamingRequest), global::Sensorstreaming.ImageStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.CompressedImageStreamingRequest), global::Sensorstreaming.CompressedImageStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.PointCloudStreamingRequest), global::Sensorstreaming.PointCloudStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
@@ -100,6 +101,203 @@ namespace Sensorstreaming {
 
   }
   #region Messages
+  public sealed partial class CameraStreamingRequest : pb::IMessage<CameraStreamingRequest> {
+    private static readonly pb::MessageParser<CameraStreamingRequest> _parser = new pb::MessageParser<CameraStreamingRequest>(() => new CameraStreamingRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CameraStreamingRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CameraStreamingRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CameraStreamingRequest(CameraStreamingRequest other) : this() {
+      image_ = other.image_ != null ? other.image_.Clone() : null;
+      compressedImage_ = other.compressedImage_ != null ? other.compressedImage_.Clone() : null;
+      address_ = other.address_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CameraStreamingRequest Clone() {
+      return new CameraStreamingRequest(this);
+    }
+
+    /// <summary>Field number for the "image" field.</summary>
+    public const int ImageFieldNumber = 1;
+    private global::Sensor.Image image_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Sensor.Image Image {
+      get { return image_; }
+      set {
+        image_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "compressedImage" field.</summary>
+    public const int CompressedImageFieldNumber = 2;
+    private global::Sensor.CompressedImage compressedImage_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Sensor.CompressedImage CompressedImage {
+      get { return compressedImage_; }
+      set {
+        compressedImage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 3;
+    private string address_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Address {
+      get { return address_; }
+      set {
+        address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CameraStreamingRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CameraStreamingRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Image, other.Image)) return false;
+      if (!object.Equals(CompressedImage, other.CompressedImage)) return false;
+      if (Address != other.Address) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (image_ != null) hash ^= Image.GetHashCode();
+      if (compressedImage_ != null) hash ^= CompressedImage.GetHashCode();
+      if (Address.Length != 0) hash ^= Address.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (image_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Image);
+      }
+      if (compressedImage_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CompressedImage);
+      }
+      if (Address.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Address);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (image_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Image);
+      }
+      if (compressedImage_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CompressedImage);
+      }
+      if (Address.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CameraStreamingRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.image_ != null) {
+        if (image_ == null) {
+          image_ = new global::Sensor.Image();
+        }
+        Image.MergeFrom(other.Image);
+      }
+      if (other.compressedImage_ != null) {
+        if (compressedImage_ == null) {
+          compressedImage_ = new global::Sensor.CompressedImage();
+        }
+        CompressedImage.MergeFrom(other.CompressedImage);
+      }
+      if (other.Address.Length != 0) {
+        Address = other.Address;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (image_ == null) {
+              image_ = new global::Sensor.Image();
+            }
+            input.ReadMessage(image_);
+            break;
+          }
+          case 18: {
+            if (compressedImage_ == null) {
+              compressedImage_ = new global::Sensor.CompressedImage();
+            }
+            input.ReadMessage(compressedImage_);
+            break;
+          }
+          case 26: {
+            Address = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class ImageStreamingRequest : pb::IMessage<ImageStreamingRequest> {
     private static readonly pb::MessageParser<ImageStreamingRequest> _parser = new pb::MessageParser<ImageStreamingRequest>(() => new ImageStreamingRequest());
     private pb::UnknownFieldSet _unknownFields;
@@ -108,7 +306,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -271,7 +469,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -434,7 +632,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -597,7 +795,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -760,7 +958,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1099,7 +1297,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1262,7 +1460,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1425,7 +1623,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1588,7 +1786,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1751,7 +1949,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1914,7 +2112,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2099,7 +2297,7 @@ namespace Sensorstreaming {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

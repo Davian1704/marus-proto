@@ -12,9 +12,8 @@ namespace Sensorstreaming {
   {
     static readonly string __ServiceName = "sensorstreaming.SensorStreaming";
 
-    static readonly grpc::Marshaller<global::Sensorstreaming.ImageStreamingRequest> __Marshaller_sensorstreaming_ImageStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.ImageStreamingRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Sensorstreaming.CameraStreamingRequest> __Marshaller_sensorstreaming_CameraStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.CameraStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Std.Empty> __Marshaller_std_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Std.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Sensorstreaming.CompressedImageStreamingRequest> __Marshaller_sensorstreaming_CompressedImageStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.CompressedImageStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.PointCloudStreamingRequest> __Marshaller_sensorstreaming_PointCloudStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.PointCloudStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.PointCloud2StreamingRequest> __Marshaller_sensorstreaming_PointCloud2StreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.PointCloud2StreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.RadarStreamingRequest> __Marshaller_sensorstreaming_RadarStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.RadarStreamingRequest.Parser.ParseFrom);
@@ -26,18 +25,11 @@ namespace Sensorstreaming {
     static readonly grpc::Marshaller<global::Sensorstreaming.AISStreamingRequest> __Marshaller_sensorstreaming_AISStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.AISStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Std.StandardRequest> __Marshaller_std_StandardRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Std.StandardRequest.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Sensorstreaming.ImageStreamingRequest, global::Std.Empty> __Method_StreamCameraSensor = new grpc::Method<global::Sensorstreaming.ImageStreamingRequest, global::Std.Empty>(
+    static readonly grpc::Method<global::Sensorstreaming.CameraStreamingRequest, global::Std.Empty> __Method_StreamCameraSensor = new grpc::Method<global::Sensorstreaming.CameraStreamingRequest, global::Std.Empty>(
         grpc::MethodType.ClientStreaming,
         __ServiceName,
         "StreamCameraSensor",
-        __Marshaller_sensorstreaming_ImageStreamingRequest,
-        __Marshaller_std_Empty);
-
-    static readonly grpc::Method<global::Sensorstreaming.CompressedImageStreamingRequest, global::Std.Empty> __Method_StreamCameraSensorCompressed = new grpc::Method<global::Sensorstreaming.CompressedImageStreamingRequest, global::Std.Empty>(
-        grpc::MethodType.ClientStreaming,
-        __ServiceName,
-        "StreamCameraSensorCompressed",
-        __Marshaller_sensorstreaming_CompressedImageStreamingRequest,
+        __Marshaller_sensorstreaming_CameraStreamingRequest,
         __Marshaller_std_Empty);
 
     static readonly grpc::Method<global::Sensorstreaming.PointCloudStreamingRequest, global::Std.Empty> __Method_StreamLidarSensor = new grpc::Method<global::Sensorstreaming.PointCloudStreamingRequest, global::Std.Empty>(
@@ -133,12 +125,7 @@ namespace Sensorstreaming {
     /// <summary>Base class for server-side implementations of SensorStreaming</summary>
     public abstract partial class SensorStreamingBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Std.Empty> StreamCameraSensor(grpc::IAsyncStreamReader<global::Sensorstreaming.ImageStreamingRequest> requestStream, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      public virtual global::System.Threading.Tasks.Task<global::Std.Empty> StreamCameraSensorCompressed(grpc::IAsyncStreamReader<global::Sensorstreaming.CompressedImageStreamingRequest> requestStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Std.Empty> StreamCameraSensor(grpc::IAsyncStreamReader<global::Sensorstreaming.CameraStreamingRequest> requestStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -228,21 +215,13 @@ namespace Sensorstreaming {
       {
       }
 
-      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.ImageStreamingRequest, global::Std.Empty> StreamCameraSensor(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.CameraStreamingRequest, global::Std.Empty> StreamCameraSensor(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamCameraSensor(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.ImageStreamingRequest, global::Std.Empty> StreamCameraSensor(grpc::CallOptions options)
+      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.CameraStreamingRequest, global::Std.Empty> StreamCameraSensor(grpc::CallOptions options)
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_StreamCameraSensor, null, options);
-      }
-      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.CompressedImageStreamingRequest, global::Std.Empty> StreamCameraSensorCompressed(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return StreamCameraSensorCompressed(new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.CompressedImageStreamingRequest, global::Std.Empty> StreamCameraSensorCompressed(grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncClientStreamingCall(__Method_StreamCameraSensorCompressed, null, options);
       }
       public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.PointCloudStreamingRequest, global::Std.Empty> StreamLidarSensor(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -353,7 +332,6 @@ namespace Sensorstreaming {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_StreamCameraSensor, serviceImpl.StreamCameraSensor)
-          .AddMethod(__Method_StreamCameraSensorCompressed, serviceImpl.StreamCameraSensorCompressed)
           .AddMethod(__Method_StreamLidarSensor, serviceImpl.StreamLidarSensor)
           .AddMethod(__Method_StreamSonarSensor, serviceImpl.StreamSonarSensor)
           .AddMethod(__Method_StreamPointCloud, serviceImpl.StreamPointCloud)
