@@ -13,8 +13,7 @@ option java_outer_classname = "SensorStreaming";
 option objc_class_prefix = "HLW";
 
 service SensorStreaming {
-    rpc StreamCameraSensor(stream ImageStreamingRequest) returns (std.Empty) {}
-    rpc StreamCameraSensorCompressed(stream CompressedImageStreamingRequest) returns (std.Empty) {}
+    rpc StreamCameraSensor(stream CameraStreamingRequest) returns (std.Empty) {}
     rpc StreamLidarSensor(stream PointCloudStreamingRequest) returns (std.Empty) {}
     rpc StreamSonarSensor(stream PointCloudStreamingRequest) returns (std.Empty) {}
     rpc StreamPointCloud(stream PointCloudStreamingRequest) returns (std.Empty) {}
@@ -27,6 +26,12 @@ service SensorStreaming {
     rpc StreamPoseSensor(stream PoseStreamingRequest) returns (std.Empty) {}
     rpc StreamAisSensor(stream AISStreamingRequest) returns (std.Empty) {}
     rpc RequestPointCloud2(std.StandardRequest) returns (stream PointCloud2StreamingRequest) {}
+}
+
+message CameraStreamingRequest {
+    sensor.Image image = 1;
+    sensor.CompressedImage compressedImage = 2;
+    string address = 3;
 }
 
 message ImageStreamingRequest {
