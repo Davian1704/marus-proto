@@ -16,6 +16,7 @@ service SensorStreaming {
     rpc StreamCameraSensor(stream CameraStreamingRequest) returns (std.Empty) {}
     rpc StreamLidarSensor(stream PointCloudStreamingRequest) returns (std.Empty) {}
     rpc StreamSonarSensor(stream PointCloudStreamingRequest) returns (std.Empty) {}
+    rpc StreamSonarImage(stream ImageStreamingRequest) returns (std.Empty) {}
     rpc StreamPointCloud(stream PointCloudStreamingRequest) returns (std.Empty) {}
     rpc StreamPointCloud2(stream PointCloud2StreamingRequest) returns (std.Empty) {}
     rpc StreamRadarSensor(stream RadarStreamingRequest) returns (std.Empty) {}
