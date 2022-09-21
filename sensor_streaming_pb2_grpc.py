@@ -30,6 +30,11 @@ class SensorStreamingStub(object):
         request_serializer=sensor__streaming__pb2.PointCloudStreamingRequest.SerializeToString,
         response_deserializer=std__pb2.Empty.FromString,
         )
+    self.StreamSonarImage = channel.stream_unary(
+        '/sensorstreaming.SensorStreaming/StreamSonarImage',
+        request_serializer=sensor__streaming__pb2.ImageStreamingRequest.SerializeToString,
+        response_deserializer=std__pb2.Empty.FromString,
+        )
     self.StreamPointCloud = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamPointCloud',
         request_serializer=sensor__streaming__pb2.PointCloudStreamingRequest.SerializeToString,
@@ -101,6 +106,13 @@ class SensorStreamingServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def StreamSonarSensor(self, request_iterator, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def StreamSonarImage(self, request_iterator, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -193,6 +205,11 @@ def add_SensorStreamingServicer_to_server(servicer, server):
       'StreamSonarSensor': grpc.stream_unary_rpc_method_handler(
           servicer.StreamSonarSensor,
           request_deserializer=sensor__streaming__pb2.PointCloudStreamingRequest.FromString,
+          response_serializer=std__pb2.Empty.SerializeToString,
+      ),
+      'StreamSonarImage': grpc.stream_unary_rpc_method_handler(
+          servicer.StreamSonarImage,
+          request_deserializer=sensor__streaming__pb2.ImageStreamingRequest.FromString,
           response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamPointCloud': grpc.stream_unary_rpc_method_handler(
