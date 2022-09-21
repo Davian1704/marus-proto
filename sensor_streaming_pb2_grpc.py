@@ -32,7 +32,7 @@ class SensorStreamingStub(object):
         )
     self.StreamSonarImage = channel.stream_unary(
         '/sensorstreaming.SensorStreaming/StreamSonarImage',
-        request_serializer=sensor__streaming__pb2.ImageStreamingRequest.SerializeToString,
+        request_serializer=sensor__streaming__pb2.CompressedImageStreamingRequest.SerializeToString,
         response_deserializer=std__pb2.Empty.FromString,
         )
     self.StreamPointCloud = channel.stream_unary(
@@ -209,7 +209,7 @@ def add_SensorStreamingServicer_to_server(servicer, server):
       ),
       'StreamSonarImage': grpc.stream_unary_rpc_method_handler(
           servicer.StreamSonarImage,
-          request_deserializer=sensor__streaming__pb2.ImageStreamingRequest.FromString,
+          request_deserializer=sensor__streaming__pb2.CompressedImageStreamingRequest.FromString,
           response_serializer=std__pb2.Empty.SerializeToString,
       ),
       'StreamPointCloud': grpc.stream_unary_rpc_method_handler(
