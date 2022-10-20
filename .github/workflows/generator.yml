@@ -16,11 +16,9 @@ jobs:
       - uses: actions/checkout@v2
     
       - name: Install protobuf compiler
-        run: sudo apt-get update &&  \
-            sudo apt-get install protobuf-compiler \
-            protobuf-compiler-grpc
-      - name: Print protoc version
-        run: protoc --version 
+        run: |
+            sudo apt-get update && sudo apt-get install protobuf-compiler protobuf-compiler-grpc
+            protoc --version 
       - name: Make directories for code
         run: mkdir ../python ../csharp ../grpc-dotnet
       - name: Correct GRPC plugin links
