@@ -1,0 +1,17 @@
+syntax = "proto3";
+package service;
+import "geometry.proto";
+
+service Bellhop {
+    rpc BellhopSim(BellhopMsg) returns (BellhopRes) {}
+    
+}
+
+message BellhopMsg {
+    geometry.Vector3 pinger_tx_loc = 1;
+    geometry.Vector3 pinger_rx_loc = 2;
+}
+
+message BellhopRes {
+    float percentage = 1;
+}
