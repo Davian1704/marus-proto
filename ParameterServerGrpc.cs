@@ -38,6 +38,7 @@ namespace Parameterserver {
     }
 
     /// <summary>Base class for server-side implementations of ParameterServer</summary>
+    [grpc::BindServiceMethod(typeof(ParameterServer), "BindService")]
     public abstract partial class ParameterServerBase
     {
       public virtual global::System.Threading.Tasks.Task<global::Parameterserver.ParamValue> GetParameter(global::Parameterserver.GetParamRequest request, grpc::ServerCallContext context)
@@ -57,7 +58,7 @@ namespace Parameterserver {
     {
       /// <summary>Creates a new client for ParameterServer</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ParameterServerClient(grpc::Channel channel) : base(channel)
+      public ParameterServerClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ParameterServer that uses a custom <c>CallInvoker</c>.</summary>
@@ -121,6 +122,16 @@ namespace Parameterserver {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetParameter, serviceImpl.GetParameter)
           .AddMethod(__Method_SetParameter, serviceImpl.SetParameter).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, ParameterServerBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_GetParameter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Parameterserver.GetParamRequest, global::Parameterserver.ParamValue>(serviceImpl.GetParameter));
+      serviceBinder.AddMethod(__Method_SetParameter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Parameterserver.SetParamRequest, global::Std.Empty>(serviceImpl.SetParameter));
     }
 
   }

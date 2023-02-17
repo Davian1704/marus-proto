@@ -61,16 +61,16 @@ namespace Sensor {
             "GAMgASgMYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Imu), global::Sensor.Imu.Parser, new[]{ "Header", "Orientation", "OrientationCovariance", "AngularVelocity", "AngularVelocityCovariance", "LinearAcceleration", "LinearAccelerationCovariance" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatStatus), global::Sensor.NavSatStatus.Parser, new[]{ "Status", "Service" }, null, new[]{ typeof(global::Sensor.NavSatStatus.Types.Status), typeof(global::Sensor.NavSatStatus.Types.Service) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatFix), global::Sensor.NavSatFix.Parser, new[]{ "Header", "Status", "Latitude", "Longitude", "Altitude", "PositionCovariance" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Channel), global::Sensor.Channel.Parser, new[]{ "Name", "Values" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointField), global::Sensor.PointField.Parser, new[]{ "Name", "Offset", "Datatype", "Count" }, null, new[]{ typeof(global::Sensor.PointField.Types.DataType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud), global::Sensor.PointCloud.Parser, new[]{ "Header", "Points", "Channels" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud2), global::Sensor.PointCloud2.Parser, new[]{ "Header", "TimeInSeconds", "Height", "Width", "Fields", "IsBigEndian", "PointStep", "RowStep", "Data", "IsDense" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Image), global::Sensor.Image.Parser, new[]{ "Header", "Height", "Width", "Encoding", "IsBigEndian", "Step", "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.CompressedImage), global::Sensor.CompressedImage.Parser, new[]{ "Header", "Format", "Data" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Imu), global::Sensor.Imu.Parser, new[]{ "Header", "Orientation", "OrientationCovariance", "AngularVelocity", "AngularVelocityCovariance", "LinearAcceleration", "LinearAccelerationCovariance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatStatus), global::Sensor.NavSatStatus.Parser, new[]{ "Status", "Service" }, null, new[]{ typeof(global::Sensor.NavSatStatus.Types.Status), typeof(global::Sensor.NavSatStatus.Types.Service) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.NavSatFix), global::Sensor.NavSatFix.Parser, new[]{ "Header", "Status", "Latitude", "Longitude", "Altitude", "PositionCovariance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Channel), global::Sensor.Channel.Parser, new[]{ "Name", "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointField), global::Sensor.PointField.Parser, new[]{ "Name", "Offset", "Datatype", "Count" }, null, new[]{ typeof(global::Sensor.PointField.Types.DataType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud), global::Sensor.PointCloud.Parser, new[]{ "Header", "Points", "Channels" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.PointCloud2), global::Sensor.PointCloud2.Parser, new[]{ "Header", "TimeInSeconds", "Height", "Width", "Fields", "IsBigEndian", "PointStep", "RowStep", "Data", "IsDense" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.Image), global::Sensor.Image.Parser, new[]{ "Header", "Height", "Width", "Encoding", "IsBigEndian", "Step", "Data" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensor.CompressedImage), global::Sensor.CompressedImage.Parser, new[]{ "Header", "Format", "Data" }, null, null, null, null)
           }));
     }
     #endregion
@@ -292,27 +292,27 @@ namespace Sensor {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
       if (other.orientation_ != null) {
         if (orientation_ == null) {
-          orientation_ = new global::Geometry.Quaternion();
+          Orientation = new global::Geometry.Quaternion();
         }
         Orientation.MergeFrom(other.Orientation);
       }
       orientationCovariance_.Add(other.orientationCovariance_);
       if (other.angularVelocity_ != null) {
         if (angularVelocity_ == null) {
-          angularVelocity_ = new global::Geometry.Vector3();
+          AngularVelocity = new global::Geometry.Vector3();
         }
         AngularVelocity.MergeFrom(other.AngularVelocity);
       }
       angularVelocityCovariance_.Add(other.angularVelocityCovariance_);
       if (other.linearAcceleration_ != null) {
         if (linearAcceleration_ == null) {
-          linearAcceleration_ = new global::Geometry.Vector3();
+          LinearAcceleration = new global::Geometry.Vector3();
         }
         LinearAcceleration.MergeFrom(other.LinearAcceleration);
       }
@@ -330,16 +330,16 @@ namespace Sensor {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
             if (orientation_ == null) {
-              orientation_ = new global::Geometry.Quaternion();
+              Orientation = new global::Geometry.Quaternion();
             }
-            input.ReadMessage(orientation_);
+            input.ReadMessage(Orientation);
             break;
           }
           case 26:
@@ -349,9 +349,9 @@ namespace Sensor {
           }
           case 34: {
             if (angularVelocity_ == null) {
-              angularVelocity_ = new global::Geometry.Vector3();
+              AngularVelocity = new global::Geometry.Vector3();
             }
-            input.ReadMessage(angularVelocity_);
+            input.ReadMessage(AngularVelocity);
             break;
           }
           case 42:
@@ -361,9 +361,9 @@ namespace Sensor {
           }
           case 50: {
             if (linearAcceleration_ == null) {
-              linearAcceleration_ = new global::Geometry.Vector3();
+              LinearAcceleration = new global::Geometry.Vector3();
             }
-            input.ReadMessage(linearAcceleration_);
+            input.ReadMessage(LinearAcceleration);
             break;
           }
           case 58:
@@ -414,7 +414,7 @@ namespace Sensor {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 1;
-    private global::Sensor.NavSatStatus.Types.Status status_ = 0;
+    private global::Sensor.NavSatStatus.Types.Status status_ = global::Sensor.NavSatStatus.Types.Status.Fix;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Sensor.NavSatStatus.Types.Status Status {
       get { return status_; }
@@ -425,7 +425,7 @@ namespace Sensor {
 
     /// <summary>Field number for the "service" field.</summary>
     public const int ServiceFieldNumber = 2;
-    private global::Sensor.NavSatStatus.Types.Service service_ = 0;
+    private global::Sensor.NavSatStatus.Types.Service service_ = global::Sensor.NavSatStatus.Types.Service.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Sensor.NavSatStatus.Types.Service Service {
       get { return service_; }
@@ -455,8 +455,8 @@ namespace Sensor {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Status != 0) hash ^= Status.GetHashCode();
-      if (Service != 0) hash ^= Service.GetHashCode();
+      if (Status != global::Sensor.NavSatStatus.Types.Status.Fix) hash ^= Status.GetHashCode();
+      if (Service != global::Sensor.NavSatStatus.Types.Service.None) hash ^= Service.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -470,11 +470,11 @@ namespace Sensor {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Status != 0) {
+      if (Status != global::Sensor.NavSatStatus.Types.Status.Fix) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Status);
       }
-      if (Service != 0) {
+      if (Service != global::Sensor.NavSatStatus.Types.Service.None) {
         output.WriteRawTag(16);
         output.WriteEnum((int) Service);
       }
@@ -486,10 +486,10 @@ namespace Sensor {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Status != 0) {
+      if (Status != global::Sensor.NavSatStatus.Types.Status.Fix) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      if (Service != 0) {
+      if (Service != global::Sensor.NavSatStatus.Types.Service.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Service);
       }
       if (_unknownFields != null) {
@@ -503,10 +503,10 @@ namespace Sensor {
       if (other == null) {
         return;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::Sensor.NavSatStatus.Types.Status.Fix) {
         Status = other.Status;
       }
-      if (other.Service != 0) {
+      if (other.Service != global::Sensor.NavSatStatus.Types.Service.None) {
         Service = other.Service;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -521,11 +521,11 @@ namespace Sensor {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            status_ = (global::Sensor.NavSatStatus.Types.Status) input.ReadEnum();
+            Status = (global::Sensor.NavSatStatus.Types.Status) input.ReadEnum();
             break;
           }
           case 16: {
-            service_ = (global::Sensor.NavSatStatus.Types.Service) input.ReadEnum();
+            Service = (global::Sensor.NavSatStatus.Types.Service) input.ReadEnum();
             break;
           }
         }
@@ -762,13 +762,13 @@ namespace Sensor {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
       if (other.status_ != null) {
         if (status_ == null) {
-          status_ = new global::Sensor.NavSatStatus();
+          Status = new global::Sensor.NavSatStatus();
         }
         Status.MergeFrom(other.Status);
       }
@@ -795,16 +795,16 @@ namespace Sensor {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
             if (status_ == null) {
-              status_ = new global::Sensor.NavSatStatus();
+              Status = new global::Sensor.NavSatStatus();
             }
-            input.ReadMessage(status_);
+            input.ReadMessage(Status);
             break;
           }
           case 25: {
@@ -1041,7 +1041,7 @@ namespace Sensor {
 
     /// <summary>Field number for the "datatype" field.</summary>
     public const int DatatypeFieldNumber = 3;
-    private global::Sensor.PointField.Types.DataType datatype_ = 0;
+    private global::Sensor.PointField.Types.DataType datatype_ = global::Sensor.PointField.Types.DataType.Int8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Sensor.PointField.Types.DataType Datatype {
       get { return datatype_; }
@@ -1086,7 +1086,7 @@ namespace Sensor {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Offset != 0) hash ^= Offset.GetHashCode();
-      if (Datatype != 0) hash ^= Datatype.GetHashCode();
+      if (Datatype != global::Sensor.PointField.Types.DataType.Int8) hash ^= Datatype.GetHashCode();
       if (Count != 0) hash ^= Count.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1109,7 +1109,7 @@ namespace Sensor {
         output.WriteRawTag(16);
         output.WriteUInt32(Offset);
       }
-      if (Datatype != 0) {
+      if (Datatype != global::Sensor.PointField.Types.DataType.Int8) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Datatype);
       }
@@ -1131,7 +1131,7 @@ namespace Sensor {
       if (Offset != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Offset);
       }
-      if (Datatype != 0) {
+      if (Datatype != global::Sensor.PointField.Types.DataType.Int8) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Datatype);
       }
       if (Count != 0) {
@@ -1154,7 +1154,7 @@ namespace Sensor {
       if (other.Offset != 0) {
         Offset = other.Offset;
       }
-      if (other.Datatype != 0) {
+      if (other.Datatype != global::Sensor.PointField.Types.DataType.Int8) {
         Datatype = other.Datatype;
       }
       if (other.Count != 0) {
@@ -1180,7 +1180,7 @@ namespace Sensor {
             break;
           }
           case 24: {
-            datatype_ = (global::Sensor.PointField.Types.DataType) input.ReadEnum();
+            Datatype = (global::Sensor.PointField.Types.DataType) input.ReadEnum();
             break;
           }
           case 32: {
@@ -1348,7 +1348,7 @@ namespace Sensor {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -1367,9 +1367,9 @@ namespace Sensor {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
@@ -1676,7 +1676,7 @@ namespace Sensor {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -1718,9 +1718,9 @@ namespace Sensor {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 17: {
@@ -1998,7 +1998,7 @@ namespace Sensor {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -2033,9 +2033,9 @@ namespace Sensor {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 16: {
@@ -2217,7 +2217,7 @@ namespace Sensor {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -2240,9 +2240,9 @@ namespace Sensor {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {

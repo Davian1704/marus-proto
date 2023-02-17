@@ -38,9 +38,9 @@ namespace Auv {
             "VmFyaWFuY2UYCiABKAsyES5nZW9tZXRyeS5WZWN0b3IzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geographic.GeographicReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Auv.NED), global::Auv.NED.Parser, new[]{ "North", "East", "Depth" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Auv.NavigationStatus), global::Auv.NavigationStatus.Parser, new[]{ "Header", "GlobalPosition", "Origin", "Position", "BodyVelocity", "SeafloorVelocity", "Orientation", "OrientationRate", "PositionVariance", "OrientationVariance" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Auv.NED), global::Auv.NED.Parser, new[]{ "North", "East", "Depth" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Auv.NavigationStatus), global::Auv.NavigationStatus.Parser, new[]{ "Header", "GlobalPosition", "Origin", "Position", "BodyVelocity", "SeafloorVelocity", "Orientation", "OrientationRate", "PositionVariance", "OrientationVariance" }, null, null, null, null)
           }));
     }
     #endregion
@@ -528,61 +528,61 @@ namespace Auv {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
       if (other.globalPosition_ != null) {
         if (globalPosition_ == null) {
-          globalPosition_ = new global::Geographic.GeoPoint();
+          GlobalPosition = new global::Geographic.GeoPoint();
         }
         GlobalPosition.MergeFrom(other.GlobalPosition);
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::Geographic.GeoPoint();
+          Origin = new global::Geographic.GeoPoint();
         }
         Origin.MergeFrom(other.Origin);
       }
       if (other.position_ != null) {
         if (position_ == null) {
-          position_ = new global::Auv.NED();
+          Position = new global::Auv.NED();
         }
         Position.MergeFrom(other.Position);
       }
       if (other.bodyVelocity_ != null) {
         if (bodyVelocity_ == null) {
-          bodyVelocity_ = new global::Geometry.Vector3();
+          BodyVelocity = new global::Geometry.Vector3();
         }
         BodyVelocity.MergeFrom(other.BodyVelocity);
       }
       if (other.seafloorVelocity_ != null) {
         if (seafloorVelocity_ == null) {
-          seafloorVelocity_ = new global::Geometry.Vector3();
+          SeafloorVelocity = new global::Geometry.Vector3();
         }
         SeafloorVelocity.MergeFrom(other.SeafloorVelocity);
       }
       if (other.orientation_ != null) {
         if (orientation_ == null) {
-          orientation_ = new global::Geometry.Vector3();
+          Orientation = new global::Geometry.Vector3();
         }
         Orientation.MergeFrom(other.Orientation);
       }
       if (other.orientationRate_ != null) {
         if (orientationRate_ == null) {
-          orientationRate_ = new global::Geometry.Vector3();
+          OrientationRate = new global::Geometry.Vector3();
         }
         OrientationRate.MergeFrom(other.OrientationRate);
       }
       if (other.positionVariance_ != null) {
         if (positionVariance_ == null) {
-          positionVariance_ = new global::Auv.NED();
+          PositionVariance = new global::Auv.NED();
         }
         PositionVariance.MergeFrom(other.PositionVariance);
       }
       if (other.orientationVariance_ != null) {
         if (orientationVariance_ == null) {
-          orientationVariance_ = new global::Geometry.Vector3();
+          OrientationVariance = new global::Geometry.Vector3();
         }
         OrientationVariance.MergeFrom(other.OrientationVariance);
       }
@@ -599,72 +599,72 @@ namespace Auv {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
             if (globalPosition_ == null) {
-              globalPosition_ = new global::Geographic.GeoPoint();
+              GlobalPosition = new global::Geographic.GeoPoint();
             }
-            input.ReadMessage(globalPosition_);
+            input.ReadMessage(GlobalPosition);
             break;
           }
           case 26: {
             if (origin_ == null) {
-              origin_ = new global::Geographic.GeoPoint();
+              Origin = new global::Geographic.GeoPoint();
             }
-            input.ReadMessage(origin_);
+            input.ReadMessage(Origin);
             break;
           }
           case 34: {
             if (position_ == null) {
-              position_ = new global::Auv.NED();
+              Position = new global::Auv.NED();
             }
-            input.ReadMessage(position_);
+            input.ReadMessage(Position);
             break;
           }
           case 42: {
             if (bodyVelocity_ == null) {
-              bodyVelocity_ = new global::Geometry.Vector3();
+              BodyVelocity = new global::Geometry.Vector3();
             }
-            input.ReadMessage(bodyVelocity_);
+            input.ReadMessage(BodyVelocity);
             break;
           }
           case 50: {
             if (seafloorVelocity_ == null) {
-              seafloorVelocity_ = new global::Geometry.Vector3();
+              SeafloorVelocity = new global::Geometry.Vector3();
             }
-            input.ReadMessage(seafloorVelocity_);
+            input.ReadMessage(SeafloorVelocity);
             break;
           }
           case 58: {
             if (orientation_ == null) {
-              orientation_ = new global::Geometry.Vector3();
+              Orientation = new global::Geometry.Vector3();
             }
-            input.ReadMessage(orientation_);
+            input.ReadMessage(Orientation);
             break;
           }
           case 66: {
             if (orientationRate_ == null) {
-              orientationRate_ = new global::Geometry.Vector3();
+              OrientationRate = new global::Geometry.Vector3();
             }
-            input.ReadMessage(orientationRate_);
+            input.ReadMessage(OrientationRate);
             break;
           }
           case 74: {
             if (positionVariance_ == null) {
-              positionVariance_ = new global::Auv.NED();
+              PositionVariance = new global::Auv.NED();
             }
-            input.ReadMessage(positionVariance_);
+            input.ReadMessage(PositionVariance);
             break;
           }
           case 82: {
             if (orientationVariance_ == null) {
-              orientationVariance_ = new global::Geometry.Vector3();
+              OrientationVariance = new global::Geometry.Vector3();
             }
-            input.ReadMessage(orientationVariance_);
+            input.ReadMessage(OrientationVariance);
             break;
           }
         }

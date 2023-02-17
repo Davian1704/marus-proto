@@ -45,6 +45,7 @@ namespace Rfcommunication {
     }
 
     /// <summary>Base class for server-side implementations of LoraTransmission</summary>
+    [grpc::BindServiceMethod(typeof(LoraTransmission), "BindService")]
     public abstract partial class LoraTransmissionBase
     {
       public virtual global::System.Threading.Tasks.Task<global::Std.Empty> StreamRangeingMsgs(grpc::IAsyncStreamReader<global::Rfcommunication.RangeingMsg> requestStream, grpc::ServerCallContext context)
@@ -69,7 +70,7 @@ namespace Rfcommunication {
     {
       /// <summary>Creates a new client for LoraTransmission</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public LoraTransmissionClient(grpc::Channel channel) : base(channel)
+      public LoraTransmissionClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for LoraTransmission that uses a custom <c>CallInvoker</c>.</summary>
@@ -134,6 +135,17 @@ namespace Rfcommunication {
           .AddMethod(__Method_StreamRangeingMsgs, serviceImpl.StreamRangeingMsgs)
           .AddMethod(__Method_ReceiveLoraMessages, serviceImpl.ReceiveLoraMessages)
           .AddMethod(__Method_SendLoraMessage, serviceImpl.SendLoraMessage).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, LoraTransmissionBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_StreamRangeingMsgs, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Rfcommunication.RangeingMsg, global::Std.Empty>(serviceImpl.StreamRangeingMsgs));
+      serviceBinder.AddMethod(__Method_ReceiveLoraMessages, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Rfcommunication.ReceiveStreamRequest, global::Rfcommunication.LoraMsg>(serviceImpl.ReceiveLoraMessages));
+      serviceBinder.AddMethod(__Method_SendLoraMessage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Rfcommunication.LoraMsg, global::Std.Empty>(serviceImpl.SendLoraMessage));
     }
 
   }

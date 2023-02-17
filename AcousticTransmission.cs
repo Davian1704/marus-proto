@@ -39,10 +39,10 @@ namespace Acoustictransmission {
             "ZC5FbXB0eSIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Labust.LabustReflection.Descriptor, global::Std.StdReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.CommandRequest), global::Acoustictransmission.CommandRequest.Parser, new[]{ "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.AcousticResponse), global::Acoustictransmission.AcousticResponse.Parser, new[]{ "Address", "Success", "Payload", "Range" }, new[]{ "Msg" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.AcousticRequest), global::Acoustictransmission.AcousticRequest.Parser, new[]{ "Success", "Request" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.CommandRequest), global::Acoustictransmission.CommandRequest.Parser, new[]{ "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.AcousticResponse), global::Acoustictransmission.AcousticResponse.Parser, new[]{ "Address", "Success", "Payload", "Range" }, new[]{ "Msg" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Acoustictransmission.AcousticRequest), global::Acoustictransmission.AcousticRequest.Parser, new[]{ "Success", "Request" }, null, null, null, null)
           }));
     }
     #endregion
@@ -569,7 +569,7 @@ namespace Acoustictransmission {
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Labust.NanomodemRequest();
+          Request = new global::Labust.NanomodemRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -590,9 +590,9 @@ namespace Acoustictransmission {
           }
           case 18: {
             if (request_ == null) {
-              request_ = new global::Labust.NanomodemRequest();
+              Request = new global::Labust.NanomodemRequest();
             }
-            input.ReadMessage(request_);
+            input.ReadMessage(Request);
             break;
           }
         }

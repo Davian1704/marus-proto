@@ -44,17 +44,17 @@ namespace Geometry {
             "dFdpdGhDb3ZhcmlhbmNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Vector3), global::Geometry.Vector3.Parser, new[]{ "X", "Y", "Z" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Point), global::Geometry.Point.Parser, new[]{ "X", "Y", "Z" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Quaternion), global::Geometry.Quaternion.Parser, new[]{ "X", "Y", "Z", "W" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Twist), global::Geometry.Twist.Parser, new[]{ "Linear", "Angular" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Pose), global::Geometry.Pose.Parser, new[]{ "Position", "Orientation" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Wrench), global::Geometry.Wrench.Parser, new[]{ "Force", "Torque" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.PoseWithCovariance), global::Geometry.PoseWithCovariance.Parser, new[]{ "Pose", "Covariance" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.PoseWithCovarianceStamped), global::Geometry.PoseWithCovarianceStamped.Parser, new[]{ "Header", "Pose" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.TwistWithCovariance), global::Geometry.TwistWithCovariance.Parser, new[]{ "Twist", "Covariance" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.TwistWithCovarianceStamped), global::Geometry.TwistWithCovarianceStamped.Parser, new[]{ "Header", "Twist" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Vector3), global::Geometry.Vector3.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Point), global::Geometry.Point.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Quaternion), global::Geometry.Quaternion.Parser, new[]{ "X", "Y", "Z", "W" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Twist), global::Geometry.Twist.Parser, new[]{ "Linear", "Angular" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Pose), global::Geometry.Pose.Parser, new[]{ "Position", "Orientation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.Wrench), global::Geometry.Wrench.Parser, new[]{ "Force", "Torque" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.PoseWithCovariance), global::Geometry.PoseWithCovariance.Parser, new[]{ "Pose", "Covariance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.PoseWithCovarianceStamped), global::Geometry.PoseWithCovarianceStamped.Parser, new[]{ "Header", "Pose" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.TwistWithCovariance), global::Geometry.TwistWithCovariance.Parser, new[]{ "Twist", "Covariance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Geometry.TwistWithCovarianceStamped), global::Geometry.TwistWithCovarianceStamped.Parser, new[]{ "Header", "Twist" }, null, null, null, null)
           }));
     }
     #endregion
@@ -772,13 +772,13 @@ namespace Geometry {
       }
       if (other.linear_ != null) {
         if (linear_ == null) {
-          linear_ = new global::Geometry.Vector3();
+          Linear = new global::Geometry.Vector3();
         }
         Linear.MergeFrom(other.Linear);
       }
       if (other.angular_ != null) {
         if (angular_ == null) {
-          angular_ = new global::Geometry.Vector3();
+          Angular = new global::Geometry.Vector3();
         }
         Angular.MergeFrom(other.Angular);
       }
@@ -795,16 +795,16 @@ namespace Geometry {
             break;
           case 10: {
             if (linear_ == null) {
-              linear_ = new global::Geometry.Vector3();
+              Linear = new global::Geometry.Vector3();
             }
-            input.ReadMessage(linear_);
+            input.ReadMessage(Linear);
             break;
           }
           case 18: {
             if (angular_ == null) {
-              angular_ = new global::Geometry.Vector3();
+              Angular = new global::Geometry.Vector3();
             }
-            input.ReadMessage(angular_);
+            input.ReadMessage(Angular);
             break;
           }
         }
@@ -941,13 +941,13 @@ namespace Geometry {
       }
       if (other.position_ != null) {
         if (position_ == null) {
-          position_ = new global::Geometry.Point();
+          Position = new global::Geometry.Point();
         }
         Position.MergeFrom(other.Position);
       }
       if (other.orientation_ != null) {
         if (orientation_ == null) {
-          orientation_ = new global::Geometry.Quaternion();
+          Orientation = new global::Geometry.Quaternion();
         }
         Orientation.MergeFrom(other.Orientation);
       }
@@ -964,16 +964,16 @@ namespace Geometry {
             break;
           case 10: {
             if (position_ == null) {
-              position_ = new global::Geometry.Point();
+              Position = new global::Geometry.Point();
             }
-            input.ReadMessage(position_);
+            input.ReadMessage(Position);
             break;
           }
           case 18: {
             if (orientation_ == null) {
-              orientation_ = new global::Geometry.Quaternion();
+              Orientation = new global::Geometry.Quaternion();
             }
-            input.ReadMessage(orientation_);
+            input.ReadMessage(Orientation);
             break;
           }
         }
@@ -1110,13 +1110,13 @@ namespace Geometry {
       }
       if (other.force_ != null) {
         if (force_ == null) {
-          force_ = new global::Geometry.Vector3();
+          Force = new global::Geometry.Vector3();
         }
         Force.MergeFrom(other.Force);
       }
       if (other.torque_ != null) {
         if (torque_ == null) {
-          torque_ = new global::Geometry.Vector3();
+          Torque = new global::Geometry.Vector3();
         }
         Torque.MergeFrom(other.Torque);
       }
@@ -1133,16 +1133,16 @@ namespace Geometry {
             break;
           case 10: {
             if (force_ == null) {
-              force_ = new global::Geometry.Vector3();
+              Force = new global::Geometry.Vector3();
             }
-            input.ReadMessage(force_);
+            input.ReadMessage(Force);
             break;
           }
           case 18: {
             if (torque_ == null) {
-              torque_ = new global::Geometry.Vector3();
+              Torque = new global::Geometry.Vector3();
             }
-            input.ReadMessage(torque_);
+            input.ReadMessage(Torque);
             break;
           }
         }
@@ -1273,7 +1273,7 @@ namespace Geometry {
       }
       if (other.pose_ != null) {
         if (pose_ == null) {
-          pose_ = new global::Geometry.Pose();
+          Pose = new global::Geometry.Pose();
         }
         Pose.MergeFrom(other.Pose);
       }
@@ -1291,9 +1291,9 @@ namespace Geometry {
             break;
           case 10: {
             if (pose_ == null) {
-              pose_ = new global::Geometry.Pose();
+              Pose = new global::Geometry.Pose();
             }
-            input.ReadMessage(pose_);
+            input.ReadMessage(Pose);
             break;
           }
           case 18:
@@ -1435,13 +1435,13 @@ namespace Geometry {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
       if (other.pose_ != null) {
         if (pose_ == null) {
-          pose_ = new global::Geometry.PoseWithCovariance();
+          Pose = new global::Geometry.PoseWithCovariance();
         }
         Pose.MergeFrom(other.Pose);
       }
@@ -1458,16 +1458,16 @@ namespace Geometry {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
             if (pose_ == null) {
-              pose_ = new global::Geometry.PoseWithCovariance();
+              Pose = new global::Geometry.PoseWithCovariance();
             }
-            input.ReadMessage(pose_);
+            input.ReadMessage(Pose);
             break;
           }
         }
@@ -1598,7 +1598,7 @@ namespace Geometry {
       }
       if (other.twist_ != null) {
         if (twist_ == null) {
-          twist_ = new global::Geometry.Twist();
+          Twist = new global::Geometry.Twist();
         }
         Twist.MergeFrom(other.Twist);
       }
@@ -1616,9 +1616,9 @@ namespace Geometry {
             break;
           case 10: {
             if (twist_ == null) {
-              twist_ = new global::Geometry.Twist();
+              Twist = new global::Geometry.Twist();
             }
-            input.ReadMessage(twist_);
+            input.ReadMessage(Twist);
             break;
           }
           case 18:
@@ -1760,13 +1760,13 @@ namespace Geometry {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
       if (other.twist_ != null) {
         if (twist_ == null) {
-          twist_ = new global::Geometry.TwistWithCovariance();
+          Twist = new global::Geometry.TwistWithCovariance();
         }
         Twist.MergeFrom(other.Twist);
       }
@@ -1783,16 +1783,16 @@ namespace Geometry {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
             if (twist_ == null) {
-              twist_ = new global::Geometry.TwistWithCovariance();
+              Twist = new global::Geometry.TwistWithCovariance();
             }
-            input.ReadMessage(twist_);
+            input.ReadMessage(Twist);
             break;
           }
         }

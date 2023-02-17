@@ -51,12 +51,12 @@ namespace Labust {
             "YW5nZU0YAyABKAESCgoCaWQYBCABKAViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.FSPathInfo), global::Labust.FSPathInfo.Parser, new[]{ "Header", "DeltaR", "K", "XiR", "DxiR", "Pi", "PiTilda", "DrP", "Position", "Orientation", "Curvature", "Torsion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.PointerPrimitiveService), global::Labust.PointerPrimitiveService.Parser, new[]{ "Radius", "VerticalOffset", "GuidanceTarget", "GuidanceEnable", "WrappingEnable", "FovGuidance", "StreamlineOrientation", "GuidanceTopic", "RadiusTopic" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.NanomodemRequest), global::Labust.NanomodemRequest.Parser, new[]{ "Header", "ReqType", "Scheduled", "Msg", "Id" }, null, new[]{ typeof(global::Labust.NanomodemRequest.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.NanomodemPayload), global::Labust.NanomodemPayload.Parser, new[]{ "Header", "Msg", "SenderId", "MsgType" }, null, new[]{ typeof(global::Labust.NanomodemPayload.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.NanomodemRange), global::Labust.NanomodemRange.Parser, new[]{ "Header", "Range", "RangeM", "Id" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.FSPathInfo), global::Labust.FSPathInfo.Parser, new[]{ "Header", "DeltaR", "K", "XiR", "DxiR", "Pi", "PiTilda", "DrP", "Position", "Orientation", "Curvature", "Torsion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.PointerPrimitiveService), global::Labust.PointerPrimitiveService.Parser, new[]{ "Radius", "VerticalOffset", "GuidanceTarget", "GuidanceEnable", "WrappingEnable", "FovGuidance", "StreamlineOrientation", "GuidanceTopic", "RadiusTopic" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.NanomodemRequest), global::Labust.NanomodemRequest.Parser, new[]{ "Header", "ReqType", "Scheduled", "Msg", "Id" }, null, new[]{ typeof(global::Labust.NanomodemRequest.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.NanomodemPayload), global::Labust.NanomodemPayload.Parser, new[]{ "Header", "Msg", "SenderId", "MsgType" }, null, new[]{ typeof(global::Labust.NanomodemPayload.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Labust.NanomodemRange), global::Labust.NanomodemRange.Parser, new[]{ "Header", "Range", "RangeM", "Id" }, null, null, null, null)
           }));
     }
     #endregion
@@ -401,7 +401,7 @@ namespace Labust {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -425,19 +425,19 @@ namespace Labust {
       }
       if (other.drP_ != null) {
         if (drP_ == null) {
-          drP_ = new global::Geometry.Vector3();
+          DrP = new global::Geometry.Vector3();
         }
         DrP.MergeFrom(other.DrP);
       }
       if (other.position_ != null) {
         if (position_ == null) {
-          position_ = new global::Geometry.Vector3();
+          Position = new global::Geometry.Vector3();
         }
         Position.MergeFrom(other.Position);
       }
       if (other.orientation_ != null) {
         if (orientation_ == null) {
-          orientation_ = new global::Geometry.Vector3();
+          Orientation = new global::Geometry.Vector3();
         }
         Orientation.MergeFrom(other.Orientation);
       }
@@ -460,9 +460,9 @@ namespace Labust {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 17: {
@@ -491,23 +491,23 @@ namespace Labust {
           }
           case 66: {
             if (drP_ == null) {
-              drP_ = new global::Geometry.Vector3();
+              DrP = new global::Geometry.Vector3();
             }
-            input.ReadMessage(drP_);
+            input.ReadMessage(DrP);
             break;
           }
           case 74: {
             if (position_ == null) {
-              position_ = new global::Geometry.Vector3();
+              Position = new global::Geometry.Vector3();
             }
-            input.ReadMessage(position_);
+            input.ReadMessage(Position);
             break;
           }
           case 82: {
             if (orientation_ == null) {
-              orientation_ = new global::Geometry.Vector3();
+              Orientation = new global::Geometry.Vector3();
             }
-            input.ReadMessage(orientation_);
+            input.ReadMessage(Orientation);
             break;
           }
           case 89: {
@@ -805,7 +805,7 @@ namespace Labust {
       }
       if (other.guidanceTarget_ != null) {
         if (guidanceTarget_ == null) {
-          guidanceTarget_ = new global::Geometry.Vector3();
+          GuidanceTarget = new global::Geometry.Vector3();
         }
         GuidanceTarget.MergeFrom(other.GuidanceTarget);
       }
@@ -848,9 +848,9 @@ namespace Labust {
           }
           case 26: {
             if (guidanceTarget_ == null) {
-              guidanceTarget_ = new global::Geometry.Vector3();
+              GuidanceTarget = new global::Geometry.Vector3();
             }
-            input.ReadMessage(guidanceTarget_);
+            input.ReadMessage(GuidanceTarget);
             break;
           }
           case 32: {
@@ -934,7 +934,7 @@ namespace Labust {
 
     /// <summary>Field number for the "reqType" field.</summary>
     public const int ReqTypeFieldNumber = 2;
-    private global::Labust.NanomodemRequest.Types.Type reqType_ = 0;
+    private global::Labust.NanomodemRequest.Types.Type reqType_ = global::Labust.NanomodemRequest.Types.Type.Brdcst;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Labust.NanomodemRequest.Types.Type ReqType {
       get { return reqType_; }
@@ -1001,7 +1001,7 @@ namespace Labust {
     public override int GetHashCode() {
       int hash = 1;
       if (header_ != null) hash ^= Header.GetHashCode();
-      if (ReqType != 0) hash ^= ReqType.GetHashCode();
+      if (ReqType != global::Labust.NanomodemRequest.Types.Type.Brdcst) hash ^= ReqType.GetHashCode();
       if (Scheduled != false) hash ^= Scheduled.GetHashCode();
       if (Msg.Length != 0) hash ^= Msg.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
@@ -1022,7 +1022,7 @@ namespace Labust {
         output.WriteRawTag(10);
         output.WriteMessage(Header);
       }
-      if (ReqType != 0) {
+      if (ReqType != global::Labust.NanomodemRequest.Types.Type.Brdcst) {
         output.WriteRawTag(16);
         output.WriteEnum((int) ReqType);
       }
@@ -1049,7 +1049,7 @@ namespace Labust {
       if (header_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
       }
-      if (ReqType != 0) {
+      if (ReqType != global::Labust.NanomodemRequest.Types.Type.Brdcst) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReqType);
       }
       if (Scheduled != false) {
@@ -1074,11 +1074,11 @@ namespace Labust {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
-      if (other.ReqType != 0) {
+      if (other.ReqType != global::Labust.NanomodemRequest.Types.Type.Brdcst) {
         ReqType = other.ReqType;
       }
       if (other.Scheduled != false) {
@@ -1103,13 +1103,13 @@ namespace Labust {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 16: {
-            reqType_ = (global::Labust.NanomodemRequest.Types.Type) input.ReadEnum();
+            ReqType = (global::Labust.NanomodemRequest.Types.Type) input.ReadEnum();
             break;
           }
           case 24: {
@@ -1222,7 +1222,7 @@ namespace Labust {
 
     /// <summary>Field number for the "msgType" field.</summary>
     public const int MsgTypeFieldNumber = 4;
-    private global::Labust.NanomodemPayload.Types.Type msgType_ = 0;
+    private global::Labust.NanomodemPayload.Types.Type msgType_ = global::Labust.NanomodemPayload.Types.Type.Brdcst;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Labust.NanomodemPayload.Types.Type MsgType {
       get { return msgType_; }
@@ -1257,7 +1257,7 @@ namespace Labust {
       if (header_ != null) hash ^= Header.GetHashCode();
       if (Msg.Length != 0) hash ^= Msg.GetHashCode();
       if (SenderId != 0) hash ^= SenderId.GetHashCode();
-      if (MsgType != 0) hash ^= MsgType.GetHashCode();
+      if (MsgType != global::Labust.NanomodemPayload.Types.Type.Brdcst) hash ^= MsgType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1283,7 +1283,7 @@ namespace Labust {
         output.WriteRawTag(24);
         output.WriteInt32(SenderId);
       }
-      if (MsgType != 0) {
+      if (MsgType != global::Labust.NanomodemPayload.Types.Type.Brdcst) {
         output.WriteRawTag(32);
         output.WriteEnum((int) MsgType);
       }
@@ -1304,7 +1304,7 @@ namespace Labust {
       if (SenderId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SenderId);
       }
-      if (MsgType != 0) {
+      if (MsgType != global::Labust.NanomodemPayload.Types.Type.Brdcst) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MsgType);
       }
       if (_unknownFields != null) {
@@ -1320,7 +1320,7 @@ namespace Labust {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -1330,7 +1330,7 @@ namespace Labust {
       if (other.SenderId != 0) {
         SenderId = other.SenderId;
       }
-      if (other.MsgType != 0) {
+      if (other.MsgType != global::Labust.NanomodemPayload.Types.Type.Brdcst) {
         MsgType = other.MsgType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1346,9 +1346,9 @@ namespace Labust {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
@@ -1360,7 +1360,7 @@ namespace Labust {
             break;
           }
           case 32: {
-            msgType_ = (global::Labust.NanomodemPayload.Types.Type) input.ReadEnum();
+            MsgType = (global::Labust.NanomodemPayload.Types.Type) input.ReadEnum();
             break;
           }
         }
@@ -1551,7 +1551,7 @@ namespace Labust {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -1577,9 +1577,9 @@ namespace Labust {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 16: {

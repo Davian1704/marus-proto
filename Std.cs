@@ -31,12 +31,12 @@ namespace Std {
             "ASgCEgkKAWEYBCABKAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Std.Empty), global::Std.Empty.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Std.StandardRequest), global::Std.StandardRequest.Parser, new[]{ "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Std.Header), global::Std.Header.Parser, new[]{ "Timestamp", "FrameId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Std.Float32Array), global::Std.Float32Array.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Std.ColorRGBA), global::Std.ColorRGBA.Parser, new[]{ "R", "G", "B", "A" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Std.Empty), global::Std.Empty.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Std.StandardRequest), global::Std.StandardRequest.Parser, new[]{ "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Std.Header), global::Std.Header.Parser, new[]{ "Timestamp", "FrameId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Std.Float32Array), global::Std.Float32Array.Parser, new[]{ "Data" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Std.ColorRGBA), global::Std.ColorRGBA.Parser, new[]{ "R", "G", "B", "A" }, null, null, null, null)
           }));
     }
     #endregion

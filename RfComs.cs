@@ -42,13 +42,13 @@ namespace Rfcommunication {
             "TG9yYU1zZxoKLnN0ZC5FbXB0eSIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.ReceiveStreamRequest), global::Rfcommunication.ReceiveStreamRequest.Parser, new[]{ "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.RangeingMsg), global::Rfcommunication.RangeingMsg.Parser, new[]{ "Header", "Address", "MasterId", "Ranges" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.LoraMsg), global::Rfcommunication.LoraMsg.Parser, new[]{ "Header", "Address", "SourceId", "TargetId", "Msg" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvGotoCommand), global::Rfcommunication.AuvGotoCommand.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvPossibleTargetDirection), global::Rfcommunication.AuvPossibleTargetDirection.Parser, new[]{ "Heading" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.Range), global::Rfcommunication.Range.Parser, new[]{ "SourceId", "TargetId", "Range_" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.ReceiveStreamRequest), global::Rfcommunication.ReceiveStreamRequest.Parser, new[]{ "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.RangeingMsg), global::Rfcommunication.RangeingMsg.Parser, new[]{ "Header", "Address", "MasterId", "Ranges" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.LoraMsg), global::Rfcommunication.LoraMsg.Parser, new[]{ "Header", "Address", "SourceId", "TargetId", "Msg" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvGotoCommand), global::Rfcommunication.AuvGotoCommand.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.AuvPossibleTargetDirection), global::Rfcommunication.AuvPossibleTargetDirection.Parser, new[]{ "Heading" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Rfcommunication.Range), global::Rfcommunication.Range.Parser, new[]{ "SourceId", "TargetId", "Range_" }, null, null, null, null)
           }));
     }
     #endregion
@@ -348,7 +348,7 @@ namespace Rfcommunication {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -372,9 +372,9 @@ namespace Rfcommunication {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
@@ -586,7 +586,7 @@ namespace Rfcommunication {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -615,9 +615,9 @@ namespace Rfcommunication {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {

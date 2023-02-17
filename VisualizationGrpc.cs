@@ -37,6 +37,7 @@ namespace Visualization {
     }
 
     /// <summary>Base class for server-side implementations of Visualization</summary>
+    [grpc::BindServiceMethod(typeof(Visualization), "BindService")]
     public abstract partial class VisualizationBase
     {
       public virtual global::System.Threading.Tasks.Task SetMarker(global::Visualization.MarkerRequest request, grpc::IServerStreamWriter<global::Visualization.Marker> responseStream, grpc::ServerCallContext context)
@@ -56,7 +57,7 @@ namespace Visualization {
     {
       /// <summary>Creates a new client for Visualization</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public VisualizationClient(grpc::Channel channel) : base(channel)
+      public VisualizationClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Visualization that uses a custom <c>CallInvoker</c>.</summary>
@@ -104,6 +105,16 @@ namespace Visualization {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_SetMarker, serviceImpl.SetMarker)
           .AddMethod(__Method_SetMarkerArray, serviceImpl.SetMarkerArray).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, VisualizationBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_SetMarker, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Visualization.MarkerRequest, global::Visualization.Marker>(serviceImpl.SetMarker));
+      serviceBinder.AddMethod(__Method_SetMarkerArray, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Visualization.MarkerRequest, global::Visualization.MarkerArray>(serviceImpl.SetMarkerArray));
     }
 
   }

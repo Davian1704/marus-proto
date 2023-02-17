@@ -38,6 +38,7 @@ namespace Acoustictransmission {
     }
 
     /// <summary>Base class for server-side implementations of AcousticTransmission</summary>
+    [grpc::BindServiceMethod(typeof(AcousticTransmission), "BindService")]
     public abstract partial class AcousticTransmissionBase
     {
       public virtual global::System.Threading.Tasks.Task StreamAcousticRequests(global::Acoustictransmission.CommandRequest request, grpc::IServerStreamWriter<global::Acoustictransmission.AcousticRequest> responseStream, grpc::ServerCallContext context)
@@ -57,7 +58,7 @@ namespace Acoustictransmission {
     {
       /// <summary>Creates a new client for AcousticTransmission</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public AcousticTransmissionClient(grpc::Channel channel) : base(channel)
+      public AcousticTransmissionClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AcousticTransmission that uses a custom <c>CallInvoker</c>.</summary>
@@ -113,6 +114,16 @@ namespace Acoustictransmission {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_StreamAcousticRequests, serviceImpl.StreamAcousticRequests)
           .AddMethod(__Method_ReturnAcousticPayload, serviceImpl.ReturnAcousticPayload).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, AcousticTransmissionBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_StreamAcousticRequests, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Acoustictransmission.CommandRequest, global::Acoustictransmission.AcousticRequest>(serviceImpl.StreamAcousticRequests));
+      serviceBinder.AddMethod(__Method_ReturnAcousticPayload, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Acoustictransmission.AcousticResponse, global::Std.Empty>(serviceImpl.ReturnAcousticPayload));
     }
 
   }

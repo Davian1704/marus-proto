@@ -59,6 +59,7 @@ namespace Tf {
     }
 
     /// <summary>Base class for server-side implementations of Tf</summary>
+    [grpc::BindServiceMethod(typeof(Tf), "BindService")]
     public abstract partial class TfBase
     {
       public virtual global::System.Threading.Tasks.Task<global::Tf.TfFrameList> GetAllFrames(global::Std.Empty request, grpc::ServerCallContext context)
@@ -93,7 +94,7 @@ namespace Tf {
     {
       /// <summary>Creates a new client for Tf</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public TfClient(grpc::Channel channel) : base(channel)
+      public TfClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Tf that uses a custom <c>CallInvoker</c>.</summary>
@@ -184,6 +185,19 @@ namespace Tf {
           .AddMethod(__Method_StreamAllFrames, serviceImpl.StreamAllFrames)
           .AddMethod(__Method_StreamFrame, serviceImpl.StreamFrame)
           .AddMethod(__Method_PublishFrame, serviceImpl.PublishFrame).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, TfBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_GetAllFrames, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Std.Empty, global::Tf.TfFrameList>(serviceImpl.GetAllFrames));
+      serviceBinder.AddMethod(__Method_GetFrame, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Tf.TfFrameRequest, global::Tf.TfFrame>(serviceImpl.GetFrame));
+      serviceBinder.AddMethod(__Method_StreamAllFrames, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Std.Empty, global::Tf.TfFrameList>(serviceImpl.StreamAllFrames));
+      serviceBinder.AddMethod(__Method_StreamFrame, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Tf.TfFrameRequest, global::Tf.TfFrame>(serviceImpl.StreamFrame));
+      serviceBinder.AddMethod(__Method_PublishFrame, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Tf.TfFrame, global::Std.Empty>(serviceImpl.PublishFrame));
     }
 
   }

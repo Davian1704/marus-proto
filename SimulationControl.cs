@@ -36,11 +36,11 @@ namespace Simulationcontrol {
             "b25jb250cm9sLlNldFN0YXJ0VGltZVJlc3BvbnNlIgBiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.StepRequest), global::Simulationcontrol.StepRequest.Parser, new[]{ "TotalTimeSecs", "TotalTimeNsecs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.StepResponse), global::Simulationcontrol.StepResponse.Parser, new[]{ "Success" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.SetStartTimeRequest), global::Simulationcontrol.SetStartTimeRequest.Parser, new[]{ "TimeSecs", "TimeNsecs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.SetStartTimeResponse), global::Simulationcontrol.SetStartTimeResponse.Parser, new[]{ "Success" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.StepRequest), global::Simulationcontrol.StepRequest.Parser, new[]{ "TotalTimeSecs", "TotalTimeNsecs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.StepResponse), global::Simulationcontrol.StepResponse.Parser, new[]{ "Success" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.SetStartTimeRequest), global::Simulationcontrol.SetStartTimeRequest.Parser, new[]{ "TimeSecs", "TimeNsecs" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Simulationcontrol.SetStartTimeResponse), global::Simulationcontrol.SetStartTimeResponse.Parser, new[]{ "Success" }, null, null, null, null)
           }));
     }
     #endregion

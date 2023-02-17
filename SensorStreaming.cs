@@ -83,20 +83,20 @@ namespace Sensorstreaming {
             "bmdCD1NlbnNvclN0cmVhbWluZ1ABogIDSExXYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Geometry.GeometryReflection.Descriptor, global::Sensor.SensorReflection.Descriptor, global::Marine.MarineReflection.Descriptor, global::Auv.AuvReflection.Descriptor, global::Std.StdReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.CameraStreamingRequest), global::Sensorstreaming.CameraStreamingRequest.Parser, new[]{ "Image", "CompressedImage", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.ImageStreamingRequest), global::Sensorstreaming.ImageStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.CompressedImageStreamingRequest), global::Sensorstreaming.CompressedImageStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.PointCloudStreamingRequest), global::Sensorstreaming.PointCloudStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.PointCloud2StreamingRequest), global::Sensorstreaming.PointCloud2StreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.RadarStreamingRequest), global::Sensorstreaming.RadarStreamingRequest.Parser, new[]{ "RangeIncrement", "RangeStart", "NumSamples", "NumSpokes", "MinIntensity", "MaxIntensity", "TimeInSeconds", "Azimuth", "RadarSpokes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.DepthStreamingRequest), global::Sensorstreaming.DepthStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.DvlStreamingRequest), global::Sensorstreaming.DvlStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.GnssStreamingRequest), global::Sensorstreaming.GnssStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.ImuStreamingRequest), global::Sensorstreaming.ImuStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.PoseStreamingRequest), global::Sensorstreaming.PoseStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.SonarStreamingRequest), global::Sensorstreaming.SonarStreamingRequest.Parser, new[]{ "Range", "Bearing", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.AISStreamingRequest), global::Sensorstreaming.AISStreamingRequest.Parser, new[]{ "AisPositionReport", "Address" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.CameraStreamingRequest), global::Sensorstreaming.CameraStreamingRequest.Parser, new[]{ "Image", "CompressedImage", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.ImageStreamingRequest), global::Sensorstreaming.ImageStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.CompressedImageStreamingRequest), global::Sensorstreaming.CompressedImageStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.PointCloudStreamingRequest), global::Sensorstreaming.PointCloudStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.PointCloud2StreamingRequest), global::Sensorstreaming.PointCloud2StreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.RadarStreamingRequest), global::Sensorstreaming.RadarStreamingRequest.Parser, new[]{ "RangeIncrement", "RangeStart", "NumSamples", "NumSpokes", "MinIntensity", "MaxIntensity", "TimeInSeconds", "Azimuth", "RadarSpokes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.DepthStreamingRequest), global::Sensorstreaming.DepthStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.DvlStreamingRequest), global::Sensorstreaming.DvlStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.GnssStreamingRequest), global::Sensorstreaming.GnssStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.ImuStreamingRequest), global::Sensorstreaming.ImuStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.PoseStreamingRequest), global::Sensorstreaming.PoseStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.SonarStreamingRequest), global::Sensorstreaming.SonarStreamingRequest.Parser, new[]{ "Range", "Bearing", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.AISStreamingRequest), global::Sensorstreaming.AISStreamingRequest.Parser, new[]{ "AisPositionReport", "Address" }, null, null, null, null)
           }));
     }
     #endregion
@@ -252,13 +252,13 @@ namespace Sensorstreaming {
       }
       if (other.image_ != null) {
         if (image_ == null) {
-          image_ = new global::Sensor.Image();
+          Image = new global::Sensor.Image();
         }
         Image.MergeFrom(other.Image);
       }
       if (other.compressedImage_ != null) {
         if (compressedImage_ == null) {
-          compressedImage_ = new global::Sensor.CompressedImage();
+          CompressedImage = new global::Sensor.CompressedImage();
         }
         CompressedImage.MergeFrom(other.CompressedImage);
       }
@@ -278,16 +278,16 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (image_ == null) {
-              image_ = new global::Sensor.Image();
+              Image = new global::Sensor.Image();
             }
-            input.ReadMessage(image_);
+            input.ReadMessage(Image);
             break;
           }
           case 18: {
             if (compressedImage_ == null) {
-              compressedImage_ = new global::Sensor.CompressedImage();
+              CompressedImage = new global::Sensor.CompressedImage();
             }
-            input.ReadMessage(compressedImage_);
+            input.ReadMessage(CompressedImage);
             break;
           }
           case 26: {
@@ -428,7 +428,7 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Sensor.Image();
+          Data = new global::Sensor.Image();
         }
         Data.MergeFrom(other.Data);
       }
@@ -448,9 +448,9 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (data_ == null) {
-              data_ = new global::Sensor.Image();
+              Data = new global::Sensor.Image();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 18: {
@@ -591,7 +591,7 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Sensor.CompressedImage();
+          Data = new global::Sensor.CompressedImage();
         }
         Data.MergeFrom(other.Data);
       }
@@ -611,9 +611,9 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (data_ == null) {
-              data_ = new global::Sensor.CompressedImage();
+              Data = new global::Sensor.CompressedImage();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 18: {
@@ -754,7 +754,7 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Sensor.PointCloud();
+          Data = new global::Sensor.PointCloud();
         }
         Data.MergeFrom(other.Data);
       }
@@ -774,9 +774,9 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (data_ == null) {
-              data_ = new global::Sensor.PointCloud();
+              Data = new global::Sensor.PointCloud();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 18: {
@@ -917,7 +917,7 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Sensor.PointCloud2();
+          Data = new global::Sensor.PointCloud2();
         }
         Data.MergeFrom(other.Data);
       }
@@ -937,9 +937,9 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (data_ == null) {
-              data_ = new global::Sensor.PointCloud2();
+              Data = new global::Sensor.PointCloud2();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 18: {
@@ -1419,7 +1419,7 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Geometry.PoseWithCovarianceStamped();
+          Data = new global::Geometry.PoseWithCovarianceStamped();
         }
         Data.MergeFrom(other.Data);
       }
@@ -1439,9 +1439,9 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (data_ == null) {
-              data_ = new global::Geometry.PoseWithCovarianceStamped();
+              Data = new global::Geometry.PoseWithCovarianceStamped();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 18: {
@@ -1582,7 +1582,7 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Geometry.TwistWithCovarianceStamped();
+          Data = new global::Geometry.TwistWithCovarianceStamped();
         }
         Data.MergeFrom(other.Data);
       }
@@ -1602,9 +1602,9 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (data_ == null) {
-              data_ = new global::Geometry.TwistWithCovarianceStamped();
+              Data = new global::Geometry.TwistWithCovarianceStamped();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 18: {
@@ -1745,7 +1745,7 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Sensor.NavSatFix();
+          Data = new global::Sensor.NavSatFix();
         }
         Data.MergeFrom(other.Data);
       }
@@ -1765,9 +1765,9 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (data_ == null) {
-              data_ = new global::Sensor.NavSatFix();
+              Data = new global::Sensor.NavSatFix();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 18: {
@@ -1908,7 +1908,7 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Sensor.Imu();
+          Data = new global::Sensor.Imu();
         }
         Data.MergeFrom(other.Data);
       }
@@ -1928,9 +1928,9 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (data_ == null) {
-              data_ = new global::Sensor.Imu();
+              Data = new global::Sensor.Imu();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 18: {
@@ -2071,7 +2071,7 @@ namespace Sensorstreaming {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Geometry.PoseWithCovarianceStamped();
+          Data = new global::Geometry.PoseWithCovarianceStamped();
         }
         Data.MergeFrom(other.Data);
       }
@@ -2091,9 +2091,9 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (data_ == null) {
-              data_ = new global::Geometry.PoseWithCovarianceStamped();
+              Data = new global::Geometry.PoseWithCovarianceStamped();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 18: {
@@ -2419,7 +2419,7 @@ namespace Sensorstreaming {
       }
       if (other.aisPositionReport_ != null) {
         if (aisPositionReport_ == null) {
-          aisPositionReport_ = new global::Marine.AISPositionReport();
+          AisPositionReport = new global::Marine.AISPositionReport();
         }
         AisPositionReport.MergeFrom(other.AisPositionReport);
       }
@@ -2439,9 +2439,9 @@ namespace Sensorstreaming {
             break;
           case 10: {
             if (aisPositionReport_ == null) {
-              aisPositionReport_ = new global::Marine.AISPositionReport();
+              AisPositionReport = new global::Marine.AISPositionReport();
             }
-            input.ReadMessage(aisPositionReport_);
+            input.ReadMessage(AisPositionReport);
             break;
           }
           case 18: {

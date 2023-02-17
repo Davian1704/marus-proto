@@ -37,10 +37,10 @@ namespace Parameterserver {
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Parameterserver.GetParamRequest), global::Parameterserver.GetParamRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Parameterserver.SetParamRequest), global::Parameterserver.SetParamRequest.Parser, new[]{ "Name", "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Parameterserver.ParamValue), global::Parameterserver.ParamValue.Parser, new[]{ "ValueStr", "ValueInt", "ValueBool", "ValueDouble" }, new[]{ "ParameterValue" }, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Parameterserver.GetParamRequest), global::Parameterserver.GetParamRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Parameterserver.SetParamRequest), global::Parameterserver.SetParamRequest.Parser, new[]{ "Name", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Parameterserver.ParamValue), global::Parameterserver.ParamValue.Parser, new[]{ "ValueStr", "ValueInt", "ValueBool", "ValueDouble" }, new[]{ "ParameterValue" }, null, null, null)
           }));
     }
     #endregion
@@ -307,7 +307,7 @@ namespace Parameterserver {
       }
       if (other.value_ != null) {
         if (value_ == null) {
-          value_ = new global::Parameterserver.ParamValue();
+          Value = new global::Parameterserver.ParamValue();
         }
         Value.MergeFrom(other.Value);
       }
@@ -328,9 +328,9 @@ namespace Parameterserver {
           }
           case 18: {
             if (value_ == null) {
-              value_ = new global::Parameterserver.ParamValue();
+              Value = new global::Parameterserver.ParamValue();
             }
-            input.ReadMessage(value_);
+            input.ReadMessage(Value);
             break;
           }
         }

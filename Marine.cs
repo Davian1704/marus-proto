@@ -38,9 +38,9 @@ namespace Marine {
             "aGljLkdlb1BvaW50YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, global::Geographic.GeographicReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Marine.Dvl), global::Marine.Dvl.Parser, new[]{ "Header", "Velocity", "VelocityCovariance", "Altitude", "AltitudeCovariance", "VelocityReference" }, null, new[]{ typeof(global::Marine.Dvl.Types.VelocityReference) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Marine.AISPositionReport), global::Marine.AISPositionReport.Parser, new[]{ "Type", "Mmsi", "Heading", "CourseOverGround", "SpeedOverGround", "Timestamp", "Geopoint" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Marine.Dvl), global::Marine.Dvl.Parser, new[]{ "Header", "Velocity", "VelocityCovariance", "Altitude", "AltitudeCovariance", "VelocityReference" }, null, new[]{ typeof(global::Marine.Dvl.Types.VelocityReference) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Marine.AISPositionReport), global::Marine.AISPositionReport.Parser, new[]{ "Type", "Mmsi", "Heading", "CourseOverGround", "SpeedOverGround", "Timestamp", "Geopoint" }, null, null, null, null)
           }));
     }
     #endregion
@@ -142,7 +142,7 @@ namespace Marine {
 
     /// <summary>Field number for the "velocityReference" field.</summary>
     public const int VelocityReferenceFieldNumber = 7;
-    private global::Marine.Dvl.Types.VelocityReference velocityReference_ = 0;
+    private global::Marine.Dvl.Types.VelocityReference velocityReference_ = global::Marine.Dvl.Types.VelocityReference.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Marine.Dvl.Types.VelocityReference VelocityReference {
       get { return velocityReference_; }
@@ -181,7 +181,7 @@ namespace Marine {
       hash ^= velocityCovariance_.GetHashCode();
       if (Altitude != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Altitude);
       if (AltitudeCovariance != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(AltitudeCovariance);
-      if (VelocityReference != 0) hash ^= VelocityReference.GetHashCode();
+      if (VelocityReference != global::Marine.Dvl.Types.VelocityReference.Unknown) hash ^= VelocityReference.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -212,7 +212,7 @@ namespace Marine {
         output.WriteRawTag(41);
         output.WriteDouble(AltitudeCovariance);
       }
-      if (VelocityReference != 0) {
+      if (VelocityReference != global::Marine.Dvl.Types.VelocityReference.Unknown) {
         output.WriteRawTag(56);
         output.WriteEnum((int) VelocityReference);
       }
@@ -237,7 +237,7 @@ namespace Marine {
       if (AltitudeCovariance != 0D) {
         size += 1 + 8;
       }
-      if (VelocityReference != 0) {
+      if (VelocityReference != global::Marine.Dvl.Types.VelocityReference.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VelocityReference);
       }
       if (_unknownFields != null) {
@@ -253,13 +253,13 @@ namespace Marine {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
       if (other.velocity_ != null) {
         if (velocity_ == null) {
-          velocity_ = new global::Geometry.Vector3();
+          Velocity = new global::Geometry.Vector3();
         }
         Velocity.MergeFrom(other.Velocity);
       }
@@ -270,7 +270,7 @@ namespace Marine {
       if (other.AltitudeCovariance != 0D) {
         AltitudeCovariance = other.AltitudeCovariance;
       }
-      if (other.VelocityReference != 0) {
+      if (other.VelocityReference != global::Marine.Dvl.Types.VelocityReference.Unknown) {
         VelocityReference = other.VelocityReference;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -286,16 +286,16 @@ namespace Marine {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
             if (velocity_ == null) {
-              velocity_ = new global::Geometry.Vector3();
+              Velocity = new global::Geometry.Vector3();
             }
-            input.ReadMessage(velocity_);
+            input.ReadMessage(Velocity);
             break;
           }
           case 26:
@@ -312,7 +312,7 @@ namespace Marine {
             break;
           }
           case 56: {
-            velocityReference_ = (global::Marine.Dvl.Types.VelocityReference) input.ReadEnum();
+            VelocityReference = (global::Marine.Dvl.Types.VelocityReference) input.ReadEnum();
             break;
           }
         }
@@ -585,7 +585,7 @@ namespace Marine {
       }
       if (other.geopoint_ != null) {
         if (geopoint_ == null) {
-          geopoint_ = new global::Geographic.GeoPoint();
+          Geopoint = new global::Geographic.GeoPoint();
         }
         Geopoint.MergeFrom(other.Geopoint);
       }
@@ -626,9 +626,9 @@ namespace Marine {
           }
           case 58: {
             if (geopoint_ == null) {
-              geopoint_ = new global::Geographic.GeoPoint();
+              Geopoint = new global::Geographic.GeoPoint();
             }
-            input.ReadMessage(geopoint_);
+            input.ReadMessage(Geopoint);
             break;
           }
         }

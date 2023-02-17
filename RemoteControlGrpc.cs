@@ -29,6 +29,7 @@ namespace Remotecontrol {
     }
 
     /// <summary>Base class for server-side implementations of RemoteControl</summary>
+    [grpc::BindServiceMethod(typeof(RemoteControl), "BindService")]
     public abstract partial class RemoteControlBase
     {
       public virtual global::System.Threading.Tasks.Task ApplyForce(global::Remotecontrol.ForceRequest request, grpc::IServerStreamWriter<global::Remotecontrol.ForceResponse> responseStream, grpc::ServerCallContext context)
@@ -43,7 +44,7 @@ namespace Remotecontrol {
     {
       /// <summary>Creates a new client for RemoteControl</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public RemoteControlClient(grpc::Channel channel) : base(channel)
+      public RemoteControlClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for RemoteControl that uses a custom <c>CallInvoker</c>.</summary>
@@ -82,6 +83,15 @@ namespace Remotecontrol {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ApplyForce, serviceImpl.ApplyForce).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, RemoteControlBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_ApplyForce, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Remotecontrol.ForceRequest, global::Remotecontrol.ForceResponse>(serviceImpl.ApplyForce));
     }
 
   }

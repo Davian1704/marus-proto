@@ -51,10 +51,10 @@ namespace Visualization {
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Visualization.MarkerRequest), global::Visualization.MarkerRequest.Parser, new[]{ "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Visualization.Marker), global::Visualization.Marker.Parser, new[]{ "Header", "Ns", "Id", "Type", "Action", "Pose", "Scale", "Color", "Lifetime", "FrameLocked", "Points", "Colors", "Text", "MeshResource", "MeshUseEmbeddedMaterials" }, null, new[]{ typeof(global::Visualization.Marker.Types.Type), typeof(global::Visualization.Marker.Types.Action) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Visualization.MarkerArray), global::Visualization.MarkerArray.Parser, new[]{ "Header", "Markers" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Visualization.MarkerRequest), global::Visualization.MarkerRequest.Parser, new[]{ "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Visualization.Marker), global::Visualization.Marker.Parser, new[]{ "Header", "Ns", "Id", "Type", "Action", "Pose", "Scale", "Color", "Lifetime", "FrameLocked", "Points", "Colors", "Text", "MeshResource", "MeshUseEmbeddedMaterials" }, null, new[]{ typeof(global::Visualization.Marker.Types.Type), typeof(global::Visualization.Marker.Types.Action) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Visualization.MarkerArray), global::Visualization.MarkerArray.Parser, new[]{ "Header", "Markers" }, null, null, null, null)
           }));
     }
     #endregion
@@ -273,7 +273,7 @@ namespace Visualization {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 4;
-    private global::Visualization.Marker.Types.Type type_ = 0;
+    private global::Visualization.Marker.Types.Type type_ = global::Visualization.Marker.Types.Type.Arrow;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Visualization.Marker.Types.Type Type {
       get { return type_; }
@@ -284,7 +284,7 @@ namespace Visualization {
 
     /// <summary>Field number for the "action" field.</summary>
     public const int ActionFieldNumber = 5;
-    private global::Visualization.Marker.Types.Action action_ = 0;
+    private global::Visualization.Marker.Types.Action action_ = global::Visualization.Marker.Types.Action.Add;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Visualization.Marker.Types.Action Action {
       get { return action_; }
@@ -438,8 +438,8 @@ namespace Visualization {
       if (header_ != null) hash ^= Header.GetHashCode();
       if (Ns.Length != 0) hash ^= Ns.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
-      if (Action != 0) hash ^= Action.GetHashCode();
+      if (Type != global::Visualization.Marker.Types.Type.Arrow) hash ^= Type.GetHashCode();
+      if (Action != global::Visualization.Marker.Types.Action.Add) hash ^= Action.GetHashCode();
       if (pose_ != null) hash ^= Pose.GetHashCode();
       if (scale_ != null) hash ^= Scale.GetHashCode();
       if (color_ != null) hash ^= Color.GetHashCode();
@@ -475,11 +475,11 @@ namespace Visualization {
         output.WriteRawTag(24);
         output.WriteInt32(Id);
       }
-      if (Type != 0) {
+      if (Type != global::Visualization.Marker.Types.Type.Arrow) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
-      if (Action != 0) {
+      if (Action != global::Visualization.Marker.Types.Action.Add) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Action);
       }
@@ -534,10 +534,10 @@ namespace Visualization {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (Type != 0) {
+      if (Type != global::Visualization.Marker.Types.Type.Arrow) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (Action != 0) {
+      if (Action != global::Visualization.Marker.Types.Action.Add) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
       }
       if (pose_ != null) {
@@ -579,7 +579,7 @@ namespace Visualization {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -589,27 +589,27 @@ namespace Visualization {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Visualization.Marker.Types.Type.Arrow) {
         Type = other.Type;
       }
-      if (other.Action != 0) {
+      if (other.Action != global::Visualization.Marker.Types.Action.Add) {
         Action = other.Action;
       }
       if (other.pose_ != null) {
         if (pose_ == null) {
-          pose_ = new global::Geometry.Pose();
+          Pose = new global::Geometry.Pose();
         }
         Pose.MergeFrom(other.Pose);
       }
       if (other.scale_ != null) {
         if (scale_ == null) {
-          scale_ = new global::Geometry.Vector3();
+          Scale = new global::Geometry.Vector3();
         }
         Scale.MergeFrom(other.Scale);
       }
       if (other.color_ != null) {
         if (color_ == null) {
-          color_ = new global::Std.ColorRGBA();
+          Color = new global::Std.ColorRGBA();
         }
         Color.MergeFrom(other.Color);
       }
@@ -643,9 +643,9 @@ namespace Visualization {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
@@ -657,32 +657,32 @@ namespace Visualization {
             break;
           }
           case 32: {
-            type_ = (global::Visualization.Marker.Types.Type) input.ReadEnum();
+            Type = (global::Visualization.Marker.Types.Type) input.ReadEnum();
             break;
           }
           case 40: {
-            action_ = (global::Visualization.Marker.Types.Action) input.ReadEnum();
+            Action = (global::Visualization.Marker.Types.Action) input.ReadEnum();
             break;
           }
           case 50: {
             if (pose_ == null) {
-              pose_ = new global::Geometry.Pose();
+              Pose = new global::Geometry.Pose();
             }
-            input.ReadMessage(pose_);
+            input.ReadMessage(Pose);
             break;
           }
           case 58: {
             if (scale_ == null) {
-              scale_ = new global::Geometry.Vector3();
+              Scale = new global::Geometry.Vector3();
             }
-            input.ReadMessage(scale_);
+            input.ReadMessage(Scale);
             break;
           }
           case 66: {
             if (color_ == null) {
-              color_ = new global::Std.ColorRGBA();
+              Color = new global::Std.ColorRGBA();
             }
-            input.ReadMessage(color_);
+            input.ReadMessage(Color);
             break;
           }
           case 77: {
@@ -870,7 +870,7 @@ namespace Visualization {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -888,9 +888,9 @@ namespace Visualization {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {

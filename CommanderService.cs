@@ -31,8 +31,8 @@ namespace Service {
             "LlByaW1pdGl2ZVBvaW50ZXJSZXNwb25zZSIAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Labust.LabustReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Service.PrimitivePointerResponse), global::Service.PrimitivePointerResponse.Parser, new[]{ "Success" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Service.PrimitivePointerResponse), global::Service.PrimitivePointerResponse.Parser, new[]{ "Success" }, null, null, null, null)
           }));
     }
     #endregion

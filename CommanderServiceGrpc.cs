@@ -29,6 +29,7 @@ namespace Service {
     }
 
     /// <summary>Base class for server-side implementations of Commander</summary>
+    [grpc::BindServiceMethod(typeof(Commander), "BindService")]
     public abstract partial class CommanderBase
     {
       public virtual global::System.Threading.Tasks.Task<global::Service.PrimitivePointerResponse> PrimitivePointer(global::Labust.PointerPrimitiveService request, grpc::ServerCallContext context)
@@ -43,7 +44,7 @@ namespace Service {
     {
       /// <summary>Creates a new client for Commander</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public CommanderClient(grpc::Channel channel) : base(channel)
+      public CommanderClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Commander that uses a custom <c>CallInvoker</c>.</summary>
@@ -90,6 +91,15 @@ namespace Service {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_PrimitivePointer, serviceImpl.PrimitivePointer).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, CommanderBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_PrimitivePointer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Labust.PointerPrimitiveService, global::Service.PrimitivePointerResponse>(serviceImpl.PrimitivePointer));
     }
 
   }

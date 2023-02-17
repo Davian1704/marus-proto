@@ -131,6 +131,7 @@ namespace Sensorstreaming {
     }
 
     /// <summary>Base class for server-side implementations of SensorStreaming</summary>
+    [grpc::BindServiceMethod(typeof(SensorStreaming), "BindService")]
     public abstract partial class SensorStreamingBase
     {
       public virtual global::System.Threading.Tasks.Task<global::Std.Empty> StreamCameraSensor(grpc::IAsyncStreamReader<global::Sensorstreaming.CameraStreamingRequest> requestStream, grpc::ServerCallContext context)
@@ -210,7 +211,7 @@ namespace Sensorstreaming {
     {
       /// <summary>Creates a new client for SensorStreaming</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public SensorStreamingClient(grpc::Channel channel) : base(channel)
+      public SensorStreamingClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for SensorStreaming that uses a custom <c>CallInvoker</c>.</summary>
@@ -366,6 +367,28 @@ namespace Sensorstreaming {
           .AddMethod(__Method_StreamPoseSensor, serviceImpl.StreamPoseSensor)
           .AddMethod(__Method_StreamAisSensor, serviceImpl.StreamAisSensor)
           .AddMethod(__Method_RequestPointCloud2, serviceImpl.RequestPointCloud2).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, SensorStreamingBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_StreamCameraSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.CameraStreamingRequest, global::Std.Empty>(serviceImpl.StreamCameraSensor));
+      serviceBinder.AddMethod(__Method_StreamLidarSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.PointCloudStreamingRequest, global::Std.Empty>(serviceImpl.StreamLidarSensor));
+      serviceBinder.AddMethod(__Method_StreamSonarSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.PointCloudStreamingRequest, global::Std.Empty>(serviceImpl.StreamSonarSensor));
+      serviceBinder.AddMethod(__Method_StreamSonarImage, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.CompressedImageStreamingRequest, global::Std.Empty>(serviceImpl.StreamSonarImage));
+      serviceBinder.AddMethod(__Method_StreamPointCloud, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.PointCloudStreamingRequest, global::Std.Empty>(serviceImpl.StreamPointCloud));
+      serviceBinder.AddMethod(__Method_StreamPointCloud2, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.PointCloud2StreamingRequest, global::Std.Empty>(serviceImpl.StreamPointCloud2));
+      serviceBinder.AddMethod(__Method_StreamRadarSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.RadarStreamingRequest, global::Std.Empty>(serviceImpl.StreamRadarSensor));
+      serviceBinder.AddMethod(__Method_StreamDepthSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.DepthStreamingRequest, global::Std.Empty>(serviceImpl.StreamDepthSensor));
+      serviceBinder.AddMethod(__Method_StreamDvlSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.DvlStreamingRequest, global::Std.Empty>(serviceImpl.StreamDvlSensor));
+      serviceBinder.AddMethod(__Method_StreamGnssSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.GnssStreamingRequest, global::Std.Empty>(serviceImpl.StreamGnssSensor));
+      serviceBinder.AddMethod(__Method_StreamImuSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.ImuStreamingRequest, global::Std.Empty>(serviceImpl.StreamImuSensor));
+      serviceBinder.AddMethod(__Method_StreamPoseSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.PoseStreamingRequest, global::Std.Empty>(serviceImpl.StreamPoseSensor));
+      serviceBinder.AddMethod(__Method_StreamAisSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.AISStreamingRequest, global::Std.Empty>(serviceImpl.StreamAisSensor));
+      serviceBinder.AddMethod(__Method_RequestPointCloud2, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Std.StandardRequest, global::Sensorstreaming.PointCloud2StreamingRequest>(serviceImpl.RequestPointCloud2));
     }
 
   }

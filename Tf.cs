@@ -39,10 +39,10 @@ namespace Tf {
             "EgsudGYuVGZGcmFtZRoKLnN0ZC5FbXB0eSIAKAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Std.StdReflection.Descriptor, global::Geometry.GeometryReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrameRequest), global::Tf.TfFrameRequest.Parser, new[]{ "FrameId", "ChildFrameId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrame), global::Tf.TfFrame.Parser, new[]{ "Header", "FrameId", "ChildFrameId", "Translation", "Rotation", "Address" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrameList), global::Tf.TfFrameList.Parser, new[]{ "Frames" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrameRequest), global::Tf.TfFrameRequest.Parser, new[]{ "FrameId", "ChildFrameId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrame), global::Tf.TfFrame.Parser, new[]{ "Header", "FrameId", "ChildFrameId", "Translation", "Rotation", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Tf.TfFrameList), global::Tf.TfFrameList.Parser, new[]{ "Frames" }, null, null, null, null)
           }));
     }
     #endregion
@@ -418,7 +418,7 @@ namespace Tf {
       }
       if (other.header_ != null) {
         if (header_ == null) {
-          header_ = new global::Std.Header();
+          Header = new global::Std.Header();
         }
         Header.MergeFrom(other.Header);
       }
@@ -430,13 +430,13 @@ namespace Tf {
       }
       if (other.translation_ != null) {
         if (translation_ == null) {
-          translation_ = new global::Geometry.Vector3();
+          Translation = new global::Geometry.Vector3();
         }
         Translation.MergeFrom(other.Translation);
       }
       if (other.rotation_ != null) {
         if (rotation_ == null) {
-          rotation_ = new global::Geometry.Quaternion();
+          Rotation = new global::Geometry.Quaternion();
         }
         Rotation.MergeFrom(other.Rotation);
       }
@@ -456,9 +456,9 @@ namespace Tf {
             break;
           case 10: {
             if (header_ == null) {
-              header_ = new global::Std.Header();
+              Header = new global::Std.Header();
             }
-            input.ReadMessage(header_);
+            input.ReadMessage(Header);
             break;
           }
           case 18: {
@@ -471,16 +471,16 @@ namespace Tf {
           }
           case 34: {
             if (translation_ == null) {
-              translation_ = new global::Geometry.Vector3();
+              Translation = new global::Geometry.Vector3();
             }
-            input.ReadMessage(translation_);
+            input.ReadMessage(Translation);
             break;
           }
           case 42: {
             if (rotation_ == null) {
-              rotation_ = new global::Geometry.Quaternion();
+              Rotation = new global::Geometry.Quaternion();
             }
-            input.ReadMessage(rotation_);
+            input.ReadMessage(Rotation);
             break;
           }
           case 50: {
