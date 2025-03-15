@@ -22,3 +22,7 @@ message ColorRGBA {
     float b = 3;
     float a = 4;
 }
+
+message Uint8Array {
+    repeated uint8 data = 1;
+}
