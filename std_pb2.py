@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\tstd.proto\x12\x03std\"\x07\n\x05\x45mpty\"\"\n\x0fStandardRequest\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\",\n\x06Header\x12\x11\n\ttimestamp\x18\x01 \x01(\x01\x12\x0f\n\x07\x66rameId\x18\x02 \x01(\t\"\x1c\n\x0c\x46loat32Array\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x02\"7\n\tColorRGBA\x12\t\n\x01r\x18\x01 \x01(\x02\x12\t\n\x01g\x18\x02 \x01(\x02\x12\t\n\x01\x62\x18\x03 \x01(\x02\x12\t\n\x01\x61\x18\x04 \x01(\x02\x62\x06proto3'
+  serialized_pb=b'\n\tstd.proto\x12\x03std\"\x07\n\x05\x45mpty\"\"\n\x0fStandardRequest\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\",\n\x06Header\x12\x11\n\ttimestamp\x18\x01 \x01(\x01\x12\x0f\n\x07\x66rameId\x18\x02 \x01(\t\"\x1c\n\x0c\x46loat32Array\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x02\"7\n\tColorRGBA\x12\t\n\x01r\x18\x01 \x01(\x02\x12\t\n\x01g\x18\x02 \x01(\x02\x12\t\n\x01\x62\x18\x03 \x01(\x02\x12\t\n\x01\x61\x18\x04 \x01(\x02\"\x1a\n\nUint8Array\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\x0c\x62\x06proto3'
 )
 
 
@@ -205,11 +205,44 @@ _COLORRGBA = _descriptor.Descriptor(
   serialized_end=194,
 )
 
+
+_UINT8ARRAY = _descriptor.Descriptor(
+  name='Uint8Array',
+  full_name='std.Uint8Array',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='data', full_name='std.Uint8Array.data', index=0,
+      number=1, type=12, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=196,
+  serialized_end=222,
+)
+
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
 DESCRIPTOR.message_types_by_name['StandardRequest'] = _STANDARDREQUEST
 DESCRIPTOR.message_types_by_name['Header'] = _HEADER
 DESCRIPTOR.message_types_by_name['Float32Array'] = _FLOAT32ARRAY
 DESCRIPTOR.message_types_by_name['ColorRGBA'] = _COLORRGBA
+DESCRIPTOR.message_types_by_name['Uint8Array'] = _UINT8ARRAY
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), {
@@ -246,6 +279,13 @@ ColorRGBA = _reflection.GeneratedProtocolMessageType('ColorRGBA', (_message.Mess
   # @@protoc_insertion_point(class_scope:std.ColorRGBA)
   })
 _sym_db.RegisterMessage(ColorRGBA)
+
+Uint8Array = _reflection.GeneratedProtocolMessageType('Uint8Array', (_message.Message,), {
+  'DESCRIPTOR' : _UINT8ARRAY,
+  '__module__' : 'std_pb2'
+  # @@protoc_insertion_point(class_scope:std.Uint8Array)
+  })
+_sym_db.RegisterMessage(Uint8Array)
 
 
 # @@protoc_insertion_point(module_scope)
