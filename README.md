@@ -1,4 +1,4 @@
-[![Protobuf code generation](https://github.com/MARUSimulator/marus-proto/actions/workflows/generator.yml/badge.svg)](https://github.com/MARUSimulator/marus-proto/actions/workflows/generator.yml)
+[![Protobuf code generation](https://github.com/Davian1704/marus-proto/actions/workflows/generator.yml/badge.svg)](https://github.com/Davian1704/marus-proto/actions/workflows/generator.yml)
 
 # Introduction
 This repository contains the [Protocol Buffers](https://developers.google.com/protocol-buffers) 
