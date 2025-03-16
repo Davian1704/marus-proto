@@ -18,13 +18,31 @@ jobs:
       - name: Install protobuf compiler
         run: |
             sudo apt-get update && sudo apt-get install protobuf-compiler protobuf-compiler-grpc
+
+            # For C# plugin support
+            sudo apt-get install -y nuget mono-devel
+            nuget install Grpc.Tools -Version 2.51.0
+            ls -la ./Grpc.Tools.2.51.0/tools/linux_x64/
+            
             protoc --version 
       - name: Make directories for code
         run: mkdir ../python ../csharp ../grpc-dotnet
-      - name: Correct GRPC plugin links
+      - name: Setup plugin symlinks
         run: |
-            sudo ln -s $(which grpc_csharp_plugin) /usr/bin/protoc-gen-csharp-grpc
-            sudo ln -s $(which grpc_python_plugin) /usr/bin/protoc-gen-python-grpc        
+            # For Python plugin
+            sudo ln -s $(which grpc_python_plugin) /usr/bin/protoc-gen-python-grpc
+            
+            # For C# plugin - use the actual path from Grpc.Tools
+            CSHARP_PLUGIN_PATH=$(find $PWD -name grpc_csharp_plugin | grep linux_x64 | head -1)
+            echo "Found C# plugin at: $CSHARP_PLUGIN_PATH"
+            
+            if [ -z "$CSHARP_PLUGIN_PATH" ]; then
+              echo "Error: Could not find grpc_csharp_plugin"
+              exit 1
+            fi
+            
+            sudo ln -s $CSHARP_PLUGIN_PATH /usr/bin/protoc-gen-csharp-grpc
+            ls -la /usr/bin/protoc-gen-*
       - name: Generate code
         run: protoc -I=protos --csharp-grpc_out=../csharp --csharp_out=../csharp --python-grpc_out=../python --python_out=../python protos/*
         
