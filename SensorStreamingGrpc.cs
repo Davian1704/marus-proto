@@ -25,6 +25,7 @@ namespace Sensorstreaming {
     static readonly grpc::Marshaller<global::Sensorstreaming.PoseStreamingRequest> __Marshaller_sensorstreaming_PoseStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.PoseStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Sensorstreaming.AISStreamingRequest> __Marshaller_sensorstreaming_AISStreamingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.AISStreamingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Std.StandardRequest> __Marshaller_std_StandardRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Std.StandardRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Sensorstreaming.ProjectedSonarImageRequest> __Marshaller_sensorstreaming_ProjectedSonarImageRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Sensorstreaming.ProjectedSonarImageRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Sensorstreaming.CameraStreamingRequest, global::Std.Empty> __Method_StreamCameraSensor = new grpc::Method<global::Sensorstreaming.CameraStreamingRequest, global::Std.Empty>(
         grpc::MethodType.ClientStreaming,
@@ -124,6 +125,13 @@ namespace Sensorstreaming {
         __Marshaller_std_StandardRequest,
         __Marshaller_sensorstreaming_PointCloud2StreamingRequest);
 
+    static readonly grpc::Method<global::Sensorstreaming.ProjectedSonarImageRequest, global::Std.Empty> __Method_StreamRawSonarSensor = new grpc::Method<global::Sensorstreaming.ProjectedSonarImageRequest, global::Std.Empty>(
+        grpc::MethodType.ClientStreaming,
+        __ServiceName,
+        "StreamRawSonarSensor",
+        __Marshaller_sensorstreaming_ProjectedSonarImageRequest,
+        __Marshaller_std_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -200,6 +208,11 @@ namespace Sensorstreaming {
       }
 
       public virtual global::System.Threading.Tasks.Task RequestPointCloud2(global::Std.StandardRequest request, grpc::IServerStreamWriter<global::Sensorstreaming.PointCloud2StreamingRequest> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Std.Empty> StreamRawSonarSensor(grpc::IAsyncStreamReader<global::Sensorstreaming.ProjectedSonarImageRequest> requestStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -341,6 +354,14 @@ namespace Sensorstreaming {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_RequestPointCloud2, null, options, request);
       }
+      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.ProjectedSonarImageRequest, global::Std.Empty> StreamRawSonarSensor(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamRawSonarSensor(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncClientStreamingCall<global::Sensorstreaming.ProjectedSonarImageRequest, global::Std.Empty> StreamRawSonarSensor(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncClientStreamingCall(__Method_StreamRawSonarSensor, null, options);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override SensorStreamingClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -366,7 +387,8 @@ namespace Sensorstreaming {
           .AddMethod(__Method_StreamImuSensor, serviceImpl.StreamImuSensor)
           .AddMethod(__Method_StreamPoseSensor, serviceImpl.StreamPoseSensor)
           .AddMethod(__Method_StreamAisSensor, serviceImpl.StreamAisSensor)
-          .AddMethod(__Method_RequestPointCloud2, serviceImpl.RequestPointCloud2).Build();
+          .AddMethod(__Method_RequestPointCloud2, serviceImpl.RequestPointCloud2)
+          .AddMethod(__Method_StreamRawSonarSensor, serviceImpl.StreamRawSonarSensor).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -389,6 +411,7 @@ namespace Sensorstreaming {
       serviceBinder.AddMethod(__Method_StreamPoseSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.PoseStreamingRequest, global::Std.Empty>(serviceImpl.StreamPoseSensor));
       serviceBinder.AddMethod(__Method_StreamAisSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.AISStreamingRequest, global::Std.Empty>(serviceImpl.StreamAisSensor));
       serviceBinder.AddMethod(__Method_RequestPointCloud2, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Std.StandardRequest, global::Sensorstreaming.PointCloud2StreamingRequest>(serviceImpl.RequestPointCloud2));
+      serviceBinder.AddMethod(__Method_StreamRawSonarSensor, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::Sensorstreaming.ProjectedSonarImageRequest, global::Std.Empty>(serviceImpl.StreamRawSonarSensor));
     }
 
   }

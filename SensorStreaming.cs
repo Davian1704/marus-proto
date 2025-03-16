@@ -26,63 +26,68 @@ namespace Sensorstreaming {
           string.Concat(
             "ChZzZW5zb3Jfc3RyZWFtaW5nLnByb3RvEg9zZW5zb3JzdHJlYW1pbmcaDmdl",
             "b21ldHJ5LnByb3RvGgxzZW5zb3IucHJvdG8aDG1hcmluZS5wcm90bxoJYXV2",
-            "LnByb3RvGglzdGQucHJvdG8ieQoWQ2FtZXJhU3RyZWFtaW5nUmVxdWVzdBIc",
-            "CgVpbWFnZRgBIAEoCzINLnNlbnNvci5JbWFnZRIwCg9jb21wcmVzc2VkSW1h",
-            "Z2UYAiABKAsyFy5zZW5zb3IuQ29tcHJlc3NlZEltYWdlEg8KB2FkZHJlc3MY",
-            "AyABKAkiRQoVSW1hZ2VTdHJlYW1pbmdSZXF1ZXN0EhsKBGRhdGEYASABKAsy",
-            "DS5zZW5zb3IuSW1hZ2USDwoHYWRkcmVzcxgCIAEoCSJZCh9Db21wcmVzc2Vk",
-            "SW1hZ2VTdHJlYW1pbmdSZXF1ZXN0EiUKBGRhdGEYASABKAsyFy5zZW5zb3Iu",
-            "Q29tcHJlc3NlZEltYWdlEg8KB2FkZHJlc3MYAiABKAkiTwoaUG9pbnRDbG91",
-            "ZFN0cmVhbWluZ1JlcXVlc3QSIAoEZGF0YRgBIAEoCzISLnNlbnNvci5Qb2lu",
-            "dENsb3VkEg8KB2FkZHJlc3MYAiABKAkiUQobUG9pbnRDbG91ZDJTdHJlYW1p",
-            "bmdSZXF1ZXN0EiEKBGRhdGEYASABKAsyEy5zZW5zb3IuUG9pbnRDbG91ZDIS",
-            "DwoHYWRkcmVzcxgCIAEoCSLTAQoVUmFkYXJTdHJlYW1pbmdSZXF1ZXN0EhYK",
-            "DnJhbmdlSW5jcmVtZW50GAEgASgCEhIKCnJhbmdlU3RhcnQYAiABKAISEgoK",
-            "bnVtU2FtcGxlcxgDIAEoDRIRCgludW1TcG9rZXMYBCABKA0SFAoMbWluSW50",
-            "ZW5zaXR5GAUgASgNEhQKDG1heEludGVuc2l0eRgGIAEoDRIVCg10aW1lSW5T",
-            "ZWNvbmRzGAcgAygBEg8KB2F6aW11dGgYCCADKAISEwoLcmFkYXJTcG9rZXMY",
-            "CSABKAwiWwoVRGVwdGhTdHJlYW1pbmdSZXF1ZXN0EjEKBGRhdGEYASABKAsy",
-            "Iy5nZW9tZXRyeS5Qb3NlV2l0aENvdmFyaWFuY2VTdGFtcGVkEg8KB2FkZHJl",
-            "c3MYAiABKAkiWgoTRHZsU3RyZWFtaW5nUmVxdWVzdBIyCgRkYXRhGAEgASgL",
-            "MiQuZ2VvbWV0cnkuVHdpc3RXaXRoQ292YXJpYW5jZVN0YW1wZWQSDwoHYWRk",
-            "cmVzcxgCIAEoCSJIChRHbnNzU3RyZWFtaW5nUmVxdWVzdBIfCgRkYXRhGAEg",
-            "ASgLMhEuc2Vuc29yLk5hdlNhdEZpeBIPCgdhZGRyZXNzGAIgASgJIkEKE0lt",
-            "dVN0cmVhbWluZ1JlcXVlc3QSGQoEZGF0YRgBIAEoCzILLnNlbnNvci5JbXUS",
-            "DwoHYWRkcmVzcxgCIAEoCSJaChRQb3NlU3RyZWFtaW5nUmVxdWVzdBIxCgRk",
-            "YXRhGAEgASgLMiMuZ2VvbWV0cnkuUG9zZVdpdGhDb3ZhcmlhbmNlU3RhbXBl",
-            "ZBIPCgdhZGRyZXNzGAIgASgJIkgKFVNvbmFyU3RyZWFtaW5nUmVxdWVzdBIN",
-            "CgVyYW5nZRgBIAEoAhIPCgdiZWFyaW5nGAIgASgCEg8KB2FkZHJlc3MYAyAB",
-            "KAkiXAoTQUlTU3RyZWFtaW5nUmVxdWVzdBI0ChFhaXNQb3NpdGlvblJlcG9y",
-            "dBgBIAEoCzIZLm1hcmluZS5BSVNQb3NpdGlvblJlcG9ydBIPCgdhZGRyZXNz",
-            "GAIgASgJMucICg9TZW5zb3JTdHJlYW1pbmcSTQoSU3RyZWFtQ2FtZXJhU2Vu",
-            "c29yEicuc2Vuc29yc3RyZWFtaW5nLkNhbWVyYVN0cmVhbWluZ1JlcXVlc3Qa",
-            "Ci5zdGQuRW1wdHkiACgBElAKEVN0cmVhbUxpZGFyU2Vuc29yEisuc2Vuc29y",
-            "c3RyZWFtaW5nLlBvaW50Q2xvdWRTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVt",
-            "cHR5IgAoARJQChFTdHJlYW1Tb25hclNlbnNvchIrLnNlbnNvcnN0cmVhbWlu",
-            "Zy5Qb2ludENsb3VkU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAES",
-            "VAoQU3RyZWFtU29uYXJJbWFnZRIwLnNlbnNvcnN0cmVhbWluZy5Db21wcmVz",
-            "c2VkSW1hZ2VTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJPChBT",
-            "dHJlYW1Qb2ludENsb3VkEisuc2Vuc29yc3RyZWFtaW5nLlBvaW50Q2xvdWRT",
-            "dHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJRChFTdHJlYW1Qb2lu",
-            "dENsb3VkMhIsLnNlbnNvcnN0cmVhbWluZy5Qb2ludENsb3VkMlN0cmVhbWlu",
-            "Z1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBEksKEVN0cmVhbVJhZGFyU2Vuc29y",
-            "EiYuc2Vuc29yc3RyZWFtaW5nLlJhZGFyU3RyZWFtaW5nUmVxdWVzdBoKLnN0",
-            "ZC5FbXB0eSIAKAESSwoRU3RyZWFtRGVwdGhTZW5zb3ISJi5zZW5zb3JzdHJl",
-            "YW1pbmcuRGVwdGhTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJH",
-            "Cg9TdHJlYW1EdmxTZW5zb3ISJC5zZW5zb3JzdHJlYW1pbmcuRHZsU3RyZWFt",
-            "aW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAESSQoQU3RyZWFtR25zc1NlbnNv",
-            "chIlLnNlbnNvcnN0cmVhbWluZy5HbnNzU3RyZWFtaW5nUmVxdWVzdBoKLnN0",
-            "ZC5FbXB0eSIAKAESRwoPU3RyZWFtSW11U2Vuc29yEiQuc2Vuc29yc3RyZWFt",
-            "aW5nLkltdVN0cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBEkkKEFN0",
-            "cmVhbVBvc2VTZW5zb3ISJS5zZW5zb3JzdHJlYW1pbmcuUG9zZVN0cmVhbWlu",
-            "Z1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBEkcKD1N0cmVhbUFpc1NlbnNvchIk",
-            "LnNlbnNvcnN0cmVhbWluZy5BSVNTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVt",
-            "cHR5IgAoARJcChJSZXF1ZXN0UG9pbnRDbG91ZDISFC5zdGQuU3RhbmRhcmRS",
-            "ZXF1ZXN0Giwuc2Vuc29yc3RyZWFtaW5nLlBvaW50Q2xvdWQyU3RyZWFtaW5n",
-            "UmVxdWVzdCIAMAFCOwogaW8uZ3JwYy5leGFtcGxlcy5zZW5zb3JzdHJlYW1p",
-            "bmdCD1NlbnNvclN0cmVhbWluZ1ABogIDSExXYgZwcm90bzM="));
+            "LnByb3RvGglzdGQucHJvdG8aFW1hcmluZV9hY291c3RpYy5wcm90byJ5ChZD",
+            "YW1lcmFTdHJlYW1pbmdSZXF1ZXN0EhwKBWltYWdlGAEgASgLMg0uc2Vuc29y",
+            "LkltYWdlEjAKD2NvbXByZXNzZWRJbWFnZRgCIAEoCzIXLnNlbnNvci5Db21w",
+            "cmVzc2VkSW1hZ2USDwoHYWRkcmVzcxgDIAEoCSJFChVJbWFnZVN0cmVhbWlu",
+            "Z1JlcXVlc3QSGwoEZGF0YRgBIAEoCzINLnNlbnNvci5JbWFnZRIPCgdhZGRy",
+            "ZXNzGAIgASgJIlkKH0NvbXByZXNzZWRJbWFnZVN0cmVhbWluZ1JlcXVlc3QS",
+            "JQoEZGF0YRgBIAEoCzIXLnNlbnNvci5Db21wcmVzc2VkSW1hZ2USDwoHYWRk",
+            "cmVzcxgCIAEoCSJPChpQb2ludENsb3VkU3RyZWFtaW5nUmVxdWVzdBIgCgRk",
+            "YXRhGAEgASgLMhIuc2Vuc29yLlBvaW50Q2xvdWQSDwoHYWRkcmVzcxgCIAEo",
+            "CSJRChtQb2ludENsb3VkMlN0cmVhbWluZ1JlcXVlc3QSIQoEZGF0YRgBIAEo",
+            "CzITLnNlbnNvci5Qb2ludENsb3VkMhIPCgdhZGRyZXNzGAIgASgJItMBChVS",
+            "YWRhclN0cmVhbWluZ1JlcXVlc3QSFgoOcmFuZ2VJbmNyZW1lbnQYASABKAIS",
+            "EgoKcmFuZ2VTdGFydBgCIAEoAhISCgpudW1TYW1wbGVzGAMgASgNEhEKCW51",
+            "bVNwb2tlcxgEIAEoDRIUCgxtaW5JbnRlbnNpdHkYBSABKA0SFAoMbWF4SW50",
+            "ZW5zaXR5GAYgASgNEhUKDXRpbWVJblNlY29uZHMYByADKAESDwoHYXppbXV0",
+            "aBgIIAMoAhITCgtyYWRhclNwb2tlcxgJIAEoDCJbChVEZXB0aFN0cmVhbWlu",
+            "Z1JlcXVlc3QSMQoEZGF0YRgBIAEoCzIjLmdlb21ldHJ5LlBvc2VXaXRoQ292",
+            "YXJpYW5jZVN0YW1wZWQSDwoHYWRkcmVzcxgCIAEoCSJaChNEdmxTdHJlYW1p",
+            "bmdSZXF1ZXN0EjIKBGRhdGEYASABKAsyJC5nZW9tZXRyeS5Ud2lzdFdpdGhD",
+            "b3ZhcmlhbmNlU3RhbXBlZBIPCgdhZGRyZXNzGAIgASgJIkgKFEduc3NTdHJl",
+            "YW1pbmdSZXF1ZXN0Eh8KBGRhdGEYASABKAsyES5zZW5zb3IuTmF2U2F0Rml4",
+            "Eg8KB2FkZHJlc3MYAiABKAkiQQoTSW11U3RyZWFtaW5nUmVxdWVzdBIZCgRk",
+            "YXRhGAEgASgLMgsuc2Vuc29yLkltdRIPCgdhZGRyZXNzGAIgASgJIloKFFBv",
+            "c2VTdHJlYW1pbmdSZXF1ZXN0EjEKBGRhdGEYASABKAsyIy5nZW9tZXRyeS5Q",
+            "b3NlV2l0aENvdmFyaWFuY2VTdGFtcGVkEg8KB2FkZHJlc3MYAiABKAkiSAoV",
+            "U29uYXJTdHJlYW1pbmdSZXF1ZXN0Eg0KBXJhbmdlGAEgASgCEg8KB2JlYXJp",
+            "bmcYAiABKAISDwoHYWRkcmVzcxgDIAEoCSJcChNBSVNTdHJlYW1pbmdSZXF1",
+            "ZXN0EjQKEWFpc1Bvc2l0aW9uUmVwb3J0GAEgASgLMhkubWFyaW5lLkFJU1Bv",
+            "c2l0aW9uUmVwb3J0Eg8KB2FkZHJlc3MYAiABKAkiYQoaUHJvamVjdGVkU29u",
+            "YXJJbWFnZVJlcXVlc3QSMgoEZGF0YRgBIAEoCzIkLm1hcmluZV9hY291c3Rp",
+            "Yy5Qcm9qZWN0ZWRTb25hckltYWdlEg8KB2FkZHJlc3MYAiABKAkyvAkKD1Nl",
+            "bnNvclN0cmVhbWluZxJNChJTdHJlYW1DYW1lcmFTZW5zb3ISJy5zZW5zb3Jz",
+            "dHJlYW1pbmcuQ2FtZXJhU3RyZWFtaW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIA",
+            "KAESUAoRU3RyZWFtTGlkYXJTZW5zb3ISKy5zZW5zb3JzdHJlYW1pbmcuUG9p",
+            "bnRDbG91ZFN0cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBElAKEVN0",
+            "cmVhbVNvbmFyU2Vuc29yEisuc2Vuc29yc3RyZWFtaW5nLlBvaW50Q2xvdWRT",
+            "dHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJUChBTdHJlYW1Tb25h",
+            "ckltYWdlEjAuc2Vuc29yc3RyZWFtaW5nLkNvbXByZXNzZWRJbWFnZVN0cmVh",
+            "bWluZ1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBEk8KEFN0cmVhbVBvaW50Q2xv",
+            "dWQSKy5zZW5zb3JzdHJlYW1pbmcuUG9pbnRDbG91ZFN0cmVhbWluZ1JlcXVl",
+            "c3QaCi5zdGQuRW1wdHkiACgBElEKEVN0cmVhbVBvaW50Q2xvdWQyEiwuc2Vu",
+            "c29yc3RyZWFtaW5nLlBvaW50Q2xvdWQyU3RyZWFtaW5nUmVxdWVzdBoKLnN0",
+            "ZC5FbXB0eSIAKAESSwoRU3RyZWFtUmFkYXJTZW5zb3ISJi5zZW5zb3JzdHJl",
+            "YW1pbmcuUmFkYXJTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJL",
+            "ChFTdHJlYW1EZXB0aFNlbnNvchImLnNlbnNvcnN0cmVhbWluZy5EZXB0aFN0",
+            "cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBEkcKD1N0cmVhbUR2bFNl",
+            "bnNvchIkLnNlbnNvcnN0cmVhbWluZy5EdmxTdHJlYW1pbmdSZXF1ZXN0Ggou",
+            "c3RkLkVtcHR5IgAoARJJChBTdHJlYW1HbnNzU2Vuc29yEiUuc2Vuc29yc3Ry",
+            "ZWFtaW5nLkduc3NTdHJlYW1pbmdSZXF1ZXN0Ggouc3RkLkVtcHR5IgAoARJH",
+            "Cg9TdHJlYW1JbXVTZW5zb3ISJC5zZW5zb3JzdHJlYW1pbmcuSW11U3RyZWFt",
+            "aW5nUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAESSQoQU3RyZWFtUG9zZVNlbnNv",
+            "chIlLnNlbnNvcnN0cmVhbWluZy5Qb3NlU3RyZWFtaW5nUmVxdWVzdBoKLnN0",
+            "ZC5FbXB0eSIAKAESRwoPU3RyZWFtQWlzU2Vuc29yEiQuc2Vuc29yc3RyZWFt",
+            "aW5nLkFJU1N0cmVhbWluZ1JlcXVlc3QaCi5zdGQuRW1wdHkiACgBElwKElJl",
+            "cXVlc3RQb2ludENsb3VkMhIULnN0ZC5TdGFuZGFyZFJlcXVlc3QaLC5zZW5z",
+            "b3JzdHJlYW1pbmcuUG9pbnRDbG91ZDJTdHJlYW1pbmdSZXF1ZXN0IgAwARJT",
+            "ChRTdHJlYW1SYXdTb25hclNlbnNvchIrLnNlbnNvcnN0cmVhbWluZy5Qcm9q",
+            "ZWN0ZWRTb25hckltYWdlUmVxdWVzdBoKLnN0ZC5FbXB0eSIAKAFCOwogaW8u",
+            "Z3JwYy5leGFtcGxlcy5zZW5zb3JzdHJlYW1pbmdCD1NlbnNvclN0cmVhbWlu",
+            "Z1ABogIDSExXYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Geometry.GeometryReflection.Descriptor, global::Sensor.SensorReflection.Descriptor, global::Marine.MarineReflection.Descriptor, global::Auv.AuvReflection.Descriptor, global::Std.StdReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Geometry.GeometryReflection.Descriptor, global::Sensor.SensorReflection.Descriptor, global::Marine.MarineReflection.Descriptor, global::Auv.AuvReflection.Descriptor, global::Std.StdReflection.Descriptor, global::MarineAcoustic.MarineAcousticReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.CameraStreamingRequest), global::Sensorstreaming.CameraStreamingRequest.Parser, new[]{ "Image", "CompressedImage", "Address" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.ImageStreamingRequest), global::Sensorstreaming.ImageStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
@@ -96,7 +101,8 @@ namespace Sensorstreaming {
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.ImuStreamingRequest), global::Sensorstreaming.ImuStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.PoseStreamingRequest), global::Sensorstreaming.PoseStreamingRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.SonarStreamingRequest), global::Sensorstreaming.SonarStreamingRequest.Parser, new[]{ "Range", "Bearing", "Address" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.AISStreamingRequest), global::Sensorstreaming.AISStreamingRequest.Parser, new[]{ "AisPositionReport", "Address" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.AISStreamingRequest), global::Sensorstreaming.AISStreamingRequest.Parser, new[]{ "AisPositionReport", "Address" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Sensorstreaming.ProjectedSonarImageRequest), global::Sensorstreaming.ProjectedSonarImageRequest.Parser, new[]{ "Data", "Address" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2442,6 +2448,169 @@ namespace Sensorstreaming {
               AisPositionReport = new global::Marine.AISPositionReport();
             }
             input.ReadMessage(AisPositionReport);
+            break;
+          }
+          case 18: {
+            Address = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ProjectedSonarImageRequest : pb::IMessage<ProjectedSonarImageRequest> {
+    private static readonly pb::MessageParser<ProjectedSonarImageRequest> _parser = new pb::MessageParser<ProjectedSonarImageRequest>(() => new ProjectedSonarImageRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProjectedSonarImageRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Sensorstreaming.SensorStreamingReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProjectedSonarImageRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProjectedSonarImageRequest(ProjectedSonarImageRequest other) : this() {
+      data_ = other.data_ != null ? other.data_.Clone() : null;
+      address_ = other.address_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProjectedSonarImageRequest Clone() {
+      return new ProjectedSonarImageRequest(this);
+    }
+
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 1;
+    private global::MarineAcoustic.ProjectedSonarImage data_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MarineAcoustic.ProjectedSonarImage Data {
+      get { return data_; }
+      set {
+        data_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "address" field.</summary>
+    public const int AddressFieldNumber = 2;
+    private string address_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Address {
+      get { return address_; }
+      set {
+        address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProjectedSonarImageRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProjectedSonarImageRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Data, other.Data)) return false;
+      if (Address != other.Address) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (data_ != null) hash ^= Data.GetHashCode();
+      if (Address.Length != 0) hash ^= Address.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (data_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Data);
+      }
+      if (Address.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Address);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (data_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
+      }
+      if (Address.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Address);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProjectedSonarImageRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.data_ != null) {
+        if (data_ == null) {
+          Data = new global::MarineAcoustic.ProjectedSonarImage();
+        }
+        Data.MergeFrom(other.Data);
+      }
+      if (other.Address.Length != 0) {
+        Address = other.Address;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (data_ == null) {
+              Data = new global::MarineAcoustic.ProjectedSonarImage();
+            }
+            input.ReadMessage(Data);
             break;
           }
           case 18: {
