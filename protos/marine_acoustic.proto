@@ -1,0 +1,27 @@
+syntax = "proto3";
+package marine_acoustic;
+
+import "std.proto";
+import "geometry.proto";
+
+message PingInfo {
+    float frequency = 1;
+    float sound_speed = 2;
+    repeated float tx_beamwidths = 3;
+    repeated float rx_beamwidths = 4;
+}
+
+message SonarImageData {
+    bool is_bigendian = 1;
+    uint32 dtype = 2;
+    uint32 beam_count = 3;
+    repeated bytes data = 4;
+}
+
+message ProjectedSonarImage {
+    std.Header header = 1;
+    PingInfo ping_info = 2;
+    repeated geometry.Vector3 beam_directions = 3;
+    repeated float ranges = 4;
+    SonarImageData image = 5;
+}
