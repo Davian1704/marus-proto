@@ -23,8 +23,9 @@ jobs:
         run: mkdir ../python ../csharp ../grpc-dotnet
       - name: Correct GRPC plugin links
         run: |
-            which grpc_python_plugin
             which grpc_csharp_plugin
+            which grpc_python_plugin
+            
             sudo ln -s $(which grpc_csharp_plugin) /usr/bin/protoc-gen-csharp-grpc
             sudo ln -s $(which grpc_python_plugin) /usr/bin/protoc-gen-python-grpc        
       - name: Generate code
