@@ -85,6 +85,11 @@ class SensorStreamingStub(object):
                 request_serializer=std__pb2.StandardRequest.SerializeToString,
                 response_deserializer=sensor__streaming__pb2.PointCloud2StreamingRequest.FromString,
                 )
+        self.StreamRawSonarSensor = channel.stream_unary(
+                '/sensorstreaming.SensorStreaming/StreamRawSonarSensor',
+                request_serializer=sensor__streaming__pb2.ProjectedSonarImageRequest.SerializeToString,
+                response_deserializer=std__pb2.Empty.FromString,
+                )
 
 
 class SensorStreamingServicer(object):
@@ -174,6 +179,12 @@ class SensorStreamingServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def StreamRawSonarSensor(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_SensorStreamingServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -246,6 +257,11 @@ def add_SensorStreamingServicer_to_server(servicer, server):
                     servicer.RequestPointCloud2,
                     request_deserializer=std__pb2.StandardRequest.FromString,
                     response_serializer=sensor__streaming__pb2.PointCloud2StreamingRequest.SerializeToString,
+            ),
+            'StreamRawSonarSensor': grpc.stream_unary_rpc_method_handler(
+                    servicer.StreamRawSonarSensor,
+                    request_deserializer=sensor__streaming__pb2.ProjectedSonarImageRequest.FromString,
+                    response_serializer=std__pb2.Empty.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -478,5 +494,21 @@ class SensorStreaming(object):
         return grpc.experimental.unary_stream(request, target, '/sensorstreaming.SensorStreaming/RequestPointCloud2',
             std__pb2.StandardRequest.SerializeToString,
             sensor__streaming__pb2.PointCloud2StreamingRequest.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def StreamRawSonarSensor(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_unary(request_iterator, target, '/sensorstreaming.SensorStreaming/StreamRawSonarSensor',
+            sensor__streaming__pb2.ProjectedSonarImageRequest.SerializeToString,
+            std__pb2.Empty.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)
