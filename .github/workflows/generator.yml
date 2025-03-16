@@ -57,7 +57,7 @@ jobs:
       - name: Save updated C# code
         run: |
           rm -f .cs
-          mv ../csharp/.cs .  
+          mv ../csharp/*.cs .  
           git add *
           if [[ -n $(git status -s) ]]
           then
@@ -74,7 +74,7 @@ jobs:
       - name: Save updated Python code
         run: |
           rm -f .py
-          mv ../python/.py .  
+          mv ../python/*.py .  
           cat << EOF > init**.py
           import sys
           from os.path import dirname
