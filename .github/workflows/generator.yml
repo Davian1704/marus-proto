@@ -14,38 +14,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-    
+   
       - name: Install protobuf compiler
         run: |
             sudo apt-get update && sudo apt-get install protobuf-compiler protobuf-compiler-grpc
-
-            # For C# plugin support
-            sudo apt-get install -y nuget mono-devel
-            nuget install Grpc.Tools -Version 2.51.0
-            ls -la ./Grpc.Tools.2.51.0/tools/linux_x64/
-            
-            protoc --version 
+            protoc --version
       - name: Make directories for code
         run: mkdir ../python ../csharp ../grpc-dotnet
-      - name: Setup plugin symlinks
+      - name: Correct GRPC plugin links
         run: |
-            # For Python plugin
-            sudo ln -s $(which grpc_python_plugin) /usr/bin/protoc-gen-python-grpc
-            
-            # For C# plugin - use the actual path from Grpc.Tools
-            CSHARP_PLUGIN_PATH=$(find $PWD -name grpc_csharp_plugin | grep linux_x64 | head -1)
-            echo "Found C# plugin at: $CSHARP_PLUGIN_PATH"
-            
-            if [ -z "$CSHARP_PLUGIN_PATH" ]; then
-              echo "Error: Could not find grpc_csharp_plugin"
-              exit 1
-            fi
-            
-            sudo ln -s $CSHARP_PLUGIN_PATH /usr/bin/protoc-gen-csharp-grpc
-            ls -la /usr/bin/protoc-gen-*
+            sudo ln -s $(which grpc_csharp_plugin) /usr/bin/protoc-gen-csharp-grpc
+            sudo ln -s $(which grpc_python_plugin) /usr/bin/protoc-gen-python-grpc        
       - name: Generate code
         run: protoc -I=protos --csharp-grpc_out=../csharp --csharp_out=../csharp --python-grpc_out=../python --python_out=../python protos/*
-        
+       
       #- name: Generate code for grpc-dotnet
       #  run:  touch ../grpc-dotnet/proj.csproj && echo '<Project Sdk="Microsoft.NET.Sdk">
       #    <PropertyGroup>
@@ -55,26 +37,26 @@ jobs:
       #    <PackageReference Include="Google.Protobuf" Version="3.20.1-rc1" />
       #    <PackageReference Include="Grpc.Net.Client" Version="2.45.0-pre1" />
       #    <PackageReference Include="Grpc.Tools" Version="2.45.0-pre1" />
-      #    <Protobuf Include="../labustsim-proto/protos/**/*.proto" ProtoRoot="../labustsim-proto/protos" CompileOutputs="false" 
+      #    <Protobuf Include="../labustsim-proto/protos//*.proto" ProtoRoot="../labustsim-proto/protos" CompileOutputs="false"
       #    OutputDir="generated"/>
       #    </ItemGroup>
       #    </Project>' >> ../grpc-dotnet/proj.csproj && dotnet build ../grpc-dotnet/proj.csproj
       #    && ls && ls .. && ls ../grpc-dotnet
-      
+     
       - name: Prepare Github
         run: |
             git config --global user.name 'Automation'
             git config --global user.email 'generator@github.action'
-    
+   
       - uses: actions/checkout@v2
         with:
           ref: csharp    
       - name: Save updated C# code
         run: |
-          rm -f *.cs
-          mv ../csharp/*.cs .   
+          rm -f .cs
+          mv ../csharp/.cs .  
           git add *
-          if [[ -n $(git status -s) ]] 
+          if [[ -n $(git status -s) ]]
           then
             echo "Files have changed in this revision."
             git commit -am "C# code generated based on revision $(git rev-parse --short "$GITHUB_SHA")."
@@ -82,21 +64,21 @@ jobs:
           else
             echo "Files did not change in this revision."
           fi
-          
+         
       - uses: actions/checkout@v2
         with:
           ref: python    
       - name: Save updated Python code
         run: |
-          rm -f *.py
-          mv ../python/*.py .   
-          cat << EOF > __init__.py
+          rm -f .py
+          mv ../python/.py .  
+          cat << EOF > init**.py
           import sys
           from os.path import dirname
-          sys.path.insert(1, dirname(__file__))
+          sys.path.insert(1, dirname(file))
           EOF
           git add *
-          if [[ -n $(git status -s) ]] 
+          if [[ -n $(git status -s) ]]
           then
             echo "Files have changed in this revision."
             git commit -am "Python code generated based on revision $(git rev-parse --short "$GITHUB_SHA")."
@@ -104,16 +86,15 @@ jobs:
           else
             echo "Files did not change in this revision."
           fi
-
       #- uses: actions/checkout@v2
       #  with:
       #    ref: grpc-dotnet    
       #- name: Save updated C# code (dotnet)
       #  run: |
-      #    rm -f *.cs
-      #    mv ../grpc-dotnet/generated/*.cs .   
+      #    rm -f .cs
+      #    mv ../grpc-dotnet/generated/.cs .  
       #    git add *
-      #    if [[ -n $(git status -s) ]] 
+      #    if [[ -n $(git status -s) ]]
       #    then
       #      echo "Files have changed in this revision."
       #      git commit -am "C# code generated based on revision $(git rev-parse --short "$GITHUB_SHA")."
