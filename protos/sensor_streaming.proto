@@ -6,6 +6,7 @@ import "sensor.proto";
 import "marine.proto";
 import "auv.proto";
 import "std.proto";
+import "marine_acoustic.proto";
 
 option java_multiple_files = true;
 option java_package = "io.grpc.examples.sensorstreaming";
@@ -27,6 +28,7 @@ service SensorStreaming {
     rpc StreamPoseSensor(stream PoseStreamingRequest) returns (std.Empty) {}
     rpc StreamAisSensor(stream AISStreamingRequest) returns (std.Empty) {}
     rpc RequestPointCloud2(std.StandardRequest) returns (stream PointCloud2StreamingRequest) {}
+    rpc StreamRawSonarSensor(stream ProjectedSonarImageRequest) returns (std.Empty){}
 }
 
 message CameraStreamingRequest {
@@ -99,5 +101,10 @@ message SonarStreamingRequest {
 }
 message AISStreamingRequest {
     marine.AISPositionReport aisPositionReport = 1;
+    string address = 2;
+}
+
+message ProjectedSonarImageRequest {
+    marine_acoustic.ProjectedSonarImage data = 1;
     string address = 2;
 }
